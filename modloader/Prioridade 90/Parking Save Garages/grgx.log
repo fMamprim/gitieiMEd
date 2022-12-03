@@ -1,0 +1,203 @@
+Log started
+ Compiled date and time Jul 17 2021 @ 12:42:22
+ with compiler _MSC_VER = 1928
+UNICODE encoding is NOT used.
+_CPPRTTI
+_MSC_BUILD 0
+_MSVC_LANG 201402
+_NATIVE_WCHAR_T_DEFINED
+_WCHAR_T_DEFINED
+_WIN32
+CStreaming::aInfoForModel=8E4CC0
+ARRAY_ModelInfo (*(DWORD**)(0x40122D))=A9B0C8
+ARRAY_ModelInfo (*(DWORD**)(0x4C5538+3))=A9B0C8
+CGarages::Patch() with is HOODLUM: true
+Parsing grge line: 1640.37  -1520.07  12.5118  1647.6  -1520.07  1640.37  -1512.45  18.1245  5  1  mul_lan  
+	Is GRGX: false
+Parsing grge line: 1523.92  -1653.23  4.72837  1556.92  -1653.23  1523.92  -1633.23  12.2284  5  33  imp_la   
+	Is GRGX: false
+Parsing grge line: 1873.97  -2096.55  12.487  1880.88  -2096.55  1873.97  -2087.62  15.7681  5  1  duf_LAS  
+	Is GRGX: false
+Parsing grge line: 1843.91  -1858.8  12.3645  1857.1  -1858.8  1843.91  -1853.79  16.1118  1  2  lasbomb  
+	Is GRGX: false
+Parsing grge line: 1809.46  -2150.67  12.4283  1809.46  -2142.75  1798.82  -2150.67  16.4347  1  1  modgLAS  
+	Is GRGX: false
+Parsing grge line: 1694.8  -2088.7  12.3636  1703  -2088.7  1694.8  -2077.48  16.2236  5  31  carlas1  
+	Is GRGX: false
+Parsing grge line: 2738.4  -2012.55  12.5759  2743.78  -2012.55  2738.4  -2004.41  17.8299  1  1  burg_lk  
+	Is GRGX: false
+Parsing grge line: 2640.78  -2049.99  12.543  2648.96  -2049.99  2640.78  -2039.55  16.206  1  1  modlast  
+	Is GRGX: false
+Parsing grge line: 2056.6  -1835.9  12.5443  2071.3  -1835.9  2056.6  -1826.97  18.5443  1  5  sprLAe  
+	Is GRGX: false
+Parsing grge line: 2502.31  -1699.36  12.4323  2508.61  -1699.36  2502.31  -1691.01  16.5666  1  16  cjsafe  
+	Is GRGX: false
+Parsing grge line: 1038.24  -1025.67  31.1027  1068.35  -1025.67  1038.24  -995.044  39.1027  1  1  bodLAwN  
+	Is GRGX: false
+Parsing grge line: 1021.81  -1018.71  30.9081  1021.81  -1029.53  1027.93  -1018.71  36.9081  1  5  sprLAe  
+	Is GRGX: false
+Parsing grge line: 491.103  -1747.55  9.45516  492.717  -1735.77  481.972  -1746.3  17.565  1  5  spLAw2  
+	Is GRGX: false
+Parsing grge line: 319.326  -1768.93  3.35686  325.625  -1768.93  319.326  -1759.57  7.49114  1  17  beacsv  
+	Is GRGX: false
+Parsing grge line: 1352.58  -636.657  108.135  1359.02  -634.418  1349.56  -627.962  113.135  1  32  CEsafe1  
+	Is GRGX: false
+Parsing grge line: -2728.53  212.295  3.45112  -2716.36  212.295  -2728.53  222.669  8.68621  1  5  mds1SFS  
+	Is GRGX: false
+Parsing grge line: -2735.46  60.7331  3.07005  -2725.82  60.7331  -2735.46  72.8828  7.92155  1  1  tbon  
+	Is GRGX: false
+Parsing grge line: -2454.02  -131.556  25.0886  -2442.38  -131.556  -2454.02  -113.935  29.8006  1  42  svgsfs1  
+	Is GRGX: false
+Parsing grge line: -1941.04  251.714  33.4274  -1941.04  239.541  -1930.66  251.714  38.6634  1  1  mdsSFSe  
+	Is GRGX: false
+Parsing grge line: -1908.93  292.353  40.0413  -1908.93  277.989  -1900.11  292.353  45.539  1  5  sprsfse  
+	Is GRGX: false
+Parsing grge line: -2112.48  -21.214  34.303  -2102.48  -21.214  -2112.48  -11.214  40.303  1  1  brgSFSE  
+	Is GRGX: false
+Parsing grge line: -2043.1  118.609  27.821  -2021.91  118.609  -2043.1  129.609  32.821  1  41  LCKSfse  
+	Is GRGX: false
+Parsing grge line: -2057.35  150.803  27.8286  -2038.91  150.803  -2057.35  182.876  33.2286  1  1  hbgdSFS  
+	Is GRGX: false
+Parsing grge line: -1694.78  1033.15  44.1937  -1681.59  1033.15  -1694.78  1038.16  47.941  1  2    
+	Is GRGX: false
+Parsing grge line: -1794.15  1429.69  4.37321  -1787.18  1429.69  -1794.15  1441.37  14.3732  1  1    
+	Is GRGX: false
+Parsing grge line: -2171.43  649.416  49.8742  -2161.79  649.416  -2171.43  661.778  58.1902  3  1  fdorsfe  
+	Is GRGX: false
+Parsing grge line: -1790.97  1209.71  23.763  -1782.58  1209.71  -1790.97  1221.46  28.963  1  1  michdr  
+	Is GRGX: false
+Parsing grge line: -2108.92  886.553  75.566  -2101.36  886.553  -2108.92  896.807  80.166  7  39  sav1sfe  
+	Is GRGX: false
+Parsing grge line: -1652.78  647.502  -6.04924  -1617.92  647.502  -1652.78  671.973  0.713446  4  34  imp_sf  
+	Is GRGX: false
+Parsing grge line: -2430.13  1013.71  49.3413  -2421.2  1013.71  -2430.13  1027.76  55.3413  1  5  sprsfw  
+	Is GRGX: false
+Parsing grge line: -2699.12  821.489  49.0042  -2692.9  821.489  -2699.12  831.208  53.653  1  40  sav1sfw  
+	Is GRGX: false
+Parsing grge line: 2218.06  2448.06  -8.43807  2234.47  2448.06  2218.06  2467.56  -1.5463  5  35  imp_lv  
+	Is GRGX: false
+Parsing grge line: 1550.98  1155.36  8.97329  1621.82  1155.36  1550.98  1224.03  29.8005  4  44  vgshngr  
+	Is GRGX: false
+Parsing grge line: 2602.6  1438.84  9.8337  2616.4  1438.84  2602.6  1462.11  15.4891  1  1  vgElock  
+	Is GRGX: false
+Parsing grge line: 2389.6  1483.26  9.81843  2398.11  1483.26  2389.6  1497.84  15.6841  5  5  timy1  
+	Is GRGX: false
+Parsing grge line: 2382.28  1044  9.8337  2391.14  1044  2382.28  1059.73  13.9338  1  1  vEcmod  
+	Is GRGX: false
+Parsing grge line: 2449.5  695.018  10.4742  2458.31  695.018  2449.5  700.227  12.9155  1  18  vEsvgrg  
+	Is GRGX: false
+Parsing grge line: 2002.96  2303.72  9.61706  2010.36  2303.72  2002.96  2317.59  13.9914  1  2  blob2  
+	Is GRGX: false
+Parsing grge line: 1968.23  2157.88  9.59696  1983.32  2157.88  1968.23  2167.03  16.2367  1  5  blob1  
+	Is GRGX: false
+Parsing grge line: 1408.65  1899.52  10.115  1417.55  1899.52  1408.65  1904.91  13.1693  1  30  blob6  
+	Is GRGX: false
+Parsing grge line: 1269.2  2525.14  9.80013  1278.72  2525.14  1269.2  2534.49  12.9784  1  27  blob69  
+	Is GRGX: false
+Parsing grge line: 929.554  2008.59  10.115  938.452  2008.59  929.554  2013.99  13.1693  1  28  blob7  
+	Is GRGX: false
+Parsing grge line: -1424.11  2576.61  54.8156  -1416.85  2576.61  -1424.11  2590.84  60.8747  1  5  CNspray  
+	Is GRGX: false
+Parsing grge line: -103.636  1112.42  18.7017  -96.3613  1112.42  -103.636  1125.79  24.5489  1  5  CN2spry  
+	Is GRGX: false
+Parsing grge line: -364.439  1194.37  18.597  -356.214  1194.37  -364.439  1202.97  22.3812  1  24  cn2gar1  
+	Is GRGX: false
+Parsing grge line: 430.059  2542.31  15.166  442.896  2542.31  430.059  2550.75  19.5951  1  25  cn2gar2  
+	Is GRGX: false
+Parsing grge line: -397.297  2223.17  41.3824  -389.058  2225.38  -398.878  2229.07  44.6359  1  1  ghostdr  
+	Is GRGX: false
+Parsing grge line: 383.843  2433.28  15.166  426.012  2433.28  383.843  2476.13  24.6886  4  45  dhangar  
+	Is GRGX: false
+Parsing grge line: -2114.42  -2462.27  29.4809  -2109.36  -2466.37  -2111.68  -2458.88  32.3474  1  1  amumis  
+	Is GRGX: false
+Parsing grge line: 715.806  -462.403  14.9635  724.293  -462.403  715.806  -447.29  21.4398  1  5  CEspray  
+	Is GRGX: false
+Parsing grge line: 2227.6  168.649  26.4635  2234.93  168.649  2227.6  176.333  29.4635  1  29  burbdoo  
+	Is GRGX: false
+Parsing grge line: 783.155  -492.75  16.3361  789.029  -492.75  783.155  -485.118  19.3361  1  26  burbdo2  
+	Is GRGX: false
+Parsing grge line: 2485.08  -1684.22  11.9989  2493.58  -1684.22  2485.08  -1678.72  17.9989  0  -1  CJPARK  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: CJPARK
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width= 8.5, Depth= 5.5, Height= 6.0,  dotProduct(dirA, dirB)=0.00
+Parsing grge line: -2076.75  -2325.07  29.0  -2087.35  -2323.87  -2080.05  -2329.47  39.4687  0  -1  ANGPARK  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: ANGPARK
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=10.7, Depth= 5.5, Height=10.5,  dotProduct(dirA, dirB)=0.51
+Parsing grge line: -2024.87  -40.7895  34.0  -2019.47  -49.2895  -2019.47  -40.7895  44.0  0  -1  DOHPARK  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: DOHPARK
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=10.1, Depth= 5.4, Height=10.0,  dotProduct(dirA, dirB)=0.54
+Parsing grge line: 903.385  -1645.22  12.1797  855.485  -1684.72  855.485  -1645.22  32.1797  0  -1  LAWPARK  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: LAWPARK
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=62.1, Depth=47.9, Height=20.0,  dotProduct(dirA, dirB)=0.77
+Parsing grge line: 192.133  -137.638  0.3  222.733  -164.338  222.733  -137.638  10.3922  0  -1  BLUPARK  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: BLUPARK
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=40.6, Depth=30.6, Height=10.1,  dotProduct(dirA, dirB)=0.75
+Parsing grge line: 2099.45  -1266.52  22.0  2105.75  -1289.62  2105.75  -1266.52  33.6562  0  -1  JFPARK1  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: JFPARK1
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=23.9, Depth= 6.3, Height=11.7,  dotProduct(dirA, dirB)=0.26
+Parsing grge line: 2825.68  2145.61  9.0  2813.28  2191.31  2813.28  2145.61  19.0  0  -1  VKPARK1  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: VKPARK1
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=47.4, Depth=12.4, Height=10.0,  dotProduct(dirA, dirB)=0.26
+Parsing grge line: 2363.39  2156.62  9.5  2357.89  2223.32  2357.89  2156.62  29.5813  0  -1  4QPARK1  -1  4  0  
+	Is GRGX: true
+	CGarageBase constructed with size: -1 = 5
+	Added GRGX.
+		Name: 4QPARK1
+		Can store vehicle: true
+		Is Parking Garage: true
+		Is GARAGE_DONT_SAVE: false
+		Width=66.9, Depth= 5.5, Height=20.1,  dotProduct(dirA, dirB)=0.08
+CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
+CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
+CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
+CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
+	CGarageBase CJPARK destructed
+	CGarageBase ANGPARK destructed
+	CGarageBase DOHPARK destructed
+	CGarageBase LAWPARK destructed
+	CGarageBase BLUPARK destructed
+	CGarageBase JFPARK1 destructed
+	CGarageBase VKPARK1 destructed
+	CGarageBase 4QPARK1 destructed
+Log finished

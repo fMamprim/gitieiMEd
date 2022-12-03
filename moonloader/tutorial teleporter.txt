@@ -1,0 +1,5 @@
+= Comandos:
+ CTRL+T para abrir o menu.
+ X+Y para teleportar para a posição marcada.
+ Você pode trocar os comandos do mod abrindo o arquivo .lua com um editor de texto, por exemplo em "0xA2" (que é ctrl) e "0x54" (que é T). São virtual keys em hexadecimal.
+ No mesmo arquivo você também pode editar ou adicionar novas posições para a lista.

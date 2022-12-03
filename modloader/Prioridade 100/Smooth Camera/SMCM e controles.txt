@@ -1,0 +1,14 @@
+escreve "SMCM" 
+
+Camera control:
+- button "W", "A", "S", "D" - camera movement;
+- Num5 - Look up;
+- Num6 - Change the angle of the right;
+- Num4 - Change the angle to the left;
+- Num2 - Show down;
+- Num1 - Turn right;
+- Num3 - Turn left;
+- Num0 - Lower chamber;
+- Enter - Raise the camera.
+
+"Backspace" - switch the camera off.

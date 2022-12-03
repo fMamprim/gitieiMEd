@@ -1,0 +1,12 @@
+Necessário correção de transparência do SkyGfx (infos)
+
+ = Como usar:
+Pegue uma lata de spray. Comandos na tela.
+Compatível com gamepad e modo coop.
+Salvará no jogo salvo (opção no .ini).
+Há também o cheat "ClearAllGraf" para você apagar todos os grafites pintados (IDs configurados no .ini).
+
+
+ = Como adicionar novas texturas:
+https://forum.mixmods.com.br/f52-tutoriais-utilidades/t5549-graffiti-anywhere-como-adicionar-novas-imagens
+ 

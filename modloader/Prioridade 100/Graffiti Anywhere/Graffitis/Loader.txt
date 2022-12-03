@@ -1,0 +1,6 @@
+# Tutorial: https://forum.mixmods.com.br/f52-tutoriais-utilidades/t5549-graffiti-anywhere-como-adicionar-novas-imagens
+
+KEEP THIS FILE INSIDE MODLOADER
+
+IDE DATA/MAPS/GraffitiAnywhere.IDE
+COLFILE 0 DATA/MAPS/GraffitiAnywhere.COL

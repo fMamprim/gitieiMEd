@@ -1,0 +1,158 @@
+GTA LEGALZÃO
+
+
+GUIA DE COMANDO DOS MODS
+
+
+- GRAVITY GUN
+Digite "GGUN"
+
+
+- PORTAL GUN
+Digite "PORTAL"
+
+
+- BUILDER MOD
+Selecione uma das listas de objetos para colocar no jogo:
+
+Pressione 4 para lista de ícones e props
+Pressione 5 para lista de grades e cercas
+Pressione 6 para lista de rampas e objetos grandes
+Pressione 7 para lista de objetos de interiores
+
+Para afastar ou aproximar o objeto:
+
+Pressione a tecla HOME para afastar
+Pressione a tecla END para aproximar
+
+Para rotacionar o objeto:
+
+Utilize os números do "Numpad"
+Numpad 5 coloca o objeto na posição original
+
+
+- ENTRAR DE CARONA
+Pressione G para entrar de carona nos veículos
+Dentro do veículo pressione H+Y para ativar o modo Drive-By (escolha a arma primeiro)
+Dentro do veículo pressione H+N para cancelar o modo Drive-By
+Dentro do veículo pressione Y para ativar autodriver e Drive-By
+Dentro do veículo digite "DF" para mudar a velocidade com o botão de acelerar, freio de mão e ré
+You can change the car's speed after typing in 
+
+Carro louco "DAF" or normally "DAX".
+
+You can create a target on the map and type "DF" or "DX" for the car to drive to the target.
+
+You can teleport to the target at a random price by typing "TS". (will not work in SA:MP for anti cheating purposes)
+
+You can follow another nearby car by typing "FOLO".
+
+
+- CHEATS
+Pressione "CTRL+B" para aparecer o menu de cheats
+
+
+- MISSÕES
+Pressione "CTRL+M" para aparecer o menu seleção de missões
+
+
+- ESCOLHER VEÍCULO
+Pressione 2 para aparecer veículos
+Pressione as setas p/cima e p/baixo para trocar o veículo
+Pressione "ESPAÇO" para escolher o veículo
+Pressione "ENTER" para sair
+
+
+- UTILIDADES
+Pressione P para soltar moscas
+Pressione = para restaurar a saúde
+Pressione 0 para matar o CJ
+Pressione 6 para consertar o veículo
+Pressione 7 para desvirar o veículo
+Pressione 9 para explodir o veículo
+Pressione ´ (acento do lado do p) para explodir
+Pressione [ para criar uma explosão de molotov á sua frente
+
+
+- DANÇAR
+Segure F5 para dançar
+
+
+- ARMA QUE ATIRA VEÍCULOS
+Digite "BUL"
+
+
+- NoClip
+Digite "NOC" para ativar o modo noclip
+Pressione R para aumentar a velocidade
+Pressione F para diminuir a velocidade
+
+
+- MODO CAMERA
+Pressione F8 para ativar o modo camera
+Pressione a tecla "HOME" para mover para frente
+Pressione a tecla "END" para mover para trás
+Pressione a tecla "PAGE UP" para mover
+Pressione a tecla "PAGE DOWN" para mover
+Pressione a tecla "INSERT" para mover
+Pressione a tecla "DELETE"
+
+
+- SALVAR EM QUALQUER LUGAR
+Pressione F4 para aparecer menu de salvamento
+
+
+- TROCAR DE ROUPAS
+Pressione 3 para aparecer o menu de roupas
+
+
+- TRANSFENDER EM QUALQUER LUGAR
+Dentro de um veículo pressione P para modificar seu veículo
+
+
+- CARSUPER
+Dentro de um veículo pressione 2 para adicionar armas
+Pressione "LCTRL" para atirar com metralhadora
+Pressione "RCTRL" para atirar com lança-mísseis
+
+
+- SPAWNAR RECRUTA IMORTAL
+Pressione K para aparecer um recruta
+Segure L para o recruta desaparecer
+
+
+- KAMEHAMEHA
+Segure a tecla "TAB" e pressione H
+
+
+- HORN CALL HOMIES
+Buzine perto dos grove para recrutar
+
+
+- RECRUIT ANY PED
+Recrute qualquer um
+
+
+- WALKSTYLE
+Digite "WALKSTYLE" para aparecer o menu de walkstyle
+
+
+- SPAWN CJ
+Digite "SPAWNCJ" para spawnar um CJ
+
+
+- GRAVITY CHANGER
+Segure "TAB" e pressione "PAGE UP" para aumentar a gravidade
+Segure "TAB" e pressione "PAGE DOWN" para diminuir a gravidade
+Segure "TAB" e pressione "HOME" para voltar a gravidade ao padrão
+
+
+- SKIN SELECTOR
+Segure "TAB", aperte "E" e gire a bolinha do mouse/aperte "Q" para
+aparecer o menu do skin selector
+
+Aperte o botão esquedo do mouse para peds normais
+Aperte "LSHIFT" para skins especiais (de missão)
+Aperte "ESPAÇO" para skins adicionados
+Aperte "C" para trocar de roupa
+Aperte a bolinha do mouse para mudar o corpo (gordura, musculo)

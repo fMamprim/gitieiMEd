@@ -1,0 +1,9 @@
+# Adapted by Junior_Djjr
+objs
+15458, vrat_engine_block, vrat_engine, 100, 1
+15459, vrat_engine_pipes, vrat_engine, 100, 1
+15460, vrat_engine_scoop1, vrat_engine, 100, 1
+15461, vrat_engine_scoop1b, vrat_engine, 100, 1
+15462, vrat_engine_scoop2, vrat_engine, 100, 1
+15463, vrat_engine_exhaust, vrat_engine, 100, 1
+end

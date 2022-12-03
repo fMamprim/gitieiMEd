@@ -1,0 +1,34 @@
+# Adapted by Junior_Djjr - TuningMod.MixMods.com.br
+objs
+15542, apoc2_bumper1, pack_apoc2, 100, 1
+15543, apoc2_bumper2, pack_apoc2, 100, 1
+15544, apoc2_spoilersup, pack_apoc2, 100, 1
+15545, apoc2_spoiler, pack_apoc2, 100, 1
+15546, apoc2_traction, pack_apoc2, 100, 1
+15547, apoc2_suspension, pack_apoc2, 100, 1
+15548, apoc2_wheel, pack_apoc2, 100, 1
+15549, apoc2_axis, pack_apoc2, 100, 1
+15550, apoc2_exhaust, pack_apoc2, 100, 1
+15551, apoc2_chain1, pack_apoc2, 100, 1
+15552, apoc2_chain2, pack_apoc2, 100, 1
+15553, apoc2_gun, pack_apoc2, 100, 1
+15554, apoc2_ladder, pack_apoc2, 100, 1
+15555, apoc2_lights, pack_apoc2, 100, 1
+15556, apoc2_rollcage, pack_apoc2, 100, 1
+15557, apoc2_seat, pack_apoc2, 100, 1
+15558, apoc2_interiorpart, pack_apoc2, 100, 1
+15559, apoc2_interiorgear, pack_apoc2, 100, 1
+15560, apoc2_steer, pack_apoc2, 100, 1
+15561, apoc2_skull, pack_apoc2, 100, 1
+15562, apoc2_skulls, pack_apoc2, 100, 1
+15563, apoc2_spike1, pack_apoc2, 100, 1
+15564, apoc2_spike2, pack_apoc2, 100, 1
+15565, apoc2_spike3, pack_apoc2, 100, 1
+15566, apoc2_pipe1, pack_apoc2, 100, 1
+15567, apoc2_pipe2, pack_apoc2, 100, 1
+15568, apoc2_pipe3, pack_apoc2, 100, 1
+15569, apoc2_metal1, pack_apoc2, 100, 1
+15570, apoc2_metal2, pack_apoc2, 100, 1
+15571, apoc2_spear, pack_apoc2, 100, 1
+15572, apoc2_body, pack_apoc2, 100, 1
+end

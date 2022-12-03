@@ -1,0 +1,8 @@
+abrir menu F7 118
+modo ilimitado 163 rctrl 113 f2
+never wanted 219 [ { foi pra pausebreak (19)
+unlimited ammo 186 foi pra numpad - (109)
+car speedup 221 ]
+alwaysmode 48 0 foi pra numpad * (106)
+foward 222 " '
+airbreak toggle foi pra numpad + (107)

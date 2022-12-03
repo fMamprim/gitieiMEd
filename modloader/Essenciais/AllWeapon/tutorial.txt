@@ -1,0 +1,7 @@
+ = Comandos:
+W+1 para ativar e desativar. Ao desativar, as armas originais voltam.
+Teclas 1 até 9 para selecionar o slot.
+Tecla 1 para a arma dentro do carro.
+
+Há algumas opções no arquivo .ini.
+Não adaptado para armas adicionadas sem substituir.

@@ -1,0 +1,48 @@
+-- PT
+Simplesmente deixe esta pasta no modloader que já estará certo.
+Mas se você já tem algum mod que também substitua estes arquivos, não instale este tal arquivo, basta abrir o arquivo do outro mod e fazer as seguintes alterações:
+
+Abra o seu "data/maps/LS/LAn2.ipl" com o bloco de notas ou outro editor de texto.
+Procure por esta linha:
+1368.35, -1279.06, 12.55, 0, 5.67432, 5.47485, 8, 1365.35, -1279.06, 12.55, 90, 0, 4, "AMMUN1", 0, 2, 0, 24
+Substitua por esta:
+1368.35, -1279.06, 2.55, 0, 5.67432, 5.47485, 8, 1365.35, -1279.06, 12.55, 90, 0, 4, "AMMUN1", 0, 2, 0, 24
+
+(nada importante) Abra o seu "data/maps/interior/gen_int5.ipl" com o bloco de notas ou outro editor de texto.
+Procure por esta linha:
+452.89, -18.1797, 1000.18, 0, 3.12819, 2.6943, 8, 452.49, -18.1797, 1000.18, 90, 1, 2, "FDREST1", 4, 2, 0, 24
+Substitua por esta:
+452.89, -18.1797, 1000.18, 0, 3.12819, 2.6943, 8, 452.49, -18.1797, 1000.18, 90, 1, 2, "FDREST1", 0, 2, 0, 24
+
+(pouco importante) Abra o seu "data/maps/leveldes/levelmap.ipl" com o bloco de notas ou outro editor de texto.
+Procure por esta linha:
+-1861.68, 58.8643, 1054.2, 0, 4, 2.27, 8, -1861.68, 60.8643, 1054.2, 0, 14, 0, "AIRPOR2", 1, 2, 0, 24
+Substitua por esta:
+-1861.68, 58.8643, 1044.2, 0, 4, 2.27, 8, -1861.68, 60.8643, 1054.2, 0, 14, 0, "AIRPOR2", 1, 2, 0, 24
+
+O "levelmap.ide" só corrigiu alguns LODs alterando a distância de visão deles.
+
+
+-- EN
+Simply leave this folder in modloader which will already be right.
+But if you already have a mod that also replaces these files, don't install such file, just open the other mod's file and make the following changes:
+
+Open your "data/maps/LS/LAn2.ipl" with notepad or another text editor.
+Search for this line:
+1368.35, -1279.06, 12.55, 0, 5.67432, 5.47485, 8, 1365.35, -1279.06, 12.55, 90, 0, 4, "AMMUN1", 0, 2, 0, 24
+Replace with this:
+1368.35, -1279.06, 2.55, 0, 5.67432, 5.47485, 8, 1365.35, -1279.06, 12.55, 90, 0, 4, "AMMUN1", 0, 2, 0, 24
+
+(nothing important) Open your "data/maps/interior/gen_int5.ipl" with notepad or another text editor.
+Search for this line:
+452.89, -18.1797, 1000.18, 0, 3.12819, 2.6943, 8, 452.49, -18.1797, 1000.18, 90, 1, 2, "FDREST1", 4, 2, 0, 24
+Replace with this:
+452.89, -18.1797, 1000.18, 0, 3.12819, 2.6943, 8, 452.49, -18.1797, 1000.18, 90, 1, 2, "FDREST1", 0, 2, 0, 24
+
+(less important) Open your "data/maps/leveldes/levelmap.ipl" with notepad or another text editor.
+Search for this line:
+-1861.68, 58.8643, 1054.2, 0, 4, 2.27, 8, -1861.68, 60.8643, 1054.2, 0, 14, 0, "AIRPOR2", 1, 2, 0, 24
+Replace with this:
+-1861.68, 58.8643, 1044.2, 0, 4, 2.27, 8, -1861.68, 60.8643, 1054.2, 0, 14, 0, "AIRPOR2", 1, 2, 0, 24
+
+"Levelmap.ide" only fixed some LODs by changing their viewing distance.

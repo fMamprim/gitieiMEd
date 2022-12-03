@@ -1,0 +1,19 @@
+#
+# by Junior_Djjr - JuniorDjjr.MixMods.com.br
+#
+objs
+15511, apoc1_dump,  pack_apoc1, 100, 2
+15512, apoc1_exhaust,  pack_apoc1, 100, 2
+15513, apoc1_wheel,  pack_apoc1, 100, 2
+15514, apoc1_turretbase,  pack_apoc1, 100, 0
+15515, apoc1_turret,  pack_apoc1, 100, 0
+15516, apoc1_light,  pack_apoc1, 100, 0
+15517, apoc1_bar1,  pack_apoc1, 100, 0
+15518, apoc1_bar2,  pack_apoc1, 100, 0
+15519, apoc1_bar3,  pack_apoc1, 100, 0
+15520, apoc1_bar4, pack_apoc1, 100, 0
+15521, apoc1_store1, pack_apoc1, 100, 0
+15522, apoc1_store2, pack_apoc1, 100, 0
+15523, apoc1_stair, pack_apoc1, 100, 0
+end
+

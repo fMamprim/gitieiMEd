@@ -1,0 +1,281 @@
+{$CLEO .cs}
+thread 'PASSENGER'
+0@ = -1 //car you are in
+1@ = -1 //coord
+2@ = -1 //coord
+3@ = -1 //coord
+4@ = -1 //weapon
+5@ = -1 //timer and money
+6@ = -1 //car driver
+7@ = -1 //car speed
+8@ = -1 //0 - 1 bit
+9@ = -1 //random car
+
+:start
+wait 0
+if
+Player.Defined($PLAYER_CHAR)
+jf @start
+if
+Actor.Driving($PLAYER_ACTOR)
+jf @notincar
+if
+00E1:   player 0 pressed_key 11
+jf @start
+0@ = -1
+03C0: 0@ = actor $PLAYER_ACTOR car
+if
+not 0@ == -1
+jf @end
+7@ = 25.0
+8@ = 0 
+jump @check
+
+:notincar
+if
+00E1:   player 0 pressed_key 8
+jf @start
+0@ = -1
+6@ = -1 
+0AB5: store_actor $PLAYER_ACTOR closest_vehicle_to 0@ closest_ped_to 6@
+if
+not 0@ == -1
+jf @end
+if
+0205:   actor $PLAYER_ACTOR near_car 0@ radius 10.0 10.0 10.0 flag 0 
+jf @end
+0470: 4@ = actor $PLAYER_ACTOR current_weapon
+05CA: AS_actor $PLAYER_ACTOR enter_car 0@ passenger_seat -1 10000 ms 
+7@ = 25.0
+8@ = 0
+5@ = 0
+
+:notincardefined
+wait 1
+5@ += 1
+if and
+Player.Defined($PLAYER_CHAR)
+not 4@ == -1
+not 0@ == -1
+jf @end
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 4@
+if
+Actor.InCar($PLAYER_ACTOR, 0@)
+jf @notincarcheck
+jump @check
+
+:notincarcheck
+if
+not 5@ > 9000
+jf @stopcj
+if
+8205:   not actor $PLAYER_ACTOR near_car 0@ radius 10.0 10.0 10.0 flag 0
+jf @notincaranims
+jump @end
+
+:notincaranims
+if and
+02A0:   actor $PLAYER_ACTOR stopped 
+89DE:   not actor $PLAYER_ACTOR entering_car
+jf @notincardefined
+
+:checkwait
+wait 750
+
+:check
+wait 0
+if and
+not 0@ == -1
+Player.Defined($PLAYER_CHAR)
+jf @end
+if
+Actor.InCar($PLAYER_ACTOR, 0@)
+jf @end
+
+:drivebyon
+if and
+00E1:   player 0 pressed_key 18 
+00E1:   player 0 pressed_key 11 
+jf @drivebyoff
+0713: actor $PLAYER_ACTOR driveby_actor -1 car -1 point 0.0 0.0 0.0 radius -2 -1 -1 firing_rate 100
+
+:drivebyoff
+if and
+00E1:   player 0 pressed_key 18 
+00E1:   player 0 pressed_key 10
+jf @cardrive
+0812: AS_actor $PLAYER_ACTOR perform_animation "OFF_SIT_IDLE_LOOP" IFP_file "INT_OFFICE" 0.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0
+
+:cardrive
+if
+0ADC: test_cheat "DAX"
+jf @carcrazy
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+jf @carcrazy
+Car.SetToNormalDriver(0@)
+Car.SetDriverBehaviour(0@, FollowRoad)
+00AE: set_car 0@ traffic_behaviour_to 4 
+Car.SetMaxSpeed(0@, 7@)
+0ACE: show_formatted_text_box "The car will drive around normally."
+8@ = 1
+
+:carcrazy
+if
+0ADC: test_cheat "DAF"
+jf @carstop
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+jf @carstop
+Car.SetToPsychoDriver(0@)
+Car.SetDriverBehaviour(0@, FollowRoad)
+00AE: set_car 0@ traffic_behaviour_to 2 
+Car.SetMaxSpeed(0@, 7@)
+0ACE: show_formatted_text_box "The car will drive around crazy."
+8@ = 1
+
+:carstop
+if
+00E1:   player 0 pressed_key 6
+jf @destination
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+8@ == 1
+jf @destination
+7@ = 0.0
+Car.SetMaxSpeed(0@, 7@)
+0ACE: show_formatted_text_box "Stopped, the speed is now at %f." 7@
+
+:destination
+if
+0ADC: test_cheat "DF"
+jf @normal
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+jf @normal
+0AB6: store_target_marker_coords_to 1@ 2@ 3@ // IF and SET 
+04D3: get_nearest_car_path_coords_from 1@ 2@ 3@ type 2 store_to 1@ 2@ 3@
+00AE: set_car 0@ traffic_behaviour_to 2 
+Car.DriveTo(0@, 1@, 2@, 3@)
+Car.SetMaxSpeed(0@, 7@)
+0ACE: show_formatted_text_box "The car is now driving to the target crazy."
+8@ = 1
+
+:normal
+if
+0ADC: test_cheat "DX"
+jf @tripskip
+6@ = -1
+046C: 6@ = car 0@ driver
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+jf @tripskip
+0ACE: show_formatted_text_box "The car is now driving to the target normally."
+0AB6: store_target_marker_coords_to 1@ 2@ 3@ // IF and SET 
+04D3: get_nearest_car_path_coords_from 1@ 2@ 3@ type 2 store_to 1@ 2@ 3@
+00AE: set_car 0@ traffic_behaviour_to 4
+Car.DriveTo(0@, 1@, 2@, 3@)
+Car.SetMaxSpeed(0@, 7@)
+8@ = 1
+
+:tripskip
+if
+0ADC: test_cheat "TS"
+jf @speedup
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+87D6:   not  6@ == $PLAYER_ACTOR
+jf @speedup
+0209: 5@ = random_int_in_ranges -100 -5000
+Player.Money($PLAYER_CHAR) += 5@ 
+0ACE: show_formatted_text_box "Trip skipped for %d dollars." 5@
+0AB6: store_target_marker_coords_to 1@ 2@ 3@ // IF and SET 
+04D3: get_nearest_car_path_coords_from 1@ 2@ 3@ type 2 store_to 1@ 2@ 3@
+fade 0 500
+wait 500
+Car.PutAt(0@, 1@, 2@, 3@)
+fade 1 500
+
+:speedup
+if
+00E1:   player 0 pressed_key 16
+jf @speeddown
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+8@ == 1
+jf @speeddown
+7@ += 5.0
+Car.SetMaxSpeed(0@, 7@)
+0ACE: show_formatted_text_box "Speeded up, the speed is now at %f." 7@
+
+:speeddown
+if
+00E1:   player 0 pressed_key 14
+jf @followcar
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+8@ == 1
+jf @followcar
+7@ += -5.0
+Car.SetMaxSpeed(0@, 7@)
+0ACE: show_formatted_text_box "Slowed down, the speed is now at %f." 7@
+
+:followcar
+if
+0ADC: test_cheat "FOLO"
+jf @check
+6@ = -1
+046C: 6@ = car 0@ driver 
+if and
+not Actor.DrivingPlane($PLAYER_ACTOR)
+not 6@ == -1
+jf @check
+0407: store_coords_to 1@ 2@ 3@ from_car 0@ with_offset 0.0 0.0 0.0
+0AE2: 9@ = random_vehicle_near_point 1@ 2@ 3@ in_radius 50.0 find_next 0 pass_wrecked 1 //IF and SET
+if and
+not 9@ == -1 
+87D6:   not  9@ == 0@
+jf @followedwrong
+8@ = 1
+07F8: car 0@ follow_car 9@ radius 10.0
+0ACE: show_formatted_text_box "Following car..."
+jump @check
+
+:followedwrong
+0ACE: show_formatted_text_box "No car found."
+jump @check
+
+:end
+Car.RemoveReferences(0@)
+Car.RemoveReferences(9@)
+if
+87D6:   not  6@ == $PLAYER_ACTOR
+jf @start
+Actor.RemoveReferences(6@)
+jump @start
+
+:stopcj
+0605: actor $PLAYER_ACTOR perform_animation_sequence "getup_front" IFP_file "ped" 4.0 loop 0 0 0 0 time 1 // versionA
+jump @end

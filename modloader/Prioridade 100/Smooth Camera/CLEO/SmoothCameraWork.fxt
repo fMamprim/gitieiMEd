@@ -1,0 +1,20 @@
+SMCM_01 Front Speed
+SMCM_02 Side Speed
+SMCM_03 Updown Speed
+SMCM_04 Rotate Speed
+SMCM_05 Lookup Speed
+SMCM_06 Lookup Limit
+SMCM_07 Recovery Speed
+SMCM_08 Fade Accelerate
+SMCM_09 =>
+SMCM_10 
+SMCM_11 Load Parameters
+SMCM_12 Save Parameters
+SMCM_13 Save1
+SMCM_14 Save2
+SMCM_15 Save3
+SMCM_16 Save4
+SMCM_17 Save5
+SMCM_18 Cancel
+SMCM_19 Tilt Speed
+SMCM_20 Shift Coef

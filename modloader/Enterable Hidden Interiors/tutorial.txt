@@ -1,0 +1,23 @@
+SE VOCÊ USA TUNING MOD: Aumente a prioridade deste mod no modloader.ini:
+http://www.mixmods.com.br/2015/07/tutorial-dicas-tudo-sobre-mod-loader.html#priority
+
+---- Comandos ----
+Alguns comandos mudam dependente ao layout do seu teclado, isso é normal e pode acontecer em qualquer mod.
+
+Teclado ABNT ou US:
+Press     \-     para fechar o porão do porta-aviões
+Press     \=     para abrir o porão do porta-aviões
+
+Teclados ABNT:
+Press     ´-     para abaixar a plataforma pequena do porta-aviões
+Press     ´=     para levantar a plataforma pequena do porta-aviões
+Press     [-     para abaixar a plataforma grande do porta-aviões
+Press     [=     para levantar a plataforma grande do porta-aviões
+
+Teclado US:
+Press     [-     para abaixar a plataforma pequena do porta-aviões
+Press     [=     para levantar a plataforma pequena do porta-aviões
+Press     ]-     para abaixar a plataforma grande do porta-aviões
+Press     ]=     para levantar a plataforma grande do porta-aviões
+
+Por exemplo: Segurar \ e apertar - irá fechar o porão do porta-aviões.

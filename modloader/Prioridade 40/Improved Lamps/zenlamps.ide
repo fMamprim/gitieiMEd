@@ -1,0 +1,14 @@
+objs
+1215, bollardlight, zenlamps, 40, 2101252
+1226, lamppost3, zenlamps, 62, 36992
+1231, Streetlamp2, zenlamps, 55, 4232
+1232, Streetlamp1, zenlamps, 55, 4232
+1283, MTraffic1, zenlamps, 85, 32896
+1284, MTraffic2, zenlamps, 85, 32896
+1297, lamppost1, zenlamps, 59, 36992
+1350, CJ_TRAFFIC_LIGHT4, zenlamps, 60, 32768
+1352, CJ_TRAFFIC_LIGHT3, zenlamps, 60, 32768
+3460, vegaslampost, zenlamps, 62, 128
+3463, vegaslampost2, zenlamps, 62, 128
+1290, lamppost2, zenlamps, 150, 32896
+end

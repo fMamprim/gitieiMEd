@@ -1,0 +1,64 @@
+#	File:	Birds.dat                                       
+#	Description: Stores data about birds. Preferences, Size, Speed, etc.                                       
+#	Note: Use Window Line Ending Format (CR LF - \r\n) otherwise the file reading can fail. If you're using Notepad++ make sure that [Edit -> EOL Conversion -> Windows Format] is selected.                                       
+#	Author: Junior_Djjr - www.MixMods.com.br             
+#                                       
+#--------------------------------------------------------------------------------
+#	@Format:                                       
+#		A: 	Identifier[s]		- [15 chars max] A string identifying the bird, it will be used as the texture name.                                       
+#		B:	ForceBirdType[i]	- Force the bird to have a specific bird type (Used for spawning it in SCM). Use -1 if you won't use the bird with SCM!!! DON'T PUT HIGHER VALUES!!! (Recommendation of max value: 256)                                       
+#		C:	Spawning Town[@]	- The spawning town of the bird, see more below.                                       
+#		DA:	MinSpawnTime[i]		- The minimum time for bird spawn, in hours (24-hour clock format)                                       
+#		DB: MaxSpawnTime[i]		- The maximum time for bird spawn, in hours (24-hour clock format)                                       
+#		EA: MinBirdsInFlock[i]	- Minimum number of this bird type in a flock of birds	(Max 6)                                       
+#		EB: MaxBirdsInFlock[i]	- Maximum number of this bird type in a flock of birds	(Max 6)                                       
+#		FA: MinBirdHeight[f]	- Minimum height to the bird spawn - by default the height is relative to the coordinate 0.0 (Not recommended), you can change it using the flags, see more below.                                       
+#		FB: MaxBirdHeight[f]	- Maximum height to the bird spawn - /\                                       
+#		GA:	MinBirdSize[f]		- The minimum size of the bird                                       
+#		GB:	MaxBirdSize[f]		- The maximum size of the bird                                       
+#		H:	BirdDistance[f]		- If the bird is in this distance from the player it will start fading and will be destroyed. This will also be the distance that the bird will spawn from the player.                                       
+#		I:	BirdSpeed[f]		- Bird speed, what can I say?                                       
+#		J:	WingSpeed[i]		- Wing speed, please note that it's a divider. Higher values makes wings slow. Lower values makes wings faster. (Note: Use -1 for a stopped wing)                                       
+#		K:	Flags[@]			- Specifies the bird preferences and others, see more below.                                       
+#		                                       
+#                                       
+#	@Spawning Town:	                                       
+#		The spawning town is a couple of booleans specifying the spawning town...                                       
+#		Note that the digits are written in a human readable form! No need to calculate the hex value or something.                                       
+#			1st digit = Countryside                  
+#			2nd digit = Los Santos                  
+#			3rd digit = San Fierro                  
+#			4th digit = Las Venturas                  
+#			5th digit = Desert                                     
+#                                       
+#		Example: 01011	- This bird will spawn in San Fierro, Countyside and Desert.                                       
+#                                       
+#                                       
+#	@Flags:                                       
+#		The flags are a couple of booleans, each digit is a specific flag.                                       
+#		Note that the digits are written in a human readable form! No need to calculate the hex value or something.                                       
+#			1st digit = BIRD_SPAWN_NEAR_WATER			- The bird will spawn when there's water near                                       
+#			2nd digit = BIRD_GLIDABLE					- The bird will glid sometimes (stop fluttering sometimes)                                       
+#			3rd digit = BIRD_HEIGHT_RELATIVE_TO_CAMERA	- The bird [BirdHeight (FA/FB)] will be relative to the camera position                                       
+#			4th digit = BIRD_HEIGHT_RELATIVE_TO_GROUND 	- The bird [BirdHeight (FA/FB)] will be relative to the ground position                                       
+#                                       
+#	TIPS:                                       
+#		[*] Use flag BIRD_HEIGHT_RELATIVE_TO_CAMERA or flag BIRD_HEIGHT_RELATIVE_TO_GROUND!! Don't leave the height relative to coordinate 0.0!                                       
+#		[*] Keep [BirdDistance(H)] in armonny with [BirdHeight (FA/FB)], otherwise the bird will spawn suficiently high to be already BirdDistance far from the camera, and then will be destroyed.                                       
+#		[*] Use In-game Bird Dev Tool to create and debug your bird, it comes with the download of this mod.                                       
+#                                       
+#                                       
+# A					B			C			DA	DB		EA	EB		FA		FB			GA		GB			H		I		J		K
+
+dove		0	11110	8	20	1	3	6.000000	10.000000	0.400000	0.500000	70.000000	5.500000	800		0001
+hawk		1	00001	6	22	1	3	20.000000	40.000000	1.000000	1.500000	130.000000	3.000000	1300	0110
+seagull		2	11110	6	22	1	4	10.000000	20.000000	0.500000	0.600000	90.000000	4.000000	1100	1110
+owl			3	10001	0	6	1	1	10.000000	20.000000	0.400000	0.600000	70.000000	6.000000	600		0001
+vulture		4	10001	9	18	1	6	20.000000	40.000000	1.000000	2.000000	130.000000	2.000000	1300	0110
+wigeon		5	11100	7	12	1	6	10.000000	30.000000	0.300000	0.400000	90.000000	4.000000	780		1101
+lesser		6	10000	0	6	1	2	5.000000	15.000000	0.300000	0.400000	70.000000	6.000000	700		0001
+killdeer	7	10000	8	12	1	3	5.000000	15.000000	0.300000	0.400000	70.000000	6.000000	600		0001
+woodp		8	10000	6	11	1	2	5.000000	15.000000	0.300000	0.400000	70.000000	7.000000	550		0001
+bluebird	9	10001	8	11	1	2	5.000000	15.000000	0.300000	0.400000	70.000000	6.000000	700		0001
+crow		10	10001	15	21	1	6	5.000000	15.000000	0.400000	0.500000	70.000000	4.500000	800		0101
+warbler		11	10000	12	16	1	3	5.000000	15.000000	0.300000	0.400000	70.000000	6.000000	600		0001

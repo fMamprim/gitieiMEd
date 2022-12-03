@@ -1,0 +1,122 @@
+Version 4.0.1 : enhancements and bug fixed
+# bug fixed
+  - load saved vehicle paintjob color bug fixed
+  - save current vehicle confirm text bug fixed
+# enhancements
+  - add 30 slot save/load vehicle, now total slot is 60 on save/load vehicle
+
+
+Version 4.0.0 : Remake
+# Initial Remake
+  - all new
+
+
+Version 3.1.2 : enhancements, bug fixed, & add new feature
+# bug fixed
+  - mission vehicle destroyed/exploded bug fixed
+  - activated bug fixed
+  - and more bug fixed...
+# enhancements
+  - now scrolling the menu, the button can be hold
+  - shortcut key can enable/disable one by one
+  - new sound effect
+  - can changes font
+  - and much more...
+# Shortcut key added
+  - alt+1 = general option menu
+  - alt+2 = vehicle option menu
+  - alt+3 = wanted menu
+  - alt+4 = actor spawning menu
+  - alt+5 = vehicle spawning menu
+  - alt+6 = mission option menu
+  - alt+7 = teleporting menu
+  - alt+8 = time menu
+  - alt+9 = weapons menu
+  - alt+0 = weathers menu
+  - k = teleport to nearest vehicle as passenger
+# Language added
+  - language French (translated by brasser 80& completed)
+# General Option, menu added
+  - god mode upgraded, now CJ won't be able to die even explode inside the vehicle
+  - unlimited helath (similar god mode but different)
+  - health and armor regen menu (10 options)
+  - peds and traffic menu (19 options)
+  - air break upgraded (added time stopper)
+  - perfect stats upgraded
+  - gang weapon editor menu (edit all gang weapon)
+  - game graphic & display menu
+  - camera zoom menu (12 options)
+  - view info menu (3 options: fps counter, player Info, coords)
+  - solid water
+  - trainer option menu (6 options: triner colors, font style, menu sounds, shortcut key, languange, game stoped while menu appear)
+# Vehicle Option, menu added
+  - modification menu upgraded
+  - nitro option menu (nitro control: NFS nitro system)
+  - speed o meter & rpm upgraded (added nitro meter-if car have)
+  - explode current vehicle
+  - auto unflip and reapir
+  - train camera fix
+  - vehicle health menu (6 options)
+  - vehicle door menu (8 options)
+  - door status
+# Actor Spawning, menu added
+  - portable clothes menu (3 options)
+# Vehicle Spawning, menu added
+  - release jetpack anywhere
+# Teleporting, menu added
+  - teleport to last vehicle
+  - teleport nearest vehicle (move here, previously name "enter nearest vehicle" in the vehicle option menu)
+  - teleport nearest vehicle as passenger
+# Time, menu added
+  - hours
+  - minutes
+  - game speed modifier menu (10 options)
+  - weekday
+  - faster clock
+# Weapons, menu added
+  - have all weapons
+  - weapon modification menu (14 options)
+# Weapons, menu added
+  - sync weather with time and location
+  - custom weather
+
+
+Version 2.0.1 : enhancements & add new feature
+# Shortcut key added
+  - atl+Q = air break
+  - J = enter nearest vehicle
+  - ] = instant speed up
+  - [ = instant stop
+# Language added
+  - language Spanish (translated by iAboika)
+# General Option, menu added
+  - trainer color menu (can change theme color)
+  - suicide
+  - shortcut key (can enable/disable)
+  - keep position, if wasted/busted
+  - gravity control menu
+# Vehicle Option, menu added
+  - enter nearest vehicle (shortcut key ready)
+  - instant speed up (shortcut key ready)
+  - instant stop (shortcut key ready)
+  - drive-by/aim in car (hold click right to aim in car)
+  - perfect handling
+  - bicycle huge jump
+# Actor Spawning, menu added
+  - appearance menu (change clothes, hair, and tattoo)
+# Vehicle Spawning, menu added
+  - added vehicle menu
+  - input vehicle id
+  - appear vehicle id in bottom menu while driving
+# Teleporting, menu added
+  - go through door
+  - interior menu (teleport to interior)
+# Weapons, menu added
+  - auto aim/lock-on (aim+q/e = aim+weapon next/prev)
+  - added weapon menu
+# Other
+  - Replay F1 & F3 has disable (can enable again in RZL-Trainer.ini config but game must restart)
+  - and fix bug....
+
+
+Version 1.0.0 : Initial release

@@ -1,0 +1,9 @@
+Default Skin Own/Rig by 
+- rezkie71 ( Fiona Tutu Skin No 1 , Hikari Miyamoto No 2 , Honoka Towel No 3 , Misaki School No 4 , Luna Folklore No 5 , Luna Secret Heart No 6 )   
+- Nagi_sanzenin ( Alicia GER No 7 ) 
+- Ryosuke839 ( Koakuma TP No 8 )
+- Gombolori.net ( Neko Hanekawa No 9 and 10 )
+
+This is Add on skin . If you want to change , you can do it normal By replace it Manually
+
+The files will be error if txd and dff is Not suitable , you can change it with another one !!!

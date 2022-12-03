@@ -1,0 +1,19 @@
+GTA:SA Crashed, Debug Info Follows:
+
+GTA Info:
+
+Version: US 1.0
+Last File Loaded: AUDIO\CONFIG\BANKSLOT.DAT
+Last Library Loaded: 
+Error: Unknown
+
+Assembly Info:
+
+Exception At Address: 0x004DD5A3
+Exception Code: 0xc0000005 (EXCEPTION_ACCESS_VIOLATION)
+
+Registers:
+EAX: 0x00000000	EBX: 0x00000000
+ECX: 0x00000000	EDX: 0x00000000
+ESI: 0x00B6BD44	EDI: 0x0000001B
+EBP: 0x76F280E0	ESP: 0x0022FCA0

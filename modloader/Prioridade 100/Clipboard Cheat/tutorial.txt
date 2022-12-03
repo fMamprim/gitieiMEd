@@ -1,0 +1,4 @@
+= Como usar:
+ Simplesmente copie um cheat, por exemplo "HESOYAM" (sem aspas) e cole com Ctrl+V.
+ Também funciona em vários outros mods de ativação como um cheat, ou que você digita um texto.
+ Caso conflito com outro mod que também use Ctrl+V, você pode editar as teclas no arquivo .ini deste mod.

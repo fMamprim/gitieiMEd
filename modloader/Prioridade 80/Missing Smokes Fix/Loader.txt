@@ -1,0 +1,7 @@
+PT: Deixe esse arquivo no ModLoader (PC). Para Android/iOS ou até mesmo Xbox, você pode instalar manualmente colocando as linhas IDE e IPL do "Loader.txt" no gta.dat, e .dff e .col no .img. Mas pode ser necessário aumentar os limites do jogo com fastman92 limit adjuster.
+EN: Keep this file in ModLoader (PC). For Android/iOS or even Xbox, you can install manually by putting the IDE and IPL lines of "Loader.txt" in gta.dat, and .dff and .col in .img. But it may be necessary to increase game limits with fastman92 limit adjuster.
+
+IPL DATA\MAPS\Missing Smokes Fix.ipl
+IDE DATA\MAPS\Missing Smokes Fix.ide
+
+COLFILE 0 DATA\MAPS\Missing Smokes Fix.col

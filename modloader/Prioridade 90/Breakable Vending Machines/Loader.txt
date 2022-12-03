@@ -1,0 +1,2 @@
+IDE DATA\MAPS\Breakable Vending Machines.IDE
+COLFILE 0 DATA\MAPS\Breakable Vending Machines.COL

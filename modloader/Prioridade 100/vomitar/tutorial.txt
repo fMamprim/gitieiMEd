@@ -1,0 +1,29 @@
+- Copie SitSmokeDrink.cs para GTASA\CLEO
+
+
+CJ
+
+pode sentar, fumar um baseado, beber uísque, jogar uma garrafa, ficar bêbado, vomitar, fazer xixi
+
+
+Atribuição de teclas (certifique-se de que o NUMBLOCK está ligado/botão no canto superior esquerdo do NUMBLOCK para ligar/desligar):
+
+
+
+Sempre 2 botões ao mesmo tempo
+
+[Tab + Y ou Z ] = sentar
+
+[Tab + U ] = fumaça
+
+[Tab + I ] = bebida
+
+[Tab + O ] = vomitar
+
+[Tab + P ] = xixi
+
+quando CJ tem a garrafa, ele vai andar bêbado
+
+quando CJ tem a garrafa, pressione o botão de fogo para jogar a garrafa
+
+quando CJ tem o charuto, ele caminha para o corredor

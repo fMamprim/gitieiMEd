@@ -1,0 +1,4 @@
+ = Comando:
+Pressione K (funciona em qualquer veículo policial)
+Você pode editar o comando no arquivo spikes.ini do mod
+Há cheat "SPIKES" para se ativar em qualquer veículo.

@@ -1,0 +1,43 @@
+GTA SA 1.0.0.0 US
+Unhandled exception at 0x004C663B in gta_sa.exe (+0xc663b): 0xC0000005: Access violation reading location 0x00000018.
+    Register dump:
+        EAX: 0x00000000  EBX: 0x008E2C64  ECX: 0x00B1BF54  EDX: 0x00000000  
+        EDI: 0x00000001  ESI: 0x00B1BF54  EBP: 0xFFFFFFFF  EIP: 0x004C663B  
+        ESP: 0x0028F294  EFL: 0x00210206  CS: 0x00000023   SS: 0x0000002B   
+        GS: 0x0000002B   FS: 0x00000053   ES: 0x0000002B   DS: 0x0000002B   
+        
+    Stack dump:
+        0x0028F294:  00B71848 005B3D9F 00003C9F 113419C8 00003C9F 42C80000
+        0x0028F2AC:  00000000 00000000 0028F430 00825EA4 636F7061 61625F31
+        0x0028F2C4:  00003372 005389C4 00B71848 000001D8 6B636170 6F70615F
+        0x0028F2DC:  00003163 00B71848 00000200 113419C8 005B85E2 00B71848
+        0x0028F2F4:  017A64D0 01792580 0028F41C FFFFFFFF 008E2C90 00003C9E
+        0x0028F30C:  113419C8 00003C97 6C646F6D 6564616F 75745C72 676E696E
+        0x0028F324:  646F6D20 72617020 705C7374 206B6361 636F7061 70696C61
+        0x0028F33C:  31206573 6361705C 7061206B 6C61636F 65737069 692E3120
+        0x0028F354:  00006564 00000000 0028F37C 5BF4D059 01610000 00000000
+        0x0028F36C:  00000050 0000004F 0000000F 113419D8 0028F398 5BF47B7A
+        base: 0x00090000   top: 0x0028F294   bottom: 0x00290000
+        
+    Backtrace (may be wrong):
+        =>0x004C663B in gta_sa.exe (+0xc663b) (0x0028F294) 
+          0x005B3D9F in gta_sa.exe (+0x1b3d9f) (0x0028F2C4) 
+          0x005389C4 in gta_sa.exe (+0x1389c4) (0x0028F2E8) 
+          0x005B85E2 in gta_sa.exe (+0x1b85e2) (0x0028F35C) 
+          0x5BF4D059 GetPluginData+0xc1d9 in std.data.dll (+0x1bd059) (0x0028F37C) 
+          0x5BF47B7A GetPluginData+0x6cfa in std.data.dll (+0x1b7b7a) (0x0028F398) 
+          0x5BDA45FC in std.data.dll (+0x145fc) (0x0028F410) 
+          0x5BE655A0 in std.data.dll (+0xd55a0) (0x0028F41C) 
+          0x5BE62E60 in std.data.dll (+0xd2e60) (0x0028F43C) 
+          0x5BE655D0 in std.data.dll (+0xd55d0) (0x0028F464) 
+          0x5BE63247 in std.data.dll (+0xd3247) (0x0028F480) 
+          0x5BE6A537 in std.data.dll (+0xda537) (0x0028F528) 
+          0x5BE6730C in std.data.dll (+0xd730c) (0x0028F534) 
+          0x005B920B in gta_sa.exe (+0x1b920b) (0x0028F57C) 
+          0x5BF33A28 in std.data.dll (+0x1a3a28) (0x0028F638) 
+          0x5BF330D9 in std.data.dll (+0x1a30d9) (0x0028F668) 
+          0x5BF342F0 in std.data.dll (+0x1a42f0) (0x0028F690) 
+          0x5BE63247 in std.data.dll (+0xd3247) (0x0028F6AC) 
+          0x5BF34FA7 in std.data.dll (+0x1a4fa7) (0x0028F754) 
+        
+    

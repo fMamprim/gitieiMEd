@@ -1,0 +1,7 @@
+IDE data\maps\zenfoodkars.ide
+
+Made on 3ds max, Adobe Photoshop, and Substance Painter. Used some Jessica's HD textures (logos, etc) and ROSA's to mix with substance painter. 
+Stole 2DFX effect from Prelight Fixes mod (so smoke comes out of the pot on the noodle cart).
+Env vehicle pipeline is used on metal/steel surfaces of the noodle and ice cream carts (Needs SkyGFX ENV to work. Optional).
+
+Zeneric

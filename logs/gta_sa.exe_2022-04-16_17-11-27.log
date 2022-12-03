@@ -1,0 +1,43 @@
+GTA SA 1.0.0.0 US
+Unhandled exception at 0x006FC6E8 in gta_sa.exe (+0x2fc6e8): 0xC0000005: Access violation reading location 0x1168069D.
+    Register dump:
+        EAX: 0x00000000  EBX: 0x00000001  ECX: 0x0028F934  EDX: 0x0000002A  
+        EDI: 0x00000026  ESI: 0x00000000  EBP: 0x0028F97C  EIP: 0x006FC6E8  
+        ESP: 0x0028F924  EFL: 0x00010246  CS: 0x00000023   SS: 0x0000002B   
+        GS: 0x0000002B   FS: 0x00000053   ES: 0x0000002B   DS: 0x0000002B   
+        
+    Stack dump:
+        0x0028F924:  00000000 00000000 5C1A2AF5 00000026 437B967C C56601A2
+        0x0028F93C:  44AF04E7 0028F988 008376BC 0028F97C 0053C13B 0174E088
+        0x0028F954:  0174DF18 FFFFFFFF 0A549428 0028F97C 6A09E086 0053E986
+        0x0028F96C:  6972DCCA 0174DF18 6972E130 00000001 0028F994 6972C643
+        0x0028F984:  0028F9B4 0028F9CC 6977A858 00000000 0028F9BC 6972E06E
+        0x0028F99C:  6977FAB0 0174E088 6972316D 00000000 0028F99C 0028F9D4
+        0x0028F9B4:  00000001 0174DF08 0028F9D8 6972CB47 0028F9E0 0028FA94
+        0x0028F9CC:  0028FA74 6977A858 00000000 0028FA80 6972E617 6977F9C4
+        0x0028F9E4:  0174E088 6977AAC1 FFFFFFFF 00000000 6972E587 0028FA94
+        0x0028F9FC:  0000001A 00000001 00000000 054BCB18 657F6B78 0028FA24
+        base: 0x00090000   top: 0x0028F924   bottom: 0x00290000
+        
+    Backtrace (may be wrong):
+        =>0x006FC6E8 in gta_sa.exe (+0x2fc6e8) (0x0028F97C) 
+          0x6972C643 in modloader.asi (+0x1c643) (0x0028F994) 
+          0x6972E06E in modloader.asi (+0x1e06e) (0x0028F9BC) 
+          0x6972CB47 in modloader.asi (+0x1cb47) (0x0028F9D8) 
+          0x6972E617 in modloader.asi (+0x1e617) (0x0028FA80) 
+          0x6972E50C in modloader.asi (+0x1e50c) (0x0028FA8C) 
+          0x0053ECC2 in gta_sa.exe (+0x13ecc2) (0x0028FA94) 
+          0x00619B71 in gta_sa.exe (+0x219b71) (0x0028FAA8) 
+          0x00748DA0 in gta_sa.exe (+0x348da0) (0x0028FB48) 
+          0x6972E0D4 in modloader.asi (+0x1e0d4) (0x0028FB68) 
+          0x6972C7A8 in modloader.asi (+0x1c7a8) (0x0028FBA8) 
+          0x6972E10F in modloader.asi (+0x1e10f) (0x0028FBDC) 
+          0x6972CAD2 in modloader.asi (+0x1cad2) (0x0028FC0C) 
+          0x6972E92C in modloader.asi (+0x1e92c) (0x0028FCCC) 
+          0x6972E558 in modloader.asi (+0x1e558) (0x0028FCE4) 
+          0x6972C8AE in modloader.asi (+0x1c8ae) (0x0028FD24) 
+          0x6972E10F in modloader.asi (+0x1e10f) (0x0028FD58) 
+          0x6972CAD2 in modloader.asi (+0x1cad2) (0x0028FD88) 
+          0x6972E92C in modloader.asi (+0x1e92c) (0x0028FE48) 
+        
+    

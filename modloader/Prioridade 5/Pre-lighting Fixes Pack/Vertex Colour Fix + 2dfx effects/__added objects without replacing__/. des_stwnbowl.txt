@@ -1,0 +1,33 @@
+Fixes: night vertex colours
+ Adds: neons, lights
+---------------------------
+version 2
+
+type9 2dfx added from original dff
+---------------------------------------
+
+This mod uses a new timed neon object, add new entries into :
+
+1. countn2.ide
+insert between tobj and end
+
+18631, bowln, neontex, 225, 4, 20, 6
+
+2. countn2.ipl
+instert between last inst entry and end, like so
+
+18631, bowln, 256, -98.1953, 1180.06, 29.9344, 0, 0, 0, 1, -1
+end
+cull
+
+3. replace the original with accompanying des_stwnbowl.dff into gta3.img
+
+4. add to gta3.img : neontex.txd, bowln.col, bowln.dff
+
+your done
+------------------------------------------------
+
+By atfburner
+Free to use but credit plz.
+
+Thx to Dexx, Kam & Deniska for their max scripts

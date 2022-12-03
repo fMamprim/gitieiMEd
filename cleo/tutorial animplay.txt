@@ -1,0 +1,13 @@
+ Abra o arquivo .ini do mod para configurá-lo do jeito que quiser, trocando ou adicionando novas animações.
+
+ Comandos: Você pode recarregar o arquivo .ini pressionando R+L+D
+           Originalmente o mod vem configurado para:
+            Alt+1 (segure) = Falar e mover a boca
+            Alt+2 (segure) = Mover a boca
+            Alt+3 = Beber (Alt+' para parar)
+            Alt+4 = Sentar
+            Alt+5 = Mijar
+            Alt+6 = Fumar (Alt+' para parar)
+ 
+ Você pode criar novos arquivos .ini na pasta "cleo\Anims" com novas configurações.
+ Use no máximo 31 caracteres no nome do arquivo.

@@ -1,0 +1,55 @@
+#
+# Bird Dev Tool Text
+#
+BIRDDF ~1~.~1~
+BIRDDI ~1~
+
+BIRDD01 Bird Dev Tool
+BIRDD02 by LINK/2012
+
+BIRDD03 Tool Menu
+BIRDD04 Create New Bird Type
+BIRDD05 Edit Existing Bird Type
+BIRDD06 Hide Menu
+BIRDD07 Exit
+
+BIRDD08 Reload textures
+BIRDD09 Save Changes
+BIRDD10 Discard Changes
+
+BIRDD20 ~p~Select the bird name~n~Press ENTER to accept~n~Leave in blank to not change the bird name!
+BIRDD21 Type 'BIRDD' to open the menu
+BIRDD22 Sppiner speed:~n~CTRL To go fast~n~SHIFT to go very fast~n~ALT to go slow~n~~n~Press TAB to test bird~n~Press ~k~~PED_SPRINT~ to exit and save changes~n~Press ~k~~VEHICLE_ENTER_EXIT~ to exit and discard changes
+BIRDD23 Values with a pair of boxes are Min\Max values
+BIRDD24 ~p~Changes couldn't be saved
+BIRDD25 ~p~Changes have been saved
+BIRDD26 ~p~Textures reloaded
+BIRDD27 ~p~Select a valid bird name next time
+BIRDD28 Mouse Wheel: Zoom~n~CTRL + Mouse Wheel: Smooth Zoom~n~LMB + Move Mouse: Move camera
+BIRDD29 
+
+BIRDD30 Bird Name
+BIRDD31 Bird Spawning Town
+BIRDD32 Bird Values
+BIRDD33 Bird Flags
+
+BIRDD34 Countryside
+BIRDD35 Los Santos
+BIRDD36 San Fierro
+BIRDD37 Las Venturas
+BIRDD38 Desert
+
+BIRDD39 Spawn Time
+BIRDD40 Birds In Flock
+BIRDD41 Height
+BIRDD42 Size
+BIRDD43 Distance
+BIRDD44 Speed
+BIRDD45 Wing Speed Divider
+
+BIRDD51 BIRD_SPAWN_NEAR_WATER
+BIRDD52 BIRD_GLIDABLE
+BIRDD53 BIRD_HEIGHT_RELATIVE_TO_CAMERA
+BIRDD54 BIRD_HEIGHT_RELATIVE_TO_GROUND
+
+BIRDD70 ~p~You can't make bird height relative to ground and relative to camera at the same time.~n~Choose only one!

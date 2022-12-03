@@ -1,0 +1,43 @@
+#
+# filename: walkstyle.fxt
+# description: this file contains all cleo texts of the mod named walkstyle.cs.
+#
+#format is
+# entry name <space> entry value
+#
+# entry name: 	name of gxt entry read by scm
+# entry value:	name of gxt value where the text is stored
+#
+ANM1_1 Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select a group.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Exit
+ANM1_2 Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select a walkstyle.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Exit
+ANM1_3 Group List
+ANM1_4 Anim Group
+ANM1_5 Name
+ANM1_6 Num
+ANM1_7 Next
+ANM2_1 Man
+ANM2_2 Woman
+ANM2_3 Miscellaneous
+ANM3_1 Normal
+ANM3_2 Man
+ANM3_3 Shuffle
+ANM3_4 Oldman
+ANM3_5 Gang1
+ANM3_6 Gang2
+ANM3_7 Oldfatman
+ANM3_8 Fatman
+ANM3_9 Jogger
+ANM3_10 Drunkman
+ANM3_11 Blindman
+ANM3_12 Swat
+ANM3_13 Woman
+ANM3_14 Shopping
+ANM3_15 Busywoman
+ANM3_16 Sexywoman
+ANM3_17 Pro
+ANM3_18 Oldwoman
+ANM3_19 Fatwoman
+ANM3_20 Jogwoman
+ANM3_21 Oldfatwoman
+ANM3_22 Skate
+DRUNKMAN DRUNKMAN

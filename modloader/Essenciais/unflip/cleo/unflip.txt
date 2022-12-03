@@ -1,0 +1,28 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+thread 'UNFLIP' 
+wait 0 
+
+:UNFLIP_15
+wait 0 
+if 
+   Player.Defined($PLAYER_CHAR)
+else_jump @UNFLIP_15 
+if 
+   Player.Controllable($PLAYER_CHAR)
+else_jump @UNFLIP_15 
+if 
+   Actor.Driving($PLAYER_ACTOR)
+else_jump @UNFLIP_15 
+if 
+0AB0:   key_pressed 55 
+else_jump @UNFLIP_15 
+03C0: 5@ = actor $PLAYER_ACTOR car
+2@ = Actor.Angle($PLAYER_ACTOR) 
+Car.Angle(5@) = 2@
+else_jump @UNFLIP_15 
+jump @UNFLIP_15 

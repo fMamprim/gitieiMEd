@@ -1,0 +1,324 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+wait 0 
+
+:NONAME_4
+wait 0 
+if 
+   Player.Defined($PLAYER_CHAR)
+else_jump @NONAME_4 
+if and
+0@ = 304493 
+  &0(0@,1i) == 16711680 
+0AB0:   key_pressed 49 
+else_jump @NONAME_4 
+if 
+8818:   not actor $PLAYER_ACTOR in_air 
+else_jump @NONAME_1913 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 3@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 3@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 4@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 4@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 5@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 5@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 6@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 6@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 7@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 7@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 8@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 8@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 9@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 9@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 10@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 10@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 11@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 11@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 12@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 12@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 13@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 13@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 14@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 14@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 15@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 15@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 16@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 16@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 17@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 17@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 18@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 18@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 19@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 19@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 20@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 20@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 21@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 21@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 22@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 22@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 23@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 23@ walk_around_ped_path 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+wait 100 
+0376: 24@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 24@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 25@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 25@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 26@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 26@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 27@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 27@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 28@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 28@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 100.0 
+0376: 29@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 29@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 100.0 
+0376: 30@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 30@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 100.0 
+0376: 31@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 31@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 100.0 
+0376: 32@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 32@ walk_around_ped_path 
+
+:NONAME_1635
+wait 0 
+if 
+8AB0:   not key_pressed 49 
+else_jump @NONAME_1635 
+
+:NONAME_1654
+wait 0 
+if 
+   Player.Defined($PLAYER_CHAR)
+else_jump @NONAME_1733 
+if 
+   not Actor.Dead($PLAYER_ACTOR)
+else_jump @NONAME_1733 
+if 
+if and
+0@ = 304493 
+  &0(0@,1i) == 16711680 
+0AB0:   key_pressed 49 
+else_jump @NONAME_1654 
+
+:NONAME_1733
+wait 0 
+Actor.DestroyWithFade(3@)
+Actor.DestroyWithFade(4@)
+Actor.DestroyWithFade(5@)
+Actor.DestroyWithFade(6@)
+Actor.DestroyWithFade(7@)
+Actor.DestroyWithFade(8@)
+Actor.DestroyWithFade(9@)
+Actor.DestroyWithFade(10@)
+Actor.DestroyWithFade(11@)
+Actor.DestroyWithFade(12@)
+Actor.DestroyWithFade(13@)
+Actor.DestroyWithFade(14@)
+Actor.DestroyWithFade(15@)
+Actor.DestroyWithFade(16@)
+Actor.DestroyWithFade(17@)
+Actor.DestroyWithFade(18@)
+Actor.DestroyWithFade(19@)
+Actor.DestroyWithFade(20@)
+Actor.DestroyWithFade(21@)
+Actor.DestroyWithFade(22@)
+Actor.DestroyWithFade(23@)
+Actor.DestroyWithFade(24@)
+Actor.DestroyWithFade(25@)
+Actor.DestroyWithFade(26@)
+Actor.DestroyWithFade(27@)
+Actor.DestroyWithFade(28@)
+Actor.DestroyWithFade(29@)
+Actor.DestroyWithFade(30@)
+Actor.DestroyWithFade(31@)
+Actor.DestroyWithFade(32@)
+
+:NONAME_1887
+wait 0 
+if 
+8AB0:   not key_pressed 49 
+else_jump @NONAME_1887 
+jump @NONAME_4 
+
+:NONAME_1913
+wait 0 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 3@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 3@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 4@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 4@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 5@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 5@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 6@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 6@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 7@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 7@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 8@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 8@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 9@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 9@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 10@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 10@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 11@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 11@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 12@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 12@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 13@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 13@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 14@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 14@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 15@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 15@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 16@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 16@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 17@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 17@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 18@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 18@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 19@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 19@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 20@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 20@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 21@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 21@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 22@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 22@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 23@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 23@ walk_around_ped_path 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+wait 100 
+0376: 24@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 24@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 25@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 25@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 26@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 26@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 27@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 27@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 28@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 28@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset -2.0 0.0 -1.0 
+0376: 29@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 29@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 -2.0 -1.0 
+0376: 30@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 30@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 2.0 0.0 -1.0 
+0376: 31@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 31@ walk_around_ped_path 
+wait 100 
+04C4: store_coords_to 0@ 1@ 2@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 -1.0 
+0376: 32@ = create_random_actor_at 0@ 1@ 2@ 
+05DE: AS_actor 32@ walk_around_ped_path 
+jump @NONAME_1635 

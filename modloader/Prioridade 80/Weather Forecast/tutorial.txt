@@ -1,0 +1,5 @@
+ Abra a janela de estatísticas (tecla TAB) para ver o ícone.
+
+ Você pode mudar a posição e tamanho do ícone editando o arquivo .ini.
+
+ Para usar em mods de neve, deixe "SnowVersion = 1" no .ini.

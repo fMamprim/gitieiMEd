@@ -1,0 +1,35 @@
+Starting fastman92 limit adjuster 6.3, compilation time: Jan 22 2022 02:41:43 (UTC)
+Website: http://fastman92.com
+
+Launch time: 10-4-2022 15:26:37 (UTC), 12:26 (local)
+Launched during the day.
+
+Solution platform: WIN_X86
+FASTMAN92_LIMIT_ADJUSTER_RELEASE_DIRECTORY is not defined. Documentation files will not be written.
+Game detected: GTA SA 1.0 US HOODLUM 14383616 bytes
+Game uses dynamic image base? No
+Game preferred image base: 0x400000
+Game current image base: 0x400000
+
+Number of FLA modules: 70
+Delayed processing of limits? No
+
+Root base directory: 
+Root directory: C:\Users\FELIPE\Documents\gitieiMEd
+Initial directory: C:\Users\FELIPE\Documents\gitieiMEd
+INI filename: fastman92limitAdjuster_GTASA.ini
+
+Global exception handler has been registered.
+---------------------------------------------
+---------------------------------------------
+Error reporting going to be applied.
+GTA_ERROR_ATTEMPT_TO_LOAD_OBJECT_INSTANCE_WITH_UNDEFINED_ID enabled.
+GTA_ERROR_MODEL_DOES_NOT_HAVE_COLLISION_LOADED enabled.
+GTA_ERROR_CAR_GENERATOR_WITH_INVALID_MODEL_ID_IS_GETTING_REGISTERED enabled.
+GTA_ERROR_IMG_ARCHIVE_NEEDS_REBUILDING enabled.
+GTA_ERROR_STREAM_HANDLES_LIMIT_EXCEEDED enabled.
+Error reporting is applied now.
+---------------------------------------------
+---------------------------------------------
+Number of memory changes made: 28
+---------------------------------------------

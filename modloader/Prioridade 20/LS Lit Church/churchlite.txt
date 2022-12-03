@@ -1,0 +1,3 @@
+IDE data\maps\churchlite.ide
+IPL data\maps\churchlite.ipl
+COLFILE 0 data\maps\churchlite.col

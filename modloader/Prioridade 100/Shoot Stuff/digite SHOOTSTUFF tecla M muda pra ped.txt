@@ -1,0 +1,4 @@
+ = Importante:
+Altamente recomendado aumentar o limite "Vehicles" com algum limite adjuster.
+Por exemplo, no .ini do Open Limit Adjuster, aumente o limite "Vehicles = 110" para "Vehicles = 500" ou mais,
+caso contrário causará o crash 0x00536BE0.

@@ -1,0 +1,2118 @@
+//{$VERSION 3.1.0023}
+{$CLEO .cs}
+
+{
+ Skin Selector
+  by Ryosuke
+  http://gtasamod.web.fc2.com/
+}
+
+const
+// 定数 
+// ここの値を変更する際はﾌｧｲﾙ末尾のﾘｽﾄも変更すること 
+MAX_NORMAL_SKIN  = 288  // 通常ｽｷﾝ数 - 1 
+MAX_SPECIAL_SKIN =  31  // 特別ｽｷﾝ数 - 1 
+MAX_ADDON_SKIN   = 255  // 追加ｽｷﾝ数 - 1
+MAX_SPAWN_ACTORS =  63  // 出現させた人の最大記憶数 - 1
+ACTOR_EMPTY  = 0xFFFFFFFF       // 人が存在しないときの値
+end
+
+{
+ 変数
+  0@ ﾒﾓﾘｱﾄﾞﾚｽ
+  1@ ﾒﾓﾘ値
+  2@ 現在のｽｷﾝ
+  3@ ﾒﾆｭｰ中の通常ｽｷﾝ
+  4@ ﾒﾆｭｰ中の特別ｽｷﾝ
+  5@ ﾒﾆｭｰ中の追加ｽｷﾝ
+ 
+  6@ ﾀｲﾌﾟ
+  7@ ﾓﾃﾞﾙID 
+
+  8@ ｽｷﾝ種 
+  9@ ｽｷﾝID
+
+ 10@ gosub temp var
+ 11@ gosub temp var
+ 12@ 未使用 
+ 13@ 未使用 
+
+ 14@ 体脂肪
+ 15@ 筋力
+
+ 16@ ﾙｰﾌﾟ
+ 17@ ﾙｰﾌﾟ
+
+ 18@ 文字列1
+ 19@ 文字列1
+ 20@ 文字列1
+ 21@ 文字列1
+ 22@ 文字列1
+ 23@ 文字列1
+
+ 24@ 文字列2
+ 25@ 文字列2
+ 26@ 文字列2
+ 27@ 文字列2
+ 28@ 文字列2
+ 29@ 文字列2
+
+ 30@ ｱｰｶｲﾌﾞ1 
+ 31@ ｱｰｶｲﾌﾞ2
+ 
+ 32@ ｷｰﾀｲﾏｰ 
+ 33@ ｷｰﾀｲﾏｰ 
+}
+
+
+//================
+// ｽｸﾘﾌﾟﾄここから 
+//================
+
+thread 'SKIN_N' 
+0ABA: end_custom_thread_named 'SKIN'
+0ABA: end_custom_thread_named 'SKIN_C'
+0ABA: end_custom_thread_named 'SKIN_O'
+
+0006: 8@ = 0
+0006: 9@ = #NULL
+
+:SKIN_INIT
+wait 0
+if
+03D9:   save_done 
+jf @SKIN_INIT
+
+
+//=============
+// ﾘｽﾄの初期化 
+//=============
+
+// 通常ｽｷﾝ 
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_SKIN_NORMAL
+for 16@ = 0 to MAX_NORMAL_SKIN
+    for 17@ = 0 to 7
+        // ｱﾝﾀﾞｰﾊﾞｰをNULLに置き換え 
+        0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+        if
+        0039:   1@ == 0x5F
+        then
+            0A8C: write_memory 0@ size 1 value 0x00 virtual_protect 0
+        end
+        000A: 0@ += 1
+    end
+end
+
+// 特別ｽｷﾝ 
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_SPECIAL
+for 16@ = 0 to MAX_SPECIAL_SKIN
+    for 17@ = 0 to 7
+        // ｱﾝﾀﾞｰﾊﾞｰをNULLに置き換え 
+        0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+        if
+        0039:   1@ == 0x5F
+        then
+            0A8C: write_memory 0@ size 1 value 0x00 virtual_protect 0
+        end
+        000A: 0@ += 1
+    end
+end
+
+// 追加ｽｷﾝ 
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_ADDON
+for 16@ = 0 to MAX_ADDON_SKIN
+    for 17@ = 0 to 4
+        // NULLで埋める 
+        0A8C: write_memory 0@ size 4 value 0x00000000 virtual_protect 0
+        000A: 0@ += 4
+    end
+end
+
+
+//================================
+// skin.imgから追加ｽｷﾝのﾘｽﾄを生成 
+//================================
+
+0A99: chdir 0  // ｶﾚﾝﾄﾃﾞｨﾚｸﾄﾘを設定
+
+gosub @GET_ADDRESS
+000E: 0@ -= @SKIN_ARCHIVE_DIR
+if
+8AE4:  not directory_exists 0@ // skin.imgは存在するか?
+then
+    // skin.imgが見つからなかった場合 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_FILE_NOT_FOUND
+    gosub @SHOW_TEXT_BOX
+    0006: 2@ = -1
+    0006: 3@ = 0
+    0006: 4@ = 0
+    0006: 5@ = 0
+    jump @SKIN_MAIN
+end
+
+gosub @GET_ADDRESS
+000E: 0@ -= @SKIN_ARCHIVE_DIR
+0AA5: call 0x5387D0 num_params 1 pop 1 0@ // CFileDir::SetDir(dir) -- Use this instead to work in Mod Loader.
+
+gosub @GET_ADDRESS
+000E: 0@ -= @PATH_BUF
+if
+8AE6:  not 30@ = find_first_file "*.*" get_filename_to 0@ // skin.imgを開いてみる
+then
+    // skin.imgが開けなかった場合 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_FILE_CANT_READ
+    gosub @SHOW_TEXT_BOX
+    0006: 2@ = -1
+    0006: 3@ = 0
+    0006: 4@ = 0
+    0006: 5@ = 0
+    jump @SKIN_MAIN
+end
+
+0006: 2@ = 0
+while true
+    // .imgﾍｯﾀﾞ ﾌｧｲﾙ情報 ﾌｧｲﾙ名 24ﾊﾞｲﾄ 24@-29@へ格納
+    gosub @GET_ADDRESS
+    000E: 0@ -= @PATH_BUF
+    0006: 1@ = 24 // copy to 24@-29@
+    gosub @COPY_FROM_BUF_TO_STRING
+
+    // ﾌｧｲﾙ名を大文字に変換 
+    0A9F: 0@ = current_thread_pointer
+    000A: 0@ += 0xB3  // ｽﾚｯﾄﾞ情報中の29@のｱﾄﾞﾚｽ
+    for 16@ = 0 to 23
+        0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+        if and
+        0019:   1@ > 0x60 
+        001B:   0x7B > 1@ 
+        then
+            000A: 1@ += -0x20
+            0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+        end
+        000A: 0@ += -1
+    end
+
+    // 拡張子の置き換え 後ろから探す 
+    0A9F: 0@ = current_thread_pointer
+    000A: 0@ += 0xB3  // ｽﾚｯﾄﾞ情報中の29@のｱﾄﾞﾚｽ 
+    for 16@ = 0 to 23
+        0A8D: 1@ = read_memory 0@ size 4 virtual_protect 0
+        if
+        // 文字列中に.DFFが見つかれば.TXDに置き換え 
+        0039:   1@ == 0x4646442E
+        then
+            0A8C: write_memory 0@ size 4 value 0x4458542E virtual_protect 0
+            break
+        end
+        // 文字列中に.TXDが見つかれば.DFFに置き換え 
+        if
+        0039:   1@ == 0x4458542E
+        then
+            0A8C: write_memory 0@ size 4 value 0x4646442E virtual_protect 0
+            break
+        end
+        000A: 0@ += -1
+    end
+
+    if
+    8039:   not 16@ == 23  //.DFFまたは.TXDが見つかりﾙｰﾌﾟが中断されたか? 
+    then
+        // 対になっている.DFFまたは.TXDを探す
+        gosub @GET_ADDRESS
+        000E: 0@ -= @PATH_BUF 
+        if
+        8AE6:  not 31@ = find_first_file "*.*" get_filename_to 0@ // skin.imgを開いてみる
+        then
+            // skin.imgが開けなかった場合 
+            gosub @GET_ADDRESS
+            000E: 0@ -= @TEXT_FILE_CANT_READ
+            gosub @SHOW_TEXT_BOX
+            0A9B: closefile 30@
+            0006: 2@ = -1
+            0006: 3@ = 0
+            0006: 4@ = 0
+            0006: 5@ = 0
+            jump @SKIN_MAIN
+        end
+        
+        0006: 16@ = 0
+
+        // 現在探している位置まで進める 
+        while true
+            if
+            002D:   16@ >= 2@ // (int) 
+            then
+                break
+            end
+            // 1ﾌｧｲﾙ分の情報 32ﾊﾞｲﾄ 無視     
+            000A: 16@ += 1
+            
+            gosub @GET_ADDRESS
+            000E: 0@ -= @PATH_BUF 
+            0AE7: 0@ = find_next_file 31@ // IF and SET
+        end
+
+        while true
+        
+            gosub @GET_ADDRESS
+            000E: 0@ -= @PATH_BUF 
+            if 8AE7: not 0@ = find_next_file 31@ // .imgﾍｯﾀﾞ ﾌｧｲﾙ情報 ﾌｧｲﾙ名 24ﾊﾞｲﾄ 18@-23@へ格�
+            then
+                break
+            end
+             
+            gosub @GET_ADDRESS
+            000E: 0@ -= @PATH_BUF
+            0006: 1@ = 18 // copy to 18@-23@
+            gosub @COPY_FROM_BUF_TO_STRING
+
+            // ﾌｧｲﾙ名を大文字に変換 
+            0A9F: 0@ = current_thread_pointer
+            000A: 0@ += 0x9B  // ｽﾚｯﾄﾞ情報中の23@のｱﾄﾞﾚｽ
+            for 17@ = 0 to 23
+                0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+                if and
+                0019:   1@ > 0x60 
+                001B:   0x7B > 1@ 
+                then
+                    000A: 1@ += -0x20
+                    0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+                end
+                000A: 0@ += -1
+            end
+
+            // ﾌｧｲﾙ名が合致するか 
+            if and
+            003B:   18@ == 24@ // (int)
+            003B:   19@ == 25@ // (int)
+            003B:   20@ == 26@ // (int)
+            003B:   21@ == 27@ // (int)
+            003B:   22@ == 28@ // (int)
+            003B:   23@ == 29@ // (int)
+            then
+                // 拡張子を削除 
+                0A9F: 0@ = current_thread_pointer
+                000A: 0@ += 0xB3  // ｽﾚｯﾄﾞ情報中の29@のｱﾄﾞﾚｽ
+                for 17@ = 0 to 23
+                    0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+                    if
+                    0039:   1@ == 0x2E
+                    then
+                        0A8C: write_memory 0@ size 4 value 0x00000000 virtual_protect 0
+                        break
+                    end
+                    000A: 0@ += -1
+                end
+
+                // 追加ｽｷﾝﾘｽﾄへ登録    
+                gosub @GET_ADDRESS
+                000E: 0@ -= @LIST_ADDON
+                for 17@ = 0 to MAX_ADDON_SKIN
+                    0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+                    if
+                    0039:   1@ == 0x00  // 空いているか? 
+                    then
+                        0A8C: write_memory 0@ size 4 value 24@ virtual_protect 0
+                        000A: 0@ += 4
+                        0A8C: write_memory 0@ size 4 value 25@ virtual_protect 0
+                        000A: 0@ += 4
+                        0A8C: write_memory 0@ size 4 value 26@ virtual_protect 0
+                        000A: 0@ += 4
+                        0A8C: write_memory 0@ size 4 value 27@ virtual_protect 0
+                        000A: 0@ += 4
+                        0A8C: write_memory 0@ size 4 value 28@ virtual_protect 0
+                        break
+                    end
+                    000A: 0@ += 20
+                end
+                break
+            end 
+
+            000A: 16@ += 1  
+        end
+
+        0AE8: find_close 31@ // ﾌｧｲﾙを閉じる
+    end
+
+    000A: 2@ += 1
+    
+    gosub @GET_ADDRESS
+    000E: 0@ -= @PATH_BUF 
+    if 8AE7: not 0@ = find_next_file 30@ //ﾌｧｲﾙ情報の終端まで来たか? 
+    then
+        break
+    end
+end
+
+0AE8: find_close 30@ // ﾌｧｲﾙを閉じる 
+0A99: chdir 0
+
+// 変数の初期化 
+0006: 2@ = -1
+0006: 3@ = 0
+0006: 4@ = 0
+0006: 5@ = 0
+
+
+//=========
+// ﾒｲﾝﾙｰﾌﾟ 
+//=========
+
+:SKIN_MAIN
+wait 0
+
+if
+03D9:   save_done  // ｾｰﾌﾞされた場合,ﾘｽﾄを作り直す 
+jf @SKIN_INIT
+
+if
+0256:   player $PLAYER_CHAR defined  // ﾌﾟﾚｲﾔｰがいなければ無視 
+jf @SKIN_MAIN
+
+// 出現させた人の管理 
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_SPAWNED
+for 17@ = 0 to MAX_SPAWN_ACTORS
+    0A8D: 1@ = read_memory 0@ size 4 virtual_protect 0
+    if
+    056D:   actor 1@ defined  // 存在するか? 
+    then
+        if
+        051A:   actor 1@ damaged_by_actor $PLAYER_ACTOR 
+        then
+            0223: set_actor 1@ health_to 0 
+        end
+        if or
+        80F2:   not actor 1@ near_actor $PLAYER_ACTOR radius 100.0 100.0 0  // 遠くへ離れたか? 
+        0118:   actor 1@ dead  // 死亡したか? 
+        then
+            01C2: remove_references_to_actor 1@ // Like turning an actor into a random pedestrian 
+            0A8C: write_memory 0@ size 4 value ACTOR_EMPTY virtual_protect 0
+            continue
+        end
+        04DD: 16@ = actor 1@ armour 
+        if
+        0039:   16@ == 0
+        then
+            06AB: set_actor 1@ all_weapons_hidden 1 
+            07CB: set_actor 1@ supporting_fire 0
+            07DD: set_actor 1@ temper_to 75 // see pedstats.dat 
+            0006: 16@ = 2
+        else
+            07CB: set_actor 1@ supporting_fire 1
+            07DD: set_actor 1@ temper_to 25 // see pedstats.dat 
+            0006: 16@ = 4
+        end 
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 6
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 7
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 9
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 10
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 11
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 12
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 13
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 14
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 17
+        077A: set_actor 1@ default_action 16@ to_actors_pedtype 20
+    end
+    000A: 0@ += 4
+end
+
+// ｲﾝﾃﾘｱのﾁｪｯｸ 
+07B0: get_active_shop_name_to s$Current_Shop_GXT_Name // 8-byte string 
+077E: get_active_interior_to $ACTIVE_INTERIOR 
+if and
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'CSCHP'  // Binco
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'CSSPRT'  // Pro-Laps
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'LACS1'  // Sub Urban
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'CLOTHGP'  // Zip
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'CSDESGN'  // Victim
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'CSEXL'  // Didier Sachs
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'TATTOO'  // Tattoo Parlor
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'TATTO2'  // Tattoo Parlor
+jf @SKIN_CJ
+if and
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'TATTO3'  // Tattoo Parlor
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'BARBERS'  // Barber
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'BARBER2'  // Barber
+85AD:   not  s$CURRENT_SHOP_GXT_NAME == 'BARBER3'  // Barber
+8038:   not  $ACTIVE_INTERIOR == 14 
+86B9:   not cutscene_data_loaded 
+jf @SKIN_CJ 
+:SKIN_RTRN
+
+// 体型･ｽｸﾘﾌﾟﾄのﾁｪｯｸ 
+if
+8039:   not 2@ == -1 
+then
+    0653: 16@ = float_stat 21
+    if
+    8045:   not 14@ == 16@ // (float) 
+    then
+        062A: change_float_stat 21 to 14@
+    end 
+    0653: 17@ = float_stat 23
+    if
+    8045:   not 15@ == 17@ // (float) 
+    then
+        062A: change_float_stat 23 to 15@
+    end 
+end 
+
+gosub @SKIN_REST
+
+// ｽｷﾝを変更できる状態か? 
+if and
+03EE:   player $PLAYER_CHAR controllable
+80DF:   not actor $PLAYER_ACTOR driving 
+8597:   not actor $PLAYER_ACTOR crouching 
+8965:   not actor $PLAYER_ACTOR swimming 
+jf @SKIN_MAIN 
+
+// ｷｰのﾁｪｯｸ 
+if or
+80E1:   not player 0 pressed_key 4 
+80E1:   not player 0 pressed_key 5 
+jf @SKIN_PREV
+if or
+80E1:   not player 0 pressed_key 4 
+80E1:   not player 0 pressed_key 7 
+jf @SKIN_NEXT
+jump @SKIN_MAIN
+
+:SKIN_CJ
+if or
+8611:   not actor $PLAYER_ACTOR performing_animation "WALK_player" 
+05AD:   s$CURRENT_SHOP_GXT_NAME == 'TATTOO'  // Tattoo Parlor
+05AD:   s$CURRENT_SHOP_GXT_NAME == 'TATTO2'  // Tattoo Parlor
+05AD:   s$CURRENT_SHOP_GXT_NAME == 'TATTO3'  // Tattoo Parlor
+jf @SKIN_RTRN
+if or
+83EE:   not player $PLAYER_CHAR controllable
+05AD:   s$CURRENT_SHOP_GXT_NAME == 'TATTOO'  // Tattoo Parlor
+05AD:   s$CURRENT_SHOP_GXT_NAME == 'TATTO2'  // Tattoo Parlor
+05AD:   s$CURRENT_SHOP_GXT_NAME == 'TATTO3'  // Tattoo Parlor
+06B9:   cutscene_data_loaded 
+jf @SKIN_RTRN
+if
+8039:   not 2@ == -1
+jf @SKIN_MAIN
+// CJに戻す 
+09C7: change_player $PLAYER_CHAR model_to #NULL 
+0006: 2@ = -1
+jump @SKIN_MAIN
+
+:SKIN_REST
+if and
+8039:   not  8@ == 0 
+0039:   2@ == -1
+0AA1: return_if_false
+// CJから戻す 
+if
+0039:   8@ == 1
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_SKIN_NORMAL
+    0085: 17@ = 9@ // (int) 
+    0012: 17@ *= 8
+    005A: 0@ += 17@ // (int) 
+    0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+    if
+    8039:   not 1@ == 0x00  // ﾌｧｲﾙ名の無いものは無視 
+    then
+        if
+        0039:   2@ == -1 
+        then
+            0653: 14@ = float_stat 21 
+            0653: 15@ = float_stat 23
+        end 
+        0006: 2@ = -2
+        0085: 7@ = 9@ // (int) 
+        gosub @ACTOR_CHANGE
+    end
+end
+if
+0039:   8@ == 2
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_SPECIAL
+    0085: 16@ = 9@ // (int) 
+    0012: 16@ *= 8
+    005A: 16@ += 0@ // (int) 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @SKIN_LOAD
+    000A: 0@ += 6
+    for 17@ = 0 to 7
+        0A8D: 1@ = read_memory 16@ size 1 virtual_protect 0
+        0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+        000A: 0@ += 1
+        000A: 16@ += 1
+        gosub @ACTOR_CHANGE
+    end
+    if
+    0039:   2@ == -1 
+    then
+        0653: 14@ = float_stat 21 
+        0653: 15@ = float_stat 23
+    end 
+    0006: 2@ = -2
+    0006: 7@ = #SPECIAL10
+    gosub @ACTOR_CHANGE
+end
+if
+0039:   8@ == 3
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_ADDON
+    0085: 16@ = 9@ // (int) 
+    0012: 16@ *= 20
+    005A: 16@ += 0@ // (int) 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @SKIN_LOAD
+    000A: 0@ += 6
+    for 17@ = 0 to 19
+        0A8D: 1@ = read_memory 16@ size 1 virtual_protect 0
+        0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+        000A: 0@ += 1
+        000A: 16@ += 1
+    end
+    if
+    0039:   2@ == -1 
+    then
+        0653: 14@ = float_stat 21 
+        0653: 15@ = float_stat 23
+    end 
+    0085: 2@ = 9@ // (int) 
+    0006: 7@ = #SPECIAL10
+    gosub @ACTOR_CHANGE
+end
+return
+
+:SKIN_PREV
+wait 0
+
+// ﾒﾆｭｰを開く 
+if or
+80E1:   not player 0 pressed_key 5 
+80E1:   not player 0 pressed_key 7 
+jf @SKIN_MENU
+
+// 前のｽｷﾝ 
+if
+80E1:   not player 0 pressed_key 5 
+jf @SKIN_PREV
+if
+0039:   2@ == -1 
+then
+    0653: 14@ = float_stat 21 
+    0653: 15@ = float_stat 23
+end 
+if
+0039:   2@ == -2  // ﾒﾆｭｰから選んでいた場合 
+then
+    0006: 2@ = -1
+else
+    000A: 2@ += -1
+end
+if
+001B:   -1 > 2@ 
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_ADDON
+    for 16@ = 0 to MAX_ADDON_SKIN
+        0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+        if
+        0039:   1@ == 0x00
+        then
+            break
+        end
+        000A: 0@ += 20
+    end
+    000A: 16@ += -1
+    0085: 2@ = 16@ // (int) 
+end
+if
+8039:   not 2@ == -1 
+then
+    0085: 5@ = 2@ // (int) 
+end 
+jump @SKIN_6
+
+:SKIN_NEXT
+wait 0
+
+// ﾒﾆｭｰを開く 
+if or
+80E1:   not player 0 pressed_key 5 
+80E1:   not player 0 pressed_key 7 
+jf @SKIN_MENU
+
+// 次のｽｷﾝ 
+if
+80E1:   not player 0 pressed_key 7 
+jf @SKIN_NEXT
+if
+0039:   2@ == -1 
+then
+    0653: 14@ = float_stat 21 
+    0653: 15@ = float_stat 23
+end 
+if
+0039:   2@ == -2  // ﾒﾆｭｰから選んでいた場合
+then
+    0006: 2@ = -1
+else
+    000A: 2@ += 1
+end
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_ADDON
+for 16@ = 0 to MAX_ADDON_SKIN
+    0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+    if
+    0039:   1@ == 0x00
+    then
+        break
+    end
+    000A: 0@ += 20
+end
+000A: 16@ += -1
+if
+001D:   2@ > 16@ // (int) 
+then
+    0006: 2@ = -1
+end
+if
+8039:   not 2@ == -1 
+then
+    0085: 5@ = 2@ // (int) 
+end 
+jump @SKIN_6
+
+:SKIN_6
+if
+0039:   2@ == -1
+then
+    0006: 8@ = 0
+    09C7: change_player $PLAYER_CHAR model_to #NULL 
+else
+    0006: 8@ = 3
+    0085: 9@ = 2@ // (int) 
+    0653: 14@ = float_stat 21 
+    0653: 15@ = float_stat 23
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_ADDON
+    0085: 16@ = 2@ // (int) 
+    0012: 16@ *= 20
+    005A: 16@ += 0@ // (int) 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @SKIN_LOAD
+    000A: 0@ += 6
+    for 17@ = 0 to 19
+        0A8D: 1@ = read_memory 16@ size 1 virtual_protect 0
+        0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+        000A: 0@ += 1
+        000A: 16@ += 1
+    end
+    000A: 16@ += -20
+    for 17@ = 0 to 4
+        0A8D: 24@(17@,6i) = read_memory 16@ size 4 virtual_protect 0
+        000A: 16@ += 4
+    end
+    gosub @SKIN_LOAD
+    09C7: change_player $PLAYER_CHAR model_to #SPECIAL10 
+    0296: unload_special_actor 10 
+end 
+jump @SKIN_MAIN
+
+
+//========== 
+// ﾒﾆｭｰ処理 
+//==========
+
+:SKIN_MENU
+01B4: toggle_player $PLAYER_CHAR can_move 0 
+04C4: store_coords_to 18@ 19@ 20@ from_actor $PLAYER_ACTOR with_offset -0.75 3.0 1.0 
+015F: set_camera_position 18@ 19@ 20@ rotation 0.0 0.0 0.0 
+04C4: store_coords_to 18@ 19@ 20@ from_actor $PLAYER_ACTOR with_offset 0.75 0.0 0.25
+0160: set_camera_point_at 18@ 19@ 20@ mode 2 
+
+// ﾒﾆｭｰを表示 
+gosub @GET_ADDRESS
+000E: 0@ -= @TEXT_SKIN_MENU
+gosub @SHOW_TEXT_BOX
+gosub @WRITE_TEXT_CLEAR
+
+:SKIN_MLOOP
+wait 0
+0006: 32@ = 0
+0006: 33@ = 0
+
+// 通常ｽｷﾝ 
+if
+00E1:   player 0 pressed_key 17 
+then
+    gosub @KEY_WAIT
+    gosub @WRITE_TEXT_NORMAL
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    gosub @SHOW_TEXT_BOX
+    jump @SKIN_NLOOP
+end
+
+// 特別ｽｷﾝ 
+if
+00E1:   player 0 pressed_key 14 
+then
+    gosub @KEY_WAIT
+    gosub @WRITE_TEXT_SPECIAL
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    gosub @SHOW_TEXT_BOX
+    jump @SKIN_SLOOP
+end
+
+// 追加ｽｷﾝ 
+if
+00E1:   player 0 pressed_key 16 
+then
+    gosub @KEY_WAIT
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_ADDON
+    for 23@ = 0 to MAX_ADDON_SKIN
+        0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+        if
+        0039:   1@ == 0x00
+        then
+            break
+        end
+        000A: 0@ += 20
+    end
+    gosub @WRITE_TEXT_ADDON
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    gosub @SHOW_TEXT_BOX
+    jump @SKIN_ALOOP
+end
+
+// 服装
+if
+00E1:   player 0 pressed_key 18 
+then
+    gosub @KEY_WAIT
+    0512: show_permanent_text_box 'WARDH1'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select a shop.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Quit
+    08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+    08DB: set_panel 23@ column 0 header 'DUMMY' data 'SHOP1' 'SHOP2' 'SHOP3' 'SHOP4' 'SHOP5' 'SHOP6' 'SHOP7' 'REMCLT' 'BARBERS' 'BARBER2' 'BARBER3' 'DUMMY' 
+    if
+    8039:   not 2@ == -1
+    jf @SKIN_CLOOP
+    09C7: change_player $PLAYER_CHAR model_to #NULL 
+    0006: 2@ = -1
+    jump @SKIN_CLOOP
+end
+
+// 体型
+if
+00E1:   player 0 pressed_key 19 
+then
+    gosub @KEY_WAIT
+    0653: 20@ = float_stat 21 
+    0653: 21@ = float_stat 23
+    0092: 20@ = float 20@ to_integer 
+    0092: 21@ = float 21@ to_integer 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_SHAPE
+    gosub @SHOW_TEXT_BOX
+    08D4: 23@ = create_panel_with_title 'DUMMY' position 29.0 145.0 width 186.0 columns 2 interactive 1 background 1 alignment 1  // 
+    08D6: set_panel 23@ column 0 alignment 1 
+    08DB: set_panel 23@ column 0 header 'DUMMY' data 'STAT021' 'STAT023' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+    08D6: set_panel 23@ column 1 alignment 2 
+    08DB: set_panel 23@ column 1 header 'DUMMY' data 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+    08EE: set_panel 23@ column 1 row 0 text_1number GXT 'NUMBER' number 20@  // ~1~
+    08EE: set_panel 23@ column 1 row 1 text_1number GXT 'NUMBER' number 21@  // ~1~
+    09DB: set_panel 23@ column 0 width 140 
+    09DB: set_panel 23@ column 1 width 46 
+    if
+    8039:   not 2@ == -1
+    jf @SKIN_FLOOP
+    09C7: change_player $PLAYER_CHAR model_to #NULL 
+    0006: 2@ = -1
+    jump @SKIN_FLOOP
+end
+
+// 戻る 
+if
+00E1:   player 0 pressed_key 15 
+jf @SKIN_MLOOP
+while 00E1:   player 0 pressed_key 15
+    wait 0
+end
+03E6: remove_text_box 
+015A: restore_camera 
+01B4: toggle_player $PLAYER_CHAR can_move 1 
+0687: clear_actor $PLAYER_ACTOR task 
+jump @SKIN_MAIN
+
+// 通常ｽｷﾝ 
+:SKIN_NLOOP
+wait 0
+gosub @GET_KEY
+if
+001D:   32@ > 22@ // (int) 
+then
+    0006: 32@ = 0
+    if
+    001B:   -64 > 21@ 
+    then
+        000A: 3@ += -1
+    end
+    if
+    0019:   21@ > 64 
+    then
+        000A: 3@ += 1
+    end
+    if
+    001B:   0 > 3@ 
+    then
+        0006: 3@ = 0
+    end
+    if
+    0019:   3@ > MAX_NORMAL_SKIN
+    then
+        0006: 3@ = MAX_NORMAL_SKIN
+    end
+    gosub @WRITE_TEXT_CLEAR
+    gosub @WRITE_TEXT_NORMAL
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    gosub @SHOW_TEXT_BOX
+end 
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_SKIN_NORMAL
+0085: 17@ = 3@ // (int) 
+0012: 17@ *= 8
+005A: 0@ += 17@ // (int) 
+0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+if and
+00E1:   player 0 pressed_key 16
+8039:   not 1@ == 0x00  // ﾌｧｲﾙ名の無いものは無視 
+then
+    018C: play_sound 1052 at 0.0 0.0 0.0 
+    0006: 8@ = 1
+    0085: 9@ = 3@ // (int) 
+    if
+    0039:   2@ == -1 
+    then
+        0653: 14@ = float_stat 21 
+        0653: 15@ = float_stat 23
+    end 
+    0006: 2@ = -2
+    0085: 7@ = 3@ // (int) 
+    gosub @ACTOR_CHANGE
+    gosub @KEY_WAIT
+end
+if and
+00E1:   player 0 pressed_key 17 
+8039:   not 1@ == 0x00  // ﾌｧｲﾙ名の無いものは無視 
+then
+    018C: play_sound 1052 at 0.0 0.0 0.0 
+    0006: 6@ = 4
+    0085: 7@ = 3@ // (int) 
+    gosub @ACTOR_CREATE
+    gosub @KEY_WAIT
+end
+if and
+00E1:   player 0 pressed_key 14 
+8039:   not 1@ == 0x00  // ﾌｧｲﾙ名の無いものは無視 
+then
+    018C: play_sound 1052 at 0.0 0.0 0.0 
+    0006: 6@ = 2
+    0085: 7@ = 3@ // (int) 
+    gosub @ACTOR_CREATE
+    gosub @KEY_WAIT
+end
+if
+80E1:   not player 0 pressed_key 15 
+jf @SKIN_BACK
+jump @SKIN_NLOOP
+
+// 特別ｽｷﾝ 
+:SKIN_SLOOP
+wait 0
+gosub @GET_KEY
+if
+001D:   32@ > 22@ // (int) 
+then
+    0006: 32@ = 0
+    if
+    001B:   -64 > 21@ 
+    then
+        000A: 4@ += -1
+    end
+    if
+    0019:   21@ > 64 
+    then
+        000A: 4@ += 1
+    end
+    if
+    001B:   0 > 4@ 
+    then
+        0006: 4@ = 0
+    end
+    if
+    0019:   4@ > MAX_SPECIAL_SKIN 
+    then
+        0006: 4@ = MAX_SPECIAL_SKIN
+    end
+    gosub @WRITE_TEXT_CLEAR
+    gosub @WRITE_TEXT_SPECIAL
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    gosub @SHOW_TEXT_BOX
+end 
+if or
+00E1:   player 0 pressed_key 16
+00E1:   player 0 pressed_key 17
+00E1:   player 0 pressed_key 14
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_SPECIAL
+    0085: 16@ = 4@ // (int) 
+    0012: 16@ *= 8
+    005A: 16@ += 0@ // (int) 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @SKIN_LOAD
+    000A: 0@ += 6
+    for 17@ = 0 to 7
+        0A8D: 1@ = read_memory 16@ size 1 virtual_protect 0
+        0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+        000A: 0@ += 1
+        000A: 16@ += 1
+    end
+    018C: play_sound 1052 at 0.0 0.0 0.0 
+    if
+    00E1:   player 0 pressed_key 16
+    then
+        0006: 8@ = 2
+        0085: 9@ = 4@ // (int) 
+        if
+        0039:   2@ == -1 
+        then
+            0653: 14@ = float_stat 21 
+            0653: 15@ = float_stat 23
+        end 
+        0006: 2@ = -2
+        0006: 7@ = #SPECIAL10
+        gosub @ACTOR_CHANGE
+        gosub @KEY_WAIT
+    end
+    if
+    00E1:   player 0 pressed_key 17 
+    then
+        0006: 6@ = 4
+        0006: 7@ = #SPECIAL10
+        gosub @ACTOR_CREATE
+        gosub @KEY_WAIT
+    end
+    if
+    00E1:   player 0 pressed_key 14 
+    then
+        0006: 6@ = 2
+        0006: 7@ = #SPECIAL10
+        gosub @ACTOR_CREATE
+        gosub @KEY_WAIT
+    end
+end
+if
+80E1:   not player 0 pressed_key 15 
+jf @SKIN_BACK
+jump @SKIN_SLOOP
+
+// 追加ｽｷﾝ 
+:SKIN_ALOOP
+wait 0
+gosub @GET_KEY
+if
+001D:   32@ > 22@ // (int) 
+then
+    0006: 32@ = 0
+    if
+    001B:   -64 > 21@ 
+    then
+        000A: 5@ += -1
+    end
+    if
+    0019:   21@ > 64 
+    then
+        000A: 5@ += 1
+    end
+    if
+    001B:   0 > 5@ 
+    then
+        0006: 5@ = 0
+    end
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_ADDON
+    for 23@ = 0 to MAX_ADDON_SKIN
+        0A8D: 1@ = read_memory 0@ size 1 virtual_protect 0
+        if
+        0039:   1@ == 0x00
+        then
+            break
+        end
+        000A: 0@ += 20
+    end
+    000A: 23@ += -1
+    if
+    0019:   5@ > 23@ 
+    then
+        0085: 5@ = 23@ // (int) 
+    end
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    000A: 0@ += 115
+    gosub @WRITE_TEXT_CLEAR
+    000A: 23@ += 1
+    gosub @WRITE_TEXT_ADDON
+    gosub @GET_ADDRESS
+    000E: 0@ -= @TEXT_SKIN_LIST
+    gosub @SHOW_TEXT_BOX
+end 
+if or
+00E1:   player 0 pressed_key 16
+00E1:   player 0 pressed_key 17
+00E1:   player 0 pressed_key 14
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_ADDON
+    0085: 16@ = 5@ // (int) 
+    0012: 16@ *= 20
+    005A: 16@ += 0@ // (int) 
+    gosub @GET_ADDRESS
+    000E: 0@ -= @SKIN_LOAD
+    000A: 0@ += 6
+    for 17@ = 0 to 19
+        0A8D: 1@ = read_memory 16@ size 1 virtual_protect 0
+        0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+        000A: 0@ += 1
+        000A: 16@ += 1
+    end
+    018C: play_sound 1052 at 0.0 0.0 0.0 
+    if
+    00E1:   player 0 pressed_key 16
+    then
+        0006: 8@ = 3
+        0085: 9@ = 5@ // (int) 
+        000A: 16@ += -20
+        for 17@ = 0 to 4
+            0A8D: 24@(17@,6i) = read_memory 16@ size 4 virtual_protect 0
+            000A: 16@ += 4
+        end
+        if
+        0039:   2@ == -1 
+        then
+            0653: 14@ = float_stat 21 
+            0653: 15@ = float_stat 23
+        end 
+        0085: 2@ = 5@ // (int) 
+        0006: 7@ = #SPECIAL10
+        gosub @ACTOR_CHANGE
+        gosub @KEY_WAIT
+    end
+    if
+    00E1:   player 0 pressed_key 17 
+    then
+        0006: 6@ = 4
+        0006: 7@ = #SPECIAL10
+        gosub @ACTOR_CREATE
+        gosub @KEY_WAIT
+    end
+    if
+    00E1:   player 0 pressed_key 14 
+    then
+        0006: 6@ = 2
+        0006: 7@ = #SPECIAL10
+        gosub @ACTOR_CREATE
+        gosub @KEY_WAIT
+    end
+end
+if
+80E1:   not player 0 pressed_key 15 
+jf @SKIN_BACK
+jump @SKIN_ALOOP
+
+// 服装
+:SKIN_CLOOP
+wait 0
+if
+00E1:   player 0 pressed_key 16
+then
+    gosub @KEY_WAIT
+    08D8: 22@ = panel 23@ selected_row 
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box 
+    if
+    001B:   6 > 22@ 
+    then
+        0512: show_permanent_text_box 'WARDH2'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select an area.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Back
+        08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+        if
+        0039:   22@ == 0
+        then
+            05AA: 24@s = 'CSCHP' 
+        end
+        if
+        0039:   22@ == 1
+        then
+            05AA: 24@s = 'CSSPRT' 
+        end
+        if
+        0039:   22@ == 2
+        then
+            05AA: 24@s = 'LACS1' 
+        end
+        if
+        0039:   22@ == 3
+        then
+            05AA: 24@s = 'CLOTHGP' 
+        end
+        if
+        0039:   22@ == 4
+        then
+            05AA: 24@s = 'CSDESGN' 
+        end
+        if
+        0039:   22@ == 5
+        then
+            05AA: 24@s = 'CSEXL' 
+        end
+        08DB: set_panel 23@ column 0 header 'DUMMY' data 'TORSO' 'LEGS' 'FEET' 'CHAINS' 'WATCHES' 'SHADES' 'HATS' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+        jump @SKIN_CLOOP2
+    end
+    if
+    0039:   22@ == 6
+    then
+        0006: 18@ = 17
+        05AA: 24@s = 'UNIFORM' 
+        0512: show_permanent_text_box 'WARDH3'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select an item.~N~~k~~PED_SPRINT~ View~N~~k~~VEHICLE_ENTER_EXIT~ Back
+        08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+        for 16@ = 0 to 11
+            05A9: $9897(16@,12s) = 'DUMMY'
+        end
+        075E: load_shopping_data_PRICES_subsection 24@s // v$ 
+        075D: load_shopping_data_SHOPS_subsection "CLOTHES" // v$ 
+        075F: store_shopping_data_entries_number_to 17@ 
+        0006: 16@ = 0
+        0006: 20@ = 0
+        while 001D:   17@ > 16@ // (int) 
+            0760: store_shopping_data_index 16@ textureCRC_to 19@ 
+            000A: 16@ += 1 
+            0783: get_shopping_item_with_textureCRC 19@ flag 1 store_to 21@ 
+            if
+            803B:   not  21@ == 18@ // (int) 
+            then
+                continue
+            end
+            0783: get_shopping_item_with_textureCRC 19@ flag 0 store_to 21@ 
+            078C: get_shopping_item_with_textureCRC 19@ nametag_to 26@s // 8-byte string 
+            008A: $2438(20@,12i) = 19@ // (int) 
+            008A: $2474(20@,12i) = 21@ // (int) 
+            05A9: $9897(20@,12s) = 26@s
+            000A: 20@ += 1
+            if
+            0039:   20@ == 12
+            then
+                break
+            end 
+        end
+        087C: release_shopping_data 
+        08DB: set_panel 23@ column 0 header 'DUMMY' data s$9897[0] s$9897[1] s$9897[2] s$9897[3] s$9897[4] s$9897[5] s$9897[6] s$9897[7] s$9897[8] s$9897[9] s$9897[10] s$9897[11] 
+        jump @SKIN_CLOOP3
+    end
+    if
+    0039:   22@ == 7
+    then
+        0512: show_permanent_text_box 'WARDH2'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select an area.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Back
+        08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+        08DB: set_panel 23@ column 0 header 'DUMMY' data 'TORSO' 'LEGS' 'FEET' 'CHAINS' 'WATCHES' 'SHADES' 'HATS' 'SHOP7' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+        jump @SKIN_CLOOP4
+    end
+    if
+    0019:   22@ > 7 
+    then
+        0006: 18@ = 1
+        if
+        0039:   22@ == 8
+        then
+            05AA: 24@s = 'BARBERS' 
+        end
+        if
+        0039:   22@ == 9
+        then
+            05AA: 24@s = 'BARBER2' 
+        end
+        if
+        0039:   22@ == 10
+        then
+            05AA: 24@s = 'BARBER3' 
+        end
+        0512: show_permanent_text_box 'WARDH3'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select an item.~N~~k~~PED_SPRINT~ View~N~~k~~VEHICLE_ENTER_EXIT~ Back
+        08D4: 23@ = create_panel_with_title 'HAIRSTY' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Hairstyle
+        for 16@ = 0 to 11
+            05A9: $9897(16@,12s) = 'DUMMY'
+        end
+        075E: load_shopping_data_PRICES_subsection 24@s // v$ 
+        075D: load_shopping_data_SHOPS_subsection "HAIRCUTS" // v$ 
+        075F: store_shopping_data_entries_number_to 17@ 
+        0006: 16@ = 0
+        0006: 20@ = 0
+        while 001D:   17@ > 16@ // (int) 
+            0760: store_shopping_data_index 16@ textureCRC_to 19@ 
+            000A: 16@ += 1 
+            0783: get_shopping_item_with_textureCRC 19@ flag 1 store_to 21@ 
+            if
+            803B:   not  21@ == 18@ // (int) 
+            then
+                continue
+            end
+            0783: get_shopping_item_with_textureCRC 19@ flag 0 store_to 21@ 
+            078C: get_shopping_item_with_textureCRC 19@ nametag_to 26@s // 8-byte string 
+            008A: $2438(20@,12i) = 19@ // (int) 
+            008A: $2474(20@,12i) = 21@ // (int) 
+            05A9: $9897(20@,12s) = 26@s
+            000A: 20@ += 1
+            if
+            0039:   20@ == 12
+            then
+                break
+            end 
+        end
+        087C: release_shopping_data 
+        08DB: set_panel 23@ column 0 header 'DUMMY' data s$9897[0] s$9897[1] s$9897[2] s$9897[3] s$9897[4] s$9897[5] s$9897[6] s$9897[7] s$9897[8] s$9897[9] s$9897[10] s$9897[11] 
+        jump @SKIN_CLOOP3
+    end
+end
+if
+00E1:   player 0 pressed_key 15 
+then
+    gosub @KEY_WAIT
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box
+    gosub @SKIN_REST 
+    jump @SKIN_MENU
+end
+jump @SKIN_CLOOP
+
+:SKIN_CLOOP2
+wait 0
+if
+00E1:   player 0 pressed_key 16
+then
+    gosub @KEY_WAIT
+    08D8: 18@ = panel 23@ selected_row 
+    gosub @GET_BODYPART
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box 
+    0512: show_permanent_text_box 'WARDH3'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select an item.~N~~k~~PED_SPRINT~ View~N~~k~~VEHICLE_ENTER_EXIT~ Back
+    08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+    for 16@ = 0 to 11
+        05A9: $9897(16@,12s) = 'DUMMY'
+    end
+    075E: load_shopping_data_PRICES_subsection 24@s // v$ 
+    075D: load_shopping_data_SHOPS_subsection "CLOTHES" // v$ 
+    075F: store_shopping_data_entries_number_to 17@ 
+    0006: 16@ = 0
+    0006: 20@ = 0
+    while 001D:   17@ > 16@ // (int) 
+        0760: store_shopping_data_index 16@ textureCRC_to 19@ 
+        000A: 16@ += 1 
+        0783: get_shopping_item_with_textureCRC 19@ flag 1 store_to 21@ 
+        if
+        803B:   not  21@ == 18@ // (int) 
+        then
+            continue
+        end
+        0783: get_shopping_item_with_textureCRC 19@ flag 0 store_to 21@ 
+        078C: get_shopping_item_with_textureCRC 19@ nametag_to 26@s // 8-byte string 
+        008A: $2438(20@,12i) = 19@ // (int) 
+        008A: $2474(20@,12i) = 21@ // (int) 
+        05A9: $9897(20@,12s) = 26@s
+        000A: 20@ += 1
+        if
+        0039:   20@ == 12
+        then
+            break
+        end 
+    end
+    087C: release_shopping_data 
+    08DB: set_panel 23@ column 0 header 'DUMMY' data s$9897[0] s$9897[1] s$9897[2] s$9897[3] s$9897[4] s$9897[5] s$9897[6] s$9897[7] s$9897[8] s$9897[9] s$9897[10] s$9897[11] 
+    jump @SKIN_CLOOP3
+end
+if
+00E1:   player 0 pressed_key 15 
+then
+    gosub @KEY_WAIT
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box 
+    0512: show_permanent_text_box 'WARDH1'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select a shop.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Quit
+    08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+    08DB: set_panel 23@ column 0 header 'DUMMY' data 'SHOP1' 'SHOP2' 'SHOP3' 'SHOP4' 'SHOP5' 'SHOP6' 'SHOP7' 'REMCLT' 'BARBERS' 'BARBER2' 'BARBER3' 'DUMMY' 
+    jump @SKIN_CLOOP
+end
+jump @SKIN_CLOOP2
+
+:SKIN_CLOOP3
+wait 0
+if
+00E1:   player 0 pressed_key 16
+then
+    gosub @KEY_WAIT
+    08D8: 21@ = panel 23@ selected_row 
+    if or
+    0039:   18@ == 0
+    0039:   18@ == 2
+    0039:   18@ == 3
+    then
+        0784: set_player $PLAYER_CHAR textureCRC 0 modelCRC 0 bodypart 17 
+    end
+    0784: set_player $PLAYER_CHAR textureCRC $2438(21@,12i) modelCRC $2474(21@,12i) bodypart 18@ 
+    070D: rebuild_player $PLAYER_CHAR 
+end
+if
+00E1:   player 0 pressed_key 15 
+then
+    gosub @KEY_WAIT
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box
+    if or
+    0039:   18@ == 17
+    0039:   18@ == 1
+    then
+        0512: show_permanent_text_box 'WARDH1'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select a shop.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Quit
+        08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+        08DB: set_panel 23@ column 0 header 'DUMMY' data 'SHOP1' 'SHOP2' 'SHOP3' 'SHOP4' 'SHOP5' 'SHOP6' 'SHOP7' 'REMCLT' 'BARBERS' 'BARBER2' 'BARBER3' 'DUMMY' 
+        jump @SKIN_CLOOP
+    else
+        0512: show_permanent_text_box 'WARDH2'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select an area.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Back
+        08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+        08DB: set_panel 23@ column 0 header 'DUMMY' data 'TORSO' 'LEGS' 'FEET' 'CHAINS' 'WATCHES' 'SHADES' 'HATS' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+        jump @SKIN_CLOOP2
+    end 
+end
+jump @SKIN_CLOOP3
+
+:SKIN_CLOOP4
+wait 0
+if
+00E1:   player 0 pressed_key 16
+then
+    gosub @KEY_WAIT
+    08D8: 18@ = panel 23@ selected_row 
+    gosub @GET_BODYPART
+    0784: set_player $PLAYER_CHAR textureCRC 0 modelCRC 0 bodypart 18@ 
+    070D: rebuild_player $PLAYER_CHAR 
+end
+if
+00E1:   player 0 pressed_key 15 
+then
+    gosub @KEY_WAIT
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box 
+    0512: show_permanent_text_box 'WARDH1'  // Use ~k~~GO_FORWARD~ and ~k~~GO_BACK~ to select a shop.~N~~k~~PED_SPRINT~ Select~N~~k~~VEHICLE_ENTER_EXIT~ Quit
+    08D4: 23@ = create_panel_with_title 'CLOTCHO' position 29.0 145.0 width 186.0 columns 1 interactive 1 background 1 alignment 1  // Apparel
+    08DB: set_panel 23@ column 0 header 'DUMMY' data 'SHOP1' 'SHOP2' 'SHOP3' 'SHOP4' 'SHOP5' 'SHOP6' 'SHOP7' 'REMCLT' 'BARBERS' 'BARBER2' 'BARBER3' 'DUMMY' 
+    jump @SKIN_CLOOP
+end
+jump @SKIN_CLOOP4
+
+// 体型 
+:SKIN_FLOOP
+0006: 33@ = 0
+wait 0
+0494: get_joystick 0 data_to 21@ 22@ 22@ 22@ 
+if or
+0019:   21@ > 64 
+001B:   -64 > 21@ 
+then
+    006A: 21@ *= 33@ // (int) 
+    0093: 21@ = integer 21@ to_float 
+    0017: 21@ /= 640.0 
+    08D7: 20@ = panel 23@ active_row 
+    0012: 20@ *= 2
+    000A: 20@ += 21 
+    0653: 22@ = float_stat 20@ 
+    005B: 22@ += 21@ // (float) 
+    if
+    0023:   0.0 > 22@ 
+    then
+        0007: 22@ = 0.0 
+    end
+    if
+    0021:   22@ > 1000.0 
+    then
+        0007: 22@ = 1000.0 
+    end
+    062A: change_float_stat 20@ to 22@
+    0653: 20@ = float_stat 21 
+    0653: 21@ = float_stat 23
+    0092: 20@ = float 20@ to_integer 
+    0092: 21@ = float 21@ to_integer 
+    08EE: set_panel 23@ column 1 row 0 text_1number GXT 'NUMBER' number 20@  // ~1~
+    08EE: set_panel 23@ column 1 row 1 text_1number GXT 'NUMBER' number 21@  // ~1~
+end
+if
+00E1:   player 0 pressed_key 16 
+then
+    070D: rebuild_player $PLAYER_CHAR 
+end
+if
+00E1:   player 0 pressed_key 15 
+then
+    gosub @KEY_WAIT
+    08DA: remove_panel 23@ 
+    03E6: remove_text_box
+    gosub @SKIN_REST 
+    jump @SKIN_MENU
+end
+jump @SKIN_FLOOP
+
+:SKIN_BACK
+wait 0
+if
+80E1:   not player 0 pressed_key 15 
+jf @SKIN_BACK
+jump @SKIN_MENU
+
+
+//=========
+// ｻﾌﾞﾙｰﾁﾝ 
+//=========
+
+// ｽｸﾘﾌﾟﾄｺｰﾄﾞのｱﾄﾞﾚｽを取得 
+:GET_ADDRESS 
+0A9F: 0@ = current_thread_pointer
+000A: 0@ += 0x10
+0A8D: 0@ = read_memory 0@ size 4 virtual_protect 0
+return
+
+// ﾃｷｽﾄﾎﾞｯｸｽを表示 
+:SHOW_TEXT_BOX
+if
+0AA9:   is_game_version_original
+then
+    0AA5: call 0x588BE0 num_params 4 pop 4 0 0 0 0@   
+else
+    0AA5: call 0x5893B0 num_params 4 pop 4 0 0 0 0@   
+end
+return
+
+// Copies a string from a null-terminated buffer (at 0@) into the 24 byte string (starting at var numered 1@) truncating with NUL.
+// Example: 0@ = label @PATH_BUF offset, 1@ = 24 // Copies from @PATH_BUF to [24@ 25@ 26@ 27@ 28@ 29@].
+// Uses 16@ and 17@ as temp vars, modifies 0@ and 1@ directly.
+:COPY_FROM_BUF_TO_STRING
+0A9F: 10@ = current_thread_pointer
+10@ += 0x3C     // 32 vars array
+1@ *= 4
+005A: 10@ += 1@ // (int)
+0085: 1@ = 10@ // (int)
+for 11@ = 0 to 22
+    0A8D: 10@ = read_memory 0@ size 1 virtual_protect 0
+    if 10@ <> 0
+    then
+        0A8C: write_memory 1@ size 1 value 10@ virtual_protect 0
+        1@ += 1
+        0@ += 1
+    else
+        0A8C: write_memory 1@ size 1 value 0 virtual_protect 0
+        1@ += 1
+        // Don't advance 0@ anymore, so it's always NUL.       
+    end
+end
+// step 23
+0A8C: write_memory 1@ size 1 value 0 virtual_protect 0
+return
+
+// 方向ｷｰ/ｽﾃｨｯｸの状態を取得 
+:GET_KEY
+0494: get_joystick 0 data_to 23@ 21@ 23@ 23@ 
+if and
+0019:   21@ > -64 
+001B:   64 > 21@ 
+then
+    0006: 32@ = 950
+    0006: 33@ = 0
+end
+if
+0019:   33@ > 950 
+then
+    0006: 33@ = 950
+end
+0085: 22@ = 33@ // (int) 
+0012: 22@ *= -1
+000A: 22@ += 1000 
+return
+
+// ｷｰが放されるまで待つ 
+:KEY_WAIT
+wait 0
+if and
+80E1:   not player 0 pressed_key 15 
+80E1:   not player 0 pressed_key 16 
+80E1:   not player 0 pressed_key 17 
+80E1:   not player 0 pressed_key 14 
+80E1:   not player 0 pressed_key 18 
+80E1:   not player 0 pressed_key 19 
+jf @KEY_WAIT
+return
+
+// ｽﾍﾟｼｬﾙｱｸﾀｰのﾛｰﾄﾞ 
+:SKIN_LOAD
+023C: load_special_actor "____________________" as 10 // models 290-299 
+038B: load_requested_models 
+while 823D:   not special_actor 10 loaded
+    wait 0
+end 
+return
+
+// ｽｷﾝﾘｽﾄの初期化 
+:WRITE_TEXT_CLEAR
+gosub @GET_ADDRESS
+000E: 0@ -= @TEXT_SKIN_LIST
+000A: 0@ += 115
+for 16@ = 0 to 10
+    0A8C: write_memory 0@ size 4 value 0x5F5F5F5F virtual_protect 0
+    000A: 0@ += 4
+    0A8C: write_memory 0@ size 4 value 0x5F5F5F5F virtual_protect 0
+    000A: 0@ += 4
+    0A8C: write_memory 0@ size 4 value 0x5F5F5F5F virtual_protect 0
+    000A: 0@ += 4
+    000A: 0@ += 6
+end
+return
+
+// 通常ｽｷﾝﾘｽﾄの生成 
+:WRITE_TEXT_NORMAL
+for 16@ = 0 to 10
+    0085: 17@ = 3@ // (int) 
+    000A: 17@ += -5
+    005A: 17@ += 16@ // (int) 
+    if and
+    0029:   17@ >= 0 
+    002B:   MAX_NORMAL_SKIN >= 17@ 
+    then
+        0085: 22@ = 3@ // (int) 
+        000A: 22@ += -5
+        005A: 22@ += 16@ // (int) 
+        gosub @GET_ADDRESS
+        000E: 0@ -= @TEXT_SKIN_LIST
+        000A: 0@ += 115
+        0085: 17@ = 16@ // (int) 
+        0012: 17@ *= 18
+        005A: 0@ += 17@ // (int) 
+        0085: 17@ = 22@ // (int) 
+        0085: 23@ = 22@ // (int) 
+        0016: 23@ /= 1000 
+        0012: 23@ *= 1000 
+        0062: 17@ -= 23@ // (int) 
+        0016: 17@ /= 100 
+        000A: 17@ += 0x30
+        0A8C: write_memory 0@ size 1 value 17@ virtual_protect 0
+        000A: 0@ += 1
+        0085: 17@ = 22@ // (int) 
+        0085: 23@ = 22@ // (int) 
+        0016: 23@ /= 100 
+        0012: 23@ *= 100 
+        0062: 17@ -= 23@ // (int) 
+        0016: 17@ /= 10 
+        000A: 17@ += 0x30
+        0A8C: write_memory 0@ size 1 value 17@ virtual_protect 0
+        000A: 0@ += 1
+        0085: 17@ = 22@ // (int) 
+        0085: 23@ = 22@ // (int) 
+        0016: 23@ /= 10
+        0012: 23@ *= 10
+        0062: 17@ -= 23@ // (int) 
+        000A: 17@ += 0x30
+        0A8C: write_memory 0@ size 1 value 17@ virtual_protect 0
+        gosub @GET_ADDRESS
+        000E: 0@ -= @LIST_SKIN_NORMAL
+        0085: 23@ = 0@ // (int) 
+        0085: 17@ = 3@ // (int) 
+        000A: 17@ += -5
+        005A: 17@ += 16@ // (int) 
+        0012: 17@ *= 8
+        005A: 23@ += 17@ // (int) 
+        gosub @GET_ADDRESS
+        000E: 0@ -= @TEXT_SKIN_LIST
+        000A: 0@ += 119
+        0085: 17@ = 16@ // (int) 
+        0012: 17@ *= 18
+        005A: 0@ += 17@ // (int) 
+        for 17@ = 0 to 11
+            0A8D: 1@ = read_memory 23@ size 1 virtual_protect 0
+            if
+            0039:   1@ == 0x00
+            then
+                break
+            end
+            0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+            000A: 0@ += 1
+            000A: 23@ += 1
+        end
+    end
+end
+return
+
+// 特別ｽｷﾝﾘｽﾄの生成 
+:WRITE_TEXT_SPECIAL
+for 16@ = 0 to 10
+    0085: 17@ = 4@ // (int) 
+    000A: 17@ += -5
+    005A: 17@ += 16@ // (int) 
+    if and
+    0029:   17@ >= 0 
+    002B:   MAX_SPECIAL_SKIN >= 17@ 
+    then
+        gosub @GET_ADDRESS
+        000E: 0@ -= @LIST_SPECIAL
+        0085: 23@ = 0@ // (int) 
+        0085: 17@ = 4@ // (int) 
+        000A: 17@ += -5
+        005A: 17@ += 16@ // (int) 
+        0012: 17@ *= 8
+        005A: 23@ += 17@ // (int) 
+        gosub @GET_ADDRESS
+        000E: 0@ -= @TEXT_SKIN_LIST
+        000A: 0@ += 115
+        0085: 17@ = 16@ // (int) 
+        0012: 17@ *= 18
+        005A: 0@ += 17@ // (int) 
+        for 17@ = 0 to 11
+            0A8D: 1@ = read_memory 23@ size 1 virtual_protect 0
+            if
+            0039:   1@ == 0x00
+            then
+                break
+            end
+            0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+            000A: 0@ += 1
+            000A: 23@ += 1
+        end
+    end
+end
+return
+
+// 追加ｽｷﾝﾘｽﾄの生成 
+:WRITE_TEXT_ADDON
+for 16@ = 0 to 10
+    0085: 17@ = 5@ // (int) 
+    000A: 17@ += -5
+    005A: 17@ += 16@ // (int) 
+    if and
+    0029:   17@ >= 0 
+    0019:   23@ > 17@ 
+    then
+        gosub @GET_ADDRESS
+        000E: 0@ -= @LIST_ADDON
+        0085: 23@ = 0@ // (int) 
+        0085: 17@ = 5@ // (int) 
+        000A: 17@ += -5
+        005A: 17@ += 16@ // (int) 
+        0012: 17@ *= 20
+        005A: 23@ += 17@ // (int) 
+        gosub @GET_ADDRESS
+        000E: 0@ -= @TEXT_SKIN_LIST
+        000A: 0@ += 115
+        0085: 17@ = 16@ // (int) 
+        0012: 17@ *= 18
+        005A: 0@ += 17@ // (int) 
+        for 17@ = 0 to 11
+            0A8D: 1@ = read_memory 23@ size 1 virtual_protect 0
+            if
+            0039:   1@ == 0x00
+            then
+                break
+            end
+            0A8C: write_memory 0@ size 1 value 1@ virtual_protect 0
+            000A: 0@ += 1
+            000A: 23@ += 1
+        end
+    end
+end
+return
+
+// 体の部位を取得 
+:GET_BODYPART
+if
+0029:   18@ >= 3
+then
+    000A: 18@ += 10
+end
+if and
+0029:   18@ >= 1
+002B:   2 >= 18@ 
+then
+    000A: 18@ += 1
+end
+return
+
+// ﾒﾆｭｰから選択した人に変更 
+:ACTOR_CHANGE
+if
+0039:   7@ == #NULL
+then
+    09C7: change_player $PLAYER_CHAR model_to #NULL 
+end
+if and
+8039:   not 7@ == #NULL
+8039:   not 7@ == #SPECIAL10
+then
+    0247: load_model 7@
+    038B: load_requested_models 
+    while 8248:   not model 7@ available 
+        wait 0
+    end 
+    09C7: change_player $PLAYER_CHAR model_to 7@
+    0249: release_model 7@ 
+end
+if
+0039:   7@ == #SPECIAL10
+then
+    gosub @SKIN_LOAD
+    09C7: change_player $PLAYER_CHAR model_to #SPECIAL10 
+    0296: unload_special_actor 10 
+end
+return
+
+// ﾒﾆｭｰから選択した人を出現 
+:ACTOR_CREATE
+0208: 18@ = random_float_in_ranges -0.25 0.25
+0208: 19@ = random_float_in_ranges 1.25 1.75
+04C4: store_coords_to 18@ 19@ 20@ from_actor $PLAYER_ACTOR with_offset 18@ 19@ 0.5
+if
+0039:   7@ == #NULL
+then
+    009A: 16@ = create_actor_pedtype 8 model #NULL at 18@ 19@ 20@ 
+end
+if and
+8039:   not 7@ == #NULL
+8039:   not 7@ == #SPECIAL10
+then
+    0247: load_model 7@
+    038B: load_requested_models 
+    while 8248:   not model 7@ available 
+        wait 0
+    end 
+    009A: 16@ = create_actor_pedtype 8 model 7@ at 18@ 19@ 20@ 
+    0249: release_model 7@ 
+end
+if
+0039:   7@ == #SPECIAL10
+then
+    gosub @SKIN_LOAD
+    009A: 16@ = create_actor_pedtype 8 model #SPECIAL10 at 18@ 19@ 20@ 
+    0296: unload_special_actor 10 
+end
+
+// いろいろ設定 
+02A9: toggle_actor 16@ immune_to_nonplayer 1 
+02AB: set_actor 16@ immunities BP 1 FP 1 EP 1 CP 1 MP 0
+0223: set_actor 16@ health_to 100 
+02E2: set_actor 16@ weapon_accuracy_to 95
+03FE: set_actor 16@ money 0 
+04D8: set_actor 16@ drowns_in_water 0 
+060F: set_actor 16@ melee_accuracy_to 100.0 
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 6
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 7
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 9
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 10
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 11
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 12
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 13
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 14
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 17
+077A: set_actor 16@ default_action 6@ to_actors_pedtype 20
+if
+0039:   6@ == 4
+then
+    07CB: set_actor 16@ supporting_fire 1
+    07DD: set_actor 16@ temper_to 75 // see pedstats.dat 
+else
+    07CB: set_actor 16@ supporting_fire 0
+    07DD: set_actor 16@ temper_to 25 // see pedstats.dat 
+end
+081A: set_actor 16@ weapon_skill_to 2 
+if
+0039:   6@ == 4
+then
+    // MP5を持たせる 
+    0247: load_model #KNIFECUR
+    0247: load_model #DESERT_EAGLE
+    0247: load_model #MP5LNG
+    038B: load_requested_models 
+    while 8248:   not model #MP5LNG available 
+        wait 0
+    end 
+    01B2: give_actor 16@ weapon 29 ammo 3000 // Load the weapon model before using this 
+    0249: release_model #MP5LNG
+    //アーマー装着 
+    035F: actor 16@ armour += 100 
+end
+
+// その辺まで歩かせる 
+0208: 18@ = random_float_in_ranges -2.5 2.5
+0208: 19@ = random_float_in_ranges 5.0 10.0
+0208: 20@ = random_float_in_ranges -2.5 2.5
+04C4: store_coords_to 18@ 19@ 20@ from_actor $PLAYER_ACTOR with_offset 18@ 19@ 20@ 
+05D3: AS_actor 16@ goto_point 18@ 19@ 20@ mode 4 999999 ms // versionA 
+0007: 18@ = 0.0 
+0006: 19@ = 0
+
+// 人ﾘｽﾄに登録 
+gosub @GET_ADDRESS
+000E: 0@ -= @LIST_SPAWNED
+for 17@ = 0 to MAX_SPAWN_ACTORS
+    0A8D: 1@ = read_memory 0@ size 4 virtual_protect 0
+    if
+    856D:   not actor 1@ defined 
+    then
+        0A8C: write_memory 0@ size 4 value 16@ virtual_protect 0
+        0006: 16@ = ACTOR_EMPTY 
+        break
+    else
+        00A0: store_actor $PLAYER_ACTOR position_to 24@ 25@ 26@
+        00A0: store_actor 1@ position_to 27@ 28@ 29@
+        0509: 20@ = distance_between_XY 24@ 25@ and_XY 27@ 28@
+        if
+        0025:   20@ > 18@ // (float) 
+        then
+            0085: 19@ = 17@ // (int) 
+            0087: 18@ = 20@ // (float) 
+        end
+    end
+    000A: 0@ += 4
+end
+// 空きが無かった場合 
+if
+8039:   not 16@ == ACTOR_EMPTY 
+then
+    gosub @GET_ADDRESS
+    000E: 0@ -= @LIST_SPAWNED
+    0012: 19@ *= 4
+    005A: 0@ += 19@ // (int) 
+    0A8D: 1@ = read_memory 0@ size 4 virtual_protect 0
+    01C2: remove_references_to_actor 1@ // Like turning an actor into a random pedestrian 
+    0A8C: write_memory 0@ size 4 value 16@ virtual_protect 0
+    0006: 16@ = ACTOR_EMPTY 
+end
+return
+
+
+//==========================
+// 実行されるｽｸﾘﾌﾟﾄここまで 
+//==========================
+
+
+//==============
+// 表示用文字列 
+//==============
+
+// ﾒﾆｭｰ用文字列 
+:TEXT_SKIN_MENU
+hex
+"~y~SkinSelector_v2.1_N~w~~n~~n~~k~~PED_FIREWEAPON~_Normal_Peds~n~~k~~PED_JUMPING~_Special_Actors~n~~k~~PED_SPRINT~_Add-on_Actors~n~~n~~k~~PED_DUCK~_Player_Cloth~n~~k~~PED_LOOKBEHIND~_Player_Shape~n~~n~~k~~VEHICLE_ENTER_EXIT~_Quit" 00
+end
+
+// ﾘｽﾄ用文字列 
+:TEXT_SKIN_LIST
+hex
+"~k~~PED_SPRINT~_Change_Skin~n~~k~~PED_FIREWEAPON~_Spawn_~r~Extreme~n~~w~~k~~PED_JUMPING~_Spawn_~g~Moderate~n~"
+"~n~~w~____________" "~n~~w~____________" "~n~~w~____________" "~n~~w~____________"
+"~n~~w~____________" "~n~~y~____________" "~n~~w~____________" "~n~~w~____________"
+"~n~~w~____________" "~n~~w~____________" "~n~~w~____________" 00
+end
+
+:TEXT_SKIN_SHAPE
+hex
+"Use_~k~~GO_FORWARD~_and_~k~~GO_BACK~_to_select~n~an_item.~n~Use_~k~~GO_LEFT~_and_~k~~GO_RIGHT~_to_change~n~a_value.~n~~k~~PED_SPRINT~_Preview~n~~k~~VEHICLE_ENTER_EXIT~_Quit" 00
+end
+
+// ｴﾗｰ表示 
+:TEXT_FILE_NOT_FOUND
+hex
+"~y~SkinSlector_v2.1~n~~r~Error:_Dir_'SKIN.IMG'_not_found." 00
+end
+
+// ｴﾗｰ表示 
+:TEXT_FILE_CANT_READ
+hex
+"~y~SkinSlector_v2.1~n~~r~Error:_Dir_'SKIN.IMG'_can't_read." 00
+end
+
+:SKIN_ARCHIVE_DIR
+hex
+    "skin.img" 00
+end
+
+//==========
+// ｽｷﾝ名ﾘｽﾄ 
+//==========
+
+// 通常ｽｷﾝﾘｽﾄ 
+// 基本的に変更しないこと 
+:LIST_SKIN_NORMAL
+hex
+"null____" "________" "________" "________" "________" "________" "________" "male01__"
+"________" "BFORI___" "BFOST___" "VBFYCRP_" "BFYRI___" "BFYST___" "BMORI___" "BMOST___"
+"BMYAP___" "BMYBU___" "BMYBE___" "BMYDJ___" "BMYRI___" "BMYCR___" "BMYST___" "WMYBMX__"
+"WBDYG1__" "WBDYG2__" "WMYBP___" "WMYCON__" "BMYDRUG_" "WMYDRUG_" "HMYDRUG_" "DWFOLC__"
+"DWMOLC1_" "DWMOLC2_" "DWMYLC1_" "HMOGAR__" "WMYGOL1_" "WMYGOL2_" "HFORI___" "HFOST___"
+"HFYRI___" "HFYST___" "________" "HMORI___" "HMOST___" "HMYBE___" "HMYRI___" "HMYCR___"
+"HMYST___" "OMOKUNG_" "WMYMECH_" "BMYMOUN_" "WMYMOUN_" "OFORI___" "OFOST___" "OFYRI___"
+"OFYST___" "OMORI___" "OMOST___" "OMYRI___" "OMYST___" "WMYPLT__" "WMOPJ___" "BFYPRO__"
+"HFYPRO__" "________" "BMYPOL1_" "BMYPOL2_" "WMOPREA_" "SBFYST__" "WMOSCI__" "WMYSGRD_"
+"SWMYHP1_" "SWMYHP2_" "________" "SWFOPRO_" "WFYSTEW_" "SWMOTR1_" "WMOTR1__" "BMOTR1__"
+"VBMYBOX_" "VWMYBOX_" "VHMYELV_" "VBMYELV_" "VIMYELV_" "VWFYPRO_" "________" "VWFYST1_"
+"WFORI___" "WFOST___" "WFYJG___" "WFYRI___" "WFYRO___" "WFYST___" "WMORI___" "WMOST___"
+"WMYJG___" "WMYLG___" "WMYRI___" "WMYRO___" "WMYCR___" "WMYST___" "BALLAS1_" "BALLAS2_"
+"BALLAS3_" "FAM1____" "FAM2____" "FAM3____" "LSV1____" "LSV2____" "LSV3____" "MAFFA___"
+"MAFFB___" "MAFBOSS_" "VLA1____" "VLA2____" "VLA3____" "TRIADA__" "TRIADB__" "________"
+"TRIBOSS_" "DNB1____" "DNB2____" "DNB3____" "VMAFF1__" "VMAFF2__" "VMAFF3__" "VMAFF4__"
+"DNMYLC__" "DNFOLC1_" "DNFOLC2_" "DNFYLC__" "DNMOLC1_" "DNMOLC2_" "SBMOTR2_" "SWMOTR2_"
+"SBMYTR3_" "SWMOTR3_" "WFYBE___" "BFYBE___" "HFYBE___" "SOFYBU__" "SBMYST__" "SBMYCR__"
+"BMYCG___" "WFYCRK__" "HMYCM___" "WMYBU___" "BFYBU___" "________" "WFYBU___" "DWFYLC1_"
+"WFYPRO__" "WMYCONB_" "WMYBE___" "WMYPIZZ_" "BMOBAR__" "CWFYHB__" "CWMOFR__" "CWMOHB1_"
+"CWMOHB2_" "CWMYFR__" "CWMYHB1_" "BMYBOUN_" "WMYBOUN_" "WMOMIB__" "BMYMIB__" "WMYBELL_"
+"BMOCHIL_" "SOFYRI__" "SOMYST__" "VWMYBJD_" "VWFYCRP_" "SFR1____" "SFR2____" "SFR3____"
+"BMYBAR__" "WMYBAR__" "WFYSEX__" "WMYAMMO_" "BMYTATT_" "VWMYCR__" "VBMOCD__" "VBMYCR__"
+"VHMYCR__" "SBMYRI__" "SOMYRI__" "SOMYBU__" "SWMYST__" "WMYVA___" "COPGRL3_" "GUNGRL3_"
+"MECGRL3_" "NURGRL3_" "CROGRL3_" "GANGRL3_" "CWFOFR__" "CWFOHB__" "CWFYFR1_" "CWFYFR2_"
+"CWMYHB2_" "DWFYLC2_" "DWMYLC2_" "OMYKARA_" "WMYKARA_" "WFYBURG_" "VWMYCD__" "VHFYPRO_"
+"________" "OMONOOD_" "OMOBOAT_" "WFYCLOT_" "VWMOTR1_" "VWMOTR2_" "VWFYWAI_" "SBFORI__"
+"SWFYRI__" "WMYCLOT_" "SBFOST__" "SBFYRI__" "SBMOCD__" "SBMORI__" "SBMOST__" "SHMYCR__"
+"SOFORI__" "SOFOST__" "SOFYST__" "SOMOBU__" "SOMORI__" "SOMOST__" "SWMOTR5_" "SWFORI__"
+"SWFOST__" "SWFYST__" "SWMOCD__" "SWMORI__" "SWMOST__" "SHFYPRO_" "SBFYPRO_" "SWMOTR4_"
+"SWMYRI__" "SMYST___" "SMYST2__" "SFYPRO__" "VBFYST2_" "VBFYPRO_" "VHFYST3_" "BIKERA__"
+"BIKERB__" "BMYPIMP_" "SWMYCR__" "WFYLG___" "WMYVA2__" "BMOSEC__" "BIKDRUG_" "WMYCH___"
+"SBFYSTR_" "SWFYSTR_" "HECK1___" "HECK2___" "BMYCON__" "WMYCD1__" "BMOCD___" "VWFYWA2_"
+"WMOICE__" "________" "________" "________" "________" "________" "________" "________"
+"________" "________" "laemt1__" "lvemt1__" "sfemt1__" "lafd1___" "lvfd1___" "sffd1___"
+"lapd1___" "sfpd1___" "lvpd1___" "csher___" "lapdm1__" "swat____" "fbi_____" "army____"
+"dsher___" 00
+end
+
+// 特別ｽｷﾝﾘｽﾄ 
+// gta3.img内で使えるものがあれば追加可
+// 追加の際はﾌｧｲﾙ先頭の定数も変更すること 
+:LIST_SPECIAL
+hex
+"TENPEN__" "PULASKI_" "HERN____" "SMOKE___" "SWEET___" "RYDER___" "RYDER2__" "RYDER3__"
+"EMMET___" "ANDRE___" "OGLOC___" "CESAR___" "KENDL___" "WUZIMU__" "CAT_____" "TRUTH___"
+"CLAUDE__" "JETHRO__" "DWAYNE__" "ZERO____" "TBONE___" "JIZZY___" "TORINO__" "SINDACO_"
+"MACCER__" "PAUL____" "ROSE____" "FORELLI_" "MADDOGG_" "JANITOR_" "BBTHIN__" "SMOKEV__" 00
+end
+
+// 追加ｽｷﾝﾘｽﾄ 
+// skin.imgから探し出した追加ｽｷﾝ名が格納される
+// より多くの追加ｽｷﾝを扱いたければ追加
+// 追加の際はﾌｧｲﾙ先頭の定数も変更すること 
+:LIST_ADDON
+hex
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+"____________________" "____________________" "____________________" "____________________"
+00
+end
+
+// 出現させた人 
+// より多くの人を記憶させたければ追加 
+// 追加の際はﾌｧｲﾙ先頭の定数も変更すること 
+// ただしSA側で上限がある 
+:LIST_SPAWNED
+hex
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+00
+end
+
+:TEMP_MEMORY
+hex
+"____________________" 00
+end
+
+:PATH_BUF
+hex
+"________________________________________________________________________________________"
+"________________________________________________________________________________________"
+"________________________________________________________________________________________" 00
+end

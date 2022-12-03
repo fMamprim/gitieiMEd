@@ -1,0 +1,63 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+0@ = Actor.EmulateFromPlayer(0)
+if 
+059A:   NOP_false 
+else_jump @NONAME_40 
+0376: 1@ = create_random_actor_at 0.0 0.0 0.0 
+
+:NONAME_40
+if 
+0485:   NOP_true 
+else_jump @NONAME_359 
+wait 0 
+0A8D: 3@ = read_memory 12010640 size 4 virtual_protect 0 
+3@ += 4 
+0A8D: 3@ = read_memory 3@ size 4 virtual_protect 0 
+4@ = 0 
+
+:NONAME_97
+if 
+  35584 >= 4@ 
+else_jump @NONAME_352 
+0A8D: 1@ = read_memory 3@ size 1 virtual_protect 0 
+3@ += 1 
+if and
+  1@ >= 0 
+  128 > 1@ 
+else_jump @NONAME_337 
+005A: 1@ += 4@ // (int) 
+if 
+   Player.PressingHorn(0)
+else_jump @NONAME_337 
+Actor.StorePos(0@, 7@, 8@, 9@)
+0A96: 6@ = actor 1@ struct 
+6@ += 1156 
+0A8D: 6@ = read_memory 6@ size 1 virtual_protect 0 
+if 
+  6@ == 1 
+else_jump @NONAME_337 
+089F: get_actor 1@ pedtype_to 5@ 
+if and
+00FE:   actor 1@ sphere 0 in_sphere 7@ 8@ 9@ radius 10.0 10.0 10.0 
+  5@ == 8 
+else_jump @NONAME_337 
+07AF: 2@ = player 0 group 
+if 
+86EE:   not actor 1@ in_group 2@ 
+else_jump @NONAME_337 
+0631: put_actor 1@ in_group 2@ 
+
+:NONAME_337
+4@ += 256 
+jump @NONAME_97 
+
+:NONAME_352
+jump @NONAME_40 
+
+:NONAME_359
+0A93: end_custom_thread 

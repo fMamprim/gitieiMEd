@@ -1,0 +1,33 @@
+[21:00:35.260600] (system)	Session started.
+[21:00:35.260600] (debug)	Module handle: 04220000
+
+MoonLoader v.026.5-beta loaded.
+Developers: FYP, hnnssy, EvgeN 1137
+
+Copyright (c) 2016, BlastHack Team
+http://blast.hk/moonloader/
+
+[21:00:35.260600] (info)	Working directory: C:\Users\FELIPE\Documents\gitieiMEd\moonloader
+[21:00:35.260600] (debug)	FP Control: 0009001F
+[21:00:35.260600] (debug)	Game: GTA SA 1.0.0.0 US
+[21:00:35.260600] (system)	Installing pre-game hooks...
+[21:00:35.270600] (system)	Hooks installed.
+[21:00:36.348600] (debug)	Initializing opcode handler table
+[21:00:36.349600] (debug)	package.path = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
+[21:00:36.349600] (debug)	package.cpath = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.dll;
+[21:00:36.349600] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\parked-car-maker.lua'...
+[21:00:36.349600] (debug)	New script: 0599BAAC
+[21:00:36.355600] (system)	Parcked Car Maker By Um Geek: Loaded successfully.
+[21:00:36.355600] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\Teleporter.lua'...
+[21:00:36.356600] (debug)	New script: 059D4DFC
+[21:00:36.359600] (system)	Teleporter: Loaded successfully.
+[21:00:36.359600] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
+[21:00:36.359600] (debug)	New script: 059D58B4
+[21:00:36.369600] (system)	Lua Visual Veh Spawner: Loaded successfully.
+[21:00:40.757600] (system)	Installing post-load hooks...
+[21:00:40.757600] (system)	Hooks installed.
+[21:09:38.170600] (system)	Unloading...
+[21:09:38.170600] (system)	Parcked Car Maker By Um Geek: Script terminated. (0599BAAC)
+[21:09:38.171600] (system)	Teleporter: Script terminated. (059D4DFC)
+[21:09:38.178600] (system)	Lua Visual Veh Spawner: Script terminated. (059D58B4)
+[21:09:38.217600] (system)	Session terminated.

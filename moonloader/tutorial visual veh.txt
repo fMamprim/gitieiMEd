@@ -1,0 +1,5 @@
+
+ = Comandos:
+U+P para abrir a interface. Em seguida, basta usar o mouse.
+K+1, K+2... até K+0 spawna um carro configurado no fast spawner.
+Você pode alterar os comandos no menu Settings dentro do mod.

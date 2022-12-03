@@ -1,0 +1,41 @@
+# Mod Custom Vinewood Text por Junior_Djjr - MixMods.com.br
+# Você PODE mudar o número ID caso conflito etc. Só não mude o nome dos arquivos .dff.
+# IDs livres: https://tuningmod.mixmods.com.br/p/ids.html
+objs
+15853, cust_vin_text_0, mulhouslahills, 299, 0
+15854, cust_vin_text_1, mulhouslahills, 299, 0
+15855, cust_vin_text_2, mulhouslahills, 299, 0
+15856, cust_vin_text_3, mulhouslahills, 299, 0
+15857, cust_vin_text_4, mulhouslahills, 299, 0
+15858, cust_vin_text_5, mulhouslahills, 299, 0
+15859, cust_vin_text_6, mulhouslahills, 299, 0
+15860, cust_vin_text_7, mulhouslahills, 299, 0
+15861, cust_vin_text_8, mulhouslahills, 299, 0
+15862, cust_vin_text_9, mulhouslahills, 299, 0
+15863, cust_vin_text_A, mulhouslahills, 299, 0
+15864, cust_vin_text_B, mulhouslahills, 299, 0
+15865, cust_vin_text_C, mulhouslahills, 299, 0
+15866, cust_vin_text_D, mulhouslahills, 299, 0
+15867, cust_vin_text_E, mulhouslahills, 299, 0
+15868, cust_vin_text_F, mulhouslahills, 299, 0
+15869, cust_vin_text_G, mulhouslahills, 299, 0
+15870, cust_vin_text_H, mulhouslahills, 299, 0
+15871, cust_vin_text_I, mulhouslahills, 299, 0
+15872, cust_vin_text_J, mulhouslahills, 299, 0
+15873, cust_vin_text_K, mulhouslahills, 299, 0
+15874, cust_vin_text_L, mulhouslahills, 299, 0
+15875, cust_vin_text_M, mulhouslahills, 299, 0
+15876, cust_vin_text_N, mulhouslahills, 299, 0
+15877, cust_vin_text_O, mulhouslahills, 299, 0
+15878, cust_vin_text_P, mulhouslahills, 299, 0
+15879, cust_vin_text_Q, mulhouslahills, 299, 0
+15880, cust_vin_text_R, mulhouslahills, 299, 0
+15881, cust_vin_text_S, mulhouslahills, 299, 0
+15882, cust_vin_text_T, mulhouslahills, 299, 0
+15883, cust_vin_text_U, mulhouslahills, 299, 0
+15884, cust_vin_text_V, mulhouslahills, 299, 0
+15885, cust_vin_text_W, mulhouslahills, 299, 0
+15886, cust_vin_text_X, mulhouslahills, 299, 0
+15887, cust_vin_text_Y, mulhouslahills, 299, 0
+15888, cust_vin_text_Z, mulhouslahills, 299, 0
+end

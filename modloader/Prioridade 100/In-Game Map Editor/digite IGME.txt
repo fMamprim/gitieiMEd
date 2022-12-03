@@ -1,0 +1,6 @@
+ = Comandos:
+Digite "IGME" (como um cheat, In-Game Map Editor) para ativar ou desativar.
+Você pode usar CTRL+C e CTRL+V para copiar e colar o número ID do objeto.
+Você encontra os comandos na tela.
+Um tutorial mais detalhado está no post na MixMods, além de avisos de problemas:
+https://www.mixmods.com.br/2021/05/in-game-map-editor-editor-de-mapa.html

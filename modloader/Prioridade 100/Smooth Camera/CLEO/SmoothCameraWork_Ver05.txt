@@ -1,0 +1,2296 @@
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+thread 'SmoothCW' 
+
+// ----------------------------------------------
+// --- このコードで予約されているローカル変数 --- 
+// ----------------------------------------------
+
+// 以下の変数は絶対に使用しないでください！！ 
+
+//  0@ : 入力キーの履歴
+//  1@ : 関数でのＸ座標一時保存用 
+//  2@ : 関数でのＹ座標一時保存用 
+//  3@ : 関数でのＺ座標一時保存用 
+//  4@ : 関数での角度一時保存用
+//  5@ : コマンド識別番号
+//  6@ : 関数での予備用１ 
+//  7@ : 関数での予備用２ 
+//  8@ : 関数での予備用３ 
+//  9@ : 関数での予備用４ 
+
+
+// 28@ : 汎用変数 
+// 29@ : 汎用変数（主にメモリから読み出した値用） 
+// 30@ : メモリプールの先頭アドレス
+// 31@ : メモリプールへのアクセス用 
+
+
+// *****************
+//     初期処理 
+// *****************  
+
+0@ = -229908 // 入力履歴のポインタ 
+gosub @GetPointer // メモリプールの先頭アドレスを30@に代入しておく 
+
+19@ = 2.0   // Ctrl Coef
+20@ = 0.01  // Tilt Speed
+21@ = 0.1   // Front Speed
+22@ = 0.1   // Side Speed
+23@ = 0.1   // Updown Speed
+24@ = 1.0   // Rotate Speed
+25@ = 0.002 // Lookupdown Speed
+26@ = 0.3   // Lookupdwon Limit
+27@ = 0.01  // Fade Acceleration 
+ 
+
+0A8E: 31@ = 30@ + 0x06C
+0A8C: write_memory 31@ size 4 value 0 virtual_protect 0 // 初回起動なのでスイッチを０にしておく 
+
+
+// *******************
+//     キー入力処理
+// *******************  
+
+:CW_Start
+    wait 0 
+
+    if &0(0@,1i) == 0x534D434D // SMCM 
+    then 5@ = 1
+    end
+
+    // 何もスイッチが入っていない場合はループに戻る 
+    if 5@ == 0
+    then jump @CW_Start
+    else &0(0@,1i) = 0x55484F26 // UHO↑
+    end
+
+    
+    // ----------------------------------------
+    // --- 簡易カメラワークを実行する(SMCM) ---
+    // ----------------------------------------
+    if 5@ == 1
+    then
+    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058 
+
+        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1052
+        0337: set_actor $PLAYER_ACTOR  visibility 0
+ 
+        00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+        01B4: set_player $PLAYER_CHAR can_move 0
+        0619: enable_actor $PLAYER_ACTOR collision_detection 0 
+
+        // 各種パラメータ設定時の選択中のメニュー番号
+        0A8E: 31@ = 30@ + 0x000
+        0A8C: write_memory 31@ size 4 value 1 virtual_protect 0 
+
+        // 初期値を設定する
+        28@ = 0.0 // 減速処理計算用 
+         6@ = 0.0 // 減速処理計算用 
+         7@ = 0.0 // 減速処理計算用 
+         8@ = 0.0 // リアル速度計算用 
+         9@ =   0 // Wait
+         
+        0A8E: 31@ = 30@ + 0x020
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 // カメラの高さに対するターゲットの高さの差(Offset) 
+
+
+        // デフォルトファイルがあれば読み出す 
+
+        0A8E: 31@ = 30@ + 0x06C
+        0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+        if 29@ == 0 // 初回起動時なら 
+        then
+            if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Default.dat" mode 0x6272
+            then
+                0A9D: readfile 29@ size 36 to 19@
+                0A9B: closefile 29@
+            end
+        end
+
+        // 初回起動ではなくなったので、スイッチをONにしておく 
+        0A8E: 31@ = 30@ + 0x06C
+        0A8C: write_memory 31@ size 4 value 1 virtual_protect 0 
+        
+        :SMCM_Loop
+        wait 0
+
+        // 左に傾く 
+        if 0AB0: key_pressed 100 // Num4 
+        then
+            // Tilt Speedを退避させる 
+            0087: 8@ = 20@
+
+            // 現在のReal Tilt Speedを読み込む 
+            0A8E: 31@ = 30@ + 0x044
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+            // 最高速度に加速係数をかける
+            006B: 8@ *= 27@
+            
+            // 右向き中なら、摩擦＋加速力で２倍の加速度 
+            if 29@ < 0
+            then 8@ *= 2.0
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                006B: 20@ *= 19@ // Ctrl Coef 
+                006B: 8@ *= 19@ // Ctrl Coef
+            end 
+            
+            // リアル速度を求める
+            005B: 29@ += 8@
+            if 0025: 29@ > 20@
+            then 0087: 29@ = 20@
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                0073: 8@ /= 19@ // Ctrl Coef 
+                0073: 20@ /= 19@ // Ctrl Coef 
+            end 
+
+            // 現在のTilt値の更新
+            0A8E: 31@ = 30@ + 0x048
+            0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+             
+            005B: 28@ += 29@
+            if 28@ > 5.0
+            then 28@ = 5.0
+            end
+            0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+
+            // 現在のReal Tilt Speedを書き込む 
+            0A8E: 31@ = 30@ + 0x044
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+        else
+            // 右に傾く 
+            if 0AB0: key_pressed 102 // Num6 
+            then
+                // Tilt Speedを退避させる 
+                0087: 8@ = 20@
+    
+                // 現在のReal Tilt Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x044
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける
+                006B: 8@ *= 27@
+                8@ *= -1.0
+                
+                // 左向き中なら、摩擦＋加速力で２倍の加速度 
+                if 29@ > 0
+                then 8@ *= 2.0
+                end
+                
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    006B: 20@ *= 19@ // Ctrl Coef 
+                    006B: 8@ *= 19@ // Ctrl Coef
+                end 
+            
+                // リアル速度を求める
+                005B: 29@ += 8@
+                29@ *= -1.0
+                if 0025: 29@ > 20@
+                then 0087: 29@ = 20@
+                end
+                29@ *= -1.0
+                
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    0073: 8@ /= 19@ // Ctrl Coef 
+                    0073: 20@ /= 19@ // Ctrl Coef 
+                end 
+    
+                // 現在のTilt値の更新
+                0A8E: 31@ = 30@ + 0x048
+                0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+                 
+                005B: 28@ += 29@
+                if 28@ < -5.0
+                then 28@ = -5.0
+                end
+                0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+    
+                // 現在のReal Tilt Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x044
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            else
+                // Tilt Speedを退避させる 
+                0087: 8@ = 20@
+    
+                // 現在のReal Tilt Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x044
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける
+                006B: 8@ *= 27@
+                
+                // リアル速度を求める
+                0A8E: 31@ = 30@ + 0x048
+                0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+                if 29@ > 0.0
+                then
+                    0063: 29@ -= 8@
+                    if 29@ < 0.0
+                    then 29@ = 0.0
+                    end
+                    005B: 28@ += 29@
+                else
+                    005B: 29@ += 8@
+                    if 29@ > 0.0
+                    then 29@ = 0.0
+                    end
+                    005B: 28@ += 29@
+                end
+                0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+    
+                // 現在のReal Tilt Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x044
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            end 
+        end 
+
+
+
+        // 左を向く 
+        if 0AB0: key_pressed 97 // Num1 
+        then
+            0172: 10@ = actor $PLAYER_ACTOR Z_angle 
+
+            // Rotate Speedを退避させる 
+            0087: 8@ = 24@
+
+            // 現在のReal Rotate Speedを読み込む 
+            0A8E: 31@ = 30@ + 0x030
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+            // 最高速度に加速係数をかける
+            006B: 8@ *= 27@
+            
+            // 右向き中なら、摩擦＋加速力で２倍の加速度 
+            if 29@ < 0
+            then 8@ *= 2.0
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                006B: 24@ *= 19@ // Ctrl Coef 
+                006B: 8@ *= 19@ // Ctrl Coef
+            end 
+            
+            // リアル速度を求める
+            005B: 29@ += 8@
+            if 0025: 29@ > 24@
+            then 0087: 29@ = 24@
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                0073: 8@ /= 19@ // Ctrl Coef 
+                0073: 24@ /= 19@ // Ctrl Coef 
+            end 
+
+            005B: 10@ += 29@
+            if 10@ >= 360.0
+            then 10@ -= 360.0
+            end
+
+            0173: set_actor $PLAYER_ACTOR Z_angle_to 10@
+
+            // 現在のReal Rotate Speedを書き込む 
+            0A8E: 31@ = 30@ + 0x030
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+        else
+            // 右を向く 
+            if 0AB0: key_pressed 99 // Num3 
+            then
+                0172: 10@ = actor $PLAYER_ACTOR Z_angle 
+
+                // Rotate Speedを退避させる 
+                0087: 8@ = 24@
+    
+                // 現在のReal Rotate Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x030
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける            
+                006B: 8@ *= 27@
+                8@ *= -1.0
+                
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    006B: 24@ *= 19@ // Ctrl Coef 
+                    006B: 8@ *= 19@ // Ctrl Coef
+                end 
+            
+                // 左向き中なら、摩擦＋加速力で２倍の加速度 
+                if 29@ > 0
+                then 8@ *= 2.0
+                end
+                
+                // リアル速度を求める
+                005B: 29@ += 8@
+                29@ *= -1.0
+                if 0025: 29@ > 24@
+                then 0087: 29@ = 24@
+                end 
+                29@ *= -1.0
+    
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    0073: 8@ /= 19@ // Ctrl Coef 
+                    0073: 24@ /= 19@ // Ctrl Coef 
+                end 
+
+                005B: 10@ += 29@
+                if 10@ < 0.0
+                then 10@ += 360.0
+                end
+                
+                0173: set_actor $PLAYER_ACTOR Z_angle_to 10@
+
+                // 現在のReal Rotate Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x030
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            else
+                0172: 10@ = actor $PLAYER_ACTOR Z_angle 
+
+                // Rotate Speedを退避させる 
+                0087: 8@ = 24@
+    
+                // 現在のReal Rotate Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x030
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                006B: 8@ *= 19@ // Ctrl Coef 
+            
+                // 最高速度に加速係数をかける            
+                0087: 7@ = 29@
+                0073: 7@ /= 24@
+                if 7@ < 0.0
+                then 7@ *= -1.0
+                end
+                
+                0087: 6@ = 24@
+                6@ *= 0.0015
+
+                0087: 28@ = 27@
+                28@ *= 100.0
+                28@ -= 1.0
+                if 28@ > 0.0
+                then
+                    006B: 28@ *= 28@
+                else
+                    006B: 28@ *= 28@
+                    28@ *= -1.0
+                end
+                28@ += 1.0
+                006B: 6@ *= 28@
+
+                006B: 8@ *= 27@
+                006B: 8@ *= 7@
+                005B: 8@ += 6@                
+                
+                // リアル速度を求める
+                if 29@ > 0.0
+                then
+                    0063: 29@ -= 8@
+                    if 29@ < 0
+                    then 29@ = 0
+                    end
+
+                    005B: 10@ += 29@
+                    if 10@ >= 360.0
+                    then 10@ -= 360.0
+                    end
+
+                else
+                    005B: 29@ += 8@
+                    if 29@ > 0
+                    then 29@ = 0
+                    end
+
+                    005B: 10@ += 29@
+                    if 10@ < 0.0
+                    then 10@ += 360.0
+                    end
+                end
+
+                0173: set_actor $PLAYER_ACTOR Z_angle_to 10@
+
+                // 現在のReal Rotate Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x030
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            end 
+        end 
+
+
+
+        // 前に進む 
+        if 0AB0: key_pressed 87 // Ｗ 
+        then
+            00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+            0172: 13@ = actor $PLAYER_ACTOR Z_angle 
+
+            // Front Speedを退避させる 
+            0087: 8@ = 21@
+
+            // 現在のReal Front Speedを読み込む 
+            0A8E: 31@ = 30@ + 0x024
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+            // 最高速度に加速係数をかける            
+            006B: 8@ *= 27@
+            
+            // 後退中なら、摩擦＋加速力で２倍の加速度 
+            if 29@ < 0
+            then 8@ *= 2.0
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                006B: 21@ *= 19@ // Ctrl Coef 
+                006B: 8@ *= 19@ // Ctrl Coef
+            end 
+            
+            // リアル速度を求める
+            005B: 29@ += 8@
+            if 0025: 29@ > 21@
+            then 0087: 29@ = 21@
+            end 
+
+            if 0AB0: key_pressed 32 // Space
+            then 
+                0073: 8@ /= 19@ // Ctrl Coef 
+                0073: 21@ /= 19@ // Ctrl Coef 
+            end 
+
+            02F6: 17@ = cosine 13@ // X軸
+            006B: 17@ *= 29@
+            02F7: 18@ = sine 13@ // Y軸 
+            006B: 18@ *= 29@
+    
+            0063: 10@ -= 17@
+            005B: 11@ += 18@
+            12@ -= 1.0
+
+            00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+
+            // 現在のReal Front Speedを書き込む 
+            0A8E: 31@ = 30@ + 0x024
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0 // Front Speed
+        else
+            if 0AB0: key_pressed 83 // Ｓ
+            then
+                00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+                0172: 13@ = actor $PLAYER_ACTOR Z_angle 
+    
+                // Front Speedを退避させる 
+                0087: 8@ = 21@
+    
+                // 現在のReal Front Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x024
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける            
+                006B: 8@ *= 27@
+                8@ *= -1.0
+                
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    006B: 21@ *= 19@ // Ctrl Coef 
+                    006B: 8@ *= 19@ // Ctrl Coef
+                end 
+            
+                // 前進中なら、摩擦－加速力で２倍の加速度 
+                if 29@ > 0
+                then 8@ *= 2.0
+                end
+            
+                // リアル速度を求める
+                005B: 29@ += 8@
+                29@ *= -1.0
+                if 0025: 29@ > 21@
+                then 0087: 29@ = 21@
+                end
+                29@ *= -1.0 
+    
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    0073: 8@ /= 19@ // Ctrl Coef 
+                    0073: 21@ /= 19@ // Ctrl Coef 
+                end 
+
+                02F6: 17@ = cosine 13@ // X軸
+                006B: 17@ *= 29@
+                02F7: 18@ = sine 13@ // Y軸 
+                006B: 18@ *= 29@
+        
+                0063: 10@ -= 17@
+                005B: 11@ += 18@
+                12@ -= 1.0
+    
+                00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+    
+                // 現在のReal Front Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x024
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0 // Front Speed
+            else
+                00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+                0172: 13@ = actor $PLAYER_ACTOR Z_angle 
+    
+                // Front Speedを退避させる 
+                0087: 8@ = 21@
+                
+                // 現在のReal Front Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x024
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                006B: 8@ *= 19@ // Ctrl Coef 
+            
+                // 最高速度に加速係数をかける            
+                0087: 7@ = 29@
+                0073: 7@ /= 21@
+                if 7@ < 0.0
+                then 7@ *= -1.0
+                end
+                
+                0087: 6@ = 21@
+                6@ *= 0.0015
+
+                0087: 28@ = 27@
+                28@ *= 100.0
+                28@ -= 1.0
+                if 28@ > 0.0
+                then
+                    006B: 28@ *= 28@
+                else
+                    006B: 28@ *= 28@
+                    28@ *= -1.0
+                end
+                28@ += 1.0
+                006B: 6@ *= 28@
+
+                006B: 8@ *= 27@
+                006B: 8@ *= 7@
+                005B: 8@ += 6@                
+
+                // リアル速度を求める
+                if 29@ > 0.0
+                then
+                    0063: 29@ -= 8@
+                    if 29@ < 0
+                    then 29@ = 0
+                    end
+                else
+                    005B: 29@ += 8@
+                    if 29@ > 0
+                    then 29@ = 0
+                    end
+                end
+                
+                02F6: 17@ = cosine 13@ // X軸
+                006B: 17@ *= 29@
+                02F7: 18@ = sine 13@ // Y軸 
+                006B: 18@ *= 29@
+        
+                0063: 10@ -= 17@
+                005B: 11@ += 18@
+                12@ -= 1.0
+    
+                00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+    
+                // 現在のReal Front Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x024
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0 // Front Speed
+            end
+        end 
+
+
+
+        // 右に移動する 
+        if 0AB0: key_pressed 68 // Ｄ
+        then
+            00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+            0172: 13@ = actor $PLAYER_ACTOR Z_angle
+
+
+            // Side Speedを退避させる 
+            0087: 8@ = 22@
+
+            // 現在のReal Side Speedを読み込む 
+            0A8E: 31@ = 30@ + 0x028
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+            // 最高速度に加速係数をかける            
+            006B: 8@ *= 27@
+            
+            // 左へ移動中なら、摩擦＋加速力で２倍の加速度 
+            if 29@ < 0
+            then 8@ *= 2.0
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                006B: 22@ *= 19@ // Ctrl Coef 
+                006B: 8@ *= 19@ // Ctrl Coef
+            end 
+            
+            // リアル速度を求める
+            005B: 29@ += 8@
+            if 0025: 29@ > 22@
+            then 0087: 29@ = 22@
+            end 
+
+            if 0AB0: key_pressed 32 // Space
+            then 
+                0073: 8@ /= 19@ // Ctrl Coef 
+                0073: 22@ /= 19@ // Ctrl Coef 
+            end 
+
+            13@ -= 90.0
+            if 13@ <= 0.0
+            then 13@ += 360.0
+            end 
+
+            02F6: 17@ = cosine 13@ // X軸
+            006B: 17@ *= 29@
+            02F7: 18@ = sine 13@ // Y軸 
+            006B: 18@ *= 29@
+    
+            0063: 10@ -= 17@
+            005B: 11@ += 18@
+            12@ -= 1.0
+
+            00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+
+            // 現在のReal Side Speedを書き込む 
+            0A8E: 31@ = 30@ + 0x028
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+        else
+            // 左に移動する 
+            if 0AB0: key_pressed 65 // Ａ
+            then
+                00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+                0172: 13@ = actor $PLAYER_ACTOR Z_angle
+
+                // Front Speedを退避させる 
+                0087: 8@ = 22@
+    
+                // 現在のReal Side Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x028
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける            
+                006B: 8@ *= 27@
+                8@ *= -1.0
+                
+                // 右へ移動中なら、摩擦－加速力で２倍の加速度 
+                if 29@ > 0
+                then 8@ *= 2.0
+                end
+            
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    006B: 22@ *= 19@ // Ctrl Coef 
+                    006B: 8@ *= 19@ // Ctrl Coef
+                end 
+            
+                // リアル速度を求める
+                005B: 29@ += 8@
+                29@ *= -1.0
+                if 0025: 29@ > 22@
+                then 0087: 29@ = 22@
+                end
+                29@ *= -1.0 
+    
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    0073: 8@ /= 19@ // Ctrl Coef 
+                    0073: 22@ /= 19@ // Ctrl Coef 
+                end 
+
+                13@ -= 90.0
+                if 13@ <= 0.0
+                then 13@ += 360.0
+                end 
+
+                02F6: 17@ = cosine 13@ // X軸
+                006B: 17@ *= 29@
+                02F7: 18@ = sine 13@ // Y軸 
+                006B: 18@ *= 29@
+        
+                0063: 10@ -= 17@
+                005B: 11@ += 18@
+                12@ -= 1.0
+    
+                00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+    
+                // 現在のReal Side Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x028
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            else
+                00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+                0172: 13@ = actor $PLAYER_ACTOR Z_angle 
+    
+                // Side Speedを退避させる 
+                0087: 8@ = 22@
+                
+                // 現在のReal Side Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x028
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                006B: 8@ *= 19@ // Ctrl Coef 
+            
+                // 最高速度に加速係数をかける            
+                0087: 7@ = 29@
+                0073: 7@ /= 22@
+                if 7@ < 0.0
+                then 7@ *= -1.0
+                end
+                
+                0087: 6@ = 22@
+                6@ *= 0.0015
+
+                0087: 28@ = 27@
+                28@ *= 100.0
+                28@ -= 1.0
+                if 28@ > 0.0
+                then
+                    006B: 28@ *= 28@
+                else
+                    006B: 28@ *= 28@
+                    28@ *= -1.0
+                end
+                28@ += 1.0
+                006B: 6@ *= 28@
+
+                006B: 8@ *= 27@
+                006B: 8@ *= 7@
+                005B: 8@ += 6@                
+                
+                // リアル速度を求める
+                if 29@ > 0.0
+                then
+                    0063: 29@ -= 8@
+                    if 29@ < 0
+                    then 29@ = 0
+                    end
+
+                    13@ -= 90.0
+                    if 13@ <= 0.0
+                    then 13@ += 360.0
+                    end 
+                else
+                    005B: 29@ += 8@
+                    if 29@ > 0
+                    then 29@ = 0
+                    end
+
+                    13@ -= 90.0
+                    if 13@ <= 0.0
+                    then 13@ += 360.0
+                    end 
+                end
+                
+                02F6: 17@ = cosine 13@ // X軸
+                006B: 17@ *= 29@
+                02F7: 18@ = sine 13@ // Y軸 
+                006B: 18@ *= 29@
+        
+                0063: 10@ -= 17@
+                005B: 11@ += 18@
+                12@ -= 1.0
+    
+                00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+    
+                // 現在のReal Side Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x028
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            end
+        end 
+
+        // 上に上がる 
+        if 0AB0: key_pressed 13 // Enter 
+        then
+            00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+
+            // Updown Speedを退避させる 
+            0087: 8@ = 23@
+
+            // 現在のReal UpDown Speedを読み込む 
+            0A8E: 31@ = 30@ + 0x02C
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+            // 最高速度に加速係数をかける            
+            006B: 8@ *= 27@
+            
+            // 下へ移動中なら、摩擦＋加速力で２倍の加速度 
+            if 29@ < 0
+            then 8@ *= 2.0
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                006B: 23@ *= 19@ // Ctrl Coef 
+                006B: 8@ *= 19@ // Ctrl Coef
+            end 
+            
+            // リアル速度を求める
+            005B: 29@ += 8@
+            if 0025: 29@ > 23@
+            then 0087: 29@ = 23@
+            end 
+
+            if 0AB0: key_pressed 32 // Space
+            then 
+                0073: 8@ /= 19@ // Ctrl Coef 
+                0073: 23@ /= 19@ // Ctrl Coef 
+            end 
+
+            005B: 12@ += 29@
+            12@ -= 1.0         
+
+            00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+
+            // 現在のReal Updown Speedを書き込む 
+            0A8E: 31@ = 30@ + 0x02C
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+        else
+            // 下に下がる 
+            if 0AB0: key_pressed 96 // Num0 
+            then
+                00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+
+                // Updown Speedを退避させる 
+                0087: 8@ = 23@
+    
+                // 現在のReal UpDown Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x02C
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける            
+                006B: 8@ *= 27@
+                8@ *= -1.0
+                
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    006B: 23@ *= 19@ // Ctrl Coef 
+                    006B: 8@ *= 19@ // Ctrl Coef
+                end 
+                
+                // 下へ移動中なら、摩擦＋加速力で２倍の加速度 
+                if 29@ > 0
+                then 8@ *= 2.0
+                end
+                
+                // リアル速度を求める
+                005B: 29@ += 8@
+                29@ *= -1.0
+                if 0025: 29@ > 23@
+                then 0087: 29@ = 23@
+                end 
+                29@ *= -1.0
+
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    0073: 8@ /= 19@ // Ctrl Coef 
+                    0073: 23@ /= 19@ // Ctrl Coef 
+                end 
+
+                005B: 12@ += 29@
+                12@ -= 1.0         
+
+                00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+
+                // 現在のReal Updown Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x02C
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            else
+                00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+
+                // Updown Speedを退避させる 
+                0087: 8@ = 23@
+    
+                // 現在のReal UpDown Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x02C
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                006B: 8@ *= 19@ // Ctrl Coef 
+            
+                // 最高速度に加速係数をかける            
+                0087: 7@ = 29@
+                0073: 7@ /= 23@
+                if 7@ < 0.0
+                then 7@ *= -1.0
+                end
+                
+                0087: 6@ = 23@
+                6@ *= 0.0015
+
+                0087: 28@ = 27@
+                28@ *= 100.0
+                28@ -= 1.0
+                if 28@ > 0.0
+                then
+                    006B: 28@ *= 28@
+                else
+                    006B: 28@ *= 28@
+                    28@ *= -1.0
+                end
+                28@ += 1.0
+                006B: 6@ *= 28@
+
+                006B: 8@ *= 27@
+                006B: 8@ *= 7@
+                005B: 8@ += 6@                
+                
+                
+                // リアル速度を求める
+                if 29@ > 0.0
+                then
+                    0063: 29@ -= 8@
+                    if 29@ < 0
+                    then 29@ = 0
+                    end
+                else
+                    005B: 29@ += 8@
+                    if 29@ > 0
+                    then 29@ = 0
+                    end
+                end
+
+                005B: 12@ += 29@
+                12@ -= 1.0         
+
+                00A1: put_actor $PLAYER_ACTOR at 10@ 11@ 12@
+
+                // 現在のReal Updown Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x02C
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            end
+        end
+
+        // 上を向く 
+        if 0AB0: key_pressed 101 // Num5
+        then
+            // Lookupdown Speedを退避させる 
+            0087: 8@ = 25@
+
+            // 現在のReal Lookupdown Speedを読み込む 
+            0A8E: 31@ = 30@ + 0x034
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+
+            // 最高速度に加速係数をかける            
+            006B: 8@ *= 27@
+            
+            // 下を向いている最中なら、摩擦＋加速力で２倍の加速度 
+            if 29@ < 0
+            then 8@ *= 2.0
+            end
+            
+            if 0AB0: key_pressed 32 // Space
+            then 
+                006B: 25@ *= 19@ // Ctrl Coef 
+                006B: 8@ *= 19@ // Ctrl Coef
+            end 
+            
+            // リアル速度を求める
+            005B: 29@ += 8@
+            if 0025: 29@ > 25@
+            then 0087: 29@ = 25@
+            end 
+
+            if 0AB0: key_pressed 32 // Space
+            then 
+                0073: 8@ /= 19@ // Ctrl Coef 
+                0073: 25@ /= 19@ // Ctrl Coef 
+            end 
+
+            // カメラターゲットの高さオフセットの更新 
+            0A8E: 31@ = 30@ + 0x020
+            0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+            005B: 28@ += 29@
+            if 0025: 28@ > 26@
+            then 0087: 28@ = 26@
+            end
+            0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+            
+
+            // 現在のReal Lookupdown Speedを書き込む 
+            0A8E: 31@ = 30@ + 0x034
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+        else
+            // 下を向く 
+            if 0AB0: key_pressed 98 // Num2
+            then
+                // Lookupdown Speedを退避させる 
+                0087: 8@ = 25@
+    
+                // 現在のReal Lookupdown Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x034
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                // 最高速度に加速係数をかける            
+                006B: 8@ *= 27@
+                8@ *= -1.0
+                
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    006B: 25@ *= 19@ // Ctrl Coef 
+                    006B: 8@ *= 19@ // Ctrl Coef
+                end 
+            
+                // 上を向いている最中なら、摩擦＋加速力で２倍の加速度 
+                if 29@ > 0
+                then 8@ *= 2.0
+                end
+                
+                // リアル速度を求める
+                005B: 29@ += 8@
+                29@ *= -1.0
+                if 0025: 29@ > 25@
+                then 0087: 29@ = 25@
+                end 
+                29@ *= -1.0
+    
+                if 0AB0: key_pressed 32 // Space
+                then 
+                    0073: 8@ /= 19@ // Ctrl Coef 
+                    0073: 25@ /= 19@ // Ctrl Coef 
+                end 
+
+                // カメラターゲットの高さオフセットの更新 
+                0A8E: 31@ = 30@ + 0x020
+                0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+                005B: 28@ += 29@
+                28@ *= -1.0
+                if 0025: 28@ > 26@
+                then 0087: 28@ = 26@
+                end
+                28@ *= -1.0
+                0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+                
+                // 現在のReal Lookupdown Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x034
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            else
+                // Lookupdown Speedを退避させる 
+                0087: 8@ = 25@
+    
+                // 現在のReal Lookupdown Speedを読み込む 
+                0A8E: 31@ = 30@ + 0x034
+                0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+    
+                006B: 8@ *= 19@ // Ctrl Coef 
+            
+                // 最高速度に加速係数をかける            
+                0087: 7@ = 29@
+                0073: 7@ /= 25@
+                if 7@ < 0.0
+                then 7@ *= -1.0
+                end
+                
+                0087: 6@ = 25@
+                6@ *= 0.0015
+
+                0087: 28@ = 27@
+                28@ *= 100.0
+                28@ -= 1.0
+                if 28@ > 0.0
+                then
+                    006B: 28@ *= 28@
+                else
+                    006B: 28@ *= 28@
+                    28@ *= -1.0
+                end
+                28@ += 1.0
+                006B: 6@ *= 28@
+
+                006B: 8@ *= 27@
+                006B: 8@ *= 7@
+                005B: 8@ += 6@                
+                
+                
+                // リアル速度を求める
+                if 29@ > 0.0
+                then
+                    0063: 29@ -= 8@
+                    if 29@ < 0
+                    then 29@ = 0
+                    end
+
+                    // カメラターゲットの高さオフセットの更新 
+                    0A8E: 31@ = 30@ + 0x020
+                    0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+                    005B: 28@ += 29@
+                    if 0025: 28@ > 26@
+                    then 0087: 28@ = 26@
+                    end
+                    0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+                else
+                    005B: 29@ += 8@
+                    if 29@ > 0
+                    then 29@ = 0
+                    end
+
+                    // カメラターゲットの高さオフセットの更新 
+                    0A8E: 31@ = 30@ + 0x020
+                    0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0
+                    005B: 28@ += 29@
+                    28@ *= -1.0
+                    if 0025: 28@ > 26@
+                    then 0087: 28@ = 26@
+                    end
+                    28@ *= -1.0
+                    0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+                end
+
+                // 現在のReal Lookupdown Speedを書き込む 
+                0A8E: 31@ = 30@ + 0x034
+                0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+            end
+        end
+
+        if 0AB0: key_pressed 35 // End 
+        then
+            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057 
+            goto @SMCM_Set
+        end
+
+        if 0AB0: key_pressed 8 // BackSpace 
+        then
+            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058 
+            goto @SMCM_Abort
+        end
+
+        // ファイルの読み出し 
+        if and
+            0AB0: key_pressed 17 // Ctrl 
+            0AB0: key_pressed 82 // R 
+        then
+            08D4: 29@ = create_panel_with_title 'DUMMY' position 10.0 10.0 width 150.0 columns 1 interactive 1 background 1 alignment 1
+            08DB: set_panel 29@ column 0 header 'SMCM_11' data 'SMCM_13' 'SMCM_14' 'SMCM_15' 'SMCM_16' 'SMCM_17' 'SMCM_18' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+
+            :SMCM_Load_Loop
+            wait 0
+            if 0AB0: key_pressed 32 // Space 
+            jf @SMCM_Load_Loop
+            wait 200
+
+            // パネルの戻り値を取得してパネル消去
+            08D8: 28@ = panel 29@ selected
+            08DA: remove_panel 29@
+
+            if 28@ == 0
+            then
+                if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save1.dat" mode 0x6272
+                then
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                    0A9D: readfile 29@ size 36 from 19@
+                    0A9B: closefile 29@
+                else
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                    wait 200
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                    wait 200
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                end
+            else
+                if 28@ == 1
+                then
+                    if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save2.dat" mode 0x6272
+                    then
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                        0A9D: readfile 29@ size 36 from 19@
+                        0A9B: closefile 29@
+                    else
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                        wait 200
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                        wait 200
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                    end
+                else
+                    if 28@ == 2
+                    then
+                        if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save3.dat" mode 0x6272
+                        then
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                            0A9D: readfile 29@ size 36 from 19@
+                            0A9B: closefile 29@
+                        else
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                            wait 200
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                            wait 200
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                        end
+                    else
+                        if 28@ == 3
+                        then
+                            if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save4.dat" mode 0x6272
+                            then
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                                0A9D: readfile 29@ size 36 from 19@
+                                0A9B: closefile 29@
+                            else
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                wait 200
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                wait 200
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                            end
+                        else
+                            if 28@ == 4
+                            then
+                                if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save5.dat" mode 0x6272
+                                then
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                                    0A9D: readfile 29@ size 36 from 19@
+                                    0A9B: closefile 29@
+                                else
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                    wait 200
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                    wait 200
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                end
+                            else    
+                                goto @SMCM_Load_End                            
+                            end
+                        end
+                    end
+                end
+            end
+            :SMCM_Load_End
+            wait 200
+        end
+
+        // ファイルの書き込み 
+        if and
+            0AB0: key_pressed 17 // Ctrl 
+            0AB0: key_pressed 83 // S 
+        then
+            08D4: 29@ = create_panel_with_title 'DUMMY' position 10.0 10.0 width 150.0 columns 1 interactive 1 background 1 alignment 1
+            08DB: set_panel 29@ column 0 header 'SMCM_12' data 'SMCM_13' 'SMCM_14' 'SMCM_15' 'SMCM_16' 'SMCM_17' 'SMCM_18' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+
+            :SMCM_Save_Loop
+            wait 0
+            if 0AB0: key_pressed 32 // Space 
+            jf @SMCM_Save_Loop
+            wait 200
+
+            // パネルの戻り値を取得してパネル消去
+            08D8: 28@ = panel 29@ selected
+            08DA: remove_panel 29@
+
+            if 28@ == 0
+            then
+                if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save1.dat" mode 0x6277
+                then
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                    0A9E: writefile 29@ size 36 from 19@
+                    0A9B: closefile 29@
+                else
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                    wait 200
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                    wait 200
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                end
+            else
+                if 28@ == 1
+                then
+                    if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save2.dat" mode 0x6277
+                    then
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                        0A9E: writefile 29@ size 36 from 19@
+                        0A9B: closefile 29@
+                    else
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                        wait 200
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                        wait 200
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                    end
+                else
+                    if 28@ == 2
+                    then
+                        if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save3.dat" mode 0x6277
+                        then
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                            0A9E: writefile 29@ size 36 from 19@
+                            0A9B: closefile 29@
+                        else
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                            wait 200
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                            wait 200
+                            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                        end
+                    else
+                        if 28@ == 3
+                        then
+                            if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save4.dat" mode 0x6277
+                            then
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                                0A9E: writefile 29@ size 36 from 19@
+                                0A9B: closefile 29@
+                            else
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                wait 200
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                wait 200
+                                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                            end
+                        else
+                            if 28@ == 4
+                            then
+                                if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Save5.dat" mode 0x6277
+                                then
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1057
+                                    0A9E: writefile 29@ size 36 from 19@
+                                    0A9B: closefile 29@
+                                else
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                    wait 200
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                    wait 200
+                                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                                end
+                            else
+                                goto @SMCM_Save_End
+                            end
+                        end
+                    end
+                end
+            end
+            :SMCM_Save_End
+            wait 200
+        end
+
+        // デフォルトとして保存 
+        if and
+            0AB0: key_pressed 17 // Ctrl 
+            0AB0: key_pressed 68 // D 
+        then
+            if 0A9A: 29@ = openfile "cleo\cleo_saves\SCW_Default.dat" mode 0x6277
+            then
+                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1136
+                0A9E: writefile 29@ size 36 from 19@
+                0A9B: closefile 29@
+            else
+                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                wait 200
+                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+                wait 200
+                097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+            end
+            wait 200
+        end
+
+        // 傾きとアオリを初期化する 
+        if 0AB0: key_pressed 36 // Home
+        then
+            0A8E: 31@ = 30@ + 0x048 
+            0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0
+
+            0A8E: 31@ = 30@ + 0x020 
+            0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0
+
+            097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058
+            wait 200
+        end
+
+
+        // パラメータ設定モードに入る 
+        if 0AB0: key_pressed 115 // F4 
+        then
+            wait 200
+            08D4: 29@ = create_panel_with_title 'DUMMY' position 10.0 10.0 width 220.0 columns 1 interactive 0 background 1 alignment -1
+            08DB: set_panel 29@ column 0 header 'DUMMY' data 'SMCM_10' 'SMCM_10' 'SMCM_10' 'SMCM_10' 'SMCM_10' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 
+
+            // 長く表示するパネルなので、ハンドルをメモリに書き込んでおく 
+            0A8E: 31@ = 30@ + 0x004
+            0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+
+            // 現在値をメモリに書き込んでおく 
+            0A8E: 31@ = 30@ + 0x04C
+            0A8C: write_memory 31@ size 4 value 21@ virtual_protect 0 // Front Speed
+            0A8E: 31@ = 30@ + 0x050
+            0A8C: write_memory 31@ size 4 value 22@ virtual_protect 0 // Side Speed  
+            0A8E: 31@ = 30@ + 0x054
+            0A8C: write_memory 31@ size 4 value 23@ virtual_protect 0 // Updown Speed 
+            0A8E: 31@ = 30@ + 0x058
+            0A8C: write_memory 31@ size 4 value 24@ virtual_protect 0 // Rotate Speed 
+            0A8E: 31@ = 30@ + 0x05C
+            0A8C: write_memory 31@ size 4 value 25@ virtual_protect 0 // Lookupdown Speed 
+            0A8E: 31@ = 30@ + 0x060
+            0A8C: write_memory 31@ size 4 value 26@ virtual_protect 0 // Lookupdown Limit 
+            0A8E: 31@ = 30@ + 0x064
+            0A8C: write_memory 31@ size 4 value 20@ virtual_protect 0 // Tilt Speed 
+            0A8E: 31@ = 30@ + 0x068
+            0A8C: write_memory 31@ size 4 value 27@ virtual_protect 0 // Fade Acceleration
+            0A8E: 31@ = 30@ + 0x070
+            0A8C: write_memory 31@ size 4 value 19@ virtual_protect 0 // Ctrl Coef
+
+            :SMCM_MenuLoop
+            wait 0            
+
+            if 001D: 32@ > 9@
+            then 9@ = 0
+            end
+    
+            if 9@ == 0
+            then
+            
+                if and
+                    0AB0: key_pressed  16 // Shift 
+                    0AB0: key_pressed 107 // ＋ 
+                then
+                    0A8E: 31@ = 30@ + 0x000
+                    0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+                    if 29@ == 1 // Front Speed
+                    then
+                        21@ += 0.02
+                        9@ = 100
+                        32@ = 0
+    
+                    else
+                        if 29@ == 2 // Side Speed  
+                        then
+                            22@ += 0.02
+                            9@ = 100
+                            32@ = 0
+                        else
+                            if 29@ == 3 // Updown Speed 
+                            then
+                                23@ += 0.02
+                                9@ = 100
+                                32@ = 0
+                            else
+                                if 29@ == 4 //  Rotate Speed 
+                                then
+                                    24@ += 0.1
+                                    9@ = 100
+                                    32@ = 0
+                                else
+                                    if 29@ == 5 // Lookupdown Speed 
+                                    then
+                                        25@ += 0.0002
+                                        9@ = 100
+                                        32@ = 0
+                                    else
+                                        if 29@ == 6 // Lookupdown Limit 
+                                        then
+                                            26@ += 0.1
+                                            9@ = 100
+                                            32@ = 0
+                                        else
+                                            if 29@ == 7 // Tilt Speed
+                                            then
+                                                20@ += 0.01
+                                                9@ = 100
+                                                32@ = 0
+                                            else
+                                                if 29@ == 8 // Fade Acceleration
+                                                then
+                                                    27@ += 0.01
+                                                    9@ = 100
+                                                    32@ = 0
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end 
+            
+                if and
+                    0AB0: key_pressed  16 // Shift 
+                    0AB0: key_pressed 109 // － 
+                then
+                    0A8E: 31@ = 30@ + 0x000
+                    0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+                    if 29@ == 1 // Front Speed
+                    then
+                        21@ -= 0.02
+                        9@ = 100
+                        32@ = 0
+                        
+                        if 21@ < 0.002
+                        then 21@ = 0.002
+                        end
+                    else
+                        if 29@ == 2 // Side Speed  
+                        then
+                            22@ -= 0.02
+                            9@ = 100
+                            32@ = 0
+
+                            if 22@ < 0.002
+                            then 22@ = 0.002
+                            end
+                        else
+                            if 29@ == 3 // Updown Speed 
+                            then
+                                23@ -= 0.02
+                                9@ = 100
+                                32@ = 0
+
+                                if 23@ < 0.002
+                                then 23@ = 0.002
+                                end
+                            else
+                                if 29@ == 4 //  Rotate Speed 
+                                then
+                                    24@ -= 0.1
+                                    9@ = 100
+                                    32@ = 0
+
+                                    if 24@ < 0.01
+                                    then 24@ = 0.01
+                                    end
+                                else
+                                    if 29@ == 5 // Lookupdown Speed 
+                                    then
+                                        25@ -= 0.0002
+                                        9@ = 100
+                                        32@ = 0
+
+                                        if 25@ < 0.00002
+                                        then 25@ = 0.00002
+                                        end
+                                    else
+                                        if 29@ == 6 // Lookupdown Limit 
+                                        then
+                                            26@ -= 0.1
+                                            9@ = 100
+                                            32@ = 0
+
+                                            if 26@ < 0.01
+                                            then 26@ = 0.01
+                                            end
+                                        else
+                                            if 29@ == 7 // Tilt Speed
+                                            then
+                                                20@ -= 0.01
+                                                9@ = 100
+                                                32@ = 0
+
+                                                if 20@ < 0.001
+                                                then 20@ = 0.001
+                                                end
+                                            else
+                                                if 29@ == 8 // Fade Acceleration
+                                                then
+                                                    27@ -= 0.01
+                                                    9@ = 100
+                                                    32@ = 0
+    
+                                                    if 27@ < 0.001
+                                                    then 27@ = 0.001
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+
+                if 0AB0: key_pressed 107 // ＋
+                then
+                    0A8E: 31@ = 30@ + 0x000
+                    0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+                    if 29@ == 1 // Front Speed
+                    then
+                        21@ += 0.002
+                        9@ = 100
+                        32@ = 0
+    
+                    else
+                        if 29@ == 2 // Side Speed  
+                        then
+                            22@ += 0.002
+                            9@ = 100
+                            32@ = 0
+                        else
+                            if 29@ == 3 // Updown Speed 
+                            then
+                                23@ += 0.002
+                                9@ = 100
+                                32@ = 0
+                            else
+                                if 29@ == 4 //  Rotate Speed 
+                                then
+                                    24@ += 0.01
+                                    9@ = 100
+                                    32@ = 0
+                                else
+                                    if 29@ == 5 // Lookupdown Speed 
+                                    then
+                                        25@ += 0.00002
+                                        9@ = 100
+                                        32@ = 0
+                                    else
+                                        if 29@ == 6 // Lookupdown Limit 
+                                        then
+                                            26@ += 0.01
+                                            9@ = 100
+                                            32@ = 0
+                                        else
+                                            if 29@ == 7 // Tilt Speed
+                                            then
+                                                20@ += 0.001
+                                                9@ = 100
+                                                32@ = 0
+                                            else
+                                                if 29@ == 8 // Fade Acceleration
+                                                then
+                                                    27@ += 0.001
+                                                    9@ = 100
+                                                    32@ = 0
+                                                else
+                                                    if 29@ == 9 // Ctrl Coef
+                                                    then
+                                                        19@ += 0.1
+                                                        9@ = 100
+                                                        32@ = 0
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end 
+            
+                if 0AB0: key_pressed 109 // － 
+                then
+                    0A8E: 31@ = 30@ + 0x000
+                    0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+                    if 29@ == 1 // Front Speed
+                    then
+                        21@ -= 0.002
+                        9@ = 100
+                        32@ = 0
+                        
+                        if 21@ < 0.002
+                        then 21@ = 0.002
+                        end
+                    else
+                        if 29@ == 2 // Side Speed  
+                        then
+                            22@ -= 0.002
+                            9@ = 100
+                            32@ = 0
+
+                            if 22@ < 0.002
+                            then 22@ = 0.002
+                            end
+                        else
+                            if 29@ == 3 // Updown Speed 
+                            then
+                                23@ -= 0.002
+                                9@ = 100
+                                32@ = 0
+
+                                if 23@ < 0.002
+                                then 23@ = 0.002
+                                end
+                            else
+                                if 29@ == 4 //  Rotate Speed 
+                                then
+                                    24@ -= 0.01
+                                    9@ = 100
+                                    32@ = 0
+
+                                    if 24@ < 0.01
+                                    then 24@ = 0.01
+                                    end
+                                else
+                                    if 29@ == 5 // Lookupdown Speed 
+                                    then
+                                        25@ -= 0.00002
+                                        9@ = 100
+                                        32@ = 0
+
+                                        if 25@ < 0.00002
+                                        then 25@ = 0.00002
+                                        end
+                                    else
+                                        if 29@ == 6 // Lookupdown Limit 
+                                        then
+                                            26@ -= 0.01
+                                            9@ = 100
+                                            32@ = 0
+
+                                            if 26@ < 0.01
+                                            then 26@ = 0.01
+                                            end
+                                        else
+                                            if 29@ == 7 // Tilt Speed
+                                            then
+                                                20@ -= 0.001
+                                                9@ = 100
+                                                32@ = 0
+
+                                                if 20@ < 0.001
+                                                then 20@ = 0.001
+                                                end
+                                            else
+                                                if 29@ == 8 // Fade Acceleration
+                                                then
+                                                    27@ -= 0.001
+                                                    9@ = 100
+                                                    32@ = 0
+    
+                                                    if 27@ < 0.001
+                                                    then 27@ = 0.001
+                                                    end
+                                                else
+                                                    if 29@ == 9 // Ctrl Coef
+                                                    then
+                                                        19@ -= 0.1
+                                                        if 19@ < 0.1
+                                                        then 19@ = 0.1
+                                                        end
+                                                        9@ = 100
+                                                        32@ = 0
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+                :SMCM_ValueChange_End 
+
+                // カーソルを上に動かす 
+                if 0AB0: key_pressed 38 // ↑ 
+                then
+                    0A8E: 31@ = 30@ + 0x000
+                    0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+                    29@ -= 1
+                    if 29@ == 0
+                    then 29@ = 1
+                    else
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1052
+                        32@ = 0
+                        9@ = 100
+                    end
+                    // 変更した値を書き込む 
+                    0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+                end 
+            
+                // カーソルを下に動かす 
+                if 0AB0: key_pressed 40 // ↓ 
+                then
+                    0A8E: 31@ = 30@ + 0x000
+                    0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+                    29@ += 1
+                    if 29@ == 10
+                    then
+                        29@ = 9
+                    else
+                        097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1052
+                        32@ = 0
+                        9@ = 100
+                    end
+                    // 変更した値を書き込む 
+                    0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+                end 
+    
+    
+                if 0AB0: key_pressed 115 // F4 
+                then
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1052 
+                    goto @SMCM_Menu_Set
+                end
+        
+                if 0AB0: key_pressed 8 // BackSpace 
+                then
+                    097A: play_sound_at_3D_coord 0.0 0.0 0.0 reference 1058 
+                    goto @SMCM_Menu_Abort
+                end
+            end
+        
+            0A8E: 31@ = 30@ + 0x000
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在選択中のメニュー 
+    
+            if 29@ == 1
+            then 28@ = 20.0
+            else
+                if 29@ == 2
+                then 28@ = 32.0
+                else
+                    if 29@ == 3
+                    then 28@ = 44.0
+                    else
+                        if 29@ == 4
+                        then 28@ = 56.0
+                        else
+                            if 29@ == 5
+                            then 28@ = 68.0
+                            else
+                                if 29@ == 6
+                                then 28@ = 80.0
+                                else
+                                    if 29@ == 7
+                                    then 28@ = 92.0
+                                    else
+                                        if 29@ == 8
+                                        then 28@ = 104.0
+                                        else
+                                            if 29@ == 9
+                                            then 28@ = 116.0
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+    
+            // 表示処理 
+            03F0: enable_text_draw 1
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 15.0 28@ GXT 'SMCM_09'  // =>
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 20.0 GXT 'SMCM_01'  // Front Speed
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 32.0 GXT 'SMCM_02'  // Side Speed 
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 44.0 GXT 'SMCM_03'  // Updown Speed 
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 56.0 GXT 'SMCM_04'  // Rotate Speed 
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 68.0 GXT 'SMCM_05'  // Lookupdown Speed 
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 80.0 GXT 'SMCM_06'  // Lookupdown Limit 
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 92.0 GXT 'SMCM_19'  // Tilt Speed 
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 104.0 GXT 'SMCM_08'  // Fade Acceleration
+            033F: set_text_draw_letter_size totalsize 0.5 Height 1.5 
+            033E: set_draw_text_position 40.0 116.0 GXT 'SMCM_20'  // Ctrl Coef
+
+            0087: 29@ = 21@
+            29@ *= 1000.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 21.0 GXT 'NUMBER' number 29@ // Front Speed
+    
+            0087: 29@ = 22@
+            29@ *= 1000.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 33.0 GXT 'NUMBER' number 29@ // Side Speed 
+    
+            0087: 29@ = 23@
+            29@ *= 1000.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 45.0 GXT 'NUMBER' number 29@ // Updown Speed  
+    
+            0087: 29@ = 24@
+            29@ *= 100.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 57.0 GXT 'NUMBER' number 29@ // Rotate Speed 
+    
+            0087: 29@ = 25@
+            29@ *= 100000.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 69.0 GXT 'NUMBER' number 29@ // Lookupdown Speed 
+    
+            0087: 29@ = 26@
+            29@ *= 100.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 81.0 GXT 'NUMBER' number 29@ // Lookupdown Limit 
+    
+            0087: 29@ = 20@
+            29@ *= 1000.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 93.0 GXT 'NUMBER' number 29@ // Tilt Speed 
+    
+            0087: 29@ = 27@
+            29@ *= 1000.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 105.0 GXT 'NUMBER' number 29@ // Fade Acceleration
+            
+            0087: 29@ = 19@
+            29@ *= 10.0 
+            0092: 29@ = float 29@ to_integer 
+            045A: draw_text_1number 180.0 117.0 GXT 'NUMBER' number 29@ // Ctrl Coef
+            
+            01B4: set_player $PLAYER_CHAR can_move 0
+
+            goto @SMCM_MenuLoop
+            
+            
+            :SMCM_Menu_Abort
+            
+            // 変更前の値をメモリから読み出す 
+            0A8E: 31@ = 30@ + 0x04C
+            0A8D: 21@ = read_memory 31@ size 4 virtual_protect 0 // Front Speed
+            0A8E: 31@ = 30@ + 0x050
+            0A8D: 22@ = read_memory 31@ size 4 virtual_protect 0 // Side Speed 
+            0A8E: 31@ = 30@ + 0x054
+            0A8D: 23@ = read_memory 31@ size 4 virtual_protect 0 // Updown Speed 
+            0A8E: 31@ = 30@ + 0x058
+            0A8D: 24@ = read_memory 31@ size 4 virtual_protect 0 // Rotate Speed 
+            0A8E: 31@ = 30@ + 0x05C
+            0A8D: 25@ = read_memory 31@ size 4 virtual_protect 0 // Lookupdown Speed 
+            0A8E: 31@ = 30@ + 0x060
+            0A8D: 26@ = read_memory 31@ size 4 virtual_protect 0 // Lookupdown Limit 
+            0A8E: 31@ = 30@ + 0x064
+            0A8D: 20@ = read_memory 31@ size 4 virtual_protect 0 // Tilt Speed 
+            0A8E: 31@ = 30@ + 0x068
+            0A8D: 27@ = read_memory 31@ size 4 virtual_protect 0 // Fade Acceleration
+            0A8E: 31@ = 30@ + 0x070
+            0A8D: 19@ = read_memory 31@ size 4 virtual_protect 0 // Ctrl Coef
+
+            :SMCM_Menu_Set
+            
+            0A8E: 31@ = 30@ + 0x004
+            0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // パネルのハンドル
+            08DA: remove_panel 29@ 
+            
+            wait 200 
+        end
+
+
+        // CJの目線の現在位置を取得        
+        00A0: store_actor $PLAYER_ACTOR position_to 10@ 11@ 12@
+        12@ += 0.8
+
+        0A8E: 31@ = 30@ + 0x008
+        0A8C: write_memory 31@ size 4 value 10@ virtual_protect 0
+        0A8E: 31@ = 30@ + 0x00C
+        0A8C: write_memory 31@ size 4 value 11@ virtual_protect 0
+        0A8E: 31@ = 30@ + 0x010
+        0A8C: write_memory 31@ size 4 value 12@ virtual_protect 0
+
+        0172: 29@ = actor $PLAYER_ACTOR Z_angle 
+
+        // CJの目線より10cm先の位置を計算する
+        02F6: 28@ = cosine 29@ // X軸
+        28@ *= 0.2
+        0A8E: 31@ = 30@ + 0x018
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+        
+        02F7: 28@ = sine 29@ // Y軸 
+        28@ *= 0.2
+        0A8E: 31@ = 30@ + 0x01C
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0
+
+        0A8E: 31@ = 30@ + 0x048 
+        0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0 // 現在のTilt値を読み込む 
+        Camera.SetPosition(10@, 11@, 12@, 29@, 0.0, 0.0)
+
+        0A8E: 31@ = 30@ + 0x018 
+        0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+        0063: 10@ -= 29@ // カメラターゲットのX座標 
+        
+        0A8E: 31@ = 30@ + 0x01C
+        0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+        005B: 11@ += 29@ // カメラターゲットのY座標 
+
+        0A8E: 31@ = 30@ + 0x020
+        0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+        005B: 12@ += 29@ // カメラターゲットのZ座標
+         
+        Camera.PointAt(10@, 11@, 12@, 2)
+        
+        goto @SMCM_Loop
+
+        // エスケープした場合はカメラ位置を元に戻す 
+        :SMCM_Abort
+        Camera.SetBehindPlayer
+        Camera.Restore_WithJumpCut
+        015A: restore_camera_to_default
+        0931: lock_camera_zoom 0 
+        099C: jiggle_camera type 1 duration 0.0 intensity 0.0
+
+        0337: set_actor $PLAYER_ACTOR visibility 1
+        01B4: set_player $PLAYER_CHAR can_move 1
+
+        if 80DF: actor $PLAYER_ACTOR not driving
+        then 0619: enable_actor $PLAYER_ACTOR collision_detection 1
+        end
+        
+        // 最後の速度そのままを載せる
+        0A8E: 31@ = 30@ + 0x024
+        0A8D: 10@ = read_memory 31@ size 4 virtual_protect 0 // Real Front Speed 
+        0A8E: 31@ = 30@ + 0x028
+        0A8D: 11@ = read_memory 31@ size 4 virtual_protect 0 // Read Side Speed
+
+        // X方向速度の計算 
+        0172: 29@ = actor $PLAYER_ACTOR Z_angle 
+        02F6: 29@ = sine 29@   // FrontのX方向速度単位  
+        006B: 29@ *= 10@       // FrontのX方向速度
+        29@ *= -1.0    
+
+        0172: 28@ = actor $PLAYER_ACTOR Z_angle 
+        02F7: 28@ = cosine 28@ // SideのX方向速度単位  
+        006B: 28@ *= 11@       // SideのX方向速度
+
+        005B: 29@ += 28@
+        0A8E: 31@ = 30@ + 0x038
+        0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+
+
+        // Y方向速度の計算 
+        0172: 29@ = actor $PLAYER_ACTOR Z_angle 
+        29@ -= 90.0
+        if 29@ < 0.0
+        then 29@ += 360.0
+        end
+        02F6: 29@ = sine 29@   // FrontのY方向速度単位  
+        006B: 29@ *= 10@       // FrontのY方向速度
+        29@ *= -1.0    
+        0172: 28@ = actor $PLAYER_ACTOR Z_angle 
+        28@ -= 90.0
+        if 28@ < 0.0
+        then 28@ += 360.0
+        end
+        02F7: 28@ = cosine 28@ // SideのY方向速度単位  
+        006B: 28@ *= 11@       // SideのY方向速度
+        
+        005B: 29@ += 28@
+        0A8E: 31@ = 30@ + 0x03C
+        0A8C: write_memory 31@ size 4 value 29@ virtual_protect 0
+
+
+        // 決定した速度を改めて読み出す
+        0A8E: 31@ = 30@ + 0x038
+        0A8D: 10@ = read_memory 31@ size 4 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x03C
+        0A8D: 11@ = read_memory 31@ size 4 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x02C
+        0A8D: 12@ = read_memory 31@ size 4 virtual_protect 0 // Read Updown Speed 
+        
+        10@ *= 80.0
+        11@ *= 80.0
+        12@ *= 80.0
+
+        083C: set_char $PLAYER_ACTOR velocity_in_direction_XYZ 10@ 11@ 12@
+         
+        goto @SMCM_End
+
+        // セットした場合はそのままのカメラ視点にする        
+        :SMCM_Set
+        0337: set_actor $PLAYER_ACTOR visibility 0
+        01B4: set_player $PLAYER_CHAR can_move 0
+        0619: enable_actor $PLAYER_ACTOR collision_detection 0 
+        goto @SMCM_End
+
+        :SMCM_End
+        // フリーズモードがOFFならフリーズ解除 
+        0A8E: 31@ = 30@ + 0x0B8
+        0A8D: 29@ = read_memory 31@ size 4 virtual_protect 0
+        if 29@ == 0
+        then 01B4: set_player $PLAYER_CHAR can_move 1
+        end
+        
+        // Real Speedを０にしておく 
+        0A8E: 31@ = 30@ + 0x024
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x028
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x02C
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x030
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x034
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 
+        0A8E: 31@ = 30@ + 0x044
+        0A8C: write_memory 31@ size 4 value 0.0 virtual_protect 0 
+        
+        wait 200
+    end
+
+5@ = 0
+
+jump @CW_Start
+
+
+
+
+
+// ************************************
+//     カメラ設定時の初期カメラ位置 
+// ************************************  
+
+:GetStartCameraPosition
+
+    29@ = Actor.Angle($PLAYER_ACTOR) // 現在のCJの角度を取得 
+
+    if and
+        0031: 29@ >= 0.0
+        0023: 90.0 > 29@
+    then
+        02F6: 27@ = get_sine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0
+        0A8E: 31@ = 30@ + 0x028        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのX座標を取得 
+        005B: 28@ += 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのX座標をメモリに書き込み 
+
+        02F7: 27@ = get_cosine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0 
+        0A8E: 31@ = 30@ + 0x02C        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのY座標を取得 
+        0063: 28@ -= 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのY座標をメモリに書き込み 
+    end
+    
+    if and
+        0031: 29@ >= 90.0
+        0023: 180.0 > 29@
+    then
+        02F6: 27@ = get_sine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0
+        0A8E: 31@ = 30@ + 0x028        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのX座標を取得 
+        005B: 28@ += 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのX座標をメモリに書き込み 
+
+        02F7: 27@ = get_cosine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0 
+        0A8E: 31@ = 30@ + 0x02C        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのY座標を取得 
+        005B: 28@ += 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのY座標をメモリに書き込み 
+    end
+    
+    if and
+        0031: 29@ >= 180.0
+        0023: 270.0 > 29@
+    then
+        02F6: 27@ = get_sine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0
+        0A8E: 31@ = 30@ + 0x028        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのX座標を取得 
+        0063: 28@ -= 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのX座標をメモリに書き込み 
+
+        02F7: 27@ = get_cosine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0 
+        0A8E: 31@ = 30@ + 0x02C        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのY座標を取得 
+        005B: 28@ += 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのY座標をメモリに書き込み 
+    end
+
+    if and
+        0031: 29@ >= 270.0
+        0023: 360.0 > 29@
+    then
+        02F6: 27@ = get_sine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0
+        0A8E: 31@ = 30@ + 0x028        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのX座標を取得 
+        0063: 28@ -= 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのX座標をメモリに書き込み 
+
+        02F7: 27@ = get_cosine_of 29@
+        if 0.0 > 27@
+        then 27@ *= -1.0
+        end
+        0013: 27@ *= 2.0 
+        0A8E: 31@ = 30@ + 0x02C        
+        0A8D: 28@ = read_memory 31@ size 4 virtual_protect 0 // 現在のカメラのY座標を取得 
+        0063: 28@ -= 27@
+        0A8C: write_memory 31@ size 4 value 28@ virtual_protect 0 // 更新したカメラのY座標をメモリに書き込み 
+    end
+
+return
+
+
+
+// ***********************************
+//     プールのポインタ取得ルーチン 
+// ***********************************  
+
+:GetPointer
+    0A9F: 30@ = current_thread_pointer
+    000A: 30@ += 0x10
+    0A8D: 30@ = read_memory 30@ size 4 virtual_protect 0
+    000E: 30@ -= @MemoryPool
+    return
+
+
+// ************************
+//     追加変数のプール 
+// ************************  
+
+// ２００個用意しました 
+
+:MemoryPool
+    hex
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    end

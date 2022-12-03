@@ -1,0 +1,2 @@
+Comando: W+O (o comando pode ser editado no .ini)
+          Em seguida, digite da arma como em data/weapon.dat (abra o arquivo com o bloco de notas para ver o nome das armas)

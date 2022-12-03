@@ -1,0 +1,1136 @@
+===========================================
+1658533314
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658533314]: Registered Exception Manager
+[1658533314]: Initialised Delayed Hooks
+[1658533314]: CALL: Hooking 5BFA90 => 72AED040
+[1658533314]: Intialised HookManager
+[1658533314]: CALL: Hooking 6F3583 => 72AF10F0
+[1658533314]: Intialised ParkedCarRandomizer
+[1658533314]: CALL: Hooking 467B01 => 72B17360
+[1658533314]: CALL: Hooking 498AA8 => 72B17490
+[1658533314]: CALL: Hooking 47F070 => 72B17410
+[1658533314]: CALL: Hooking 5DFE79 => 72B16450
+[1658533314]: CALL: Hooking 469612 => 72B16550
+[1658533314]: CALL: Hooking 4958C6 => 72B16CF0
+[1658533314]: CALL: Hooking 495B38 => 72B16D60
+[1658533314]: CALL: Hooking 48C1FA => 72B16C90
+[1658533314]: CALL: Hooking 495902 => 72B163E0
+[1658533314]: CALL: Hooking 495B74 => 72B166A0
+[1658533314]: CALL: Hooking 4985DA => 72B17600
+[1658533314]: CALL: Hooking 49128C => 72B16490
+[1658533314]: CALL: Hooking 475BBC => 72B16530
+[1658533314]: CALL: Hooking 53BCD9 => 72B16C70
+[1658533314]: CALL: Hooking 489835 => 72B16590
+[1658533314]: CALL: Hooking 495429 => 72B16640
+[1658533314]: CALL: Hooking 467AB7 => 72B17510
+[1658533314]: Intialised ScriptVehicleRandomizer
+[1658533314]: Intialised LicensePlateRandomizer
+[1658533314]: CALL: Hooking 6D10FB => 72B14C50
+[1658533314]: CALL: Hooking 4C9484 => 72B14C60
+[1658533314]: CALL: Hooking 468E9A => 72B14E20
+[1658533314]: CALL: Hooking 618E97 => 72B14E20
+[1658533314]: CALL: Hooking 5BA167 => 72B14E20
+[1658533314]: CALL: Hooking 53EB9D => 72AF1900
+[1658533314]: Intialised ClothesRandomizer
+[1658533314]: CALL: Hooking 46683B => 72B0BD10
+[1658533314]: CALL: Hooking 468E7F => 72B0A350
+[1658533314]: Intialised DyomRandomizer
+[1658533314]: CALL: Hooking 5A88AC => 72B07E30
+[1658533330]: CALL: Hooking 469FB0 => 72B0A8B0
+[1658533380]: Initialised Script Vehicles cache
+[1658535015]: Game has crashed
+[1658535015]: Exception Type: 0xC0000005
+[1658535015]: Exception Address: 0x571A10
+[1658535015]: Inaccessible memory address: 0x39692D
+[1658535015]: crash <- 0x571a10
+===========================================
+1658535024
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658535024]: Registered Exception Manager
+[1658535024]: Initialised Delayed Hooks
+[1658535024]: CALL: Hooking 5BFA90 => 72B3D040
+[1658535024]: Intialised HookManager
+[1658535024]: CALL: Hooking 6F3583 => 72B410F0
+[1658535024]: Intialised ParkedCarRandomizer
+[1658535024]: CALL: Hooking 467B01 => 72B67360
+[1658535024]: CALL: Hooking 498AA8 => 72B67490
+[1658535024]: CALL: Hooking 47F070 => 72B67410
+[1658535024]: CALL: Hooking 5DFE79 => 72B66450
+[1658535024]: CALL: Hooking 469612 => 72B66550
+[1658535024]: CALL: Hooking 4958C6 => 72B66CF0
+[1658535024]: CALL: Hooking 495B38 => 72B66D60
+[1658535024]: CALL: Hooking 48C1FA => 72B66C90
+[1658535024]: CALL: Hooking 495902 => 72B663E0
+[1658535024]: CALL: Hooking 495B74 => 72B666A0
+[1658535024]: CALL: Hooking 4985DA => 72B67600
+[1658535024]: CALL: Hooking 49128C => 72B66490
+[1658535024]: CALL: Hooking 475BBC => 72B66530
+[1658535024]: CALL: Hooking 53BCD9 => 72B66C70
+[1658535024]: CALL: Hooking 489835 => 72B66590
+[1658535024]: CALL: Hooking 495429 => 72B66640
+[1658535024]: CALL: Hooking 467AB7 => 72B67510
+[1658535024]: Intialised ScriptVehicleRandomizer
+[1658535024]: Intialised LicensePlateRandomizer
+[1658535024]: CALL: Hooking 6D10FB => 72B64C50
+[1658535024]: CALL: Hooking 4C9484 => 72B64C60
+[1658535024]: CALL: Hooking 468E9A => 72B64E20
+[1658535024]: CALL: Hooking 618E97 => 72B64E20
+[1658535024]: CALL: Hooking 5BA167 => 72B64E20
+[1658535024]: CALL: Hooking 53EB9D => 72B41900
+[1658535024]: Intialised ClothesRandomizer
+[1658535024]: CALL: Hooking 46683B => 72B5BD10
+[1658535024]: CALL: Hooking 468E7F => 72B5A350
+[1658535024]: Intialised DyomRandomizer
+[1658535024]: CALL: Hooking 5A88AC => 72B57E30
+[1658535025]: CALL: Hooking 469FB0 => 72B5A8B0
+[1658535035]: Initialised Script Vehicles cache
+===========================================
+1658535059
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658535059]: Registered Exception Manager
+[1658535059]: Initialised Delayed Hooks
+[1658535059]: CALL: Hooking 5BFA90 => 72D0D040
+[1658535059]: Intialised HookManager
+[1658535059]: CALL: Hooking 6F3583 => 72D110F0
+[1658535059]: Intialised ParkedCarRandomizer
+[1658535059]: CALL: Hooking 467B01 => 72D37360
+[1658535059]: CALL: Hooking 498AA8 => 72D37490
+[1658535059]: CALL: Hooking 47F070 => 72D37410
+[1658535059]: CALL: Hooking 5DFE79 => 72D36450
+[1658535059]: CALL: Hooking 469612 => 72D36550
+[1658535059]: CALL: Hooking 4958C6 => 72D36CF0
+[1658535059]: CALL: Hooking 495B38 => 72D36D60
+[1658535059]: CALL: Hooking 48C1FA => 72D36C90
+[1658535059]: CALL: Hooking 495902 => 72D363E0
+[1658535059]: CALL: Hooking 495B74 => 72D366A0
+[1658535059]: CALL: Hooking 4985DA => 72D37600
+[1658535059]: CALL: Hooking 49128C => 72D36490
+[1658535059]: CALL: Hooking 475BBC => 72D36530
+[1658535059]: CALL: Hooking 53BCD9 => 72D36C70
+[1658535059]: CALL: Hooking 489835 => 72D36590
+[1658535059]: CALL: Hooking 495429 => 72D36640
+[1658535059]: CALL: Hooking 467AB7 => 72D37510
+[1658535059]: Intialised ScriptVehicleRandomizer
+[1658535059]: Intialised LicensePlateRandomizer
+[1658535059]: CALL: Hooking 6D10FB => 72D34C50
+[1658535059]: CALL: Hooking 4C9484 => 72D34C60
+[1658535059]: CALL: Hooking 468E9A => 72D34E20
+[1658535059]: CALL: Hooking 618E97 => 72D34E20
+[1658535059]: CALL: Hooking 5BA167 => 72D34E20
+[1658535059]: CALL: Hooking 53EB9D => 72D11900
+[1658535059]: Intialised ClothesRandomizer
+[1658535059]: CALL: Hooking 46683B => 72D2BD10
+[1658535059]: CALL: Hooking 468E7F => 72D2A350
+[1658535059]: Intialised DyomRandomizer
+[1658535059]: CALL: Hooking 5A88AC => 72D27E30
+[1658535060]: CALL: Hooking 469FB0 => 72D2A8B0
+[1658535071]: Initialised Script Vehicles cache
+===========================================
+1658535289
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658535289]: Registered Exception Manager
+[1658535289]: Initialised Delayed Hooks
+[1658535289]: CALL: Hooking 5BFA90 => 72B3D040
+[1658535289]: Intialised HookManager
+[1658535289]: CALL: Hooking 6F3583 => 72B410F0
+[1658535289]: Intialised ParkedCarRandomizer
+[1658535289]: CALL: Hooking 467B01 => 72B67360
+[1658535289]: CALL: Hooking 498AA8 => 72B67490
+[1658535289]: CALL: Hooking 47F070 => 72B67410
+[1658535289]: CALL: Hooking 5DFE79 => 72B66450
+[1658535289]: CALL: Hooking 469612 => 72B66550
+[1658535289]: CALL: Hooking 4958C6 => 72B66CF0
+[1658535289]: CALL: Hooking 495B38 => 72B66D60
+[1658535289]: CALL: Hooking 48C1FA => 72B66C90
+[1658535289]: CALL: Hooking 495902 => 72B663E0
+[1658535289]: CALL: Hooking 495B74 => 72B666A0
+[1658535289]: CALL: Hooking 4985DA => 72B67600
+[1658535289]: CALL: Hooking 49128C => 72B66490
+[1658535289]: CALL: Hooking 475BBC => 72B66530
+[1658535289]: CALL: Hooking 53BCD9 => 72B66C70
+[1658535289]: CALL: Hooking 489835 => 72B66590
+[1658535289]: CALL: Hooking 495429 => 72B66640
+[1658535289]: CALL: Hooking 467AB7 => 72B67510
+[1658535289]: Intialised ScriptVehicleRandomizer
+[1658535289]: Intialised LicensePlateRandomizer
+[1658535289]: CALL: Hooking 6D10FB => 72B64C50
+[1658535289]: CALL: Hooking 4C9484 => 72B64C60
+[1658535289]: CALL: Hooking 468E9A => 72B64E20
+[1658535289]: CALL: Hooking 618E97 => 72B64E20
+[1658535289]: CALL: Hooking 5BA167 => 72B64E20
+[1658535289]: CALL: Hooking 53EB9D => 72B41900
+[1658535289]: Intialised ClothesRandomizer
+[1658535289]: CALL: Hooking 46683B => 72B5BD10
+[1658535289]: CALL: Hooking 468E7F => 72B5A350
+[1658535289]: Intialised DyomRandomizer
+[1658535289]: CALL: Hooking 5A88AC => 72B57E30
+[1658535290]: CALL: Hooking 469FB0 => 72B5A8B0
+[1658535301]: Initialised Script Vehicles cache
+===========================================
+1658535393
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658535393]: Registered Exception Manager
+[1658535393]: Initialised Delayed Hooks
+[1658535393]: CALL: Hooking 5BFA90 => 6193D040
+[1658535393]: Intialised HookManager
+[1658535393]: CALL: Hooking 6F3583 => 619410F0
+[1658535393]: Intialised ParkedCarRandomizer
+[1658535393]: CALL: Hooking 467B01 => 61967360
+[1658535393]: CALL: Hooking 498AA8 => 61967490
+[1658535393]: CALL: Hooking 47F070 => 61967410
+[1658535393]: CALL: Hooking 5DFE79 => 61966450
+[1658535393]: CALL: Hooking 469612 => 61966550
+[1658535393]: CALL: Hooking 4958C6 => 61966CF0
+[1658535393]: CALL: Hooking 495B38 => 61966D60
+[1658535393]: CALL: Hooking 48C1FA => 61966C90
+[1658535393]: CALL: Hooking 495902 => 619663E0
+[1658535393]: CALL: Hooking 495B74 => 619666A0
+[1658535393]: CALL: Hooking 4985DA => 61967600
+[1658535393]: CALL: Hooking 49128C => 61966490
+[1658535393]: CALL: Hooking 475BBC => 61966530
+[1658535393]: CALL: Hooking 53BCD9 => 61966C70
+[1658535393]: CALL: Hooking 489835 => 61966590
+[1658535393]: CALL: Hooking 495429 => 61966640
+[1658535393]: CALL: Hooking 467AB7 => 61967510
+[1658535393]: Intialised ScriptVehicleRandomizer
+[1658535393]: Intialised LicensePlateRandomizer
+[1658535393]: CALL: Hooking 6D10FB => 61964C50
+[1658535393]: CALL: Hooking 4C9484 => 61964C60
+[1658535393]: CALL: Hooking 468E9A => 61964E20
+[1658535393]: CALL: Hooking 618E97 => 61964E20
+[1658535393]: CALL: Hooking 5BA167 => 61964E20
+[1658535393]: CALL: Hooking 53EB9D => 61941900
+[1658535393]: Intialised ClothesRandomizer
+[1658535393]: CALL: Hooking 46683B => 6195BD10
+[1658535393]: CALL: Hooking 468E7F => 6195A350
+[1658535393]: Intialised DyomRandomizer
+[1658535393]: CALL: Hooking 5A88AC => 61957E30
+[1658535394]: CALL: Hooking 469FB0 => 6195A8B0
+[1658535414]: Initialised Script Vehicles cache
+===========================================
+1658536675
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658536675]: Registered Exception Manager
+[1658536675]: Initialised Delayed Hooks
+[1658536675]: CALL: Hooking 5BFA90 => 6075D040
+[1658536675]: Intialised HookManager
+[1658536675]: CALL: Hooking 6F3583 => 607610F0
+[1658536675]: Intialised ParkedCarRandomizer
+[1658536675]: CALL: Hooking 467B01 => 60787360
+[1658536675]: CALL: Hooking 498AA8 => 60787490
+[1658536675]: CALL: Hooking 47F070 => 60787410
+[1658536675]: CALL: Hooking 5DFE79 => 60786450
+[1658536675]: CALL: Hooking 469612 => 60786550
+[1658536675]: CALL: Hooking 4958C6 => 60786CF0
+[1658536675]: CALL: Hooking 495B38 => 60786D60
+[1658536675]: CALL: Hooking 48C1FA => 60786C90
+[1658536675]: CALL: Hooking 495902 => 607863E0
+[1658536675]: CALL: Hooking 495B74 => 607866A0
+[1658536675]: CALL: Hooking 4985DA => 60787600
+[1658536675]: CALL: Hooking 49128C => 60786490
+[1658536675]: CALL: Hooking 475BBC => 60786530
+[1658536675]: CALL: Hooking 53BCD9 => 60786C70
+[1658536675]: CALL: Hooking 489835 => 60786590
+[1658536675]: CALL: Hooking 495429 => 60786640
+[1658536675]: CALL: Hooking 467AB7 => 60787510
+[1658536675]: Intialised ScriptVehicleRandomizer
+[1658536675]: Intialised LicensePlateRandomizer
+[1658536675]: CALL: Hooking 6D10FB => 60784C50
+[1658536675]: CALL: Hooking 4C9484 => 60784C60
+[1658536675]: CALL: Hooking 468E9A => 60784E20
+[1658536675]: CALL: Hooking 618E97 => 60784E20
+[1658536675]: CALL: Hooking 5BA167 => 60784E20
+[1658536675]: CALL: Hooking 53EB9D => 60761900
+[1658536675]: Intialised ClothesRandomizer
+[1658536675]: CALL: Hooking 46683B => 6077BD10
+[1658536675]: CALL: Hooking 468E7F => 6077A350
+[1658536675]: Intialised DyomRandomizer
+[1658536675]: CALL: Hooking 5A88AC => 60777E30
+[1658536676]: CALL: Hooking 469FB0 => 6077A8B0
+[1658536685]: Initialised Script Vehicles cache
+===========================================
+1658539261
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658539261]: Registered Exception Manager
+[1658539261]: Initialised Delayed Hooks
+[1658539261]: CALL: Hooking 5BFA90 => 601DD040
+[1658539261]: Intialised HookManager
+[1658539261]: CALL: Hooking 6F3583 => 601E10F0
+[1658539261]: Intialised ParkedCarRandomizer
+[1658539261]: CALL: Hooking 467B01 => 60207360
+[1658539261]: CALL: Hooking 498AA8 => 60207490
+[1658539261]: CALL: Hooking 47F070 => 60207410
+[1658539261]: CALL: Hooking 5DFE79 => 60206450
+[1658539261]: CALL: Hooking 469612 => 60206550
+[1658539261]: CALL: Hooking 4958C6 => 60206CF0
+[1658539261]: CALL: Hooking 495B38 => 60206D60
+[1658539261]: CALL: Hooking 48C1FA => 60206C90
+[1658539261]: CALL: Hooking 495902 => 602063E0
+[1658539261]: CALL: Hooking 495B74 => 602066A0
+[1658539261]: CALL: Hooking 4985DA => 60207600
+[1658539261]: CALL: Hooking 49128C => 60206490
+[1658539261]: CALL: Hooking 475BBC => 60206530
+[1658539261]: CALL: Hooking 53BCD9 => 60206C70
+[1658539261]: CALL: Hooking 489835 => 60206590
+[1658539261]: CALL: Hooking 495429 => 60206640
+[1658539261]: CALL: Hooking 467AB7 => 60207510
+[1658539261]: Intialised ScriptVehicleRandomizer
+[1658539261]: Intialised LicensePlateRandomizer
+[1658539261]: CALL: Hooking 6D10FB => 60204C50
+[1658539261]: CALL: Hooking 4C9484 => 60204C60
+[1658539261]: CALL: Hooking 468E9A => 60204E20
+[1658539261]: CALL: Hooking 618E97 => 60204E20
+[1658539261]: CALL: Hooking 5BA167 => 60204E20
+[1658539261]: CALL: Hooking 53EB9D => 601E1900
+[1658539261]: Intialised ClothesRandomizer
+[1658539261]: CALL: Hooking 46683B => 601FBD10
+[1658539261]: CALL: Hooking 468E7F => 601FA350
+[1658539261]: Intialised DyomRandomizer
+[1658539261]: CALL: Hooking 5A88AC => 601F7E30
+[1658539266]: CALL: Hooking 469FB0 => 601FA8B0
+[1658539276]: Initialised Script Vehicles cache
+[1658539530]: Game has crashed
+[1658539530]: Exception Type: 0xC0000005
+[1658539530]: Exception Address: 0x5D95CE
+[1658539530]: Inaccessible memory address: 0x0
+[1658539530]: crash <- 0x5d95ce
+===========================================
+1658539531
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658539531]: Registered Exception Manager
+[1658539531]: Initialised Delayed Hooks
+[1658539531]: CALL: Hooking 5BFA90 => 601DD040
+[1658539531]: Intialised HookManager
+[1658539531]: CALL: Hooking 6F3583 => 601E10F0
+[1658539531]: Intialised ParkedCarRandomizer
+[1658539531]: CALL: Hooking 467B01 => 60207360
+[1658539531]: CALL: Hooking 498AA8 => 60207490
+[1658539531]: CALL: Hooking 47F070 => 60207410
+[1658539531]: CALL: Hooking 5DFE79 => 60206450
+[1658539531]: CALL: Hooking 469612 => 60206550
+[1658539531]: CALL: Hooking 4958C6 => 60206CF0
+[1658539531]: CALL: Hooking 495B38 => 60206D60
+[1658539531]: CALL: Hooking 48C1FA => 60206C90
+[1658539531]: CALL: Hooking 495902 => 602063E0
+[1658539531]: CALL: Hooking 495B74 => 602066A0
+[1658539531]: CALL: Hooking 4985DA => 60207600
+[1658539531]: CALL: Hooking 49128C => 60206490
+[1658539531]: CALL: Hooking 475BBC => 60206530
+[1658539531]: CALL: Hooking 53BCD9 => 60206C70
+[1658539531]: CALL: Hooking 489835 => 60206590
+[1658539531]: CALL: Hooking 495429 => 60206640
+[1658539531]: CALL: Hooking 467AB7 => 60207510
+[1658539531]: Intialised ScriptVehicleRandomizer
+[1658539531]: Intialised LicensePlateRandomizer
+[1658539531]: CALL: Hooking 6D10FB => 60204C50
+[1658539531]: CALL: Hooking 4C9484 => 60204C60
+[1658539531]: CALL: Hooking 468E9A => 60204E20
+[1658539531]: CALL: Hooking 618E97 => 60204E20
+[1658539531]: CALL: Hooking 5BA167 => 60204E20
+[1658539531]: CALL: Hooking 53EB9D => 601E1900
+[1658539531]: Intialised ClothesRandomizer
+[1658539531]: CALL: Hooking 46683B => 601FBD10
+[1658539531]: CALL: Hooking 468E7F => 601FA350
+[1658539531]: Intialised DyomRandomizer
+[1658539531]: CALL: Hooking 5A88AC => 601F7E30
+[1658539531]: Game has crashed
+[1658539531]: Exception Type: 0xC0000005
+[1658539531]: Exception Address: 0x605DA85E
+[1658539531]: Inaccessible memory address: 0x3A2083C
+[1658539531]: crash <- 0x605da85e
+[1658539535]: Game has crashed
+[1658539535]: Exception Type: 0x80000003
+[1658539535]: Exception Address: 0x6051AE21
+[1658539535]: crash <- 0x6051ae21
+===========================================
+1658539539
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658539539]: Registered Exception Manager
+[1658539539]: Initialised Delayed Hooks
+[1658539539]: CALL: Hooking 5BFA90 => 5FFBD040
+[1658539539]: Intialised HookManager
+[1658539539]: CALL: Hooking 6F3583 => 5FFC10F0
+[1658539539]: Intialised ParkedCarRandomizer
+[1658539539]: CALL: Hooking 467B01 => 5FFE7360
+[1658539539]: CALL: Hooking 498AA8 => 5FFE7490
+[1658539539]: CALL: Hooking 47F070 => 5FFE7410
+[1658539539]: CALL: Hooking 5DFE79 => 5FFE6450
+[1658539539]: CALL: Hooking 469612 => 5FFE6550
+[1658539539]: CALL: Hooking 4958C6 => 5FFE6CF0
+[1658539539]: CALL: Hooking 495B38 => 5FFE6D60
+[1658539539]: CALL: Hooking 48C1FA => 5FFE6C90
+[1658539539]: CALL: Hooking 495902 => 5FFE63E0
+[1658539539]: CALL: Hooking 495B74 => 5FFE66A0
+[1658539539]: CALL: Hooking 4985DA => 5FFE7600
+[1658539539]: CALL: Hooking 49128C => 5FFE6490
+[1658539539]: CALL: Hooking 475BBC => 5FFE6530
+[1658539539]: CALL: Hooking 53BCD9 => 5FFE6C70
+[1658539539]: CALL: Hooking 489835 => 5FFE6590
+[1658539539]: CALL: Hooking 495429 => 5FFE6640
+[1658539539]: CALL: Hooking 467AB7 => 5FFE7510
+[1658539539]: Intialised ScriptVehicleRandomizer
+[1658539539]: Intialised LicensePlateRandomizer
+[1658539539]: CALL: Hooking 6D10FB => 5FFE4C50
+[1658539539]: CALL: Hooking 4C9484 => 5FFE4C60
+[1658539539]: CALL: Hooking 468E9A => 5FFE4E20
+[1658539539]: CALL: Hooking 618E97 => 5FFE4E20
+[1658539539]: CALL: Hooking 5BA167 => 5FFE4E20
+[1658539539]: CALL: Hooking 53EB9D => 5FFC1900
+[1658539539]: Intialised ClothesRandomizer
+[1658539539]: CALL: Hooking 46683B => 5FFDBD10
+[1658539539]: CALL: Hooking 468E7F => 5FFDA350
+[1658539539]: Intialised DyomRandomizer
+[1658539539]: CALL: Hooking 5A88AC => 5FFD7E30
+[1658539540]: CALL: Hooking 469FB0 => 5FFDA8B0
+[1658539549]: Initialised Script Vehicles cache
+[1658539645]: Game has crashed
+[1658539645]: Exception Type: 0xC0000005
+[1658539645]: Exception Address: 0x5D95CE
+[1658539645]: Inaccessible memory address: 0x0
+[1658539645]: crash <- 0x5d95ce
+===========================================
+1658539649
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658539649]: Registered Exception Manager
+[1658539649]: Initialised Delayed Hooks
+[1658539649]: CALL: Hooking 5BFA90 => 6095D040
+[1658539649]: Intialised HookManager
+[1658539649]: CALL: Hooking 6F3583 => 609610F0
+[1658539649]: Intialised ParkedCarRandomizer
+[1658539649]: CALL: Hooking 467B01 => 60987360
+[1658539649]: CALL: Hooking 498AA8 => 60987490
+[1658539649]: CALL: Hooking 47F070 => 60987410
+[1658539649]: CALL: Hooking 5DFE79 => 60986450
+[1658539649]: CALL: Hooking 469612 => 60986550
+[1658539649]: CALL: Hooking 4958C6 => 60986CF0
+[1658539649]: CALL: Hooking 495B38 => 60986D60
+[1658539649]: CALL: Hooking 48C1FA => 60986C90
+[1658539649]: CALL: Hooking 495902 => 609863E0
+[1658539649]: CALL: Hooking 495B74 => 609866A0
+[1658539649]: CALL: Hooking 4985DA => 60987600
+[1658539649]: CALL: Hooking 49128C => 60986490
+[1658539649]: CALL: Hooking 475BBC => 60986530
+[1658539649]: CALL: Hooking 53BCD9 => 60986C70
+[1658539649]: CALL: Hooking 489835 => 60986590
+[1658539649]: CALL: Hooking 495429 => 60986640
+[1658539649]: CALL: Hooking 467AB7 => 60987510
+[1658539649]: Intialised ScriptVehicleRandomizer
+[1658539649]: Intialised LicensePlateRandomizer
+[1658539649]: CALL: Hooking 6D10FB => 60984C50
+[1658539649]: CALL: Hooking 4C9484 => 60984C60
+[1658539649]: CALL: Hooking 468E9A => 60984E20
+[1658539649]: CALL: Hooking 618E97 => 60984E20
+[1658539649]: CALL: Hooking 5BA167 => 60984E20
+[1658539649]: CALL: Hooking 53EB9D => 60961900
+[1658539649]: Intialised ClothesRandomizer
+[1658539649]: CALL: Hooking 46683B => 6097BD10
+[1658539649]: CALL: Hooking 468E7F => 6097A350
+[1658539649]: Intialised DyomRandomizer
+[1658539649]: CALL: Hooking 5A88AC => 60977E30
+[1658539650]: CALL: Hooking 469FB0 => 6097A8B0
+[1658539660]: Initialised Script Vehicles cache
+[1658539934]: Game has crashed
+[1658539934]: Exception Type: 0xC0000005
+[1658539934]: Exception Address: 0x5D95CE
+[1658539934]: Inaccessible memory address: 0x0
+[1658539934]: crash <- 0x5d95ce
+===========================================
+1658540094
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540094]: Registered Exception Manager
+[1658540094]: Initialised Delayed Hooks
+[1658540094]: CALL: Hooking 5BFA90 => 5F78D040
+[1658540094]: Intialised HookManager
+[1658540094]: CALL: Hooking 6F3583 => 5F7910F0
+[1658540094]: Intialised ParkedCarRandomizer
+[1658540094]: CALL: Hooking 467B01 => 5F7B7360
+[1658540094]: CALL: Hooking 498AA8 => 5F7B7490
+[1658540094]: CALL: Hooking 47F070 => 5F7B7410
+[1658540094]: CALL: Hooking 5DFE79 => 5F7B6450
+[1658540094]: CALL: Hooking 469612 => 5F7B6550
+[1658540094]: CALL: Hooking 4958C6 => 5F7B6CF0
+[1658540094]: CALL: Hooking 495B38 => 5F7B6D60
+[1658540094]: CALL: Hooking 48C1FA => 5F7B6C90
+[1658540094]: CALL: Hooking 495902 => 5F7B63E0
+[1658540094]: CALL: Hooking 495B74 => 5F7B66A0
+[1658540094]: CALL: Hooking 4985DA => 5F7B7600
+[1658540094]: CALL: Hooking 49128C => 5F7B6490
+[1658540094]: CALL: Hooking 475BBC => 5F7B6530
+[1658540094]: CALL: Hooking 53BCD9 => 5F7B6C70
+[1658540094]: CALL: Hooking 489835 => 5F7B6590
+[1658540094]: CALL: Hooking 495429 => 5F7B6640
+[1658540094]: CALL: Hooking 467AB7 => 5F7B7510
+[1658540094]: Intialised ScriptVehicleRandomizer
+[1658540094]: Intialised LicensePlateRandomizer
+[1658540094]: CALL: Hooking 6D10FB => 5F7B4C50
+[1658540094]: CALL: Hooking 4C9484 => 5F7B4C60
+[1658540094]: CALL: Hooking 468E9A => 5F7B4E20
+[1658540094]: CALL: Hooking 618E97 => 5F7B4E20
+[1658540094]: CALL: Hooking 5BA167 => 5F7B4E20
+[1658540094]: CALL: Hooking 53EB9D => 5F791900
+[1658540094]: Intialised ClothesRandomizer
+[1658540094]: CALL: Hooking 46683B => 5F7ABD10
+[1658540094]: CALL: Hooking 468E7F => 5F7AA350
+[1658540094]: Intialised DyomRandomizer
+[1658540094]: CALL: Hooking 5A88AC => 5F7A7E30
+[1658540096]: CALL: Hooking 469FB0 => 5F7AA8B0
+[1658540105]: Initialised Script Vehicles cache
+[1658540195]: Game has crashed
+[1658540195]: Exception Type: 0xC0000005
+[1658540195]: Exception Address: 0x5D95CE
+[1658540195]: Inaccessible memory address: 0x0
+[1658540195]: crash <- 0x5d95ce
+===========================================
+1658540296
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540296]: Registered Exception Manager
+[1658540296]: Initialised Delayed Hooks
+[1658540296]: CALL: Hooking 5BFA90 => 5F58D040
+[1658540296]: Intialised HookManager
+[1658540296]: CALL: Hooking 6F3583 => 5F5910F0
+[1658540296]: Intialised ParkedCarRandomizer
+[1658540296]: CALL: Hooking 467B01 => 5F5B7360
+[1658540296]: CALL: Hooking 498AA8 => 5F5B7490
+[1658540296]: CALL: Hooking 47F070 => 5F5B7410
+[1658540296]: CALL: Hooking 5DFE79 => 5F5B6450
+[1658540296]: CALL: Hooking 469612 => 5F5B6550
+[1658540296]: CALL: Hooking 4958C6 => 5F5B6CF0
+[1658540296]: CALL: Hooking 495B38 => 5F5B6D60
+[1658540296]: CALL: Hooking 48C1FA => 5F5B6C90
+[1658540296]: CALL: Hooking 495902 => 5F5B63E0
+[1658540296]: CALL: Hooking 495B74 => 5F5B66A0
+[1658540296]: CALL: Hooking 4985DA => 5F5B7600
+[1658540296]: CALL: Hooking 49128C => 5F5B6490
+[1658540296]: CALL: Hooking 475BBC => 5F5B6530
+[1658540296]: CALL: Hooking 53BCD9 => 5F5B6C70
+[1658540296]: CALL: Hooking 489835 => 5F5B6590
+[1658540296]: CALL: Hooking 495429 => 5F5B6640
+[1658540296]: CALL: Hooking 467AB7 => 5F5B7510
+[1658540296]: Intialised ScriptVehicleRandomizer
+[1658540296]: Intialised LicensePlateRandomizer
+[1658540296]: CALL: Hooking 6D10FB => 5F5B4C50
+[1658540296]: CALL: Hooking 4C9484 => 5F5B4C60
+[1658540296]: CALL: Hooking 468E9A => 5F5B4E20
+[1658540296]: CALL: Hooking 618E97 => 5F5B4E20
+[1658540296]: CALL: Hooking 5BA167 => 5F5B4E20
+[1658540296]: CALL: Hooking 53EB9D => 5F591900
+[1658540296]: Intialised ClothesRandomizer
+[1658540296]: CALL: Hooking 46683B => 5F5ABD10
+[1658540296]: CALL: Hooking 468E7F => 5F5AA350
+[1658540296]: Intialised DyomRandomizer
+[1658540296]: CALL: Hooking 5A88AC => 5F5A7E30
+[1658540297]: CALL: Hooking 469FB0 => 5F5AA8B0
+[1658540306]: Initialised Script Vehicles cache
+[1658540326]: Game has crashed
+[1658540326]: Exception Type: 0xC0000005
+[1658540326]: Exception Address: 0x5D95CE
+[1658540326]: Inaccessible memory address: 0x0
+[1658540326]: crash <- 0x5d95ce
+===========================================
+1658540377
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540377]: Registered Exception Manager
+[1658540377]: Initialised Delayed Hooks
+[1658540377]: CALL: Hooking 5BFA90 => 5F54D040
+[1658540377]: Intialised HookManager
+[1658540377]: CALL: Hooking 6F3583 => 5F5510F0
+[1658540377]: Intialised ParkedCarRandomizer
+[1658540377]: CALL: Hooking 467B01 => 5F577360
+[1658540377]: CALL: Hooking 498AA8 => 5F577490
+[1658540377]: CALL: Hooking 47F070 => 5F577410
+[1658540377]: CALL: Hooking 5DFE79 => 5F576450
+[1658540377]: CALL: Hooking 469612 => 5F576550
+[1658540377]: CALL: Hooking 4958C6 => 5F576CF0
+[1658540377]: CALL: Hooking 495B38 => 5F576D60
+[1658540377]: CALL: Hooking 48C1FA => 5F576C90
+[1658540377]: CALL: Hooking 495902 => 5F5763E0
+[1658540377]: CALL: Hooking 495B74 => 5F5766A0
+[1658540377]: CALL: Hooking 4985DA => 5F577600
+[1658540377]: CALL: Hooking 49128C => 5F576490
+[1658540377]: CALL: Hooking 475BBC => 5F576530
+[1658540377]: CALL: Hooking 53BCD9 => 5F576C70
+[1658540377]: CALL: Hooking 489835 => 5F576590
+[1658540377]: CALL: Hooking 495429 => 5F576640
+[1658540377]: CALL: Hooking 467AB7 => 5F577510
+[1658540377]: Intialised ScriptVehicleRandomizer
+[1658540377]: Intialised LicensePlateRandomizer
+[1658540377]: CALL: Hooking 6D10FB => 5F574C50
+[1658540377]: CALL: Hooking 4C9484 => 5F574C60
+[1658540377]: CALL: Hooking 468E9A => 5F574E20
+[1658540377]: CALL: Hooking 618E97 => 5F574E20
+[1658540377]: CALL: Hooking 5BA167 => 5F574E20
+[1658540377]: CALL: Hooking 53EB9D => 5F551900
+[1658540377]: Intialised ClothesRandomizer
+[1658540377]: CALL: Hooking 46683B => 5F56BD10
+[1658540377]: CALL: Hooking 468E7F => 5F56A350
+[1658540377]: Intialised DyomRandomizer
+[1658540377]: CALL: Hooking 5A88AC => 5F567E30
+[1658540378]: CALL: Hooking 469FB0 => 5F56A8B0
+[1658540387]: Initialised Script Vehicles cache
+[1658540434]: Game has crashed
+[1658540434]: Exception Type: 0xC0000005
+[1658540434]: Exception Address: 0x5D95CE
+[1658540434]: Inaccessible memory address: 0x0
+[1658540434]: crash <- 0x5d95ce
+===========================================
+1658540445
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540445]: Registered Exception Manager
+[1658540445]: Initialised Delayed Hooks
+[1658540445]: CALL: Hooking 5BFA90 => 5F58D040
+[1658540445]: Intialised HookManager
+[1658540445]: CALL: Hooking 6F3583 => 5F5910F0
+[1658540445]: Intialised ParkedCarRandomizer
+[1658540445]: CALL: Hooking 467B01 => 5F5B7360
+[1658540445]: CALL: Hooking 498AA8 => 5F5B7490
+[1658540445]: CALL: Hooking 47F070 => 5F5B7410
+[1658540445]: CALL: Hooking 5DFE79 => 5F5B6450
+[1658540445]: CALL: Hooking 469612 => 5F5B6550
+[1658540445]: CALL: Hooking 4958C6 => 5F5B6CF0
+[1658540445]: CALL: Hooking 495B38 => 5F5B6D60
+[1658540445]: CALL: Hooking 48C1FA => 5F5B6C90
+[1658540445]: CALL: Hooking 495902 => 5F5B63E0
+[1658540445]: CALL: Hooking 495B74 => 5F5B66A0
+[1658540445]: CALL: Hooking 4985DA => 5F5B7600
+[1658540445]: CALL: Hooking 49128C => 5F5B6490
+[1658540445]: CALL: Hooking 475BBC => 5F5B6530
+[1658540445]: CALL: Hooking 53BCD9 => 5F5B6C70
+[1658540445]: CALL: Hooking 489835 => 5F5B6590
+[1658540445]: CALL: Hooking 495429 => 5F5B6640
+[1658540445]: CALL: Hooking 467AB7 => 5F5B7510
+[1658540445]: Intialised ScriptVehicleRandomizer
+[1658540445]: Intialised LicensePlateRandomizer
+[1658540445]: CALL: Hooking 6D10FB => 5F5B4C50
+[1658540445]: CALL: Hooking 4C9484 => 5F5B4C60
+[1658540445]: CALL: Hooking 468E9A => 5F5B4E20
+[1658540445]: CALL: Hooking 618E97 => 5F5B4E20
+[1658540445]: CALL: Hooking 5BA167 => 5F5B4E20
+[1658540445]: CALL: Hooking 53EB9D => 5F591900
+[1658540445]: Intialised ClothesRandomizer
+[1658540445]: CALL: Hooking 46683B => 5F5ABD10
+[1658540445]: CALL: Hooking 468E7F => 5F5AA350
+[1658540445]: Intialised DyomRandomizer
+[1658540445]: CALL: Hooking 5A88AC => 5F5A7E30
+[1658540446]: CALL: Hooking 469FB0 => 5F5AA8B0
+[1658540456]: Initialised Script Vehicles cache
+[1658540555]: Game has crashed
+[1658540555]: Exception Type: 0xC0000005
+[1658540555]: Exception Address: 0x5D95CE
+[1658540555]: Inaccessible memory address: 0x0
+[1658540555]: crash <- 0x5d95ce
+===========================================
+1658540579
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540579]: Registered Exception Manager
+[1658540579]: Initialised Delayed Hooks
+[1658540579]: CALL: Hooking 5BFA90 => 5F54D040
+[1658540579]: Intialised HookManager
+[1658540579]: CALL: Hooking 6F3583 => 5F5510F0
+[1658540579]: Intialised ParkedCarRandomizer
+[1658540579]: CALL: Hooking 467B01 => 5F577360
+[1658540579]: CALL: Hooking 498AA8 => 5F577490
+[1658540579]: CALL: Hooking 47F070 => 5F577410
+[1658540579]: CALL: Hooking 5DFE79 => 5F576450
+[1658540579]: CALL: Hooking 469612 => 5F576550
+[1658540579]: CALL: Hooking 4958C6 => 5F576CF0
+[1658540579]: CALL: Hooking 495B38 => 5F576D60
+[1658540579]: CALL: Hooking 48C1FA => 5F576C90
+[1658540579]: CALL: Hooking 495902 => 5F5763E0
+[1658540579]: CALL: Hooking 495B74 => 5F5766A0
+[1658540579]: CALL: Hooking 4985DA => 5F577600
+[1658540579]: CALL: Hooking 49128C => 5F576490
+[1658540579]: CALL: Hooking 475BBC => 5F576530
+[1658540579]: CALL: Hooking 53BCD9 => 5F576C70
+[1658540579]: CALL: Hooking 489835 => 5F576590
+[1658540579]: CALL: Hooking 495429 => 5F576640
+[1658540579]: CALL: Hooking 467AB7 => 5F577510
+[1658540579]: Intialised ScriptVehicleRandomizer
+[1658540579]: Intialised LicensePlateRandomizer
+[1658540579]: CALL: Hooking 6D10FB => 5F574C50
+[1658540579]: CALL: Hooking 4C9484 => 5F574C60
+[1658540579]: CALL: Hooking 468E9A => 5F574E20
+[1658540579]: CALL: Hooking 618E97 => 5F574E20
+[1658540579]: CALL: Hooking 5BA167 => 5F574E20
+[1658540579]: CALL: Hooking 53EB9D => 5F551900
+[1658540579]: Intialised ClothesRandomizer
+[1658540579]: CALL: Hooking 46683B => 5F56BD10
+[1658540579]: CALL: Hooking 468E7F => 5F56A350
+[1658540579]: Intialised DyomRandomizer
+[1658540579]: CALL: Hooking 5A88AC => 5F567E30
+[1658540581]: CALL: Hooking 469FB0 => 5F56A8B0
+[1658540590]: Initialised Script Vehicles cache
+[1658540697]: Game has crashed
+[1658540697]: Exception Type: 0xC0000005
+[1658540697]: Exception Address: 0x5D95CE
+[1658540697]: Inaccessible memory address: 0x0
+[1658540697]: crash <- 0x5d95ce
+===========================================
+1658540783
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540783]: Registered Exception Manager
+[1658540783]: Initialised Delayed Hooks
+[1658540783]: CALL: Hooking 5BFA90 => 5F46D040
+[1658540783]: Intialised HookManager
+[1658540783]: CALL: Hooking 6F3583 => 5F4710F0
+[1658540783]: Intialised ParkedCarRandomizer
+[1658540783]: CALL: Hooking 467B01 => 5F497360
+[1658540783]: CALL: Hooking 498AA8 => 5F497490
+[1658540783]: CALL: Hooking 47F070 => 5F497410
+[1658540783]: CALL: Hooking 5DFE79 => 5F496450
+[1658540783]: CALL: Hooking 469612 => 5F496550
+[1658540783]: CALL: Hooking 4958C6 => 5F496CF0
+[1658540783]: CALL: Hooking 495B38 => 5F496D60
+[1658540783]: CALL: Hooking 48C1FA => 5F496C90
+[1658540783]: CALL: Hooking 495902 => 5F4963E0
+[1658540783]: CALL: Hooking 495B74 => 5F4966A0
+[1658540783]: CALL: Hooking 4985DA => 5F497600
+[1658540783]: CALL: Hooking 49128C => 5F496490
+[1658540783]: CALL: Hooking 475BBC => 5F496530
+[1658540783]: CALL: Hooking 53BCD9 => 5F496C70
+[1658540783]: CALL: Hooking 489835 => 5F496590
+[1658540783]: CALL: Hooking 495429 => 5F496640
+[1658540783]: CALL: Hooking 467AB7 => 5F497510
+[1658540783]: Intialised ScriptVehicleRandomizer
+[1658540783]: Intialised LicensePlateRandomizer
+[1658540783]: CALL: Hooking 6D10FB => 5F494C50
+[1658540783]: CALL: Hooking 4C9484 => 5F494C60
+[1658540783]: CALL: Hooking 468E9A => 5F494E20
+[1658540783]: CALL: Hooking 618E97 => 5F494E20
+[1658540783]: CALL: Hooking 5BA167 => 5F494E20
+[1658540783]: CALL: Hooking 53EB9D => 5F471900
+[1658540783]: Intialised ClothesRandomizer
+[1658540783]: CALL: Hooking 46683B => 5F48BD10
+[1658540783]: CALL: Hooking 468E7F => 5F48A350
+[1658540783]: Intialised DyomRandomizer
+[1658540783]: CALL: Hooking 5A88AC => 5F487E30
+[1658540784]: CALL: Hooking 469FB0 => 5F48A8B0
+[1658540794]: Initialised Script Vehicles cache
+[1658540805]: Game has crashed
+[1658540805]: Exception Type: 0xC0000005
+[1658540805]: Exception Address: 0x5E9BA938
+[1658540805]: Inaccessible memory address: 0x1C
+[1658540805]: crash <- 0x5e9ba938 <- 0x539f9f0
+===========================================
+1658540871
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658540871]: Registered Exception Manager
+[1658540871]: Initialised Delayed Hooks
+[1658540871]: CALL: Hooking 5BFA90 => 5F41D040
+[1658540871]: Intialised HookManager
+[1658540871]: CALL: Hooking 6F3583 => 5F4210F0
+[1658540871]: Intialised ParkedCarRandomizer
+[1658540871]: CALL: Hooking 467B01 => 5F447360
+[1658540871]: CALL: Hooking 498AA8 => 5F447490
+[1658540871]: CALL: Hooking 47F070 => 5F447410
+[1658540871]: CALL: Hooking 5DFE79 => 5F446450
+[1658540871]: CALL: Hooking 469612 => 5F446550
+[1658540871]: CALL: Hooking 4958C6 => 5F446CF0
+[1658540871]: CALL: Hooking 495B38 => 5F446D60
+[1658540871]: CALL: Hooking 48C1FA => 5F446C90
+[1658540871]: CALL: Hooking 495902 => 5F4463E0
+[1658540871]: CALL: Hooking 495B74 => 5F4466A0
+[1658540871]: CALL: Hooking 4985DA => 5F447600
+[1658540871]: CALL: Hooking 49128C => 5F446490
+[1658540871]: CALL: Hooking 475BBC => 5F446530
+[1658540871]: CALL: Hooking 53BCD9 => 5F446C70
+[1658540871]: CALL: Hooking 489835 => 5F446590
+[1658540871]: CALL: Hooking 495429 => 5F446640
+[1658540871]: CALL: Hooking 467AB7 => 5F447510
+[1658540871]: Intialised ScriptVehicleRandomizer
+[1658540871]: Intialised LicensePlateRandomizer
+[1658540871]: CALL: Hooking 6D10FB => 5F444C50
+[1658540871]: CALL: Hooking 4C9484 => 5F444C60
+[1658540871]: CALL: Hooking 468E9A => 5F444E20
+[1658540871]: CALL: Hooking 618E97 => 5F444E20
+[1658540871]: CALL: Hooking 5BA167 => 5F444E20
+[1658540871]: CALL: Hooking 53EB9D => 5F421900
+[1658540871]: Intialised ClothesRandomizer
+[1658540871]: CALL: Hooking 46683B => 5F43BD10
+[1658540871]: CALL: Hooking 468E7F => 5F43A350
+[1658540871]: Intialised DyomRandomizer
+[1658540871]: CALL: Hooking 5A88AC => 5F437E30
+[1658540872]: CALL: Hooking 469FB0 => 5F43A8B0
+[1658540881]: Initialised Script Vehicles cache
+[1658541209]: Game has crashed
+[1658541209]: Exception Type: 0xC0000005
+[1658541209]: Exception Address: 0x7F18CF
+[1658541209]: Inaccessible memory address: 0x5C
+[1658541209]: crash <- 0x7f18cf
+===========================================
+1658541215
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658541215]: Registered Exception Manager
+[1658541215]: Initialised Delayed Hooks
+[1658541215]: CALL: Hooking 5BFA90 => 603AD040
+[1658541215]: Intialised HookManager
+[1658541215]: CALL: Hooking 6F3583 => 603B10F0
+[1658541215]: Intialised ParkedCarRandomizer
+[1658541215]: CALL: Hooking 467B01 => 603D7360
+[1658541215]: CALL: Hooking 498AA8 => 603D7490
+[1658541215]: CALL: Hooking 47F070 => 603D7410
+[1658541215]: CALL: Hooking 5DFE79 => 603D6450
+[1658541215]: CALL: Hooking 469612 => 603D6550
+[1658541215]: CALL: Hooking 4958C6 => 603D6CF0
+[1658541215]: CALL: Hooking 495B38 => 603D6D60
+[1658541215]: CALL: Hooking 48C1FA => 603D6C90
+[1658541215]: CALL: Hooking 495902 => 603D63E0
+[1658541215]: CALL: Hooking 495B74 => 603D66A0
+[1658541215]: CALL: Hooking 4985DA => 603D7600
+[1658541215]: CALL: Hooking 49128C => 603D6490
+[1658541215]: CALL: Hooking 475BBC => 603D6530
+[1658541215]: CALL: Hooking 53BCD9 => 603D6C70
+[1658541215]: CALL: Hooking 489835 => 603D6590
+[1658541215]: CALL: Hooking 495429 => 603D6640
+[1658541215]: CALL: Hooking 467AB7 => 603D7510
+[1658541215]: Intialised ScriptVehicleRandomizer
+[1658541215]: Intialised LicensePlateRandomizer
+[1658541215]: CALL: Hooking 6D10FB => 603D4C50
+[1658541215]: CALL: Hooking 4C9484 => 603D4C60
+[1658541215]: CALL: Hooking 468E9A => 603D4E20
+[1658541215]: CALL: Hooking 618E97 => 603D4E20
+[1658541215]: CALL: Hooking 5BA167 => 603D4E20
+[1658541215]: CALL: Hooking 53EB9D => 603B1900
+[1658541215]: Intialised ClothesRandomizer
+[1658541215]: CALL: Hooking 46683B => 603CBD10
+[1658541215]: CALL: Hooking 468E7F => 603CA350
+[1658541215]: Intialised DyomRandomizer
+[1658541215]: CALL: Hooking 5A88AC => 603C7E30
+[1658541216]: CALL: Hooking 469FB0 => 603CA8B0
+[1658541225]: Initialised Script Vehicles cache
+[1658541766]: Game has crashed
+[1658541766]: Exception Type: 0xC0000005
+[1658541766]: Exception Address: 0x4897E4
+[1658541766]: Inaccessible memory address: 0x14
+[1658541766]: crash <- 0x4897e4
+===========================================
+1658541771
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658541771]: Registered Exception Manager
+[1658541771]: Initialised Delayed Hooks
+[1658541771]: CALL: Hooking 5BFA90 => 6039D040
+[1658541771]: Intialised HookManager
+[1658541771]: CALL: Hooking 6F3583 => 603A10F0
+[1658541771]: Intialised ParkedCarRandomizer
+[1658541771]: CALL: Hooking 467B01 => 603C7360
+[1658541771]: CALL: Hooking 498AA8 => 603C7490
+[1658541771]: CALL: Hooking 47F070 => 603C7410
+[1658541771]: CALL: Hooking 5DFE79 => 603C6450
+[1658541771]: CALL: Hooking 469612 => 603C6550
+[1658541771]: CALL: Hooking 4958C6 => 603C6CF0
+[1658541771]: CALL: Hooking 495B38 => 603C6D60
+[1658541771]: CALL: Hooking 48C1FA => 603C6C90
+[1658541771]: CALL: Hooking 495902 => 603C63E0
+[1658541771]: CALL: Hooking 495B74 => 603C66A0
+[1658541771]: CALL: Hooking 4985DA => 603C7600
+[1658541771]: CALL: Hooking 49128C => 603C6490
+[1658541771]: CALL: Hooking 475BBC => 603C6530
+[1658541771]: CALL: Hooking 53BCD9 => 603C6C70
+[1658541771]: CALL: Hooking 489835 => 603C6590
+[1658541771]: CALL: Hooking 495429 => 603C6640
+[1658541771]: CALL: Hooking 467AB7 => 603C7510
+[1658541771]: Intialised ScriptVehicleRandomizer
+[1658541771]: Intialised LicensePlateRandomizer
+[1658541771]: CALL: Hooking 6D10FB => 603C4C50
+[1658541771]: CALL: Hooking 4C9484 => 603C4C60
+[1658541771]: CALL: Hooking 468E9A => 603C4E20
+[1658541771]: CALL: Hooking 618E97 => 603C4E20
+[1658541771]: CALL: Hooking 5BA167 => 603C4E20
+[1658541771]: CALL: Hooking 53EB9D => 603A1900
+[1658541771]: Intialised ClothesRandomizer
+[1658541771]: CALL: Hooking 46683B => 603BBD10
+[1658541771]: CALL: Hooking 468E7F => 603BA350
+[1658541771]: Intialised DyomRandomizer
+[1658541771]: CALL: Hooking 5A88AC => 603B7E30
+[1658541773]: CALL: Hooking 469FB0 => 603BA8B0
+[1658541782]: Initialised Script Vehicles cache
+[1658541860]: Game has crashed
+[1658541860]: Exception Type: 0xC0000005
+[1658541860]: Exception Address: 0x4248011A
+[1658541860]: Inaccessible memory address: 0xF5BDF285
+[1658541860]: crash <- 0x4248011a
+===========================================
+1658541864
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658541864]: Registered Exception Manager
+[1658541864]: Initialised Delayed Hooks
+[1658541864]: CALL: Hooking 5BFA90 => 5F41D040
+[1658541864]: Intialised HookManager
+[1658541864]: CALL: Hooking 6F3583 => 5F4210F0
+[1658541864]: Intialised ParkedCarRandomizer
+[1658541864]: CALL: Hooking 467B01 => 5F447360
+[1658541864]: CALL: Hooking 498AA8 => 5F447490
+[1658541864]: CALL: Hooking 47F070 => 5F447410
+[1658541864]: CALL: Hooking 5DFE79 => 5F446450
+[1658541864]: CALL: Hooking 469612 => 5F446550
+[1658541864]: CALL: Hooking 4958C6 => 5F446CF0
+[1658541864]: CALL: Hooking 495B38 => 5F446D60
+[1658541864]: CALL: Hooking 48C1FA => 5F446C90
+[1658541864]: CALL: Hooking 495902 => 5F4463E0
+[1658541864]: CALL: Hooking 495B74 => 5F4466A0
+[1658541864]: CALL: Hooking 4985DA => 5F447600
+[1658541864]: CALL: Hooking 49128C => 5F446490
+[1658541864]: CALL: Hooking 475BBC => 5F446530
+[1658541864]: CALL: Hooking 53BCD9 => 5F446C70
+[1658541864]: CALL: Hooking 489835 => 5F446590
+[1658541864]: CALL: Hooking 495429 => 5F446640
+[1658541864]: CALL: Hooking 467AB7 => 5F447510
+[1658541864]: Intialised ScriptVehicleRandomizer
+[1658541864]: Intialised LicensePlateRandomizer
+[1658541864]: CALL: Hooking 6D10FB => 5F444C50
+[1658541864]: CALL: Hooking 4C9484 => 5F444C60
+[1658541864]: CALL: Hooking 468E9A => 5F444E20
+[1658541864]: CALL: Hooking 618E97 => 5F444E20
+[1658541864]: CALL: Hooking 5BA167 => 5F444E20
+[1658541864]: CALL: Hooking 53EB9D => 5F421900
+[1658541864]: Intialised ClothesRandomizer
+[1658541864]: CALL: Hooking 46683B => 5F43BD10
+[1658541864]: CALL: Hooking 468E7F => 5F43A350
+[1658541864]: Intialised DyomRandomizer
+[1658541864]: CALL: Hooking 5A88AC => 5F437E30
+[1658541865]: CALL: Hooking 469FB0 => 5F43A8B0
+[1658541874]: Initialised Script Vehicles cache
+===========================================
+1658541958
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658541958]: Registered Exception Manager
+[1658541958]: Initialised Delayed Hooks
+[1658541958]: CALL: Hooking 5BFA90 => 5F40D040
+[1658541958]: Intialised HookManager
+[1658541958]: CALL: Hooking 6F3583 => 5F4110F0
+[1658541958]: Intialised ParkedCarRandomizer
+[1658541958]: CALL: Hooking 467B01 => 5F437360
+[1658541958]: CALL: Hooking 498AA8 => 5F437490
+[1658541958]: CALL: Hooking 47F070 => 5F437410
+[1658541958]: CALL: Hooking 5DFE79 => 5F436450
+[1658541958]: CALL: Hooking 469612 => 5F436550
+[1658541958]: CALL: Hooking 4958C6 => 5F436CF0
+[1658541958]: CALL: Hooking 495B38 => 5F436D60
+[1658541958]: CALL: Hooking 48C1FA => 5F436C90
+[1658541958]: CALL: Hooking 495902 => 5F4363E0
+[1658541958]: CALL: Hooking 495B74 => 5F4366A0
+[1658541958]: CALL: Hooking 4985DA => 5F437600
+[1658541958]: CALL: Hooking 49128C => 5F436490
+[1658541958]: CALL: Hooking 475BBC => 5F436530
+[1658541958]: CALL: Hooking 53BCD9 => 5F436C70
+[1658541958]: CALL: Hooking 489835 => 5F436590
+[1658541958]: CALL: Hooking 495429 => 5F436640
+[1658541958]: CALL: Hooking 467AB7 => 5F437510
+[1658541958]: Intialised ScriptVehicleRandomizer
+[1658541958]: Intialised LicensePlateRandomizer
+[1658541958]: CALL: Hooking 6D10FB => 5F434C50
+[1658541958]: CALL: Hooking 4C9484 => 5F434C60
+[1658541958]: CALL: Hooking 468E9A => 5F434E20
+[1658541958]: CALL: Hooking 618E97 => 5F434E20
+[1658541958]: CALL: Hooking 5BA167 => 5F434E20
+[1658541958]: CALL: Hooking 53EB9D => 5F411900
+[1658541958]: Intialised ClothesRandomizer
+[1658541958]: CALL: Hooking 46683B => 5F42BD10
+[1658541958]: CALL: Hooking 468E7F => 5F42A350
+[1658541958]: Intialised DyomRandomizer
+[1658541958]: CALL: Hooking 5A88AC => 5F427E30
+[1658541959]: CALL: Hooking 469FB0 => 5F42A8B0
+[1658541969]: Initialised Script Vehicles cache
+===========================================
+1658542199
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658542199]: Registered Exception Manager
+[1658542199]: Initialised Delayed Hooks
+[1658542199]: CALL: Hooking 5BFA90 => 5F41D040
+[1658542199]: Intialised HookManager
+[1658542199]: CALL: Hooking 6F3583 => 5F4210F0
+[1658542199]: Intialised ParkedCarRandomizer
+[1658542199]: CALL: Hooking 467B01 => 5F447360
+[1658542199]: CALL: Hooking 498AA8 => 5F447490
+[1658542199]: CALL: Hooking 47F070 => 5F447410
+[1658542199]: CALL: Hooking 5DFE79 => 5F446450
+[1658542199]: CALL: Hooking 469612 => 5F446550
+[1658542199]: CALL: Hooking 4958C6 => 5F446CF0
+[1658542199]: CALL: Hooking 495B38 => 5F446D60
+[1658542199]: CALL: Hooking 48C1FA => 5F446C90
+[1658542199]: CALL: Hooking 495902 => 5F4463E0
+[1658542199]: CALL: Hooking 495B74 => 5F4466A0
+[1658542199]: CALL: Hooking 4985DA => 5F447600
+[1658542199]: CALL: Hooking 49128C => 5F446490
+[1658542199]: CALL: Hooking 475BBC => 5F446530
+[1658542199]: CALL: Hooking 53BCD9 => 5F446C70
+[1658542199]: CALL: Hooking 489835 => 5F446590
+[1658542199]: CALL: Hooking 495429 => 5F446640
+[1658542199]: CALL: Hooking 467AB7 => 5F447510
+[1658542199]: Intialised ScriptVehicleRandomizer
+[1658542199]: Intialised LicensePlateRandomizer
+[1658542199]: CALL: Hooking 6D10FB => 5F444C50
+[1658542199]: CALL: Hooking 4C9484 => 5F444C60
+[1658542199]: CALL: Hooking 468E9A => 5F444E20
+[1658542199]: CALL: Hooking 618E97 => 5F444E20
+[1658542199]: CALL: Hooking 5BA167 => 5F444E20
+[1658542199]: CALL: Hooking 53EB9D => 5F421900
+[1658542199]: Intialised ClothesRandomizer
+[1658542199]: CALL: Hooking 46683B => 5F43BD10
+[1658542199]: CALL: Hooking 468E7F => 5F43A350
+[1658542199]: Intialised DyomRandomizer
+[1658542199]: CALL: Hooking 5A88AC => 5F437E30
+[1658542200]: CALL: Hooking 469FB0 => 5F43A8B0
+[1658542210]: Initialised Script Vehicles cache
+[1658543143]: Game has crashed
+[1658543143]: Exception Type: 0xC0000005
+[1658543143]: Exception Address: 0x47DEE2
+[1658543143]: Inaccessible memory address: 0xB9
+[1658543143]: crash <- 0x47dee2
+===========================================
+1658543148
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658543148]: Registered Exception Manager
+[1658543148]: Initialised Delayed Hooks
+[1658543148]: CALL: Hooking 5BFA90 => 6161D040
+[1658543148]: Intialised HookManager
+[1658543148]: CALL: Hooking 6F3583 => 616210F0
+[1658543148]: Intialised ParkedCarRandomizer
+[1658543148]: CALL: Hooking 467B01 => 61647360
+[1658543148]: CALL: Hooking 498AA8 => 61647490
+[1658543148]: CALL: Hooking 47F070 => 61647410
+[1658543148]: CALL: Hooking 5DFE79 => 61646450
+[1658543148]: CALL: Hooking 469612 => 61646550
+[1658543148]: CALL: Hooking 4958C6 => 61646CF0
+[1658543148]: CALL: Hooking 495B38 => 61646D60
+[1658543148]: CALL: Hooking 48C1FA => 61646C90
+[1658543148]: CALL: Hooking 495902 => 616463E0
+[1658543148]: CALL: Hooking 495B74 => 616466A0
+[1658543148]: CALL: Hooking 4985DA => 61647600
+[1658543148]: CALL: Hooking 49128C => 61646490
+[1658543148]: CALL: Hooking 475BBC => 61646530
+[1658543148]: CALL: Hooking 53BCD9 => 61646C70
+[1658543148]: CALL: Hooking 489835 => 61646590
+[1658543148]: CALL: Hooking 495429 => 61646640
+[1658543148]: CALL: Hooking 467AB7 => 61647510
+[1658543148]: Intialised ScriptVehicleRandomizer
+[1658543148]: Intialised LicensePlateRandomizer
+[1658543148]: CALL: Hooking 6D10FB => 61644C50
+[1658543148]: CALL: Hooking 4C9484 => 61644C60
+[1658543148]: CALL: Hooking 468E9A => 61644E20
+[1658543148]: CALL: Hooking 618E97 => 61644E20
+[1658543148]: CALL: Hooking 5BA167 => 61644E20
+[1658543148]: CALL: Hooking 53EB9D => 61621900
+[1658543148]: Intialised ClothesRandomizer
+[1658543148]: CALL: Hooking 46683B => 6163BD10
+[1658543148]: CALL: Hooking 468E7F => 6163A350
+[1658543148]: Intialised DyomRandomizer
+[1658543148]: CALL: Hooking 5A88AC => 61637E30
+[1658543149]: CALL: Hooking 469FB0 => 6163A8B0
+===========================================
+1658543195
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658543195]: Registered Exception Manager
+[1658543195]: Initialised Delayed Hooks
+[1658543195]: CALL: Hooking 5BFA90 => 6067D040
+[1658543195]: Intialised HookManager
+[1658543195]: CALL: Hooking 6F3583 => 606810F0
+[1658543195]: Intialised ParkedCarRandomizer
+[1658543195]: CALL: Hooking 467B01 => 606A7360
+[1658543195]: CALL: Hooking 498AA8 => 606A7490
+[1658543195]: CALL: Hooking 47F070 => 606A7410
+[1658543195]: CALL: Hooking 5DFE79 => 606A6450
+[1658543195]: CALL: Hooking 469612 => 606A6550
+[1658543195]: CALL: Hooking 4958C6 => 606A6CF0
+[1658543195]: CALL: Hooking 495B38 => 606A6D60
+[1658543195]: CALL: Hooking 48C1FA => 606A6C90
+[1658543195]: CALL: Hooking 495902 => 606A63E0
+[1658543195]: CALL: Hooking 495B74 => 606A66A0
+[1658543195]: CALL: Hooking 4985DA => 606A7600
+[1658543195]: CALL: Hooking 49128C => 606A6490
+[1658543195]: CALL: Hooking 475BBC => 606A6530
+[1658543195]: CALL: Hooking 53BCD9 => 606A6C70
+[1658543195]: CALL: Hooking 489835 => 606A6590
+[1658543195]: CALL: Hooking 495429 => 606A6640
+[1658543195]: CALL: Hooking 467AB7 => 606A7510
+[1658543195]: Intialised ScriptVehicleRandomizer
+[1658543195]: Intialised LicensePlateRandomizer
+[1658543195]: CALL: Hooking 6D10FB => 606A4C50
+[1658543195]: CALL: Hooking 4C9484 => 606A4C60
+[1658543195]: CALL: Hooking 468E9A => 606A4E20
+[1658543195]: CALL: Hooking 618E97 => 606A4E20
+[1658543195]: CALL: Hooking 5BA167 => 606A4E20
+[1658543195]: CALL: Hooking 53EB9D => 60681900
+[1658543195]: Intialised ClothesRandomizer
+[1658543195]: CALL: Hooking 46683B => 6069BD10
+[1658543195]: CALL: Hooking 468E7F => 6069A350
+[1658543195]: Intialised DyomRandomizer
+[1658543195]: CALL: Hooking 5A88AC => 60697E30
+[1658543196]: CALL: Hooking 469FB0 => 6069A8B0
+[1658543205]: Initialised Script Vehicles cache
+[1658543578]: Game has crashed
+[1658543578]: Exception Type: 0xC0000005
+[1658543578]: Exception Address: 0x657475
+[1658543578]: Inaccessible memory address: 0x1B58
+[1658543578]: crash <- 0x657475
+===========================================
+1658543586
+Rainbomizer Build: Build v2.1 
+===========================================
+[1658543586]: Registered Exception Manager
+[1658543586]: Initialised Delayed Hooks
+[1658543586]: CALL: Hooking 5BFA90 => 6063D040
+[1658543586]: Intialised HookManager
+[1658543586]: CALL: Hooking 6F3583 => 606410F0
+[1658543586]: Intialised ParkedCarRandomizer
+[1658543586]: CALL: Hooking 467B01 => 60667360
+[1658543586]: CALL: Hooking 498AA8 => 60667490
+[1658543586]: CALL: Hooking 47F070 => 60667410
+[1658543586]: CALL: Hooking 5DFE79 => 60666450
+[1658543586]: CALL: Hooking 469612 => 60666550
+[1658543586]: CALL: Hooking 4958C6 => 60666CF0
+[1658543586]: CALL: Hooking 495B38 => 60666D60
+[1658543586]: CALL: Hooking 48C1FA => 60666C90
+[1658543586]: CALL: Hooking 495902 => 606663E0
+[1658543586]: CALL: Hooking 495B74 => 606666A0
+[1658543586]: CALL: Hooking 4985DA => 60667600
+[1658543586]: CALL: Hooking 49128C => 60666490
+[1658543586]: CALL: Hooking 475BBC => 60666530
+[1658543586]: CALL: Hooking 53BCD9 => 60666C70
+[1658543586]: CALL: Hooking 489835 => 60666590
+[1658543586]: CALL: Hooking 495429 => 60666640
+[1658543586]: CALL: Hooking 467AB7 => 60667510
+[1658543586]: Intialised ScriptVehicleRandomizer
+[1658543586]: Intialised LicensePlateRandomizer
+[1658543586]: CALL: Hooking 6D10FB => 60664C50
+[1658543586]: CALL: Hooking 4C9484 => 60664C60
+[1658543586]: CALL: Hooking 468E9A => 60664E20
+[1658543586]: CALL: Hooking 618E97 => 60664E20
+[1658543586]: CALL: Hooking 5BA167 => 60664E20
+[1658543586]: CALL: Hooking 53EB9D => 60641900
+[1658543586]: Intialised ClothesRandomizer
+[1658543586]: CALL: Hooking 46683B => 6065BD10
+[1658543586]: CALL: Hooking 468E7F => 6065A350
+[1658543586]: Intialised DyomRandomizer
+[1658543586]: CALL: Hooking 5A88AC => 60657E30
+[1658543587]: CALL: Hooking 469FB0 => 6065A8B0
+[1658543596]: Initialised Script Vehicles cache
+[1658543943]: Game has crashed
+[1658543943]: Exception Type: 0xC0000005
+[1658543943]: Exception Address: 0x0
+[1658543943]: Inaccessible memory address: 0x0
+[1658543943]: crash <- 0x0 <- 0x469ff7

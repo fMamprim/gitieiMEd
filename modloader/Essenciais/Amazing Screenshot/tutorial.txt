@@ -1,0 +1,16 @@
+Comandos:
+Alt+Comando de mudar câmera (padrão: V) - Ativa o mod
+Comando de mudar câmera - Alterna para câmera livre
+Mouse - Roda a câmera
+Page Up/Down - Move a câmera para cima ou para baixo
+WASD - Movimenta a câmera
+Shift+WASD - Movimenta a câmera rápido
+Ctrl+WASD - Movimenta a câmera lentamente
+Botão esquerdo do mouse - Trava o movimento do mouse horizontalmente
+Botão direito do mouse - Trava o movimento do mouse verticalmente
+Tab - Liga/desliga Widescreen
+[ - Diminui o Field of View
+´ - Aumenta o Field of View
+P - Reseta Field of View
+F12 - Tira print (salva na GTA San Andreas User Files)
+' - Abre o menu com os comandos ingame 

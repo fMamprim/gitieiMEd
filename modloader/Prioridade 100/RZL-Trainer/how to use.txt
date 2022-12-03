@@ -1,0 +1,50 @@
+----------Keyboard----------
+F2 = show/hide menu
+
+numpad 5/ right Shift = Accept
+numpad 0/ Backspace = Back
+
+numpad 8/ arrow up = UP
+numpad 2/ arrow down = Down
+
+numpad 4/ arrow left = Left
+numpad 6/ arrow right = Right
+
+numpad 9/ page up = Up 10/5 line (if possible)
+numpad 3/ page down = Down 10/5 line (if possible)
+
+
+----------Joypad----------
+Hold R1 + dpad left = show menu
+
+dpad right = Accept
+dpad left = Back
+
+dpad up = UP
+dpad down = Down
+
+Hold L1 + dpad left = Left
+Hold L1 + dpad right = Right
+
+
+----------Shorcut Keyboard----------
+alt+1 = player options menu
+alt+2 = vehicle options menu
+alt+3 = wanted options menu
+alt+4 = weapon options menu
+alt+5 = telepor options menu
+alt+6 = mission options menu
+alt+7 = time options menu
+alt+8 = weather options menu
+alt+9 = object options menu
+alt+0 = misc options menu
+atl+Q = air break
+atl+F = eject form vehicle
+atl+T = input vehicle dff name
+Delete = Teleport to marker
+J = teleport to nearest vehicle as passenger
+k = teleport to nearest vehicle as passenger
+' = Go through door
+] = instant speed up
+[ = instant stop
+

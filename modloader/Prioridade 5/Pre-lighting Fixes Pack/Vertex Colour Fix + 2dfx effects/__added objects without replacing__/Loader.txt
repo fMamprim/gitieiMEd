@@ -1,0 +1,5 @@
+KEEP THIS FILE INSIDE MODLOADER
+
+COLFILE 0 DATA/MAPS/vtxcfix2dfxs.col
+IDE DATA/MAPS/vtxcfix2dfxs.ide
+IPL DATA/MAPS/vtxcfix2dfxs.ipl

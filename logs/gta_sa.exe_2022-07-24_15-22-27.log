@@ -1,0 +1,43 @@
+GTA SA 1.0.0.0 US
+Unhandled exception at 0x00536BE0 in gta_sa.exe (+0x136be0): 0xC0000005: Access violation reading location 0x00000036.
+    Register dump:
+        EAX: 0x00000863  EBX: 0x00000001  ECX: 0x00000000  EDX: 0x0000006E  
+        EDI: 0x00000218  ESI: 0x00000000  EBP: 0x0028E2E4  EIP: 0x00536BE0  
+        ESP: 0x0028E1CC  EFL: 0x00210246  CS: 0x00000023   SS: 0x0000002B   
+        GS: 0x0000002B   FS: 0x00000053   ES: 0x0000002B   DS: 0x0000002B   
+        
+    Stack dump:
+        0x0028E1CC:  00432146 00000218 00000218 00000001 FFFFFFFF 0028E27C
+        0x0028E1E4:  008374BB FFFFFFFF 60A4C795 00000218 00000000 00000000
+        0x0028E1FC:  00000000 00000000 60A573ED 00000218 00000000 00000000
+        0x0028E214:  00000000 00000000 00000064 5EBF3430 00467B06 00000218
+        0x0028E22C:  00000000 00000000 00000000 00000000 00000064 5EBF3430
+        0x0028E244:  60A4AA70 00000000 8B8FE230 60A90E18 5E6A624A 01880000
+        0x0028E25C:  00000000 8B8FE230 00000000 00000000 00000000 5E68E436
+        0x0028E274:  0028E250 3AAD36A9 0028E2D8 00837D7C FFFFFFFF 00469FF7
+        0x0028E28C:  000000A5 00000000 0000001A 5E681E97 3ABB6CBE 0D8A7E48
+        0x0028E2A4:  0000001A 00000033 0CC54DE0 00000040 00000022 25F77FC8
+        base: 0x00090000   top: 0x0028E1CC   bottom: 0x00290000
+        
+    Backtrace (may be wrong):
+        =>0x00536BE0 in gta_sa.exe (+0x136be0) (0x0028E2E4) 
+          0x5E6409DA GetZMenuVersion+0x1a62a in zmenusa.asi (+0x509da) (0x0028E31C) 
+          0x5E67517A GetZMenuVersion+0x4edca in zmenusa.asi (+0x8517a) (0x0028E334) 
+          0x5E661E00 GetZMenuVersion+0x3ba50 in zmenusa.asi (+0x71e00) (0x0028F3E0) 
+          0x5E675964 GetZMenuVersion+0x4f5b4 in zmenusa.asi (+0x85964) (0x0028F508) 
+          0x5E676653 GetZMenuVersion+0x502a3 in zmenusa.asi (+0x86653) (0x0028F540) 
+          0x61077BC7 GetCleoPlusVersion+0x3ed7 in CLEO+.cleo (+0x17bc7) (0x0028F594) 
+          0x6108A7DC GetCleoPlusVersion+0x16aec in CLEO+.cleo (+0x2a7dc) (0x0028F5CC) 
+          0x6108174B GetCleoPlusVersion+0xda5b in CLEO+.cleo (+0x2174b) (0x0028F5F0) 
+          0x6107F2D8 GetCleoPlusVersion+0xb5e8 in CLEO+.cleo (+0x1f2d8) (0x0028F6F0) 
+          0x600AC9EF in newopcodes.cleo (+0xc9ef) (0x0028F708) 
+          0x6172DF97 in CheatMenuSA.asi (+0x1df97) (0x0028F75C) 
+          0x61731C45 in CheatMenuSA.asi (+0x21c45) (0x0028F79C) 
+          0x6172E06B in CheatMenuSA.asi (+0x1e06b) (0x0028F7C0) 
+          0x61748AF2 in CheatMenuSA.asi (+0x38af2) (0x0028F938) 
+          0x0053E298 in gta_sa.exe (+0x13e298) (0x0028F97C) 
+          0x60E5C643 in modloader.asi (+0x1c643) (0x0028F994) 
+          0x60E5E06E in modloader.asi (+0x1e06e) (0x0028F9BC) 
+          0x60E5CB47 in modloader.asi (+0x1cb47) (0x0028F9D8) 
+        
+    

@@ -1,0 +1,8 @@
+# Tutorial PT-BR: https://forum.mixmods.com.br/f52-tutoriais-utilidades/t5549-graffiti-anywhere-como-adicionar-novas-imagens
+# Tutorial EN: https://forum.mixmods.com.br/f315-tutorial-utilities/t5551-graffiti-anywhere-how-to-add-new-images
+objs
+13974, graffiti_1x1_1, graffiti_anywhere, 299, 4
+13975, graffiti_2x1_1, graffiti_anywhere, 299, 4
+13976, graffiti_2x1_2, graffiti_anywhere, 299, 4
+13977, graffiti_4x1_1, graffiti_anywhere, 299, 4
+end

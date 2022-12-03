@@ -1,0 +1,38 @@
+Fixes: night vertex colours, collision
+ Adds: neons, 2dfx, uv animation
+---------------------------
+version 2
+
+added uv animation
+------------------
+orig col used an over simplified shape, caused many parts to be empty
+
+This mod uses a new timed neon object, add new entries into :
+
+1. LAw.ide
+insert between tobj and end
+
+18632, jlneon, neontex, 225, 4, 20, 6
+
+2. LAw.ipl
+instert between last inst entry and end, like so
+
+18632, jlneon, 256, 701.438, -1417.125, 17.664, 0.000, 0.000, -1.000, -0.000, -1
+end
+cull
+
+3. replace the original with accompanying jettysign_law.dff into gta3.img
+
+4. replace the original with accompanying law_3.col into gta3.img
+
+5. add to gta3.img : neontex.txd, jlneon.col, jlneon.dff
+
+6. rebuild gta3.img
+
+your done
+------------------------------------------------
+
+By atfburner
+Free to use but credit plz.
+
+Thx to Dexx, Kam & Deniska for their max scripts

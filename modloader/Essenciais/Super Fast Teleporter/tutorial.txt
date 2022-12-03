@@ -1,0 +1,3 @@
+ = Comandos:
+Segure ] ou \ e clique no mapa. (a tecla pode mudar conforme o seu teclado)
+Para teleportar para um checkpoint de missão, segure a tecla e pressiona Espaço.

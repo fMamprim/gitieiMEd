@@ -1,0 +1,43 @@
+GTA SA 1.0.0.0 US
+Unhandled exception at 0x00406034 in gta_sa.exe (+0x6034): 0xC0000005: Access violation reading location 0x001404C1.
+    Register dump:
+        EAX: 0x00000000  EBX: 0x00000000  ECX: 0x20B76BB8  EDX: 0x1B8A5708  
+        EDI: 0x1B8A5708  ESI: 0x125682AC  EBP: 0x0028F800  EIP: 0x00406034  
+        ESP: 0x0028F748  EFL: 0x00210246  CS: 0x00000023   SS: 0x0000002B   
+        GS: 0x0000002B   FS: 0x00000053   ES: 0x0000002B   DS: 0x0000002B   
+        
+    Stack dump:
+        0x0028F748:  005A2A23 1B8A5708 00000000 125682AC 00000800 00000000
+        0x0028F760:  3F800000 00B6FA74 134059A0 3F800000 00535F99 13535900
+        0x0028F778:  3D75C28F 00000C01 00000000 0056872C 00000001 00000060
+        0x0028F790:  00000000 0053C09A 04ADB480 04ADB480 04ADB554 1E905313
+        0x0028F7A8:  0028F800 6281E086 694031C5 1EB6B848 0028F808 0028F86C
+        0x0028F7C0:  04ADB554 00004242 003300FA 00000113 7708E454 77CE29D7
+        0x0028F7D8:  00000000 016301BC 01630000 003300FA 00000113 03D601F3
+        0x0028F7F0:  000006F8 0028F858 6941939D 00000000 0028F840 69405C45
+        0x0028F808:  69420044 04AF4E78 00000113 0163F7F0 0028F804 0000002C
+        0x0028F820:  0028F8EC 00000002 0510B9E8 0028F808 04AF4E78 04ADB540
+        base: 0x00090000   top: 0x0028F748   bottom: 0x00290000
+        
+    Backtrace (may be wrong):
+        =>0x00406034 in gta_sa.exe (+0x6034) (0x0028F800) 
+          0x69405C45 in collectiblesonradar.sa.asi (+0x5c45) (0x0028F840) 
+          0x6940450B in collectiblesonradar.sa.asi (+0x450b) (0x0028F864) 
+          0x69403C8E in collectiblesonradar.sa.asi (+0x3c8e) (0x0028F964) 
+          0x0053E986 in gta_sa.exe (+0x13e986) (0x0028F97C) 
+          0x5F08C643 in modloader.asi (+0x1c643) (0x0028F994) 
+          0x5F08E06E in modloader.asi (+0x1e06e) (0x0028F9BC) 
+          0x5F08CB47 in modloader.asi (+0x1cb47) (0x0028F9D8) 
+          0x5F08E617 in modloader.asi (+0x1e617) (0x0028FA80) 
+          0x5F08E50C in modloader.asi (+0x1e50c) (0x0028FA8C) 
+          0x0053ECC2 in gta_sa.exe (+0x13ecc2) (0x0028FA94) 
+          0x00619B71 in gta_sa.exe (+0x219b71) (0x0028FAA8) 
+          0x00748DA0 in gta_sa.exe (+0x348da0) (0x0028FB48) 
+          0x5F08E0D4 in modloader.asi (+0x1e0d4) (0x0028FB68) 
+          0x5F08C7A8 in modloader.asi (+0x1c7a8) (0x0028FBA8) 
+          0x5F08E10F in modloader.asi (+0x1e10f) (0x0028FBDC) 
+          0x5F08CAD2 in modloader.asi (+0x1cad2) (0x0028FC0C) 
+          0x5F08E92C in modloader.asi (+0x1e92c) (0x0028FCCC) 
+          0x5F08E558 in modloader.asi (+0x1e558) (0x0028FCE4) 
+        
+    
