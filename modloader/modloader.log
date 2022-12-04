@@ -11217,9 +11217,9 @@ Installing file "modloader\prioridade 100\walkstyle\cleo\cleo_text\walkstyle.fxt
 Installing file "modloader\prioridade 100\walkstyle\cleo\walkstyle.cs"
 Installing file "modloader\prioridade 100\walkstyle\digite walkstyle.txt"
 Updating gta3.std.data state...
-Parsing cached readme data for "modloader\controller\anim\warning anim !!.txt"
-Parsing cached readme data for "modloader\controller\gta3.img\warning skin !!.txt"
-Parsing cached readme data for "modloader\controller\holding\credits.txt"
+Parsing readme file "modloader\controller\anim\warning anim !!.txt"
+Parsing readme file "modloader\controller\gta3.img\warning skin !!.txt"
+Parsing readme file "modloader\controller\holding\credits.txt"
 Parsing cached readme data for "modloader\rosa project evolved v1.2\loader.txt"
 Found cached level file line for 'modloader\rosa project evolved v1.2\loader.txt':1
 Found cached level file line for 'modloader\rosa project evolved v1.2\loader.txt':2
@@ -11240,13 +11240,13 @@ Parsing cached readme data for "modloader\tuning mod parts\pack apocalipse 2\loa
 Found cached level file line for 'modloader\tuning mod parts\pack apocalipse 2\loader.txt':1
 Parsing readme file "modloader\prioridade 10\skygfx\models\texdb.txt"
 Ignoring text file "modloader\prioridade 10\skygfx\models\texdb.txt" because it's too big.
-Parsing cached readme data for "modloader\prioridade 20\cutscene characters remastered\!diminuir prioridade.txt"
+Parsing readme file "modloader\prioridade 20\cutscene characters remastered\!diminuir prioridade.txt"
 Parsing cached readme data for "modloader\prioridade 20\ls lit church\churchlite.txt"
 Found cached level file line for 'modloader\prioridade 20\ls lit church\churchlite.txt':1
 Found cached level file line for 'modloader\prioridade 20\ls lit church\churchlite.txt':2
 Found cached level file line for 'modloader\prioridade 20\ls lit church\churchlite.txt':3
-Parsing cached readme data for "modloader\prioridade 20\new rc shop\!diminuir prioridade.txt"
-Parsing cached readme data for "modloader\prioridade 20\remastered cj house\!mudar prioridade talvez.txt"
+Parsing readme file "modloader\prioridade 20\new rc shop\!diminuir prioridade.txt"
+Parsing readme file "modloader\prioridade 20\remastered cj house\!mudar prioridade talvez.txt"
 Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\data lines\androm.txt"
 Found cached vehicles handling line for 'modloader\prioridade 20\revamped vehicle project\data lines\androm.txt':2
 Found cached vehicle colours line for 'modloader\prioridade 20\revamped vehicle project\data lines\androm.txt':5
@@ -11288,29 +11288,29 @@ Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project
 Found cached vehicle upgrades line for 'modloader\prioridade 20\revamped vehicle project\data lines\supergt.txt':2
 Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\data lines\trash.txt"
 Found cached vehicles handling line for 'modloader\prioridade 20\revamped vehicle project\data lines\trash.txt':2
-Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\list of changes.txt"
-Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\readme.txt"
-Parsing cached readme data for "modloader\prioridade 30\improved and fixed original vegetation\mudar prioridade.txt"
+Parsing readme file "modloader\prioridade 20\revamped vehicle project\list of changes.txt"
+Parsing readme file "modloader\prioridade 20\revamped vehicle project\readme.txt"
+Parsing readme file "modloader\prioridade 30\improved and fixed original vegetation\mudar prioridade.txt"
 Parsing cached readme data for "modloader\prioridade 40\animal statues remastered\loader.txt"
 Found cached level file line for 'modloader\prioridade 40\animal statues remastered\loader.txt':1
-Parsing readme file "modloader\prioridade 40\hd sea props and animals\aumentar prioridade.txt"
+Parsing cached readme data for "modloader\prioridade 40\hd sea props and animals\aumentar prioridade.txt"
 Parsing cached readme data for "modloader\prioridade 40\improved food carts\loader.txt"
 Found cached level file line for 'modloader\prioridade 40\improved food carts\loader.txt':1
 Parsing cached readme data for "modloader\prioridade 40\improved lamps\loader.txt"
 Found cached level file line for 'modloader\prioridade 40\improved lamps\loader.txt':1
-Parsing readme file "modloader\prioridade 40\nextgen remaster weapons\diminuir prioridade.txt"
-Parsing readme file "modloader\prioridade 40\proper vegetation retex\!mudar prioridade.txt"
-Parsing readme file "modloader\prioridade 40\proper vegetation retex\aumentar streaming memory.txt"
-Parsing readme file "modloader\zmenu\keybinds configuradas.txt"
-Parsing readme file "modloader\essenciais\allweapon\tutorial.txt"
-Parsing readme file "modloader\essenciais\amazing screenshot\tutorial.txt"
-Parsing readme file "modloader\essenciais\super fast teleporter\tutorial.txt"
-Parsing readme file "modloader\essenciais\unflip\aperta 7.txt"
-Parsing readme file "modloader\essenciais\unflip\cleo\unflip.txt"
+Parsing cached readme data for "modloader\prioridade 40\nextgen remaster weapons\diminuir prioridade.txt"
+Parsing cached readme data for "modloader\prioridade 40\proper vegetation retex\!mudar prioridade.txt"
+Parsing cached readme data for "modloader\prioridade 40\proper vegetation retex\aumentar streaming memory.txt"
+Parsing cached readme data for "modloader\zmenu\keybinds configuradas.txt"
+Parsing cached readme data for "modloader\essenciais\allweapon\tutorial.txt"
+Parsing cached readme data for "modloader\essenciais\amazing screenshot\tutorial.txt"
+Parsing cached readme data for "modloader\essenciais\super fast teleporter\tutorial.txt"
+Parsing cached readme data for "modloader\essenciais\unflip\aperta 7.txt"
+Parsing cached readme data for "modloader\essenciais\unflip\cleo\unflip.txt"
 Parsing cached readme data for "modloader\enterable hidden interiors\data\gta dat.txt"
 Found cached level file line for 'modloader\enterable hidden interiors\data\gta dat.txt':3
-Parsing cached readme data for "modloader\enterable hidden interiors\prioridade tuning mod.txt"
-Parsing cached readme data for "modloader\enterable hidden interiors\tutorial.txt"
+Parsing readme file "modloader\enterable hidden interiors\prioridade tuning mod.txt"
+Parsing readme file "modloader\enterable hidden interiors\tutorial.txt"
 Parsing cached readme data for "modloader\prioridade 60\mapas\mini malibu safehouse\data\gtadat.txt"
 Found cached level file line for 'modloader\prioridade 60\mapas\mini malibu safehouse\data\gtadat.txt':4
 Found cached level file line for 'modloader\prioridade 60\mapas\mini malibu safehouse\data\gtadat.txt':5
@@ -11360,7 +11360,7 @@ Found cached vehicle colours line for 'modloader\prioridade 60\veiculos\veh br\m
 Parsing cached readme data for "modloader\prioridade 70\fix\food eating fix\food models\food eating fix.txt"
 Found cached level file line for 'modloader\prioridade 70\fix\food eating fix\food models\food eating fix.txt':1
 Found cached level file line for 'modloader\prioridade 70\fix\food eating fix\food models\food eating fix.txt':2
-Parsing cached readme data for "modloader\prioridade 80\inverted map\green desert mod\read-me.txt"
+Parsing readme file "modloader\prioridade 80\inverted map\green desert mod\read-me.txt"
 Parsing cached readme data for "modloader\prioridade 80\inverted map\new forest location\loader.txt"
 Found cached level file line for 'modloader\prioridade 80\inverted map\new forest location\loader.txt':3
 Found cached level file line for 'modloader\prioridade 80\inverted map\new forest location\loader.txt':4
@@ -11373,37 +11373,37 @@ Found cached level file line for 'modloader\prioridade 80\missing smokes fix\loa
 Parsing cached readme data for "modloader\prioridade 80\new algorithm for trains\loader.txt"
 Found cached level file line for 'modloader\prioridade 80\new algorithm for trains\loader.txt':4
 Found cached level file line for 'modloader\prioridade 80\new algorithm for trains\loader.txt':5
-Parsing readme file "modloader\prioridade 80\weather forecast\tutorial.txt"
-Parsing readme file "modloader\prioridade 90\attach vehicle\tecla 2.txt"
+Parsing cached readme data for "modloader\prioridade 80\weather forecast\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 90\attach vehicle\tecla 2.txt"
 Parsing cached readme data for "modloader\prioridade 90\breakable vending machines\loader.txt"
 Found cached level file line for 'modloader\prioridade 90\breakable vending machines\loader.txt':1
 Found cached level file line for 'modloader\prioridade 90\breakable vending machines\loader.txt':2
-Parsing readme file "modloader\prioridade 90\cj son mod\tutorial.txt"
-Parsing readme file "modloader\prioridade 90\collectibles on radar\desativa com f12.txt"
-Parsing readme file "modloader\prioridade 90\horn call homies\cleo\horn call homies.txt"
+Parsing cached readme data for "modloader\prioridade 90\cj son mod\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 90\collectibles on radar\desativa com f12.txt"
+Parsing cached readme data for "modloader\prioridade 90\horn call homies\cleo\horn call homies.txt"
 Parsing cached readme data for "modloader\prioridade 90\parking save garages\data\loader.txt"
 Found cached level file line for 'modloader\prioridade 90\parking save garages\data\loader.txt':1
 Found cached level file line for 'modloader\prioridade 90\parking save garages\data\loader.txt':2
 Found cached level file line for 'modloader\prioridade 90\parking save garages\data\loader.txt':3
 Parsing cached readme data for "modloader\prioridade 90\rusty brown's ring donuts overhaul\loader.txt"
 Found cached level file line for 'modloader\prioridade 90\rusty brown's ring donuts overhaul\loader.txt':3
-Parsing readme file "modloader\prioridade 90\vice city lighthouse\lighthouse & pyramid fix\leiame (ou não).txt"
-Parsing readme file "modloader\prioridade 90\vice city lighthouse\lighthouse & pyramid fix\readme (or not).txt"
-Parsing readme file "modloader\prioridade 100\0x858624\aperte b + page down para diminuir.txt"
-Parsing readme file "modloader\prioridade 100\0x858624\aperte b + page up para aumentar.txt"
-Parsing readme file "modloader\prioridade 100\boxrain\aperte w+b.txt"
-Parsing readme file "modloader\prioridade 100\carjump\aperta shift.txt"
-Parsing readme file "modloader\prioridade 100\carssuper\aperta 2.txt"
-Parsing readme file "modloader\prioridade 100\change4colors\digite color.txt"
-Parsing cached readme data for "modloader\prioridade 100\clipboard cheat\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 90\vice city lighthouse\lighthouse & pyramid fix\leiame (ou não).txt"
+Parsing cached readme data for "modloader\prioridade 90\vice city lighthouse\lighthouse & pyramid fix\readme (or not).txt"
+Parsing cached readme data for "modloader\prioridade 100\0x858624\aperte b + page down para diminuir.txt"
+Parsing cached readme data for "modloader\prioridade 100\0x858624\aperte b + page up para aumentar.txt"
+Parsing cached readme data for "modloader\prioridade 100\boxrain\aperte w+b.txt"
+Parsing cached readme data for "modloader\prioridade 100\carjump\aperta shift.txt"
+Parsing cached readme data for "modloader\prioridade 100\carssuper\aperta 2.txt"
+Parsing cached readme data for "modloader\prioridade 100\change4colors\digite color.txt"
+Parsing readme file "modloader\prioridade 100\clipboard cheat\tutorial.txt"
 Parsing cached readme data for "modloader\prioridade 100\custom vinewood text\loader.txt"
 Found cached level file line for 'modloader\prioridade 100\custom vinewood text\loader.txt':3
 Found cached level file line for 'modloader\prioridade 100\custom vinewood text\loader.txt':4
-Parsing readme file "modloader\prioridade 100\dog[0]\aperta k e tira com l.txt"
+Parsing cached readme data for "modloader\prioridade 100\dog[0]\aperta k e tira com l.txt"
 Parsing cached readme data for "modloader\prioridade 100\graffiti anywhere\graffitis\loader.txt"
 Found cached level file line for 'modloader\prioridade 100\graffiti anywhere\graffitis\loader.txt':5
 Found cached level file line for 'modloader\prioridade 100\graffiti anywhere\graffitis\loader.txt':6
-Parsing readme file "modloader\prioridade 100\graffiti anywhere\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\graffiti anywhere\tutorial.txt"
 Parsing cached readme data for "modloader\prioridade 100\handling\handling ambulan.txt"
 Found cached vehicles handling line for 'modloader\prioridade 100\handling\handling ambulan.txt':1
 Parsing cached readme data for "modloader\prioridade 100\handling\handling bravura.txt"
@@ -11412,44 +11412,44 @@ Parsing cached readme data for "modloader\prioridade 100\handling\handling buffa
 Found cached vehicles handling line for 'modloader\prioridade 100\handling\handling buffalo.txt':1
 Parsing cached readme data for "modloader\prioridade 100\handling\handling hpv1000.txt"
 Found cached vehicles handling line for 'modloader\prioridade 100\handling\handling hpv1000.txt':1
-Parsing cached readme data for "modloader\prioridade 100\handling\handling landstal.txt"
+Parsing readme file "modloader\prioridade 100\handling\handling landstal.txt"
 Parsing cached readme data for "modloader\prioridade 100\handling\handling peren.txt"
 Found cached vehicles handling line for 'modloader\prioridade 100\handling\handling peren.txt':1
 Parsing cached readme data for "modloader\prioridade 100\handling\handling police_la.txt"
 Found cached vehicles handling line for 'modloader\prioridade 100\handling\handling police_la.txt':1
 Parsing cached readme data for "modloader\prioridade 100\handling\handling tractor.txt"
 Found cached vehicles handling line for 'modloader\prioridade 100\handling\handling tractor.txt':1
-Parsing readme file "modloader\prioridade 100\in-game map editor\digite igme.txt"
-Parsing readme file "modloader\prioridade 100\insanity\readme - en.txt"
-Parsing readme file "modloader\prioridade 100\insanity\readme - pt.txt"
-Parsing readme file "modloader\prioridade 100\insanity\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\kamehameha\aperta tab + h.txt"
-Parsing readme file "modloader\prioridade 100\name weapon spawner\aperta o +  i.txt"
-Parsing readme file "modloader\prioridade 100\name weapon spawner\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\passenger\aperta g.txt"
-Parsing readme file "modloader\prioridade 100\passenger\cleo\passenger.txt"
-Parsing readme file "modloader\prioridade 100\passenger\passenger readme.txt"
-Parsing readme file "modloader\prioridade 100\pedrain\aperta alt + 1.txt"
-Parsing readme file "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1.txt"
-Parsing readme file "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1[0].txt"
-Parsing readme file "modloader\prioridade 100\portal gun\digite portal.txt"
-Parsing cached readme data for "modloader\prioridade 100\rzl-trainer\how to use.txt"
-Parsing readme file "modloader\prioridade 100\shoot stuff\digite shootstuff tecla m muda pra ped.txt"
-Parsing readme file "modloader\prioridade 100\skin selector (n)\aperta tab + e + bolinha do mouse.txt"
+Parsing cached readme data for "modloader\prioridade 100\in-game map editor\digite igme.txt"
+Parsing cached readme data for "modloader\prioridade 100\insanity\readme - en.txt"
+Parsing cached readme data for "modloader\prioridade 100\insanity\readme - pt.txt"
+Parsing cached readme data for "modloader\prioridade 100\insanity\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\kamehameha\aperta tab + h.txt"
+Parsing cached readme data for "modloader\prioridade 100\name weapon spawner\aperta o +  i.txt"
+Parsing cached readme data for "modloader\prioridade 100\name weapon spawner\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\passenger\aperta g.txt"
+Parsing cached readme data for "modloader\prioridade 100\passenger\cleo\passenger.txt"
+Parsing cached readme data for "modloader\prioridade 100\passenger\passenger readme.txt"
+Parsing cached readme data for "modloader\prioridade 100\pedrain\aperta alt + 1.txt"
+Parsing cached readme data for "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1.txt"
+Parsing cached readme data for "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1[0].txt"
+Parsing cached readme data for "modloader\prioridade 100\portal gun\digite portal.txt"
+Parsing readme file "modloader\prioridade 100\rzl-trainer\how to use.txt"
+Parsing cached readme data for "modloader\prioridade 100\shoot stuff\digite shootstuff tecla m muda pra ped.txt"
+Parsing cached readme data for "modloader\prioridade 100\skin selector (n)\aperta tab + e + bolinha do mouse.txt"
 Parsing readme file "modloader\prioridade 100\skin selector (n)\cleo\skin_n.txt"
 Ignoring text file "modloader\prioridade 100\skin selector (n)\cleo\skin_n.txt" because it's too big.
 Parsing readme file "modloader\prioridade 100\smooth camera\cleo\smoothcamerawork_ver05.txt"
 Ignoring text file "modloader\prioridade 100\smooth camera\cleo\smoothcamerawork_ver05.txt" because it's too big.
-Parsing readme file "modloader\prioridade 100\smooth camera\smcm e controles.txt"
-Parsing readme file "modloader\prioridade 100\spawn cj\digite spawncj.txt"
-Parsing readme file "modloader\prioridade 100\spikes mod\aperta k em carro de policia.txt"
-Parsing readme file "modloader\prioridade 100\spikes mod\digita spike para usar em qualquer carro.txt"
-Parsing readme file "modloader\prioridade 100\spikes mod\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\transfender\aperta p.txt"
-Parsing readme file "modloader\prioridade 100\vomitar\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\waldrivebyleo\aperta 4 para ir pro teto.txt"
-Parsing readme file "modloader\prioridade 100\waldrivebyleo\aperta w + 1 no carro.txt"
-Parsing readme file "modloader\prioridade 100\walkstyle\digite walkstyle.txt"
+Parsing cached readme data for "modloader\prioridade 100\smooth camera\smcm e controles.txt"
+Parsing cached readme data for "modloader\prioridade 100\spawn cj\digite spawncj.txt"
+Parsing cached readme data for "modloader\prioridade 100\spikes mod\aperta k em carro de policia.txt"
+Parsing cached readme data for "modloader\prioridade 100\spikes mod\digita spike para usar em qualquer carro.txt"
+Parsing cached readme data for "modloader\prioridade 100\spikes mod\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\transfender\aperta p.txt"
+Parsing cached readme data for "modloader\prioridade 100\vomitar\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\waldrivebyleo\aperta 4 para ir pro teto.txt"
+Parsing cached readme data for "modloader\prioridade 100\waldrivebyleo\aperta w + 1 no carro.txt"
+Parsing cached readme data for "modloader\prioridade 100\walkstyle\digite walkstyle.txt"
 Done updating gta3.std.data state.
 Starting up filesystem watcher...
 
@@ -14508,8 +14508,8 @@ Loading default ped relationship data "DATA\PED.DAT"
 Loading custom weapon data "modloader\rosa project evolved v1.2\data\weapon.dat"
 Loading custom ped groups "modloader\prioridade 60\peds\pack peds low poly\pedgrp.dat"
 Loading custom car groups "modloader\prioridade 70\carros bolsonaro\cargrp.dat"
-Starting injected cleo script search 139FC350 for version '0'...
-Injecting extra scripts into search 139FC350...
+Starting injected cleo script search 1380C530 for version '0'...
+Injecting extra scripts into search 1380C530...
 Injecting cleo script "modloader\prioridade 30\more radar icons\cleo\more radar icons (junior_djjr).cs"
 Injecting cleo script "modloader\essenciais\allweapon\cleo\allweapon_2.0.cs"
 Injecting cleo script "modloader\essenciais\amazing screenshot\cleo\amazingscreen.cs"
@@ -14622,11 +14622,11 @@ Injecting cleo script "modloader\prioridade 100\vomitar\cleo\sitsmkdrkgang.cs"
 Injecting cleo script "modloader\prioridade 100\vomitar\cleo\sitsmokedrink.cs"
 Injecting cleo script "modloader\prioridade 100\waldrivebyleo\cleo\waldrivebyleo.cs"
 Injecting cleo script "modloader\prioridade 100\walkstyle\cleo\walkstyle.cs"
-Finishing injected cleo script search 139FC350...
-Starting injected cleo script search 139FC350 for version '4'...
-Finishing injected cleo script search 139FC350...
-Starting injected cleo script search 139FC350 for version '3'...
-Finishing injected cleo script search 139FC350...
+Finishing injected cleo script search 1380C530...
+Starting injected cleo script search 1380C530 for version '4'...
+Finishing injected cleo script search 1380C530...
+Starting injected cleo script search 1380C530 for version '3'...
+Finishing injected cleo script search 1380C530...
 Loading default action reaction stats "DATA\AR_STATS.DAT"
 Loading default stat update conditions "DATA\STATDISP.DAT"
 Loading custom shopping data "C:\Users\FELIPE\AppData\Local\modloader\gta3.std.data\0\shopping.dat"
@@ -14634,8 +14634,8 @@ Removing imported model file at index 0
 Loading script sprite "modloader\prioridade 80\weather forecast\models\txd\weafore.txd"
 Loading default furniture data "data\furnitur.dat"
 Loading default procedural objects "data\procobj.dat"
-Loading script sprite "modloader\prioridade 100\graffiti anywhere\graffitis\models\txd\grfanyw.txd"
 Loading script sprite "modloader\prioridade 30\more radar icons\models\txd\mrdicns.txd"
+Loading script sprite "modloader\prioridade 100\graffiti anywhere\graffitis\models\txd\grfanyw.txd"
 Removing imported model file at index 20000
 Removing imported model file at index 20001
 Removing imported model file at index 20002

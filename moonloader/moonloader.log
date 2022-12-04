@@ -1,5 +1,5 @@
-[11:54:38.517616] (system)	Session started.
-[11:54:38.517616] (debug)	Module handle: 6F710000
+[12:39:55.106223] (system)	Session started.
+[12:39:55.106223] (debug)	Module handle: 04390000
 
 MoonLoader v.026.5-beta loaded.
 Developers: FYP, hnnssy, EvgeN 1137
@@ -7,27 +7,27 @@ Developers: FYP, hnnssy, EvgeN 1137
 Copyright (c) 2016, BlastHack Team
 http://blast.hk/moonloader/
 
-[11:54:38.517616] (info)	Working directory: C:\Users\FELIPE\Documents\gitieiMEd\moonloader
-[11:54:38.517616] (debug)	FP Control: 0009001F
-[11:54:38.517616] (debug)	Game: GTA SA 1.0.0.0 US
-[11:54:38.517616] (system)	Installing pre-game hooks...
-[11:54:38.517616] (system)	Hooks installed.
-[11:54:45.666616] (debug)	Initializing opcode handler table
-[11:54:45.666616] (debug)	package.path = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
-[11:54:45.666616] (debug)	package.cpath = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.dll;
-[11:54:45.667616] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\parked-car-maker.lua'...
-[11:54:45.667616] (debug)	New script: 053927A4
-[11:54:45.756616] (system)	Parcked Car Maker By Um Geek: Loaded successfully.
-[11:54:45.756616] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\Teleporter.lua'...
-[11:54:45.756616] (debug)	New script: 05392C3C
-[11:54:45.768616] (system)	Teleporter: Loaded successfully.
-[11:54:45.768616] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
-[11:54:45.768616] (debug)	New script: 053933E4
-[11:54:45.875616] (system)	Lua Visual Veh Spawner: Loaded successfully.
-[11:55:02.907616] (system)	Installing post-load hooks...
-[11:55:02.908616] (system)	Hooks installed.
-[11:57:25.370616] (system)	Unloading...
-[11:57:25.370616] (system)	Parcked Car Maker By Um Geek: Script terminated. (053927A4)
-[11:57:25.415616] (system)	Teleporter: Script terminated. (05392C3C)
-[11:57:25.420616] (system)	Lua Visual Veh Spawner: Script terminated. (053933E4)
-[11:57:25.442616] (system)	Session terminated.
+[12:39:55.106223] (info)	Working directory: C:\Users\FELIPE\Documents\gitieiMEd\moonloader
+[12:39:55.107223] (debug)	FP Control: 0009001F
+[12:39:55.107223] (debug)	Game: GTA SA 1.0.0.0 US
+[12:39:55.107223] (system)	Installing pre-game hooks...
+[12:39:55.109223] (system)	Hooks installed.
+[12:39:56.195223] (debug)	Initializing opcode handler table
+[12:39:56.196223] (debug)	package.path = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
+[12:39:56.196223] (debug)	package.cpath = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.dll;
+[12:39:56.196223] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\parked-car-maker.lua'...
+[12:39:56.196223] (debug)	New script: 05A4966C
+[12:39:56.203223] (system)	Parcked Car Maker By Um Geek: Loaded successfully.
+[12:39:56.203223] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\Teleporter.lua'...
+[12:39:56.203223] (debug)	New script: 05A49C8C
+[12:39:56.206223] (system)	Teleporter: Loaded successfully.
+[12:39:56.206223] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
+[12:39:56.206223] (debug)	New script: 05A494E4
+[12:39:56.214223] (system)	Lua Visual Veh Spawner: Loaded successfully.
+[12:40:00.327223] (system)	Installing post-load hooks...
+[12:40:00.327223] (system)	Hooks installed.
+[12:43:13.189223] (system)	Unloading...
+[12:43:13.189223] (system)	Parcked Car Maker By Um Geek: Script terminated. (05A4966C)
+[12:43:13.195223] (system)	Teleporter: Script terminated. (05A49C8C)
+[12:43:13.202223] (system)	Lua Visual Veh Spawner: Script terminated. (05A494E4)
+[12:43:13.217223] (system)	Session terminated.
