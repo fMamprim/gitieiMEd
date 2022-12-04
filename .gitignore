@@ -1,3 +1,8 @@
+cleo.log
+moonlsoader.log
+FixMALE01.SA.log
+gsx.log
+grgx.log
 anim/
 audio/
 models/
@@ -14,8 +19,3 @@ modloader/Prioridade 50/Proper Vehicles Retex
 modloader/Prioridade 80/Inverted Map
 modloader/RoSA Project Evolved v1.2
 logs/
-cleo.log
-moonlsoader.log
-FixMALE01.SA.log
-gsx.log
-grgx.log
