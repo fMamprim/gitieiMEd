@@ -1,5 +1,5 @@
-cleo.log
-moonlsoader.log
+﻿/cleo.log
+moonloader.log
 FixMALE01.SA.log
 gsx.log
 grgx.log
@@ -19,5 +19,5 @@ modloader/Prioridade 50/Proper Vehicles Retex
 modloader/Inverted Map
 modloader/RoSA Project Evolved v1.2
 logs/
-cleo.log
+
 *.log
