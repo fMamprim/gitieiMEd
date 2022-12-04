@@ -3,45 +3,40 @@ Handling: Vanilla handling pointer: 00C2B9DC 224 00C37D30
 Core: Started
 WARNING: Some VehFuncs functions need IndieVehicles.asi installed.
 
-Error fixed: Using 'body' as chassis for vehicle id 467
-Retrocompatibility: Found 'movsteer_*' 
 Extras: Found 'f_class' 
+Select 1 from total 1 is f_extras:1
+Select 1 from total 1 is gtasawheel
+Extras: Class inserted: gtasawheel
+Extras: Class inserted: f
 Select 0 from total 1 is f_extras:1
 Select 1 from total 1 is bully
 Extras: Class inserted: bully
 Extras: Class inserted: f
-Select 1 from total 1 is f_extras:1
-Select 0 from total 1 is gtavwheel
-Extras: Class inserted: gtavwheel
-Extras: Class inserted: f
 Extras: Jumping class nodes 
 Extras: Found 'f_extras' 
-Extras: Seed: 10896
-Extras: Classes: bully f gtavwheel f 
+Extras: Seed: 22983
+Extras: Classes: gtasawheel f bully f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:0'
 Extras: Childs found: 1
 Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bar'
-Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 10896
-Extras: Classes: bully f gtavwheel f 
+Extras: Seed: 22983
+Extras: Classes: gtasawheel f bully f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
+Extras: Added to match class: _[gtasawheel]
 Extras: Childs found: 2
 Extras: Class childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
+Extras: Processing node: '_[gtasawheel]'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 10896
-Extras: Classes: bully f gtavwheel f 
+Extras: Seed: 22983
+Extras: Classes: gtasawheel f bully f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
 Extras: Added to match class: _[bully]
@@ -53,8 +48,8 @@ Extras: Processing node: '_[bully]'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 10896
-Extras: Classes: bully f gtavwheel f 
+Extras: Seed: 22983
+Extras: Classes: gtasawheel f bully f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
 Extras: Added to match class: _[bully]
@@ -66,378 +61,25 @@ Extras: Processing node: '_[bully]'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 10896
-Extras: Classes: bully f gtavwheel f 
+Extras: Seed: 22983
+Extras: Classes: gtasawheel f bully f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
+Extras: Added to match class: _[gtasawheel]
 Extras: Childs found: 2
 Extras: Class childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
+Extras: Processing node: '_[gtasawheel]'
 Extras: Node has no child 
 Extras: --- Ending 
 Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_class' 
-Select 0 from total 1 is f_extras:1
-Select 0 from total 1 is gtasa
-Extras: Class inserted: gtasa
-Extras: Class inserted: f
-Select 1 from total 1 is f_extras:1
-Select 0 from total 1 is gtavwheel
-Extras: Class inserted: gtavwheel
-Extras: Class inserted: f
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 14741
-Extras: Classes: gtasa f gtavwheel f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bar'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 14741
-Extras: Classes: gtasa f gtavwheel f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 14741
-Extras: Classes: gtasa f gtavwheel f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtasa]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtasa]'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: (error) 'f_extras' has no childs 
-Extras: Found 'f_extras' 
-Extras: Seed: 14741
-Extras: Classes: gtasa f gtavwheel f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtasa]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtasa]'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: (error) 'f_extras' has no childs 
-Extras: Found 'f_extras' 
-Extras: Seed: 14741
-Extras: Classes: gtasa f gtavwheel f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Error fixed: Using 'body' as chassis for vehicle id 467
-Error fixed: Using 'body' as chassis for vehicle id 467
-Retrocompatibility: Found 'movsteer_*' 
-Error fixed: Using 'body' as chassis for vehicle id 467
-Retrocompatibility: Found 'movsteer_*' 
-Error fixed: Using 'body' as chassis for vehicle id 467
-Error fixed: Using 'body' as chassis for vehicle id 467
-Error fixed: Using 'body' as chassis for vehicle id 467
-Extras: Found 'f_class' 
-Select 1 from total 1 is f_extras:1
-Select 0 from total 1 is gtavwheel
-Extras: Class inserted: gtavwheel
-Extras: Class inserted: f
-Select 0 from total 1 is f_extras:1
-Select 0 from total 1 is gtasa
-Extras: Class inserted: gtasa
-Extras: Class inserted: f
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 22901
-Extras: Classes: gtavwheel f gtasa f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22901
-Extras: Classes: gtavwheel f gtasa f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22901
-Extras: Classes: gtavwheel f gtasa f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtasa]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtasa]'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'front'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22901
-Extras: Classes: gtavwheel f gtasa f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22901
-Extras: Classes: gtavwheel f gtasa f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtasa]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtasa]'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22901
-Extras: Classes: gtavwheel f gtasa f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Extras: Found 'f_extras' 
-Extras: Seed: 30236
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 600
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 3
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'can'
-Extras: Node has no child 
-Extras: --- Ending 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Wipers: Found 'f_wiper' 
-Wipers: Found 'f_wiper' 
-Retrocompatibility: Found 'steering' 
-Error fixed: Using 'body' as chassis for vehicle id 467
-Retrocompatibility: Found 'movsteer_*' 
-Retrocompatibility: Found 'movsteer_*' 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Error fixed: Using 'body' as chassis for vehicle id 414
-Error fixed: Using 'body' as chassis for vehicle id 467
-Error fixed: Using 'body' as chassis for vehicle id 467
-Retrocompatibility: Found 'movsteer_*' 
-Pedal: Found 'f_gas' 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Error fixed: Using 'body' as chassis for vehicle id 467
-Error fixed: Using 'body' as chassis for vehicle id 467
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
-Retrocompatibility: Found 'movsteer_*' 
-Extras: Found 'f_extras' 
-Extras: Seed: 2979
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Gear: Found 'f_fan' 
-Gear: Found 'f_fan' 
-Gear: Found 'f_fan' 
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
-Retrocompatibility: Found 'movsteer_*' 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_class' 
-Found '?' condition at 'spt?c0?c4:1'
-Condition check failed 
-Found '?' condition at 'chp?c1?c2?c3:1'
-Select 0 from total 0 is chp?c1?c2?c3:1
-Select 0 from total 0 is vars:1
-Select 1 from total 2 is bvar:1
-Charac: Found 'drv' (driver), selected '247' at 'a_drv=248,247,242,181'
-Extras: Class inserted: bvar
-Extras: Class inserted: vars
-Extras: Class inserted: chp
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 839
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
-Extras: Processing node: 'ptank:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'btank'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'mdgr:1'
-Extras: Added to match class: bmudgrdr[chp]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmudgrdr[chp]:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'bmdgr:0'
-Extras: Added to match class: ltrbgs[bvar]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node (class match) 1 of 0 
-Extras: Processing node: 'ltrbgs[bvar]'
-Extras: Node has no child 
-Extras: Starting new node 3 of 4 
-Extras: Processing node: 'exhs:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'exh2'
-Extras: Node has no child 
-Extras: There is no more extras to select 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 839
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: lightf[chp]:1
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'lightf[chp]:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'frksfl:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'frksflglss'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 839
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'barmdgrf:1'
-Extras: Added to match class: bmdgrb[chp]:0
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmdgrb[chp]:0'
-Extras: Childs found: 3
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'cmudgrd'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 839
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: mirrors[chp]:0+
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'mirrors[chp]:0+'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'lmrr'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Charac: Changing driver: 247
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
 Extras: Found 'f_class' 
 Found '?' condition at 'clsa?c0?c4'
 Condition check failed 
 Found '?' condition at 'clsb?c1?c2?c3'
 Select 0 from total 0 is clsb?c1?c2?c3
-Charac: Found 'drt' (dirty). Calculated from '-' result '5' at '_drt=0-5'
+Charac: Found 'drt' (dirty). Calculated from '-' result '7' at '_drt=0-5'
 Extras: Class inserted: clsb
 Extras: Jumping class nodes 
 Extras: Found 'f_class' 
@@ -445,46 +87,68 @@ Select 0 from total 1 is stkwhl
 Extras: Class inserted: stkwhl
 Extras: Jumping class nodes 
 Extras: Found 'f_extras' 
-Extras: Seed: 30872
+Extras: Seed: 24556
 Extras: Classes: clsb stkwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:4'
 Extras: Childs found: 4
 Extras: Select variations: 4
 Extras: Starting new node 1 of 4 
+Extras: Processing node: 'oltanks:1'
+Extras: Childs found: 2
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'oltanka'
+Extras: Node has no child 
+Extras: Starting new node 2 of 4 
 Extras: Processing node: 'exhs:1'
 Extras: Childs found: 4
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'xhc'
+Extras: Processing node: 'xha'
 Extras: Node has no child 
-Extras: Starting new node 2 of 4 
+Extras: Starting new node 3 of 4 
 Extras: Processing node: 'chsss:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'chssaa:1'
-Extras: Childs found: 1
+Extras: Processing node: 'chsssex:2'
+Extras: Childs found: 2
+Extras: Select variations: 2
+Extras: Starting new node 1 of 2 
+Extras: Processing node: 'chsvca:1'
+Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'satnka:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
+Extras: Processing node: 'mdgrra:0'
+Extras: Childs found: 1
+Extras: Select variations: 0
+Extras: Starting new node 1 of 0 
+Extras: Processing node: 'rlampa'
+Extras: Node has no child 
+Extras: Starting new node 2 of 2 
+Extras: Processing node: 'chssab:1'
+Extras: Childs found: 2
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'satnkb:3'
+Extras: Childs found: 3
+Extras: Select variations: 3
+Extras: Starting new node 1 of 3 
 Extras: Processing node: 'tcaps:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
 Extras: Processing node: 'tcapa'
 Extras: Node has no child 
-Extras: Starting new node 2 of 4 
+Extras: Starting new node 2 of 3 
 Extras: Processing node: 'ctlc:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'tctcb'
+Extras: Processing node: 'tctca'
 Extras: Node has no child 
-Extras: Starting new node 3 of 4 
+Extras: Starting new node 3 of 3 
 Extras: Processing node: 'mdlc:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
@@ -492,61 +156,61 @@ Extras: Starting new node 1 of 1
 Extras: Processing node: 'tmdca'
 Extras: Node has no child 
 Extras: Starting new node 4 of 4 
-Extras: Processing node: 'salmps:0+'
-Extras: Childs found: 2
-Extras: Select variations: 0
-Extras: Starting new node 3 of 4 
 Extras: Processing node: 'msc:0'
 Extras: Childs found: 1
 Extras: Select variations: 0
-Extras: Starting new node 4 of 4 
-Extras: Processing node: 'oltanks:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'oltanka'
-Extras: Node has no child 
 Extras: --- Ending 
 Footpegs: Found 'f_fpeg1' (footpeg driver) 
 Extras: Found 'f_extras' 
-Extras: Seed: 30872
+Extras: Seed: 24556
 Extras: Classes: clsb stkwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:2'
 Extras: Childs found: 2
 Extras: Select variations: 2
 Extras: Starting new node 1 of 2 
-Extras: Processing node: 'hdles:1'
-Extras: Childs found: 3
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'hndlbrsc'
-Extras: Node has no child 
-Extras: Starting new node 2 of 2 
 Extras: Processing node: 'mirrors:0'
 Extras: Childs found: 2
 Extras: Select variations: 0
 Extras: Starting new node 1 of 0 
-Extras: Processing node: 'mrrsa'
+Extras: Processing node: 'mrrsb'
+Extras: Node has no child 
+Extras: Starting new node 2 of 2 
+Extras: Processing node: 'hdles:1'
+Extras: Childs found: 3
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'hndlbrsa'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 30872
+Extras: Seed: 24556
 Extras: Classes: clsb stkwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:1'
 Extras: Childs found: 5
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'smlmp:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'crslmps'
+Extras: Processing node: 'bcrndo:2'
+Extras: Childs found: 2
+Extras: Select variations: 2
+Extras: Starting new node 1 of 2 
+Extras: Processing node: 'wshld:1'
+Extras: Childs found: 2
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'wndshldb'
+Extras: Node has no child 
+Extras: Starting new node 2 of 2 
+Extras: Processing node: 'clrs:1'
+Extras: Childs found: 2
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'crndclb'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 30872
+Extras: Seed: 24556
 Extras: Classes: clsb stkwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:0'
@@ -557,7 +221,7 @@ Extras: Processing node: 'fmdgrdb'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 30872
+Extras: Seed: 24556
 Extras: Classes: clsb stkwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:1'
@@ -574,7 +238,7 @@ Extras: Processing node: 'whlftstk'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 30872
+Extras: Seed: 24556
 Extras: Classes: clsb stkwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:1'
@@ -590,300 +254,34 @@ Extras: Starting new node 1 of 1
 Extras: Processing node: 'whlrrstk'
 Extras: Node has no child 
 Extras: --- Ending 
-Charac: Applying dirty: 5
-Retrocompatibility: Found 'dvornik_dummy' 
-Retrocompatibility: dvorright changed to f_wiper=ay60
-Retrocompatibility: dvorleft changed to f_wiper=ay-60
-Wipers: Found 'f_wiper' 
-Wipers: Found 'f_wiper' 
-Retrocompatibility: Found 'movsteer' 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Retrocompatibility: Found 'dvornik_dummy' 
-Retrocompatibility: dvorright changed to f_wiper=ay60
-Retrocompatibility: dvorleft changed to f_wiper=ay-60
-Wipers: Found 'f_wiper' 
-Wipers: Found 'f_wiper' 
-Retrocompatibility: Found 'movsteer' 
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
-Error fixed: Using 'body' as chassis for vehicle id 478
-Charac: Found 'drv' (driver), selected '46' at 'chassis_drv=046'
-Charac: Changing driver: 46
-Error fixed: Using 'body' as chassis for vehicle id 414
-Retrocompatibility: Found 'dvornik_dummy' 
-Retrocompatibility: dvorright changed to f_wiper=ay60
-Retrocompatibility: dvorleft changed to f_wiper=ay-60
-Wipers: Found 'f_wiper' 
-Wipers: Found 'f_wiper' 
-Retrocompatibility: Found 'movsteer' 
-Retrocompatibility: Found 'movsteer_*' 
-Charac: Found 'drv' (driver), selected '46' at 'chassis_drv=046'
-Charac: Changing driver: 46
-Extras: Found 'f_extras' 
-Extras: Seed: 4384
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 24691
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bextra_pj=1_drv=259'
-Extras: Node has no child 
-Extras: --- Ending 
-Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
-Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
-Charac: Applying paintjob: 1 keep color 0
-Charac: Changing driver: 259
-Extras: Found 'f_extras' 
-Extras: Seed: 20041
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Steer: Found 'f_steer' 
-Shake: Found 'f_shake' 
-Extras: Found 'f_class' 
-Select 1 from total 1 is f_extras:1
-Select 0 from total 1 is gtavwheel
-Extras: Class inserted: gtavwheel
-Extras: Class inserted: f
-Select 0 from total 1 is f_extras:1
-Select 1 from total 1 is bully
-Extras: Class inserted: bully
-Extras: Class inserted: f
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 8781
-Extras: Classes: gtavwheel f bully f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 8781
-Extras: Classes: gtavwheel f bully f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 8781
-Extras: Classes: gtavwheel f bully f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[bully]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[bully]'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 8781
-Extras: Classes: gtavwheel f bully f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[bully]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[bully]'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 8781
-Extras: Classes: gtavwheel f bully f 
-Extras: --- Starting extras for veh ID 481
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[gtavwheel]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[gtavwheel]'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
+Charac: Applying dirty: 7
+Pedal: Found 'f_gas' 
+Error fixed: Using 'body' as chassis for vehicle id 467
 Pedal: Found 'f_gas' 
 Extras: Found 'f_class' 
-Found '?' condition at 'spt?c0?c4:1'
-Condition check failed 
-Found '?' condition at 'chp?c1?c2?c3:1'
-Select 0 from total 0 is chp?c1?c2?c3:1
-Select 0 from total 0 is vars:1
-Select 2 from total 2 is cvar:1
-Charac: Found 'drv' (driver), selected '248' at 'a_drv=248,247,242,181'
-Extras: Class inserted: cvar
-Extras: Class inserted: vars
-Extras: Class inserted: chp
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 18504
-Extras: Classes: cvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
-Extras: Processing node: 'exhs:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'exh1'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'ptank:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'btank'
-Extras: Node has no child 
-Extras: Starting new node 3 of 4 
-Extras: Processing node: 'mdgr:1'
-Extras: Added to match class: bmudgrdr[chp]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmudgrdr[chp]:1'
-Extras: Added to match class: cmdgr[cvar]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'cmdgr[cvar]'
-Extras: Node has no child 
-Extras: There is no more extras to select 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 18504
-Extras: Classes: cvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: lightf[chp]:1
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'lightf[chp]:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'frksfl:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 18504
-Extras: Classes: cvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'barmdgrf:1'
-Extras: Added to match class: bmdgrb[chp]:0
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmdgrb[chp]:0'
-Extras: Childs found: 3
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 18504
-Extras: Classes: cvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: mirrors[chp]:0+
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'mirrors[chp]:0+'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'lmrr'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Charac: Changing driver: 248
-Extras: Found 'f_class' 
-Select 0 from total 1 is f_extras:1
-Select 1 from total 1 is bully
-Extras: Class inserted: bully
-Extras: Class inserted: f
 Select 1 from total 1 is f_extras:1
 Select 1 from total 1 is gtasawheel
 Extras: Class inserted: gtasawheel
 Extras: Class inserted: f
+Select 0 from total 1 is f_extras:1
+Select 0 from total 1 is gtasa
+Extras: Class inserted: gtasa
+Extras: Class inserted: f
 Extras: Jumping class nodes 
 Extras: Found 'f_extras' 
-Extras: Seed: 6816
-Extras: Classes: bully f gtasawheel f 
+Extras: Seed: 27032
+Extras: Classes: gtasawheel f gtasa f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:0'
 Extras: Childs found: 1
 Extras: Select variations: 0
+Extras: Starting new node 1 of 0 
+Extras: Processing node: 'bar'
+Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 6816
-Extras: Classes: bully f gtasawheel f 
+Extras: Seed: 27032
+Extras: Classes: gtasawheel f gtasa f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
 Extras: Added to match class: _[gtasawheel]
@@ -895,34 +293,36 @@ Extras: Processing node: '_[gtasawheel]'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 6816
-Extras: Classes: bully f gtasawheel f 
+Extras: Seed: 27032
+Extras: Classes: gtasawheel f gtasa f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[bully]
+Extras: Added to match class: _[gtasa]
 Extras: Childs found: 2
 Extras: Class childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[bully]'
-Extras: Node has no child 
+Extras: Processing node: '_[gtasa]'
+Extras: Childs found: 1
+Extras: Select variations: 0
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 6816
-Extras: Classes: bully f gtasawheel f 
+Extras: Seed: 27032
+Extras: Classes: gtasawheel f gtasa f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: _[bully]
+Extras: Added to match class: _[gtasa]
 Extras: Childs found: 2
 Extras: Class childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: '_[bully]'
-Extras: Node has no child 
+Extras: Processing node: '_[gtasa]'
+Extras: Childs found: 1
+Extras: Select variations: 0
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 6816
-Extras: Classes: bully f gtasawheel f 
+Extras: Seed: 27032
+Extras: Classes: gtasawheel f gtasa f 
 Extras: --- Starting extras for veh ID 481
 Extras: Processing node: 'f_extras:1'
 Extras: Added to match class: _[gtasawheel]
@@ -934,247 +334,35 @@ Extras: Processing node: '_[gtasawheel]'
 Extras: Node has no child 
 Extras: --- Ending 
 Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_class' 
-Found '?' condition at 'spt?c0?c4:1'
-Condition check failed 
-Found '?' condition at 'chp?c1?c2?c3:1'
-Select 0 from total 0 is chp?c1?c2?c3:1
-Select 0 from total 0 is vars:1
-Select 1 from total 2 is bvar:1
-Charac: Found 'drv' (driver), selected '248' at 'a_drv=248,247,242,181'
-Extras: Class inserted: bvar
-Extras: Class inserted: vars
-Extras: Class inserted: chp
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 15170
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
-Extras: Processing node: 'exhs:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'exh2'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'mdgr:1'
-Extras: Added to match class: bmudgrdr[chp]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmudgrdr[chp]:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'bmdgr:0'
-Extras: Added to match class: ltrbgs[bvar]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node (class match) 1 of 0 
-Extras: Processing node: 'ltrbgs[bvar]'
-Extras: Node has no child 
-Extras: Starting new node 3 of 4 
-Extras: Processing node: 'ptank:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'btank'
-Extras: Node has no child 
-Extras: There is no more extras to select 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 15170
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: lightf[chp]:1
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'lightf[chp]:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'frksfl:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'frksflglss'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 15170
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'barmdgrf:1'
-Extras: Added to match class: bmdgrb[chp]:0
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmdgrb[chp]:0'
-Extras: Childs found: 3
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bmudgrd'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 15170
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: mirrors[chp]:0+
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'mirrors[chp]:0+'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'rmrr'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Charac: Changing driver: 248
 Error fixed: Using 'body' as chassis for vehicle id 467
-Retrocompatibility: Found 'movsteer_*' 
 Extras: Found 'f_extras' 
-Extras: Seed: 18612
+Extras: Seed: 22350
 Extras: Classes: 
 Extras: --- Starting extras for veh ID 418
 Extras: Processing node: 'f_extras'
 Extras: Childs found: 1
 Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bextra_pj=1_drv=259'
-Extras: Node has no child 
 Extras: --- Ending 
-Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
-Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
-Charac: Applying paintjob: 1 keep color 0
-Charac: Changing driver: 259
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Gear: Found 'f_fan' 
-Gear: Found 'f_fan' 
-Gear: Found 'f_fan' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Shake: Found 'f_shake' 
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
-Charac: Found 'drv' (driver), selected '46' at 'chassis_drv=046'
-Charac: Changing driver: 46
-Error fixed: Using 'body' as chassis for vehicle id 478
-Extras: Found 'f_extras' 
-Extras: Seed: 28244
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bextra_pj=1_drv=259'
-Extras: Node has no child 
-Extras: --- Ending 
-Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
-Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
-Charac: Applying paintjob: 1 keep color 0
-Charac: Changing driver: 259
-Extras: Found 'f_extras' 
-Extras: Seed: 9152
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bextra_pj=1_drv=259'
-Extras: Node has no child 
-Extras: --- Ending 
-Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
-Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
-Charac: Applying paintjob: 1 keep color 0
-Charac: Changing driver: 259
-Retrocompatibility: Found 'dvornik_dummy' 
-Retrocompatibility: dvorright changed to f_wiper=ay60
-Retrocompatibility: dvorleft changed to f_wiper=ay-60
-Wipers: Found 'f_wiper' 
-Wipers: Found 'f_wiper' 
-Retrocompatibility: Found 'movsteer' 
-Error fixed: Using 'body' as chassis for vehicle id 478
-Charac: Found 'drv' (driver), selected '260' at 'chassis_drv=260'
-Charac: Changing driver: 260
-Error fixed: Using 'body' as chassis for vehicle id 478
 Extras: Found 'f_class' 
 Found '?' condition at 'clsa?c0?c4'
 Condition check failed 
 Found '?' condition at 'clsb?c1?c2?c3'
 Select 0 from total 0 is clsb?c1?c2?c3
-Charac: Found 'drt' (dirty). Calculated from '-' result '3' at '_drt=0-5'
+Charac: Found 'drt' (dirty). Calculated from '-' result '8' at '_drt=0-5'
 Extras: Class inserted: clsb
 Extras: Jumping class nodes 
 Extras: Found 'f_class' 
-Select 0 from total 1 is stkwhl
-Extras: Class inserted: stkwhl
+Select 1 from total 1 is cstwhl
+Extras: Class inserted: cstwhl
 Extras: Jumping class nodes 
 Extras: Found 'f_extras' 
-Extras: Seed: 22201
-Extras: Classes: clsb stkwhl 
+Extras: Seed: 6574
+Extras: Classes: clsb cstwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:4'
 Extras: Childs found: 4
 Extras: Select variations: 4
 Extras: Starting new node 1 of 4 
-Extras: Processing node: 'exhs:1'
-Extras: Childs found: 4
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'xhc'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'oltanks:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'oltankb:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'oltankcb'
-Extras: Node has no child 
-Extras: Starting new node 3 of 4 
-Extras: Processing node: 'msc:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'engnshld'
-Extras: Node has no child 
-Extras: Starting new node 4 of 4 
 Extras: Processing node: 'chsss:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
@@ -1187,398 +375,58 @@ Extras: Processing node: 'satnka:4'
 Extras: Childs found: 4
 Extras: Select variations: 4
 Extras: Starting new node 1 of 4 
-Extras: Processing node: 'tcaps:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'tcapa'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'mdlc:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'tmdca'
-Extras: Node has no child 
-Extras: Starting new node 3 of 4 
 Extras: Processing node: 'ctlc:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'tctca'
+Extras: Processing node: 'tctcb'
 Extras: Node has no child 
-Extras: Starting new node 4 of 4 
+Extras: Starting new node 2 of 4 
 Extras: Processing node: 'salmps:0+'
 Extras: Childs found: 2
-Extras: Select variations: 0
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Extras: Found 'f_extras' 
-Extras: Seed: 22201
-Extras: Classes: clsb stkwhl 
-Extras: --- Starting extras for veh ID 463
-Extras: Processing node: 'f_extras:2'
-Extras: Childs found: 2
 Extras: Select variations: 2
 Extras: Starting new node 1 of 2 
-Extras: Processing node: 'hdles:1'
-Extras: Childs found: 3
+Extras: Processing node: 'crslamps:1'
+Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'hndlbrsa'
+Extras: Processing node: 'rcrslmpa'
 Extras: Node has no child 
 Extras: Starting new node 2 of 2 
-Extras: Processing node: 'mirrors:0'
-Extras: Childs found: 2
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'mrrsa'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22201
-Extras: Classes: clsb stkwhl 
-Extras: --- Starting extras for veh ID 463
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 5
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'bcrndo:2'
-Extras: Childs found: 2
-Extras: Select variations: 2
-Extras: Starting new node 1 of 2 
-Extras: Processing node: 'clrs:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'crndclb'
-Extras: Node has no child 
-Extras: Starting new node 2 of 2 
-Extras: Processing node: 'wshld:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'wndshlda'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22201
-Extras: Classes: clsb stkwhl 
-Extras: --- Starting extras for veh ID 463
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 2
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'fmdgrda'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22201
-Extras: Classes: clsb stkwhl 
-Extras: --- Starting extras for veh ID 463
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: whlsf[stkwhl]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'whlsf[stkwhl]:1'
+Extras: Processing node: 'rlamps:1'
 Extras: Childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'whlftstk'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 22201
-Extras: Classes: clsb stkwhl 
-Extras: --- Starting extras for veh ID 463
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: whlsr[stkwhl]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'whlsr[stkwhl]:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'whlrrstk'
-Extras: Node has no child 
-Extras: --- Ending 
-Charac: Applying dirty: 3
-Retrocompatibility: Found 'movsteer_*' 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_extras' 
-Extras: Seed: 291
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Charac: Found 'drv' (driver), selected '46' at 'chassis_drv=046'
-Charac: Changing driver: 46
-Retrocompatibility: Found 'movsteer_*' 
-Retrocompatibility: Found 'movsteer_*' 
-Extras: Found 'f_extras' 
-Extras: Seed: 10705
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 19019
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 569
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 19019
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 569
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 3
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'skin1'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 15572
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 569
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 15572
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 569
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 3
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'skin1'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 14631
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 569
-Extras: Processing node: 'f_extras:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'sides'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 14631
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 569
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 3
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'skin3'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_class' 
-Found '?' condition at 'spt?c0?c4:1'
-Condition check failed 
-Found '?' condition at 'chp?c1?c2?c3:1'
-Select 0 from total 0 is chp?c1?c2?c3:1
-Select 0 from total 0 is vars:1
-Select 1 from total 2 is bvar:1
-Charac: Found 'drv' (driver), selected '248' at 'a_drv=248,247,242,181'
-Extras: Class inserted: bvar
-Extras: Class inserted: vars
-Extras: Class inserted: chp
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 6396
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
-Extras: Processing node: 'exhs:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'exh2'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'mdgr:1'
-Extras: Added to match class: bmudgrdr[chp]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmudgrdr[chp]:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'bmdgr:0'
-Extras: Added to match class: ltrbgs[bvar]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node (class match) 1 of 0 
-Extras: Processing node: 'ltrbgs[bvar]'
+Extras: Processing node: 'rlampa'
 Extras: Node has no child 
 Extras: Starting new node 3 of 4 
-Extras: Processing node: 'ptank:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'btank'
-Extras: Node has no child 
-Extras: There is no more extras to select 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 6396
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: lightf[chp]:1
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'lightf[chp]:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'frksfl:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 6396
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'barmdgrf:1'
-Extras: Added to match class: bmdgrb[chp]:0
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmdgrb[chp]:0'
-Extras: Childs found: 3
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 6396
-Extras: Classes: bvar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: mirrors[chp]:0+
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'mirrors[chp]:0+'
-Extras: Childs found: 2
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'rmrr'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Shake: Found 'f_shake' 
-Gear: Found 'f_fan' 
-Shake: Found 'f_shake' 
-Gear: Found 'f_fan' 
-Gear: Found 'f_fan' 
-Gear: Found 'f_fan' 
-Extras: Found 'f_class' 
-Found '?' condition at 'clsa?c0?c4'
-Condition check failed 
-Found '?' condition at 'clsb?c1?c2?c3'
-Select 0 from total 0 is clsb?c1?c2?c3
-Charac: Found 'drt' (dirty). Calculated from '-' result '1' at '_drt=0-5'
-Extras: Class inserted: clsb
-Extras: Jumping class nodes 
-Extras: Found 'f_class' 
-Select 0 from total 1 is stkwhl
-Extras: Class inserted: stkwhl
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 7531
-Extras: Classes: clsb stkwhl 
-Extras: --- Starting extras for veh ID 463
-Extras: Processing node: 'f_extras:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
-Extras: Processing node: 'oltanks:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'oltankb:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'oltankca'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'msc:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 3 of 4 
-Extras: Processing node: 'chsss:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'chsssex:2'
-Extras: Childs found: 2
-Extras: Select variations: 2
-Extras: Starting new node 1 of 2 
-Extras: Processing node: 'chssab:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'vctnk:3'
-Extras: Childs found: 3
-Extras: Select variations: 3
-Extras: Starting new node 1 of 3 
-Extras: Processing node: 'satac:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 2 of 3 
-Extras: Processing node: 'ctcl:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'vctnkclra'
-Extras: Node has no child 
-Extras: Starting new node 3 of 3 
 Extras: Processing node: 'tcaps:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
 Extras: Processing node: 'tcapb'
 Extras: Node has no child 
-Extras: Starting new node 2 of 2 
-Extras: Processing node: 'chsvca:1'
+Extras: Starting new node 4 of 4 
+Extras: Processing node: 'mdlc:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'mdgrra:0'
+Extras: Processing node: 'tmdca'
+Extras: Node has no child 
+Extras: Starting new node 2 of 4 
+Extras: Processing node: 'oltanks:1'
+Extras: Childs found: 2
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'oltanka'
+Extras: Node has no child 
+Extras: Starting new node 3 of 4 
+Extras: Processing node: 'msc:0'
 Extras: Childs found: 1
 Extras: Select variations: 0
+Extras: Starting new node 1 of 0 
+Extras: Processing node: 'engnshld'
+Extras: Node has no child 
 Extras: Starting new node 4 of 4 
 Extras: Processing node: 'exhs:1'
 Extras: Childs found: 4
@@ -1589,246 +437,105 @@ Extras: Node has no child
 Extras: --- Ending 
 Footpegs: Found 'f_fpeg1' (footpeg driver) 
 Extras: Found 'f_extras' 
-Extras: Seed: 7531
-Extras: Classes: clsb stkwhl 
+Extras: Seed: 6574
+Extras: Classes: clsb cstwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:2'
 Extras: Childs found: 2
 Extras: Select variations: 2
 Extras: Starting new node 1 of 2 
-Extras: Processing node: 'hdles:1'
-Extras: Childs found: 3
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'hndlbrsc'
-Extras: Node has no child 
-Extras: Starting new node 2 of 2 
 Extras: Processing node: 'mirrors:0'
 Extras: Childs found: 2
 Extras: Select variations: 0
 Extras: Starting new node 1 of 0 
-Extras: Processing node: 'mrrsb'
+Extras: Processing node: 'mrrsa'
+Extras: Node has no child 
+Extras: Starting new node 2 of 2 
+Extras: Processing node: 'hdles:1'
+Extras: Childs found: 3
+Extras: Select variations: 1
+Extras: Starting new node 1 of 1 
+Extras: Processing node: 'hndlbrsa'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 7531
-Extras: Classes: clsb stkwhl 
+Extras: Seed: 6574
+Extras: Classes: clsb cstwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:1'
 Extras: Childs found: 5
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'bcrndo:2'
+Extras: Processing node: 'acrndo:2'
 Extras: Childs found: 2
 Extras: Select variations: 2
 Extras: Starting new node 1 of 2 
-Extras: Processing node: 'wshld:1'
+Extras: Processing node: 'wshlds:1'
 Extras: Childs found: 2
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
 Extras: Processing node: 'wndshlda'
 Extras: Node has no child 
 Extras: Starting new node 2 of 2 
-Extras: Processing node: 'clrs:1'
+Extras: Processing node: 'mscs:0+'
 Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'crndcla'
+Extras: Select variations: 2
+Extras: Starting new node 1 of 2 
+Extras: Processing node: 'mscb'
+Extras: Node has no child 
+Extras: Starting new node 2 of 2 
+Extras: Processing node: 'msca'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 7531
-Extras: Classes: clsb stkwhl 
+Extras: Seed: 6574
+Extras: Classes: clsb cstwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:0'
 Extras: Childs found: 2
 Extras: Select variations: 0
+Extras: Starting new node 1 of 0 
+Extras: Processing node: 'fmdgrdb'
+Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 7531
-Extras: Classes: clsb stkwhl 
+Extras: Seed: 6574
+Extras: Classes: clsb cstwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: whlsf[stkwhl]:1
+Extras: Added to match class: whlsf[cstwhl]:1
 Extras: Childs found: 2
 Extras: Class childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'whlsf[stkwhl]:1'
+Extras: Processing node: 'whlsf[cstwhl]:1'
 Extras: Childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'whlftstk'
+Extras: Processing node: 'whlftcstm'
 Extras: Node has no child 
 Extras: --- Ending 
 Extras: Found 'f_extras' 
-Extras: Seed: 7531
-Extras: Classes: clsb stkwhl 
+Extras: Seed: 6574
+Extras: Classes: clsb cstwhl 
 Extras: --- Starting extras for veh ID 463
 Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: whlsr[stkwhl]:1
+Extras: Added to match class: whlsr[cstwhl]:1
 Extras: Childs found: 2
 Extras: Class childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'whlsr[stkwhl]:1'
+Extras: Processing node: 'whlsr[cstwhl]:1'
 Extras: Childs found: 1
 Extras: Select variations: 1
 Extras: Starting new node 1 of 1 
-Extras: Processing node: 'whlrrstk'
+Extras: Processing node: 'whlrrcstm'
 Extras: Node has no child 
 Extras: --- Ending 
-Charac: Applying dirty: 1
-Retrocompatibility: Found 'movsteer_*' 
+Charac: Applying dirty: 8
+Error fixed: Using 'body' as chassis for vehicle id 467
 Extras: Found 'f_extras' 
-Extras: Seed: 16424
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_extras' 
-Extras: Seed: 12956
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bextra_pj=1_drv=259'
-Extras: Node has no child 
-Extras: --- Ending 
-Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
-Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
-Charac: Applying paintjob: 1 keep color 0
-Extras: Found 'f_extras' 
-Extras: Seed: 12116
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Error fixed: Using 'body' as chassis for vehicle id 478
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_class' 
-Found '?' condition at 'spt?c0?c4:1'
-Condition check failed 
-Found '?' condition at 'chp?c1?c2?c3:1'
-Select 0 from total 0 is chp?c1?c2?c3:1
-Select 0 from total 0 is vars:1
-Select 0 from total 2 is avar:1
-Charac: Found 'drv' (driver), selected '247' at 'a_drv=248,247,242,181'
-Charac: Found 'drv' (driver), selected '128' at 'b_drv=185,131,128'
-Charac: Found 'drv' (driver), selected '250' at 'c_drv=250,215,202,201'
-Extras: Class inserted: avar
-Extras: Class inserted: vars
-Extras: Class inserted: chp
-Extras: Jumping class nodes 
-Extras: Found 'f_extras' 
-Extras: Seed: 1160
-Extras: Classes: avar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:4'
-Extras: Childs found: 4
-Extras: Select variations: 4
-Extras: Starting new node 1 of 4 
-Extras: Processing node: 'exhs:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'exh1'
-Extras: Node has no child 
-Extras: Starting new node 2 of 4 
-Extras: Processing node: 'mdgr:1'
-Extras: Added to match class: bmudgrdr[chp]:1
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmudgrdr[chp]:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'bmdgr:0'
-Extras: Added to match class: bmdgrb[avar]
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 3 of 4 
-Extras: Processing node: 'ptank:1'
-Extras: Childs found: 2
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'atank'
-Extras: Node has no child 
-Extras: There is no more extras to select 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 1160
-Extras: Classes: avar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: lightf[chp]:1
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'lightf[chp]:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'frksfl:0'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 1160
-Extras: Classes: avar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node 1 of 1 
-Extras: Processing node: 'barmdgrf:1'
-Extras: Added to match class: bmdgrb[chp]:0
-Extras: Childs found: 2
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'bmdgrb[chp]:0'
-Extras: Childs found: 3
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bmudgrd'
-Extras: Node has no child 
-Extras: --- Ending 
-Extras: Found 'f_extras' 
-Extras: Seed: 1160
-Extras: Classes: avar vars chp 
-Extras: --- Starting extras for veh ID 586
-Extras: Processing node: 'f_extras:1'
-Extras: Added to match class: mirrors[chp]:0+
-Extras: Childs found: 1
-Extras: Class childs found: 1
-Extras: Select variations: 1
-Extras: Starting new node (class match) 1 of 1 
-Extras: Processing node: 'mirrors[chp]:0+'
-Extras: Childs found: 2
-Extras: Select variations: 2
-Extras: Starting new node 1 of 2 
-Extras: Processing node: 'rmrr'
-Extras: Node has no child 
-Extras: Starting new node 2 of 2 
-Extras: Processing node: 'lmrr'
-Extras: Node has no child 
-Extras: --- Ending 
-Footpegs: Found 'f_fpeg1' (footpeg driver) 
-Charac: Changing driver: 250
-Extras: Found 'f_extras' 
-Extras: Seed: 14574
+Extras: Seed: 18386
 Extras: Classes: 
 Extras: --- Starting extras for veh ID 418
 Extras: Processing node: 'f_extras'
@@ -1842,20 +549,4 @@ Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
 Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
 Charac: Applying paintjob: 1 keep color 0
 Charac: Changing driver: 259
-Error fixed: Using 'body' as chassis for vehicle id 414
-Extras: Found 'f_extras' 
-Extras: Seed: 32713
-Extras: Classes: 
-Extras: --- Starting extras for veh ID 418
-Extras: Processing node: 'f_extras'
-Extras: Childs found: 1
-Extras: Select variations: 0
-Extras: Starting new node 1 of 0 
-Extras: Processing node: 'bextra_pj=1_drv=259'
-Extras: Node has no child 
-Extras: --- Ending 
-Charac: Found 'pj' (paintjob). Set '1' at 'bextra_pj=1_drv=259'
-Charac: Found 'drv' (driver), selected '259' at 'bextra_pj=1_drv=259'
-Charac: Applying paintjob: 1 keep color 0
-Charac: Changing driver: 259
-Error fixed: Using 'body' as chassis for vehicle id 414
+Error fixed: Using 'body' as chassis for vehicle id 467
