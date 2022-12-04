@@ -42,7 +42,7 @@ Parsing grge line: 319.326  -1768.93  3.35686  325.625  -1768.93  319.326  -1759
 	Is GRGX: false
 Parsing grge line: 1352.58  -636.657  108.135  1359.02  -634.418  1349.56  -627.962  113.135  1  32  CEsafe1  
 	Is GRGX: false
-Parsing grge line: -2728.53  212.295  3.45112  -2716.36  212.295  -2728.53  222.669  8.68621  1  5  mds1SFS  
+Parsing grge line: -2728.53  212.295  3.45112  -2716.36  212.295  -2728.53  222.669  8.68705  1  5  mds1SFS  
 	Is GRGX: false
 Parsing grge line: -2735.46  60.7331  3.07005  -2725.82  60.7331  -2735.46  72.8828  7.92155  1  1  tbon  
 	Is GRGX: false
@@ -188,8 +188,6 @@ Parsing grge line: 2363.39  2156.62  9.5  2357.89  2223.32  2357.89  2156.62  29
 		Is Parking Garage: true
 		Is GARAGE_DONT_SAVE: false
 		Width=66.9, Depth= 5.5, Height=20.1,  dotProduct(dirA, dirB)=0.08
-CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
-CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
 CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
 CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
 	CGarageBase CJPARK destructed

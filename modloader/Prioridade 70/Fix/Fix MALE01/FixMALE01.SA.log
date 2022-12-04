@@ -1,229 +1,98 @@
 v2.0b3 by Junior_Djjr - MixMods.com.br
 will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 538 type -1
-253 for vehicle, class 255
--- FINAL 253
-will fix vehicle 
--- START fix for vehicle id 404 type 0
-7 for vehicle, class 1
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 478 type 0
-196 for vehicle, class 4
--- FINAL 196
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 478 type 0
-196 for vehicle, class 4
--- FINAL 196
-will fix vehicle 
--- START fix for vehicle id 562 type 0
-7 for vehicle, class 2
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 562 type 0
-7 for vehicle, class 2
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 562 type 0
-7 for vehicle, class 2
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 562 type 0
-7 for vehicle, class 2
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 478 type 0
-7 for vehicle, class 4
--- NO FIX 7
-will fix vehicle 
 -- START fix for vehicle id 543 type 0
 7 for vehicle, class 0
 -- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 543 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 543 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 478 type 0
-7 for vehicle, class 4
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 543 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 543 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 586 type 0
-7 for vehicle, class 8
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 478 type 0
-7 for vehicle, class 4
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 475 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 475 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 562 type 0
-7 for vehicle, class 2
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 404 type 0
-7 for vehicle, class 1
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 475 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 543 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 538 type -1
-253 for vehicle, class 255
--- FINAL 253
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 543 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 475 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 475 type 0
-7 for vehicle, class 0
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 404 type 0
-7 for vehicle, class 1
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
--- START fix for vehicle id 474 type 21
-manual fixed gang 114 gang id 7
--- FINAL 114
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
 will fix vehicle 
 -- START fix for vehicle id 514 type 0
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
+-- START fix for vehicle id 478 type 0
+7 for vehicle, class 4
 -- NO FIX 7
 will fix vehicle 
--- START fix for vehicle id 414 type 0
+-- START fix for vehicle id 478 type 0
+7 for vehicle, class 4
+-- NO FIX 7
+will fix vehicle 
+-- START fix for vehicle id 514 type 0
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
--- START fix for vehicle id 414 type 0
+-- START fix for vehicle id 562 type 0
+7 for vehicle, class 2
+-- NO FIX 7
+will fix vehicle 
+-- START fix for vehicle id 562 type 0
+7 for vehicle, class 2
+-- NO FIX 7
+will fix vehicle 
+-- START fix for vehicle id 478 type 0
+196 for vehicle, class 4
+-- FINAL 196
+will fix vehicle 
+-- START fix for vehicle id 562 type 0
+7 for vehicle, class 2
+-- NO FIX 7
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
 -- START fix for vehicle id 478 type 0
-40 for vehicle, class 4
--- FINAL 40
+196 for vehicle, class 4
+-- FINAL 196
 will fix vehicle 
--- START fix for vehicle id 414 type 0
+-- START fix for vehicle id 478 type 0
+196 for vehicle, class 4
+-- FINAL 196
+will fix vehicle 
+-- START fix for vehicle id 478 type 0
+196 for vehicle, class 4
+-- FINAL 196
+will fix vehicle 
+-- START fix for vehicle id 478 type 0
+196 for vehicle, class 4
+-- FINAL 196
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 478 type 0
+196 for vehicle, class 4
+-- FINAL 196
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 532 type 4
+196 for vehicle, class 255
+-- FINAL 196
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
@@ -231,59 +100,15 @@ will fix vehicle
 253 for vehicle, class 255
 -- FINAL 253
 will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
+-- START fix for vehicle id 532 type 4
+196 for vehicle, class 255
+-- FINAL 196
 will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
+-- START fix for vehicle id 532 type 4
+196 for vehicle, class 255
+-- FINAL 196
 will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 478 type 0
-43 for vehicle, class 4
--- FINAL 43
-will fix vehicle 
--- START fix for vehicle id 428 type 0
-7 for vehicle, class 5
--- NO FIX 7
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 552 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 414 type 0
-50 for vehicle, class 4
--- FINAL 50
-will fix vehicle 
--- START fix for vehicle id 514 type 0
+-- START fix for vehicle id 456 type 0
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
@@ -299,10 +124,114 @@ will fix vehicle
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
+-- START fix for vehicle id 414 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
 -- START fix for vehicle id 456 type 0
 50 for vehicle, class 4
 -- FINAL 50
 will fix vehicle 
--- START fix for vehicle id 514 type 0
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 428 type 0
+7 for vehicle, class 5
+-- NO FIX 7
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 508 type 0
+90 for vehicle, class 4
+-- FINAL 7
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 414 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 414 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 538 type -1
+253 for vehicle, class 255
+-- FINAL 253
+will fix vehicle 
+-- START fix for vehicle id 403 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 538 type -1
+253 for vehicle, class 255
+-- FINAL 253
+will fix vehicle 
+-- START fix for vehicle id 463 type 0
+248 for vehicle, class 8
+-- FINAL 248
+will fix vehicle 
+-- START fix for vehicle id 463 type 0
+248 for vehicle, class 8
+-- FINAL 248
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 456 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 552 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 428 type 0
+7 for vehicle, class 5
+-- NO FIX 7
+will fix vehicle 
+-- START fix for vehicle id 478 type 0
+59 for vehicle, class 4
+-- FINAL 59
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 499 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 552 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 552 type 0
+50 for vehicle, class 4
+-- FINAL 50
+will fix vehicle 
+-- START fix for vehicle id 414 type 0
 50 for vehicle, class 4
 -- FINAL 50
