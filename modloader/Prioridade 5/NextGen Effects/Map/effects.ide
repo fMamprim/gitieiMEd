@@ -1,0 +1,156 @@
+objs
+15169, waves2, effects, 2000, 0
+15170, waves3, effects, 2000, 0
+15171, waves4, effects, 2000, 0
+15172, waves5, effects, 2000, 0
+15173, waves6, effects, 2000, 0
+
+
+15174, waves0, effects, 2000, 0
+15175, waves0x, effects, 2000, 0
+15176, waves0x2, effects, 2000, 0
+
+15177, fog_1, effects, 20, 0
+15182, fog_2, effects, 20, 0
+15183, fog_3, effects, 20, 0
+15184, fog_4, effects, 20, 0
+
+15178, pool_refl, effects, 20, 0
+
+15179, dr_dc1x, effects, 2, 0
+
+15180, bld1_bhls, effects, 2, 0
+15181, bld2_bhls, effects, 2, 0
+
+15185, jz_wd_hls, effects, 2, 0
+15194, jz_wd_hls2, effects, 2, 0
+15206, jz_wd_hls3, effects, 2, 0
+15186, jz_cn_hls1, effects, 2, 0
+15187, jz_cn_hls2, effects, 2, 0
+
+15188, p_blowp, effects, 2, 0
+
+15189, motgls, effects, 5, 1088
+
+15190, plnalrm, effects, 30, 0
+15192, plnalrm2, effects, 30, 0
+15191, pln_clds, effects, 5, 0
+
+15193, dana_bh, effects, 5, 0
+15201, dana_bh2, effects, 5, 0
+15202, dana_bh3, effects, 5, 0
+
+15203, dana_cnc1, effects, 5, 0
+15204, dana_cnc2, effects, 5, 0
+15205, dana_cnc3, effects, 5, 0
+
+15195, conc_bounce1,  effects, 2, 0
+15196, conc_bounce1x, effects, 2, 0
+15197, conc_bounce2,  effects, 2, 0
+15198, conc_bounce2x, effects, 2, 0
+
+15199, d_tall,  effects, 2, 0
+15209, d_tall2,  effects, 2, 0
+
+15210, d_tall_t,  effects, 2, 0
+15211, d_tall_t2,  effects, 2, 0
+
+15200, d_short, effects, 2, 0
+15208, d_short2, effects, 2, 0
+
+15207, manydrums, effects, 2, 0
+
+15212, vaultfx,  effects, 2, 0 
+
+15213, atr_bl_1, effects, 2, 0  
+15214, atr_bl_2, effects, 2, 0 
+15215, atr_bl_3, effects, 2, 0 
+
+15216, atrex_bl_1, effects, 2, 0 
+15217, atrex_bl_2, effects, 2, 0
+15218, atrex_bl_3, effects, 2, 0
+
+
+15219, grey_imp1, effects, 2, 0
+15220, grey_imp2, effects, 2, 0
+
+15221, mtl_1, effects, 2, 0
+15222, mtl_2, effects, 2, 0
+15223, mtl_3, effects, 2, 0
+
+15224, mtl_rf, effects, 2, 0
+15225, mtl_sd, effects, 2, 0
+
+15226,  badlnds_1, effects, 2, 0
+15227,  badlnds_2, effects, 2, 0
+
+15228,  bnk_3, effects, 2, 0
+15229,  bnk_2, effects, 2, 0
+15230,  bnk_1, effects, 2, 0
+
+15231,  outr_1, effects, 2, 0
+15232,  outr_2, effects, 2, 0
+
+15233,  pierwd, effects, 2, 0
+
+15234,  mbys_1, effects, 2, 0
+15235,  mbys_2, effects, 2, 0
+15236,  mbys_3, effects, 2, 0
+
+15237,  arch_1, effects, 2, 0
+15238,  arch_2, effects, 2, 0
+15239,  arch_3, effects, 2, 0
+
+
+15240,  mit_1, effects, 2, 0
+15241,  mit_2, effects, 2, 0
+15242,  mit_3, effects, 2, 0
+
+15243,  losz_1, effects, 2, 0
+15244,  losz_2, effects, 2, 0
+15245,  losz_3, effects, 2, 0
+15246,  losz_4, effects, 2, 0
+15247,  losz_5, effects, 2, 0
+15248,  losz_6, effects, 2, 0
+
+
+15249,  bistr_1, effects, 2, 0
+15250,  bistr_2, effects, 2, 0
+15251,  bistr_3, effects, 2, 0
+15252,  bistr_4, effects, 2, 0
+15253,  bistr_5, effects, 2, 0
+
+15254,  clbnk_1, effects, 2, 0
+15255,  clbnk_2, effects, 2, 0
+15256,  clbnk_3, effects, 2, 0
+
+15257,  mdgrf_1, effects, 2, 0
+15258,  mdgrf_2, effects, 2, 0
+15259,  mdgrf_3, effects, 2, 0
+
+15260,  mdgmns_1, effects, 2, 0
+15261,  mdgmns_2, effects, 2, 0
+15262,  mdgmns_3, effects, 2, 0
+
+15263,  endfl_1, effects, 2, 0
+15264,  endfl_2, effects, 2, 0
+15265,  endfl_3, effects, 2, 0
+
+
+
+
+
+end
+tobj
+
+15168, waves1, effects, 500, 4, 6, 21
+
+end
+path
+end
+2dfx
+end
+anim
+end
+txdp
+end

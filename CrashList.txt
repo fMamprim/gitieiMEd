@@ -1,4 +1,24 @@
-09/11/22 (DD/MM/YY)
+03/07/24 (DD/MM/YY)
+
+Erro: 0x015691EE
+Problema: Limite de modelos de veículos com paintjob.
+Solução: Identifique e remova veículos que nativamente não têm paintjob mas um mod colocou, ou aumente o limite de paintjobs com fastman92 limit adjuster.
+
+Erro: 0x006E3D17
+Problema: Tarefa de uma pessoa entrando num veículo, mas o valor do banco para encontrar a porta é inválido. Provavelmente causado por algum mod CLEO com valor incorreto, ou causado por ordem errada dos parâmetros de banco e tempo no comando de script.
+Solução: Identifique o mod que causa isso, remova, avise ao autor etc.
+
+Erro: 0x00467654
+Problema: Algum mod CLEO tentou criar uma pessoa mas aparentemente bateu o limite de pessoas do jogo.
+Solução: Identifique qual, o mod SCRLog vai te dizer, mas muito provavelmente o seu jogo está criando pessoas demais. Instale Open Limit Adjuster, remova uns mods que criam muitas pessoas ou que esteja atingindo o limite de memória do jogo etc.
+
+Erro: 0x007FACCE
+Problema: Não foi possível criar o pixel shader. Incompatibilidade com mods gráficos que alteram shaders ou outro problema relacionado.
+Solução: Identifique e remova os mods, por exemplo pode ser incompatibilidade com RenderHook e SkyGfx.
+
+Erro: 0x004D40D0
+Problema: Aparentemente limite de arquivos .ifp ou algo relacionado à isto.
+Solução: Tente apagar arquivos .ifp não usados no ModLoader ou .img, remover uns mods que usam .ifp ou usar fastman92 limit adjuster para aumentar o limite de arquivos .ifp.
 
 Erro: 0x00733F2A
 Problema: Renderização de um objeto com alpha (transparência).
@@ -105,7 +125,7 @@ Solução: Se houver "0x005D9F00" (CCustomCarEnvMapPipeline) logo embaixo do "0x
 
 Erro: 0x004A9F54
 Problema: Falta um efeito especial ou algum PRIM dentro do efeito. Algo removido do arquivo .fxp, ou um .fxs removido do Effects Loader, que é necessário pelo jogo.
-Solução: Identifique, recoloque os efeitos necessários ou faça backup dos efeiotos, se por exemplo foi durante uma explosão pode ser que seja o efeito de explosão, ou fumaça etc. Se tiver "fxsfuncs.asi" no Backtrace no final do log, provavelmente é um efeito configurado no FxsFuncs.ini.
+Solução: Identifique, recoloque os efeitos necessários ou faça backup dos efeiotos, se por exemplo foi durante uma explosão pode ser que seja o efeito de explosão, ou fumaça etc. Se tiver "fxsfuncs.asi" no Backtrace no final do log, provavelmente é um efeito configurado no FxsFuncs.ini ou FxsFuncs.ini mal configurado (por exemplo configurado para um pack de efeitos não mais instalado).
 
 Erro: 0x005A329E
 Problema: Relacionado com objetos procedurais pra superfícies.
@@ -206,10 +226,6 @@ Erro: 0x005D95CE
 Problema: Relacionado ao limpar a lista de materiais com efeitos, normalmente veículos, mas pode não ser causado necessariamente por mods de veículos, é um problema estranho.
 Solução: MixSets corrige todos os crashes ao fechar o jogo.
 
-Erro: 0x00406036
-Problema: Aparentemente algum limite de arquivos .ipl, ou limite do conteúdo total de todos os .ipls.
-Solução: Remova alguns mods .ipl que você tenha instalado, ou, se realmente for este o problema (tenha funcionando sem algum .ipl), use fastman92 limit adjuster para aumentar o limite de arquivos .ipl, ou faça fusão deles manualmente copiando o conteúdo de um para o outro, assim diminuindo o número de arquivos .ipl do seu jogo. Não há muito mistério, só tome cuidado com as seções (por exemplo todas as linhas de objetos precisam estar entre o "inst" até "end").
-
 Erro: 0x00749B7B
 Problema: Tentando criar um modelo que não existe, ou o .txd não existe. Ou nome de arquivo longo demais.
 Solução 1: Verifique a instalação de mods que necessitam de modelos, como objetos de mapa. Já foi relatado ao tentar instalar um .dff ou .txd inexistente num .ide.
@@ -262,8 +278,8 @@ Sobre: Tem relação com tarefas de pedestres, pode ser algo sobre limites, algu
 
 Erro: 0x004C444A
 Sobre: Com o VehFuncs instalado, caso este crash acontecer, o mod dará informações sobre qual modelo de veículo causou isto.
-Sobre: Ao deletar um modelo, muito provavelmente um veículo, mas também pode ser pedestre, arma, e em casos muito raros, objeto. Caso tiver um "0x004089DD" embaixo do backtrace, realmente, foi durante o descarregamento de um modelo.
-Problema: Pode ter sido causado por algum model mal feito, mal adaptado, mal modelado, deve ser algo interno do modelo.
+Sobre: Ao deletar um modelo, muito provavelmente um veículo, mas também pode ser pedestre (provavelmente um pedestre criado como um veículo), arma, e em casos muito raros, objeto. Caso tiver um "0x004089DD" embaixo do backtrace, realmente, foi durante o descarregamento de um modelo.
+Problema: Pode ter sido causado por algum mod CLEO que criou um pedestre como um carro (SCRLog te informará), algum modelo de veículo mal feito, mal adaptado, mal modelado, deve ser algo interno do modelo.
 Solução: Identifique qual, recomendo que teste primeiramente veículos e este mod pode ajudar. Desinstale e contate o autor. Lembrando também que pode ser mais de um modelo.
 
 Erro: 0x005334F0
@@ -603,7 +619,7 @@ Erro: 0xE8AC1250 (em "Backtrace" no fim do log terá vários "unknown" e um shel
 Problema: Algum tipo de incompatibilidade do vehlightsfix.asi
 Solução: Corrigido ao aumentar a prioridade dele no modloader.ini, ou seja, coloque ele numa pasta e deixe esta pasta numa prioridade grande, como "100". Clique aqui para saber como.
 
-Erro: 0x00406034, 0x00406035, 0x00406038, 0x004F243E, 0x00405FDC
+Erro: 0x00406034, 0x00406035, 0x00406036, 0x00406037, 0x00406038, 0x004F243E, 0x00405FDC
 Problema: Limites de arquivos .ipl que contém objetos na section "inst".
 Solução 1: Instale Open Limit Adjuster (versão 1.5.9 ou mais nova) que aumentará os limites automaticamente.
 Solução 2: Instale fastman92 limit adjuster, aumentando o limite "Entity index array".
@@ -918,11 +934,12 @@ Erro: 0x004C53A6
 Sobre: Normalmente causado por algum veículo ter o nome do node (basicamente, o nome da peça) com nome longo demais (o limite é 23 caracteres, sendo 25 ou mais causa problemas graves no seu jogo). Com o VehFuncs instalado, este crash é corrigido automaticamente. A informação ainda continua no .log caso você queira saber qual é o veículo causador do problema. Sem o VehFuncs, tendo ou não este crash, o problema que leva a este crash também leva à outros bugs e crashes do jogo. Mais informações aqui.
 
 Erro: 0x00571A10, 0x00571A00
-Sobre: Isto pode ser causado por centenas de motivos diferentes.
+Sobre: Isto pode ser causado por centenas de motivos diferentes. Uma comum é relacionado com tarefas em pessoas, mas também pode acontecer por coisas completamente diferentes disso.
 Backtrace: 0x00490B77
 Problema: Algum mod aplicou tarefas demais aos peds/NPCs do jogo, assim batendo o limite.
 Solução 1: Identifique e remova este mod cleo. Você pode usar o SCRLog para isso, mas basicamente é algum mod que controla NPCs. Avise ao autor do mod para que ele corrija.
-Solução 2: Aumente o limite de tarefas.
+Solução 2: Aumente o limite de tarefas. Open Limit Adjuster aumenta um deles, mas por algum motivo no momento ainda não resolve este erro em específico, pois pode ser um outro limite mais específico, mas que ainda tenha relação com pessoas realizando alguma tarefa, como animação por script.
+Solução 3: Muitos mods CLEO adicionando animações em pessoas no jogo. Urbanize faz muito disso, mas toma cuidado para não atingir limites, mas juntando com outros mods, o limite pode ser atingido, mas é pouco provável pois precisa de umas 100 pessoas realizando ações, como animações, então raramente será o caso.
 
 Erro: 0x909090C3
 Problema: Este crash pode acontecer devido há vários motivos, mas normalmente é causado por um conflito entre 2 mods que utilizaram patch de memória do sistema do jogo.
@@ -1095,7 +1112,7 @@ Solução: Use Open Limit Adjuster
 
 Erro: 0x006D1080
 Problema: Falha ao pegar o handling de um veículo, muito possivelmente o veículo sumiu do jogo e algum mod mal feito acabou tentando pegar o handling de um carro inexistente
-Solução: Possivelmente foi um cleo e possivelmente não irá gerar SCRLog.log para você saber qual cleo... você terá que procurar qual script fez dar este erro manualmente, infelizmente. Se foi algum mod da MixMods, avise.
+Solução: Se você usa o First Person Mod, desative a câmera em primeira pessoa antes da missão OG Loc. Possivelmente foi um cleo e possivelmente não irá gerar SCRLog.log para você saber qual cleo... você terá que procurar qual script fez dar este erro manualmente, infelizmente. Se foi algum mod da MixMods, avise.
 
 Erro: 0x005B6B2F
 Problema 1: Dois IDs iguais sendo usados no data/vehicles.ide
@@ -1491,7 +1508,7 @@ Erro: STREAM~1.ASI
 Sobre: Stream Memory Fix? Se você usa isso seu GTA está desatualizado. Como eu sempre digo, evite montar seu GTA em outros sites fora da MixMods, o Stream Memory Fix é coisa lá de 2007, atualmente ele é substituível por outras coisas muito melhores como MixSets e Open Limit Adjuster. Clique aqui para a postagem de como montar um bom GTA.
 
 Erro: d3d9.dll
-Problema 1: Como você já deve saber, é a .dll usada para várias coisas, principalmente enb series, então tudo define em para O QUE você usou ela (onde 99% das pessoas usam ela como enb series ou já veio na instalação do jogo). Pode ser que seu PC não suporte a enb series ou outro mod gráfico que use essa dll, mas também há mods que são feitos usando esta dll, mods super antigos lá do lançamento do GTA SA na qual acabaram usando esta .dll para criar o mod, coisa totalmente obsoleta agora, deixe de usar tais mods. Caso você não use enb series ou outros mods desta dll, deve ser corrigível atualizando seu DirectX Runtime, e logo em seguida, caso tenha esta dll instalada no seu jogo, deletá-la (ou não).
+Problema 1: É a .dll usada para várias coisas, principalmente coisas relacionadas com renderização gráfica. Pode ser algum bug causado por modelos, efeitos gráficos ou outro mod gráfico que use essa dll, mas também há mods que são feitos usando esta dll, mods super antigos lá do lançamento do GTA SA na qual acabaram usando esta .dll para criar o mod, coisa totalmente obsoleta agora, deixe de usar tais mods. Caso você não use enb series ou outros mods desta dll, deve ser corrigível atualizando seu DirectX Runtime, e logo em seguida, caso tenha esta dll instalada no seu jogo, deletá-la (ou não).
 Problema 2: Caso crashou numa missão, estranhamente pode dar o crash nesta dll e a solução enviada pelo Luiz Felipe diz que simplesmente você tem que pular a cutscene apertando Enter. Pode ser causado por alguma legenda bugada ou outro texto na tela, geralmente por traduções ou mods, neste caso, é melhor contatar o criador e/ou desativar as legendas ou pular a cutscene se possível. A tradução da Gamevicio tem este crash, a nossa tradução pt-br não.
 Problema 3: Caso crash no menu Advanced dos gráficos do jogo e você esteja usando 90s AVP Reborn, foi causado pelo Super GT dele e a solução é simplesmente trocar este carro. Do mesmo modo que você pode não estar usando o 90s AVP mas estar com este mesmo carro, ou outro carro com o mesmo problema, ou seja, caso crash nesta dll neste menu, pode ser algum carro instalado no seu GTA.
 Problema 4: Durante alguma explosão? Usando algum mod como Remastered Effects? Caso tiver algum 0x007FDE14 e/ou 0x007FE7DC e/ou 0x004A140A no "Backtrace" no fim do log, pode ser que seja causado pelo IgnoreWater do MixSets (ou até mesmo FreezeHour). Assim, se tiver ativado, configure estas funções para -1 no MixSets.
@@ -1501,7 +1518,7 @@ Problema: Difícil saber o motivo exato, pois é uma .dll muito comum do Windows
 Antes de tudo, se ocorreu o crash ao abrir o jogo, simplesmente tente abrir ele mais uma ou duas vezes que deve funcionar. É estranho e eu ainda não sei o motivo ainda. Mas este mesmo erro pode ser causado por outras coisas:
 Solução 1: No final do "modloader.log", na linha de cima do endereço do crash, terá o último arquivo lido, por exemplo: "Loading default object types "data\maps\veh_mods\veh_mods.ide"", neste exemplo, possivelmente crashou ao tentar ler o arquivo veh_mods.ide, verifique-o. Caso o último arquivo ser um .txd, muito possivelmente não foi problema nele. Também muitas vezes não pode ter nada a ver, como por exemplo, se você entrar numa loja irá aparecer que o "shopping.dat" foi carregado por último, mas nem por isso quer dizer que o crash foi neste arquivo também, então desconfie, não tenha certeza, mas mesmo assim tente verificá-los, principalmente se o crash foi ao tentar abrir o jogo.
 Solução 2: Verifique as permissões do Windows e das leituras dos arquivos, pode ser qualquer arquivo, seja da pasta data ou de algum mod. Recomendo sempre usar o GTA nos Documents e não Program Files, corrige este e outros problemas.
-Solução 3: Se crashou ao selecionar a rádio "User Tracks", apague o arquivo "sa-utrax.dat" da pasta "Documents/GTA San Andreas User Files". Também é possível que algum .mp3 lá está com codificação errada, o GTA SA só aceita o formato MP3 LAME. Isto também pode ser um problema atual de mods CLEO, explicado aqui: https://github.com/cleolibrary/CLEO4/issues/38 neste caso você pode identificar e remover tal mod CLEO que usa o comando CHDIR, ou mudar a rádio pelo menu de pausa.
+Solução 3: Se crashou ao selecionar a rádio "User Tracks", atualize a sua versão da CLEO, este problema já foi corrigido, ou apague o arquivo "sa-utrax.dat" da pasta "Documents/GTA San Andreas User Files". Também é possível que algum .mp3 lá está com codificação errada, o GTA SA só aceita o formato MP3 LAME.
 Solução 4: Se crashou no SAMP, verifique se está marcado "SAMP Fix" no .ini do ImVehFt. Ou se algum arquivo necessário para o funcionamento do SAMP está ausente (neste caso a reinstalação do SAMP ajudará)
 Solução 5: Se vir seguido de uma janela de erro "std.asi: translator.SteupASI failed to identify caller ASI", é porque foi incompatibilidade de um .asi com outro, mods .asi que modificam a mesma coisa que o outro. Acredito que isso já foi devido ao vehlightsfix.asi junto com silentpatch.asi, já que os dois corrigem algumas coisas iguais, mas isso foi só um chute e também só um exemplo.
 Problema 6: Action_x86.dll imcompatível com ntdll.dll.
@@ -1513,6 +1530,8 @@ Solução 8: Pause o jogo antes de minimizar, ou se já tenha pausado, pode ser 
 Solução 9: Tente instalar Improved Fastloader.
 Solução 10: Falta o arquivo stream.ini na pasta do jogo.
 Solução 11: Não use caracteres especiais (nem pontuações etc) no nome da pasta do jogo ou em algum local do caminho. Também não use caminho longo demais. Já foi solucionado após remover caracteres [ e . do nome da pasta do jogo, mas não se sabe exatamente se era isto o problema, ou se o caminho era longo demais, ou se era algum bug do Windows etc.
+Solução 12: Se foi durante a rádio de usuário: Vá em "Documents\GTA San Andreas User Files\User Tracks" e verifique se há arquivos de música corrompidos ou qualquer outro arquivo que não seja o formato mp3. Também tente instalar o mais novo Windows Media Player pelo "Adicionar ou remover programas" ou site da Microsoft.
+Solução 13: Skin Selector aleatoriamente pode causar erro ao ler o arquivo .img ao abrir o jogo, basta abrir de novo que não causará o problema, ainda não se sabe ao certo o que faz causar isto.
 
 
 Outros problemas:

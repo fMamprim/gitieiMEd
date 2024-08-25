@@ -110,6 +110,8 @@ Parsing grge line: 383.843  2433.28  15.166  426.012  2433.28  383.843  2476.13 
 	Is GRGX: false
 Parsing grge line: -2114.42  -2462.27  29.4809  -2109.36  -2466.37  -2111.68  -2458.88  32.3474  1  1  amumis  
 	Is GRGX: false
+Parsing grge line: 2946.813477  -645.6765747  10.33906269  2952.773438  -645.6765747  2946.813477  -649.6865845  14.17906189  1  5  PetronG  
+	Is GRGX: false
 Parsing grge line: 715.806  -462.403  14.9635  724.293  -462.403  715.806  -447.29  21.4398  1  5  CEspray  
 	Is GRGX: false
 Parsing grge line: 2227.6  168.649  26.4635  2234.93  168.649  2227.6  176.333  29.4635  1  29  burbdoo  
@@ -188,8 +190,10 @@ Parsing grge line: 2363.39  2156.62  9.5  2357.89  2223.32  2357.89  2156.62  29
 		Is Parking Garage: true
 		Is GARAGE_DONT_SAVE: false
 		Width=66.9, Depth= 5.5, Height=20.1,  dotProduct(dirA, dirB)=0.08
-CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
-CCustomGarage::StoreAndRemoveCarsForThisGarage(...)
+CGarages::OnLoad() called with slot 1
+C:\Users\felip\Documents\GTA San Andreas User Files/grgx/1.sav
+	num_garages = 8
+	Restored 1 cars:
 	CGarageBase CJPARK destructed
 	CGarageBase ANGPARK destructed
 	CGarageBase DOHPARK destructed

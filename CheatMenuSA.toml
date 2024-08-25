@@ -1,0 +1,15 @@
+[Features]
+QuickTeleport = true
+SpawnAircraftInAir = false
+SpawnWithTunes = false
+TeleportMarker = false
+
+[Menu]
+LastUpdateChecked = 19
+
+[Window]
+CurrentPage = 4
+PosX = 202.0
+PosY = 153.0
+SizeX = 480.0
+SizeY = 897.0

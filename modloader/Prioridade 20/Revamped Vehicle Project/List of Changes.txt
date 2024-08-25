@@ -1,0 +1,865 @@
+¦ Global
+-Added rounder/smoother wheels
+-Added fake reflection on rearview mirror
+-Added texture on underside of bonnet and boot
+-Optimization on vehicles data lines
+
+¦ Savanna
+-Basic adaptation to VehFuncs
+-Fixed colored exhaust
+-Fixed exhaust dummy position
+-Fixed collision model position
+-Fixed mesh normals
+-Reworked LOD model
+
+
+¦ Monster A
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust dummy position
+-Fixed exhaust fume only appear on right side exhaust
+-Fixed misplaced front wheel axle
+-Remaked and retextured wheels
+-Added damaged door and windshield
+-Retextured chrome strips
+
+¦ Monster
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust dummy position
+-Fixed exhaust fume only appear on left side exhaust
+-Fixed mesh normals
+-Remaked and retextured wheels
+-Remapped bed cover texture
+-Added damaged door and windshield
+
+¦ Willard
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Fixed clipped engine mesh on right front wheelbarrow
+-Fixed trunk interior texture
+
+¦ Greenwood
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Added texture on underside of bonnet and boot
+-Deleted partial mesh
+-Fixed transparency bug
+-Fixed normals
+-Reworked wheels
+
+¦ Securicar
+-Basic adaptation to ImVehFt and VehFuncs
+-Added texture on underside of bonnet and boot
+-Added secondary taillight dummy
+-Fixed chassis normals
+-Fixed exhaust position
+-Fixed numberplate texture
+
+¦ Taxi
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed chassis normals
+-Fixed hole on wheel well
+-Fixed transparency bug
+
+¦ Voodoo
+-Basic adaptation to VehFuncs
+-Fixed and resized rear number plate
+-Fixed some chassis normals
+-Fixed windshield dummy position
+-Added texture on underside of bonnet and boot
+-Fixed transparency bug
+-Fixed chassis mesh
+
+¦ Tampa
+-Basic adaptation to VehFuncs
+-Fixed reflection value on some parts
+-Fixed windshield position
+-Remapped rear end texture
+
+¦ Mule
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Fixed windshield pivot point
+
+¦ Yankee
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Reworked petrolcap model
+-Fixed boot pivot point
+-Fixed extras model
+
+¦ Burrito
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Fixed CJ feet clipped into wheelbarrow
+-Fixed wrong interior materials/textures
+-Fixed under bonnet and boot texture
+
+¦ Esperanto
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Fixed z-fighting on front grill
+-Fixed clipping trunk interior
+-Fixed flipped back number plate
+-Added texture under boot and bonnet
+
+¦ Dumper
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+
+¦ Merit
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+-Added texture on underside of bonnet and boot
+
+¦ Dumper
+-Basic adaptation to VehFuncs
+-Basic adaptation to ImVehFt
+
+¦ Buccaneer
+-Basic adaptation to VehFuncs
+-Fixed chassis normals
+-Fixed tire width
+-Added rearview mirror inside interior
+
+¦ Washington
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed chassis normals
+-Fixed damaged boot taillights not turning on
+-Added second taillight dummy
+
+¦ Sabre
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed chassis normals
+-Added second taillight dummy
+
+¦ Virgo
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed chassis normals
+
+¦ Clover
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed reflection value on some parts
+-Fixed chassis normals
+-Fixed exhaust not attached to chassis
+-Removed reflection and specular on roof
+-Added texture on underside of bonnet and boot
+
+¦ Tahoma
+-Basic adaptation to VehFuncs
+-Added texture on underside of bonnet and boot
+
+¦ Faggio
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight and taillight
+-Fixed LOD texture
+-Removed unused speedometer mesh
+
+¦ FCR900
+-Basic adaptation to VehFuncs
+-Fixed headlight and taillight
+
+¦ PCJ600
+-Basic adaptation to VehFuncs
+-Fixed headlight and taillight
+
+¦ NRG500
+-Basic adaptation to VehFuncs
+-Fixed headlight and taillight
+-Added reflection
+
+¦ Sanchez
+-Basic adaptation to VehFuncs
+-Fixed headlight and taillight
+-Added reflection
+
+¦ Mountain Bike
+-Added reflection
+
+
+
+¦ Admiral
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed some chassis normals
+-Fixed wheel pivot point
+-Fixed transparency bug on damaged bumpers
+-Slightly lowered car height
+-Remapped tyre texture
+
+¦ Alpha
+-Basic adaptation to ImVehFt and VehFuncs
+-Remapped rear end texture
+
+¦ Ambulance
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed front door frame color scheme
+-Fixed left rear wheel position
+-Remapped dirt texture
+
+¦ Andromeda
+-Basic adaptation to VehFuncs
+-Fixed interior mesh
+-Fixed door not opening
+-Fixed CJ position when boarding this plane
+-Fixed some chassis normals
+-Tweaked collision
+-Added right side door
+-Added reflection
+-Added color variation
+
+¦ Artict 1,2 and 3
+-Fixed chassis normals
+
+¦ AT400
+-Basic adaptation to VehFuncs
+-Fixed body color scheme
+-Fixed front landing gear
+-Fixed engine exhaust texture
+-Major overhaul on interior
+-Added reflection
+
+¦ Baggage
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust position
+-Removed misc_b
+-Restored exhaust fume
+
+¦ Bandito
+-Basic adaptation to VehFuncs
+-Restored exhaust fumes
+
+¦ Banshee
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed colored doorhandle
+-Fixed colored interior
+-Fixed chassis normals 
+-Fixed engine and interior mesh
+-Fixed mesh normals
+-Remapped interior texture
+-Added second taillight dummy
+-Added texture on underside of bonnet and boot
+
+¦ Barracks
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust dummy position
+-Added second taillight dummy
+
+¦ Beagle
+-Fixed color scheme on front landing gear parts
+-Fixed hollowed plane seat
+-Fixed right and left landing wheel
+-Fixed alpha channel bug on it's window
+-Fixed plane centre stick position
+-Fixed chassis normals
+-Added reflection
+
+¦ Benson
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed boot dummy position
+-Fixed hollowed extra 4
+-Added texture on underside of bonnet
+-Added unused “Flower Power” extras (extra5)
+
+¦ BF400
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight and taillight texture not turning on
+-Remapped taillight texture
+-Resized numberplate
+
+¦ BF Injection
+-Basic adaptation to VehFuncs
+-Fixed LOD color scheme
+-Fixed exhaust smoke not showing
+
+¦ Bike
+-Remapped several textures
+
+¦ Blade
+-Basic adaptation to VehFuncs
+-Remapped interior texture
+-Fixed trunk interior
+-Fixed interior color scheme
+-Remapped tyre texture
+
+¦ Blista Compact
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed right turnlight texture
+-Fixed headlight texture not turning on
+-Remapped grille texture
+-Remapped seat texture
+
+¦ Bloodring Banger
+-Basic adaptation to ImVehFt
+-Fixed exhaust dummy position
+
+¦ Bobcat
+-Basic adaptation to ImVehFt and VehFuncs
+-Remapped wrong brake light texture
+-Remapped dirt texture
+-Added second taillight dummy
+
+¦ Boxville and Boxburg
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight texture not turning on
+-Increased vehicle capacity up to 4 occupants
+-Remapped vehicle dashboard texture
+
+¦ Bullet
+-Basic adaptation to VehFuncs
+-Added front trunk
+
+¦ Bus
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed some chassis normals
+-Remapped taillights
+-Restored unused rear wing
+-Added windshield wipers
+-Added exhaust
+
+¦ BMX
+-Basic adaptation to VehFuncs
+-Fixed chaining gear not spinning along with chainset
+-Fixed and remapped back brake texture
+-Fixed duplicated poly/mesh
+
+¦ Bravura
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed broken texture on underside of boot
+-Fixed chassis normals
+-Fixed windshield position
+-Fixed rearview mirror mesh
+
+¦ Cement Truck
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight not turning on
+-Fixed taillight dummy position
+-Fixed several mesh normals and textures
+-Added reflection
+-Added double rear wheels
+-Remapped tyre texture
+
+¦ Cheetah
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed steering wheel position
+-Fixed z-fighting on front bumper
+-Fixed some chassis normals
+-Reworked partially engine bay
+-Remapped brake disc texture
+
+¦ Coach
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight texture not turning on
+-Fixed some chassis normals
+-Fixed clipped right passenger window
+-Removed reflection from interior
+-Removed reflection from fenders
+-Added right and left rear wing
+-Added windshield wipers
+-Added exhaust
+
+¦ Copcar LS
+-Basic adaptation to VehFuncs
+-Fixed normals on siren and headlight
+-Fixed hollowed wheel house
+-Fixed exhaust dummy position
+-Slightly changed engine mesh
+-Added texture on underside of bonnet and boot
+
+¦ Copcar SF
+-Basic adaptation to VehFuncs
+-Fixed normals on siren and headlight
+-Fixed hollowed wheel house
+-Fixed exhaust dummy position
+-Slightly changed engine mesh
+-Added texture on underside of bonnet and boot
+
+¦ Copcar VG
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust not attached to chassis
+-Fixed color scheme
+-Added texture on underside of bonnet and boot
+
+¦ Comet
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed some chassis normals
+-Fixed dirt texture
+-Added texture on underside of bonnet and boot
+
+¦ DFT-30
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed some chassis normals
+-Fixed wheel dummy typo
+-Added exhaust mesh
+
+¦ Dodo
+-Fixed both ailerons and elevators using different material
+-Restored color scheme
+
+¦ Elegy
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed different texture on damaged bonnet and boot
+-Fixed headlight texture
+-Fixed damaged number plate position
+-Fixed headlight texture on LOD
+-Fixed flipped paintjob texture on rear end
+-Remapped brake disc texture
+-Restored beta elegy (Legend 556) paint job
+
+¦ Euros
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed second taillight dummy
+-Fixed wheels clipping into ground a little
+-Remapped interior textures
+-Restored tuning parts data line
+-Added second headlight dummy
+
+¦ FBI  Rancher
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight and taillight not turning on
+-Fixed different texture on underside of undamaged and damaged bonnet
+-Fixed clipped texture on underside of damaged bonnet
+-Added light texture to LOD
+-Renamed all doors parts
+
+¦ Feltzer
+-Basic adaptation to VehFuncs
+-Remapped and fixed interior
+-Added second taillight dummy
+-Removed wheel2
+
+¦ Firetruck
+-Basic adaptation to ImVehFt and VehFuncs
+-Added secondary color
+
+¦ Firela
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed clipped shadow
+-Added damaged models on front bumper and doors
+-Added secondary color
+
+¦ Freeway
+-Basic adaptation to ImVehFt
+-Fixed lights not turning on
+-Added reflection
+
+¦ Glendale Shit
+-Basic adaptation to VehFuncs
+-Cosmetic overhaul to make it more “Broken”
+-Slightly changed shadow collision
+-Fixed windshield dummy position
+-Added fully working damage model on car parts
+-Added texture on underside of bonnet and boot
+
+¦ Glendale
+-Basic adaptation to VehFuncs
+-Fixed chassis and windscreen normals
+-Fixed windshield dummy position
+-Remapped rear number plate frame texture
+-Added texture on underside of bonnet and boot
+
+¦ Sadler
+-Basic adaptation to Imvehft and VehFuncs
+-Fixed different texture on underside of undamaged and damaged bonnet
+-Added reflection
+-Added secondary color on bed
+-Remapped front badge
+-Corrected and restored tuning parts data
+
+¦ Sadler Shit
+-Basic adaptation to Imvehft and VehFuncs
+-Fixed missing number plate
+-Fixed duplicated right door
+-Cosmetic overhaul to make it more “Broken”
+-Slightly changed shadow collision
+-Added fully working damage model on car parts
+-Added secondary color on bed
+-Corrected and restored tuning parts data
+
+¦ Hotdog
+-Basic adaptation to VehFuncs
+-Fixed clipped rear wheel
+-Fixed exhaust dummy position
+-Fixed flipped rear number plate
+-Fixed colored bumper
+-Remapped it’s underside texture
+-Added windshield wipers
+
+¦ Hotknife
+-Basic adaptation to VehFuncs
+-Remapped steering house
+-Fixed right door position
+-Added windshield wipers
+
+¦ Hotring
+-Basic adaptation to Imvehft and VehFuncs
+-Added texture on underside of bonnet
+-Fixed LOD frond end part
+
+¦ Hotring A
+-Basic adaptation to Imvehft and VehFuncs
+-Fixed exhaust position too close with wheel
+-Added texture on underside of bonnet
+
+¦ Hotring B
+-Basic adaptation to Imvehft and VehFuncs
+-Fixed wrong color scheme
+-Fixed exhaust position too close with wheel
+-Added texture on underside of bonnet
+
+¦ HPV1000
+-Basic adaptation to Imvehft and VehFuncs
+-Fixed wheel and exhaust normals
+-Fixed exhaust position
+-Fixed light texture not turning on
+-Remapped siren light texture
+-Removed second taillight dummy
+
+¦ Huntley
+-Basic adaptation to Imvehft and VehFuncs
+-Fixed headlight texture not turning on
+-Fixed yellow-ish tint on left and right front door window
+-Fixed side skirts dummy position
+-Remapped brake disc texture
+-Added texture on underside of bonnet and boot
+-Added some tuning parts data line
+
+
+¦ Hustler
+-Basic adaptation to VehFuncs
+-Fixed exhaust fume only appear on right side exhaust
+-Fixed clipped trunk
+-Added texture on underside of bonnet and boot
+
+¦ Infernus
+-Basic adaptation to ImVehFt and VehFuncs
+-Remapped interior textures
+-Fixed wrong light texture
+-Fixed headlight dummy position
+-Fixed missing right foglight on damaged front bumper
+-Fixed transparency issue on right front blinker
+-Added second headlight dummy
+-Added texture on underside of bonnet
+
+¦ Intruder
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed colored interior
+-Fixed roof tuning part dummy position
+-Renamed wheel to wheel
+-Added second taillight dummy
+
+¦ Journey
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed rear window
+-Fixed clipped interior on right wheel house
+-Fixed clipped interior on above driver cabin
+-Fixed mirrored front number plate
+-Fixed broken front number plate texture on damaged front bumper
+-Fixed rear right door pivot
+-Fixed vehicle seat position
+-Fixed chassis normals
+-Fixed wheel pivot point
+-Remapped tyre texture
+-Added texture on underside of bonnet
+
+¦ Kart
+-Basic adaptation to VehFuncs
+-Fixed headlight and taillight texture not turning on
+-Fixed vehicle base height
+-Fixed tire texture and mesh normals
+-Fixed exhaust fumes not showing
+-Added extra3 (combined extra1 and extra2)
+-Removed second taillight dummy
+
+¦ Linerunner
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed hollowed coupling mesh
+-Fixed chrome part texture
+-Remapped headlight texture
+-Added texture underside of bonnet
+
+¦ Nevada
+-Fixed inverted rotor blur texture
+-Added reflection
+-Fixed some chassis normals
+
+¦ Majestic
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust not attached to chassis
+-Remapped brake disc texture
+-Remapped turn light texture
+-Added texture on underside of bonnet and boot
+-Added windshield wipers
+
+¦ Maverick
+-Fixed wrong rotor blur texture
+-Added ped_backseat dummy
+
+¦ Mesa
+-Basic adaptation to ImVehFt and VehFuncs
+-Remapped interior floor texture
+
+¦ Monster
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed exhaust dummy position
+-Fixed exhaust fume only appear on left side exhaust
+-Remapped bed cover texture
+
+¦ Mountain Bike (Unfixed)
+-Remapped wheel texture
+
+¦ Oceanic
+-Basic adaptation to VehFuncs
+-Fixed interior mirror size
+-Fixed exhaust dummy position
+-Fixed some chassis and window normals
+-Remapped and fixed front grille
+-Remapped rear number plate frame texture
+
+¦ Patriot
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed wrong texture on windshield frame
+-Fixed boot opening in wrong direction
+-Fixed axle shafts position
+-Fixed exhaust dummy position
+
+¦ Pizzaboy
+-Basic adaptation to ImVehFt
+-Fixed untextured LOD
+-Fixed headlight and taillight texture not turning on
+
+¦ Picador
+-Basic adaptation to ImVehFt and VehFuncs
+-Removed one "can" extra mesh clipped in wheelhouse
+
+¦ Premier
+-Basic adaptation to VehFuncs
+-Fixed hollowed wheel house
+-Added texture on underside of bonnet and boot
+
+¦ Raindance
+-Fixed rotor texture
+-Fixed dashboard texture
+-Fixed CJ position
+-Fixed joystick position
+-Removed ped_arms dummy
+
+¦ Rancher
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight and taillight dummy position
+-Fixed headlight and taillight not turning on
+-Fixed rear view mirror texture
+-Added light texture to LOD
+-Renamed all doors parts
+
+¦ Rancher Lure
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight and taillight dummy position
+-Fixed headlight and taillight not turning on
+-Fixed rear view mirror texture
+-Added light texture to LOD
+-Renamed all doors parts
+
+¦ Ranger
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight and taillight dummy position
+-Fixed engine dummy position
+-Fixed right headlight not turning on
+-Fixed underside of damaged bonnet texture
+-Fixed some chassis and doors normals
+-Added light texture to LOD
+-Renamed all doors parts
+-Removed all tuning parts dummy (leftover from Racher)
+
+¦ Rhino
+-Fixed cannon/barrel pivot point
+-Fixed clipped/duplicated wheel
+-Reworked LOD model
+-Removed reflection
+
+¦ Rustler
+-Fixed both landing gear mesh
+-Fixed some chassis normals
+-Added reflection
+
+¦ Sandking
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed hollowed rearview mirror
+-Fixed headlight texture not turning on
+-Restored and fixed sponsor stickers
+-Restored missing reflection
+
+¦ Skimmer
+-Fixed rotor blur texture and mesh
+-Remapped interior textures
+-Restored missing reflection
+
+¦ Slamvan
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed some chassis and bonnet normals
+-Fixed broken interior texture
+-Fixed exhaust pivot point
+-Fixed exhaust dummy position
+-Remapped brake disc texture
+-Removed reflection and specular on bed cover
+-Added texture on underside of bonnet
+
+
+¦ Stuntplane
+-Added rotor blur texture
+-Added reflection
+-Added rear tire
+-Remapped wheel texture
+
+¦ Sunrise
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight texture not turning on
+-Fixed flipped front plate number
+-Fixed LOD using a wrong texture
+-Fixed different texture on underside of undamaged and damaged bonnet
+-Remapped front bumper texture
+-Remapped brake disc texture
+-Added texture on underside of boot
+
+¦ SuperGT
+-Basic adaptation to ImVehFt and VehFuncs
+-Remapped interior and brake disc texture
+-Removed boot_ok dummy
+-Fixed rear light dummy
+-Added reflection
+-Added partially tuning parts data
+
+¦ Tractor
+-Basic adaptation to VehFuncs
+-Fixed steering axle position
+
+¦ Trashmaster
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed cambered wheels
+-Added texture on underside of bonnet
+-Added fly (insects) via 2dfx particle system
+
+¦ Turismo
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed rear number plate
+-Reworked exhaust mesh
+
+¦ Tug
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed both undamaged and damaged left wing
+-Fixed duplicated mesh on rear end
+-Fixed several chassis normals
+
+¦ Tugstair
+-Added reflection
+
+¦ Uranus
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed missing reflection and specular
+-Fixed untextured taillight on LOD
+-Fixed collision
+-Added texture on underside of bonnet
+
+¦ Jetmax
+-Basic adaptation to VehFuncs
+
+¦ Squalo
+-Basic adaptation to VehFuncs
+-Fixed propeller not spinning
+
+¦ S.W.A.T
+-Basic adaptation to ImVehFt and VehFuncs
+
+¦ Tornado
+-Basic adaptation to VehFuncs
+-Fixed alpha bug on damaged front bumper
+-Fixed clipped trunk interior
+-Fixed headlight and taillight position
+-Added second taillight dummy
+-Added texture on underside of bonnet and boot
+-Added windshield wipers
+
+¦ Yosemite
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed clipped wheel house
+-Fixed broken bed texture
+-Fixed exhaust dummy position
+-Removed wheel01
+
+¦ Vincent
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed different texture on underside of boot
+-Fixed some chassis normals
+
+¦ Windsor
+-Basic adaptation to ImVehFt and VehFuncs
+-Remapped wheel textures
+-Remapped exhaust texture
+-Fixed broken interior texture
+-Fixed engine intake mesh width
+-Fixed radio controller (idk what is this called) position
+-Fixed front number plate
+-Fixed some mesh normals
+-Added hardtop roof (extra2)
+
+¦ Wayfarer
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed stretched number plate
+-Fixed some chassis normals
+-Added reflection
+-Removed specular on tire and seat
+
+¦ Walton
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed headlight dummy position
+-Fixed exhaust not attached to chassis
+-Fixed some chassis normals
+-Added texture on underside of bonnet and boot
+
+¦ ZR350
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed some chassis normals
+-Fixed inverted poly and alpha bug on damaged bonnet
+-Added texture on underside of bonnet
+
+¦ Sultan
+-Basic adaptation to ImVehFt and VehFuncs
+-Fixed wheel position
+-Fixed colored underside of bonnet
+-Fixed untextured underside of bonnet
+-Fixed exhaust dummy pos
+-Remapped brake disc texture
+-Slightly lowered ground clearance
+-Added windshield wipers
+
+Tuning Parts
+¦ All Tuning Wheels (Generic, Tuner and, Lowrider)
+-Rounder/smoother wheels
+-Fixed pivot point position
+
+¦ Alien Front Bumper (Sultan)
+-Basic adaptation to ImVehFt
+
+¦ X-Flow Front Bumper (Sultan)
+-Basic adaptation to ImVehFt
+-Removed badge
+
+¦ Alien Roof Scoop (Elegy)
+-Fixed white texture on it’s stickers
+-Fixed clipped right sticker
+
+¦ X-Flow Roof Scoop (Uranus)
+-Fixed clipped right sticker
+
+¦ Hardtop Roof (Savanna)
+-Fixed reflection and specular value
+
+¦ Round fog light (Generic)
+-Basic adaptation to ImVehFt
+
+¦ Square fog light (Generic)
+-Basic adaptation to ImVehFt
+
+¦ Hood ornament 1 (Slamvan)
+-Fixed position
+
+¦ Hood ornament 1 (Slamvan)
+-Fixed position

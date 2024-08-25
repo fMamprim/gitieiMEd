@@ -1,0 +1,144 @@
+# Ped style models configuration file for Urbanize mod
+# You can also add new files like this one, in "CLEO\Urbanize\_Models" folder, so you don't need to replace this.
+
+# 0
+Vendor
+BMOCHIL
+OMONOOD
+End
+
+# 1
+Scientist
+wmosci
+End
+
+# 2
+Skater
+WMYBMX
+End
+
+# 3
+Worker
+WMYCON
+BMYCON
+End
+
+# 4
+Airport
+BMYAP
+End
+
+# 5
+Mechanic
+WMYMECH
+End
+
+# 6
+Guard
+WMYSGRD
+BMOSEC
+WBDYG1
+WBDYG2
+End
+
+# 7
+Trail
+WMYBP
+End
+
+# 8
+MountBiker
+BMYMOUN
+WMYMOUN
+End
+
+# 9
+Camper
+swmyhp1
+wfyjg
+wmyjg
+sbmytr3
+dwfylc1
+vwmycd
+sbfost
+sbmocd
+sbmori
+sbmost
+sofost
+swfori
+swfyst
+swmori
+End
+
+# 10
+Hunter
+dwmylc1
+hmogar
+dnmolc2
+cwmyfr
+dwmylc2
+End
+
+# 11
+Young
+WMYBMX
+bfyst
+bmydj
+bmyst
+hmyst
+ofyst
+omyst
+wmyst
+somyst
+vwmycr
+swmyst
+smyst
+sofyst
+End
+
+# 12
+Gardener
+sbfyst
+End
+
+# 13
+BikerGang
+bikera
+bikerb
+wmycr
+End
+
+# 14
+BoxCarrier
+vwmycd
+dwmylc2
+End
+
+# 15
+RuralWorker
+cwmofr
+cwmohb1
+cwmohb2
+cwmyfr
+End
+
+# 16
+DesertWorker
+dwmylc1
+dnmolc2
+dwmylc2
+End
+
+# 17
+Business
+bmybu
+hfyri
+omori
+wmybu
+sofybu
+wfybu
+somybu
+somyri
+somobu
+End
+

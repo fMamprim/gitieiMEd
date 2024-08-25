@@ -1,0 +1,3 @@
+IPL DATA\MAPS\country\effects.IPL
+IDE DATA\MAPS\leveldes\effects.IDE
+COLFILE 0 data\maps\effects.col

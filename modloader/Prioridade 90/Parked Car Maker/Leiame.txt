@@ -1,0 +1,44 @@
+  __  __ _      __  __           _     
+ |  \/  (_)    |  \/  |         | | 2018
+ | \  / |___  _| \  / | ___   __| |___ 
+ | |\/| | \ \/ / |\/| |/ _ \ / _` / __|
+ | |  | | |>  <| |  | | (_) | (_| \__ \
+ |_|  |_|_/_/\_\_|  |_|\___/ \__,_|___/
+                                       
+
+=======   MixMods.com.br   ======= - Melhor visualizável no bloco de notas com fontes mono-espaçadas, como "Consolas".
+
+
+------- Instruções:
+
+Extraia a pasta "Parked Car Maker" para a pasta do Modloader.
+IMPORTANTE: Instalando pelo Modloader, fique ciente de que o arquivo .ini será salvo na pasta CLEO fora do ModLoader, e não dentro dele!
+
+-- Download da última versão do Modloader: MixMods.com.br/2015/01/SA-Modloader.html
+
+
+
+ Nota: Após iniciar o jogo pela primeira vez, o arquivo .ini será criado na pasta "CLEO".
+
+
+ - Comandos:
+(os comandos podem ser editados no arquivo .ini)
+Enquanto dentro de um veículo, digite "MKPK" para abrir o menu.
+Basicamente a primeira opção é a que cria um veículo estacionado no lugar onde você está.
+Em seguida irá perguntar se quer salvar um carro aleatório, caso pressionar "Y" será aleatório, caso "N" salvará o seu carro atual (mas não incluindo peças tuning).
+
+
+Explicações mais detalhadas aqui: https://gta-geek.blogspot.com.br/2017/12/gta-sa-mais-carros-estacionados-beta.html
+Veja também soluções de problemas aqui: http://www.mixmods.com.br/2017/12/parked-car-maker-criar-carros-estacionados-ini.html
+
+
+
+Versão: v3.0.2
+--------------------
+
+Autor: Um Geek
+
+
+====   MixMods.com.br         ====
+====   fb.com/FamiliaMixMods  ====
+

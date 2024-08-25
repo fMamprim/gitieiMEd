@@ -1,0 +1,45 @@
+# Vehicle style models configuration file for Urbanize mod
+# You can also add new files like this one, in "CLEO\Urbanize\_Models" folder, so you don't need to replace this.
+
+# 0
+Harley
+freeway
+End
+
+# 1
+Desertbike
+freeway
+wayfarer
+End
+
+# 2
+GhettoBike
+bmx
+End
+
+# 3
+Camp
+journey
+camper
+End
+
+# 4
+MountBike
+mtbike
+End
+
+# 5
+OffRoad
+mesa
+yosemite
+bfinject
+sanchez
+quad
+rancher
+bandito
+End
+
+# 6
+UnloadVan
+yankee
+End

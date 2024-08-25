@@ -1,0 +1,33 @@
+Dam addon mod based on movie "Tranformers"
+Made By: [EsN]Killswitch
+
+How to install:
+
+there are 7 options you can install
+
+real dam with no addons (good with slow fast computers)
+real dam with low addons (good with slow-med fast computers)
+real dam with alot addons (good with med-high fast computers)
+real dam with no addons with a waterfall
+real dam with low addons with a waterfall
+real dam with alot addons with a waterfall
+just waterfall aka the pumping water out of turnbines
+
+To install either one of the 7 put in 
+GTA San Andreas/data/maps/country/
+
+how to restore oringal dam
+
+Go in Backup of countryN.ipl folder and install in 
+GTA San Andreas/data/maps/country/
+
+Time to make 8 hours
+
+Bugs:
+
+1. For slow computers some wont show up (known bug not gonna fix it)
+2. Slow draw Distance (known bug not gonna fix it)
+3. I dont know if it is an bug or not but if you hit the bollards it will
+wobble LOL
+4. If you shoot at the light posts in the middle of the road they will not 
+break if you run over them they wont break (minor known bug not gonna fix it) 

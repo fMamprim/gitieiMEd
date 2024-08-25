@@ -1,0 +1,24 @@
+--------------------------
+-Las Venturas Bus Station-
+--------------------------
+
+Situado al lado del local de carnets de moto, en Las Venturas
+By linksert
+linksert@gmail.com
+
+-------------
+-INSTALACIÓN-
+-------------
+1. Abre con el programa IMG Tool  el archivo \models\gta3.img
+2. Elimina o extrae los archivos break_s_sf.txd y vgsbikeschool.txd
+3. Añade los archivos break_s_sf.txd y vgsbikeschool.txd incluidos en la carpeta
+4. Copia y pega la carpeta "maps" en la carpeta "data" (C:\Archivos de programa\Rockstar Games\GTA San Andreas\data)
+
+Las carpetas incluidas en mapas, interior, generic y leveldes son para aumentar el lod de algunos objetos.
+
+Post del mod
+http://www.gtarevolution.net/public/index.php?topic=11207.0
+
+* Si quieres subir este mod a una página dejar intacto el archivo original "leeme.txt", citar el autor y email y avisarme al correo
+
+

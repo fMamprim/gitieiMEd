@@ -1,0 +1,213 @@
+NAD0 Selecionar lenda
+NAD1 Localizaœ¨es
+NAD2 Localizaœšo
+NAD3 todas
+NAD4 Hor˜rios
+NAD5 Caracter¢sticas
+NAD6 Cen˜rio
+NAD7 ResistŸncias
+NAD8 Outros
+NAD9 Raio
+
+NAD10 Horas de in¢cio
+NAD11 Horas de tžrmino
+NAD12 Tempo para aparecer
+NAD13 Hor˜rios
+NAD16 Tempo para reaparecer
+
+NAD25 Quantidade
+NAD17 Interaœšo
+NAD18 Vida
+NAD19 Dano
+NAD20 Precisšo de ataques
+NAD21 FrequŸncia de ataques
+NAD22 Animaœšo
+NAD23 Estilo de luta
+
+NAD26 Pode ser decapitado
+NAD27 Faz animaœšo de dano
+NAD28 € prova de balas
+NAD29 € prova de fogo
+NAD30 € prova de explosšo
+NAD31 € prova de socos
+
+NAD32 nšo
+NAD33 sim
+
+NAD34 Modo de andar
+NAD35 Ataca pedestres
+NAD36 Ataca animais
+NAD37 Recrut˜vel
+
+NAD38 Tipo de spawn
+NAD39 Criado em calœadas
+NAD40 Pedestres fogem
+NAD41 Carro desliga
+NAD42 Encontrado usando...
+
+NAD43 Dist™ncia de interaœšo
+NAD44 Arma
+NAD45 Rasto de sague
+NAD46 Dinheiro
+
+NAD47 Area+
+NAD48 Area-
+
+NAD49 Voltar
+
+NAD50 Poder˜ ser encontrado a partir desta hora
+NAD51 Poder˜ ser encontrado atž esta hora
+NAD52 Minutos (do jogo) de atraso para a lenda ser criada
+NAD53 Horas (do jogo) para que possa ser encontrado novamente
+
+//NAD 54 Pode aparecer em qualquer localizaœšo
+//NAD 55 Pode aparecer em qualquer localizaœšo~n~(pode ser criado em mais de um local ao mesmo tempo)
+//NAD 56 Aparece em uma localizaœšo aleat¦ria entre as dispon¢veis
+
+NAD54 ž criado exatamente no centro da localizaœšo definida
+NAD55 ž criado ao redor do jogador
+NAD56 ž criado em qualquer parte da ˜rea definida
+NAD57 Se ž criado apenas na calçada
+NAD58 Se pedestres fugiršo
+NAD59 Se habilitado, seu ve¢culo ir˜ desligar
+NAD60 Se ser˜ poss¢vel encontrar a lenda enquanto estiver usando algum ve¢culo
+
+NAD61 Se um tiro na cabeœa o mata instan™neamente
+NAD62 Se ele reage a  ataques/tiros
+NAD63 Se recebe dano de tiros
+NAD64 Se recebe dano de fogo
+NAD65 Se recebe dano de explos¨es
+NAD66 Se recebe dano de socos
+
+NAD67 Quantos seršo criados no local
+NAD68 Ele ataca
+NAD69 Ele foge
+NAD70 Dist™ncia para ele atacar ou fugir
+NAD71 Quantos pontos de vida ele tem~n~(pedestres normais tem 100)
+NAD72 Dano extra causado
+NAD73 O quanto ele acerta os ataques/tiros
+NAD74 A frequŸncia dos ataques, quanto maior, menos pausas
+
+NAD75 Homem comum
+NAD76 Homem velho
+NAD77 Gangue 1
+NAD78 Gangue 2
+NAD79 Homem velho e gordo
+NAD80 Homem gordo
+NAD81 Atleta (homem)
+NAD82 BŸbado
+NAD83 Cego (anda com a mšo pra frente)
+NAD84 Policial
+NAD85 Mulher comum
+NAD86 Carregando sacolas
+NAD87 Mulher rica
+NAD88 Mulher sensual
+NAD89 Prostituta
+NAD90 Mulher velha
+NAD91 Mulher gorda
+NAD92 Atleta (mulher)
+NAD93 Mulher velha e gorda
+NAD94 Animaœšo customizada, definida na seœšo "ATRIBUTES"~n~linha "custom animgroup" do .ini correspondente
+
+NAD95 Padršo
+NAD96 Boxing
+NAD97 Kung Fu
+NAD98 Kickboxing
+
+NAD99 Fica parado no local selecionado
+NAD100 Anda para qualquer direœšo
+NAD101 Anda nas calœadas
+NAD102 Anda lentamente atž vocŸ
+NAD103 Corre rapidamente atž vocŸ
+
+NAD104 Se ataca outros pedestres alžm de vocŸ
+NAD105 Se ataca os animais
+NAD106 Se ž poss¢vel recrut˜-lo para te seguir
+
+NAD107 Sem arma
+NAD108 Soco inglŸs
+NAD109 Taco de golf
+NAD110 Cacetete
+NAD111 Faca
+NAD112 Taco de baseball
+NAD113 P˜
+NAD114 Taco de sinuca
+NAD115 Katana
+NAD116 Motosserra
+NAD117 Dildo Roxo
+NAD118 Dildo
+NAD119 Vibrador
+NAD120 Vibrado prateado
+NAD121 Flores
+NAD122 Bengala
+NAD123 Granada
+NAD124 Granada de fumaœa
+NAD125 Molotov
+NAD126 9mm
+NAD127 9mm com silenciador
+NAD128 Desert Eagle
+NAD129 Escopeta
+NAD130 Escopeta de cano serrado
+NAD131 Escopeta de combate
+NAD132 Mini Uzi
+NAD133 MP5
+NAD134 AK-47
+NAD135 M4
+NAD136 Tec-9
+NAD137 Rifle de caœa
+NAD138 Sniper
+NAD139 Bazooka
+NAD140 Lanœa-chamas
+NAD141 Minigun
+NAD142 Lata de spray
+NAD143 Extintor
+NAD144 Qualquer arma branca
+NAD145 Qualquer arma branca (sem soco inglŸs, dildos e flor)
+NAD146 Qualquer arma branca violenta (faca, motossera ou bastšo de baseball)
+NAD147 Qualquer pistola
+NAD148 Qualquer submetralhadora
+NAD149 Qualquer metralhadora
+NAD150 Qualquer escopeta
+NAD151 Qualquer rifle de precisšo
+NAD152 Qualquer arma pesada
+NAD153 Qualquer dildo
+NAD154 Qualquer arma de guangue
+NAD155 Qualquer arma do s¢tio
+NAD156 Qualquer arma policial
+NAD157 Qualquer arma urbana
+
+NAD158 Se a lenda deixa sangue por onde passa
+NAD159 Quanto dinheiro a lenda carrega
+
+NAD160 Modo de localizaœ¨es
+NAD161 Densidade demogr˜fica
+
+NAD162 Pode aparecer em qualquer localizaœšo
+NAD163 Pode aparecer em qualquer localizaœšo~n~(pode ser criado em mais de um local ao mesmo tempo)
+NAD164 Aparece em uma localizaœšo aleat¦ria entre as dispon¢veis
+
+NAD165 Porcentagem de pedestres e ve¢culos nas ruas
+
+NAD166 Clima
+NAD167 O clima do jogo mudar˜ para o selecionado
+
+NAD168 Erro ao carregar modelo
+
+NAD169 v˜ atž o lugar desejado e segure ~k~~CONVERSATION_YES~ para confirmar o local.
+NAD170 Segure ~k~~CONVERSATION_NO~ para cancelar.
+
+NAD171 Combate aprimorado
+NAD172 Jumpscare
+NAD173 Facada mortal
+NAD174 Super golpe
+NAD175 Teletransporte
+
+NAD176 Se habilitado a lenda melhora sigificativamente sua habilidade em lutas
+NAD177 A camera se aproxima da lenda e ž tocado o audio~n~Myths\MythX\jumpsca.mp3
+NAD178 Se vocŸ ficar com metade da vida e receber dano da lenda,~n~vocŸ ir˜ levar um golpe fatal
+NAD179 VocŸ cair˜ quando receber dano da lenda
+NAD180 Se vocŸ tentar fugir, a lenda se teleportar˜ para mais pr¦ximo~n~(sem que seja percept¢vel)
+
+NAD181 Habilidades
+
+NAD182 Reiniciando mod...
