@@ -1,0 +1,15 @@
+{$CLEO .cs}
+
+thread 'FIRECJ'
+
+:MAIN_LOOP
+wait 0 // Garante que o script sempre espere um frame a cada ciclo
+
+// Verifica se a tecla Backspace (código 8) foi pressionada
+if 0AB0: key_pressed 8
+then
+0326: 0@ = create_actor $PLAYER_CHAR fire
+end
+
+// Após a verificação (tendo criado o fogo ou não), volta ao início do loop
+jump @MAIN_LOOP

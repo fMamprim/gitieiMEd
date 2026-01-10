@@ -1,0 +1,337 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+thread 'MDC' 
+06D1: v$DANCE_ANIM_IFP = "RUNNINGMAN" // v$ = string 
+17@ = 1 
+18@ = 0 
+19@ = 0 
+29@ = -2 
+
+:MDC_56
+wait 0 
+if 
+   Player.Defined($PLAYER_CHAR)
+else_jump @MDC_56 
+if 
+  $ONMISSION == 0 
+else_jump @MDC_56 
+if and
+09E7:   player $PLAYER_CHAR not_frozen 
+   not Actor.Driving($PLAYER_ACTOR)
+0AB0:   key_pressed 116 
+else_jump @MDC_56 
+0826: enable_hud 0 
+0581: enable_radar 0 
+if 
+  29@ >= -1 
+else_jump @MDC_1751 
+
+:MDC_145
+04ED: load_animation v$DANCE_ANIM_IFP 
+if 
+84EE:   not animation v$DANCE_ANIM_IFP loaded 
+else_jump @MDC_177 
+wait 0 
+jump @MDC_145 
+
+:MDC_177
+gosub @MDC_449 
+jump @MDC_191 
+
+:MDC_191
+if 
+  17@ == 17 
+else_jump @MDC_397 
+if 
+  19@ == 0 
+else_jump @MDC_258 
+06D1: v$DANCE_ANIM_IFP = "WOP" // v$ = string 
+17@ = 1 
+19@ = 1 
+jump @MDC_365 
+
+:MDC_258
+if 
+  19@ == 1 
+else_jump @MDC_309 
+06D1: v$DANCE_ANIM_IFP = "GFUNK" // v$ = string 
+17@ = 1 
+19@ = 2 
+jump @MDC_365 
+
+:MDC_309
+if 
+  19@ == 2 
+else_jump @MDC_365 
+06D1: v$DANCE_ANIM_IFP = "RUNNINGMAN" // v$ = string 
+17@ = 1 
+19@ = 0 
+jump @MDC_365 
+
+:MDC_365
+04ED: load_animation v$DANCE_ANIM_IFP 
+if 
+84EE:   not animation v$DANCE_ANIM_IFP loaded 
+else_jump @MDC_397 
+wait 0 
+jump @MDC_365 
+
+:MDC_397
+if and
+09E7:   player $PLAYER_CHAR not_frozen 
+   not Actor.Driving($PLAYER_ACTOR)
+0AB0:   key_pressed 116 
+else_jump @MDC_429 
+jump @MDC_56 
+
+:MDC_429
+04EF: release_animation v$DANCE_ANIM_IFP 
+0826: enable_hud 1 
+0581: enable_radar 1 
+jump @MDC_1940 
+
+:MDC_449
+if 
+  18@ == 0 
+else_jump @MDC_493 
+18@ = 1 
+wait 250 
+18@ = 0 
+jump @MDC_495 
+
+:MDC_493
+return 
+
+:MDC_495
+0871: init_jump_table 17@ total_jumps 15 default_jump 1 @MDC_623 jumps 2 @MDC_652 3 @MDC_681 4 @MDC_710 5 @MDC_739 6 @MDC_768 7 @MDC_797 8 @MDC_826 
+0872: jump_table_jumps 9 @MDC_855 10 @MDC_884 11 @MDC_914 12 @MDC_944 13 @MDC_974 14 @MDC_1004 15 @MDC_1034 16 @MDC_1064 -1 @MDC_1094 
+
+:MDC_623
+06D1: v$DANCE_ANIM = "DANCE_G1" // v$ = string 
+17@ = 2 
+jump @MDC_1094 
+
+:MDC_652
+06D1: v$DANCE_ANIM = "DANCE_G2" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_681
+06D1: v$DANCE_ANIM = "DANCE_G3" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_710
+06D1: v$DANCE_ANIM = "DANCE_G4" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_739
+06D1: v$DANCE_ANIM = "DANCE_G5" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_768
+06D1: v$DANCE_ANIM = "DANCE_G6" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_797
+06D1: v$DANCE_ANIM = "DANCE_G7" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_826
+06D1: v$DANCE_ANIM = "DANCE_G8" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_855
+06D1: v$DANCE_ANIM = "DANCE_G9" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_884
+06D1: v$DANCE_ANIM = "DANCE_G10" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_914
+06D1: v$DANCE_ANIM = "DANCE_G11" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_944
+06D1: v$DANCE_ANIM = "DANCE_G12" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_974
+06D1: v$DANCE_ANIM = "DANCE_G13" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_1004
+06D1: v$DANCE_ANIM = "DANCE_G14" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_1034
+06D1: v$DANCE_ANIM = "DANCE_G15" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_1064
+06D1: v$DANCE_ANIM = "DANCE_G16" // v$ = string 
+17@ += 1 
+jump @MDC_1094 
+
+:MDC_1094
+0812: AS_actor $PLAYER_ACTOR perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+if 
+  29@ >= -2 
+else_jump @MDC_1749 
+0085: 30@ = 29@ // (int) 
+0871: init_jump_table 29@ total_jumps 7 default_jump -1 @MDC_1749 jumps 0 @MDC_1671 1 @MDC_1594 2 @MDC_1517 3 @MDC_1440 4 @MDC_1363 5 @MDC_1286 6 @MDC_1209 
+
+:MDC_1209
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1279 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1279 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1279
+29@ -= 1 
+
+:MDC_1286
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1356 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1356 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1356
+29@ -= 1 
+
+:MDC_1363
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1433 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1433 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1433
+29@ -= 1 
+
+:MDC_1440
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1510 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1510 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1510
+29@ -= 1 
+
+:MDC_1517
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1587 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1587 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1587
+29@ -= 1 
+
+:MDC_1594
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1664 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1664 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1664
+29@ -= 1 
+
+:MDC_1671
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1741 
+if 
+   not Actor.Dead(0@(29@,7i))
+else_jump @MDC_1741 
+0812: AS_actor 0@(29@,7i) perform_animation v$DANCE_ANIM IFP_file v$DANCE_ANIM_IFP 4.0 loopA 0 lockX 0 lockY 0 lockF 0 time 0 // versionB 
+
+:MDC_1741
+0085: 29@ = 30@ // (int) 
+
+:MDC_1749
+return 
+
+:MDC_1751
+29@ = 0 
+0@(29@,7i) = 0 
+07AF: 25@ = player $PLAYER_CHAR group 
+092B: 0@ = group 25@ member 0 
+092B: 1@ = group 25@ member 1 
+092B: 2@ = group 25@ member 2 
+092B: 3@ = group 25@ member 3 
+092B: 4@ = group 25@ member 4 
+092B: 5@ = group 25@ member 5 
+092B: 6@ = group 25@ member 6 
+if 
+056D:   actor 0@ defined 
+else_jump @MDC_1919 
+
+:MDC_1863
+wait 0 
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_1933 
+29@ += 1 
+if 
+  29@ >= 7 
+else_jump @MDC_1863 
+jump @MDC_56 
+
+:MDC_1919
+29@ = -1 
+jump @MDC_56 
+
+:MDC_1933
+jump @MDC_56 
+
+:MDC_1940
+29@ = 0 
+
+:MDC_1947
+wait 0 
+if 
+056D:   actor 0@(29@,7i) defined 
+else_jump @MDC_2005 
+Actor.RemoveReferences(0@(29@,7i))
+29@ += 1 
+if 
+  29@ >= 7 
+else_jump @MDC_1947 
+
+:MDC_2005
+29@ = -2 
+jump @MDC_56 

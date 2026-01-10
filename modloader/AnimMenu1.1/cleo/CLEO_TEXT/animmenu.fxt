@@ -1,0 +1,171 @@
+AMMTITL   ~g~~h~Anim Menu
+
+AMMCHOS Choose an option
+AMMNEXT ~h~--- Next Page ---
+
+AMMI01 General Anims
+AMMI02 Sitting Anims
+AMMI03 Dancing Anims
+AMMI04 Chatting Anims
+AMMI05 Gang Anims
+AMMI06 Idle Standing Anims
+AMMI07 Weapon Anims
+
+AMGEP01 General Anims - Page ~y~1
+AMGEP02 General Anims - Page ~y~2
+AMGEP03 General Anims - Page ~y~3
+AMGEP04 General Anims - Page ~y~4
+AMGEP05 General Anims - Page ~y~5
+AMGEP06 General Anims - Page ~y~6
+AMGEP07 General Anims - Page ~y~7
+
+AMGEI01 Wave 1
+AMGEI02 Wave 2
+AMGEI03 Lean (back)
+AMGEI04 Lean (left)
+AMGEI05 Salute/point up
+AMGEI06 Eat
+AMGEI07 Drink
+AMGEI08 Smoke
+AMGEI09 Smoke (leaning)
+AMGEI10 Laugh
+AMGEI11 Cry
+
+AMGEI12 Hands up
+AMGEI13 Cross arms
+AMGEI14 Think
+AMGEI15 Look at watch
+AMGEI16 Flip off
+AMGEI17 Signal a taxi
+AMGEI18 Grab/take
+AMGEI19 Drunk walk
+AMGEI20 Rob/aim
+AMGEI21 Cower/hide
+AMGEI22 Shout
+
+AMGEI23 Puke
+AMGEI24 Wank
+AMGEI25 Piss
+AMGEI26 Kiss
+AMGEI27 Use ATM
+AMGEI28 Tired (catch breath)
+AMGEI29 Point forward
+AMGEI30 Boxing
+AMGEI31 Protest/riot 1
+AMGEI32 Protest/riot 2
+AMGEI33 Perform CPR
+
+AMGEI34 Die (on stomach)
+AMGEI35 Injured (on wall)
+AMGEI36 Sleep
+AMGEI37 Lie on ground (crack)
+AMGEI38 Win
+AMGEI39 Lose
+AMGEI40 Swipe card
+AMGEI41 Use switch/button
+AMGEI42 Wash hands
+AMGEI43 Plant bomb
+AMGEI44 Beckon
+
+AMGEI45 Scratch balls
+AMGEI46 Bitch slap
+AMGEI47 Taichi
+AMGEI48 Kung fu
+AMGEI49 Pick up
+AMGEI50 Facepalm
+AMGEI51 Talk on phone
+AMGEI52 Sneak walk
+AMGEI53 Spray
+AMGEI54 Rob safe
+AMGEI55 Arrest
+
+AMGEI56 Pay cash
+AMGEI57 Drug Dealer (idle)
+AMGEI58 Drug Dealer (sell)
+AMGEI59 Rap 1
+AMGEI60 Rap 2
+AMGEI61 Gym workout
+AMGEI62 Kick
+AMGEI63 Push
+AMGEI64 Headbutt
+AMGEI65 Open sliding door
+AMGEI66 Fix car
+
+AMGEI67 Basket (idle)
+AMGEI68 Basket (defend)
+AMGEI69 Basket (dunk)
+AMGEI70 Throw
+AMGEI71 Throw (far)
+AMGEI72 Put down
+AMGEI73 Slap ass
+AMGEI74 Dying
+AMGEI75 Use vending machine
+AMGEI76 Signal to stop
+AMGEI77 Search car trunk
+AMGEI78 Take cover
+
+AMSII01 Lay on ground 1
+AMSII02 Lay on ground 2
+AMSII03 Lay on ground 3
+AMSII04 Lay on ground 4
+AMSII05 Sit and eat
+AMSII06 Sit and die
+AMSII07 Sit on chair
+AMSII08 Sit on chair (relaxed 1)
+AMSII09 Sit on chair (relaxed 2)
+AMSII10 Sit and talk
+AMSII11 Sit and look at watch
+
+AMDAI01 Generic dance
+AMDAI02 Dance 1
+AMDAI03 Dance 2
+AMDAI04 Dance 3
+AMDAI05 Dance 4
+AMDAI06 Dance 5
+AMDAI07 Dance 6
+AMDAI08 Dance 7
+AMDAI09 Dance 8
+AMDAI10 Dance 9
+AMDAI11 Dance 10
+
+AMCHI01 Chat 1
+AMCHI02 Chat 2
+AMCHI03 Chat 3
+AMCHI04 Chat 4
+AMCHI05 Chat 5
+AMCHI06 Chat 6
+AMCHI07 Chat 7
+AMCHI08 Chat (window)
+AMCHI09 Argue 1
+AMCHI10 Argue 2
+AMCHI11 Argue 3
+
+AMGAI01 Yes
+AMGAI02 No
+AMGAI03 Handshake 1
+AMGAI04 Handshake 2 (fast)
+AMGAI05 Handshake 3 (slow)
+AMGAI06 Handshake 4
+AMGAI07 Gang sign 1
+AMGAI08 Gang sign 2
+AMGAI09 Gang sign 3
+AMGAI10 Gang sign 4
+
+AMIDI01 Idle 1
+AMIDI02 Idle 2
+AMIDI03 Idle 3
+AMIDI04 Idle 4
+AMIDI05 Idle 5
+AMIDI06 Idle 6
+AMIDI07 Idle (bartender)
+AMIDI08 Idle (upside down)
+
+AMWEI01 Hold bat
+AMWEI02 Reload (Rifle)
+AMWEI03 Reload (SMG)
+AMWEI04 Cock/reload Shotgun
+AMWEI05 Cock/reload Pistol
+AMWEI06 Cock/reload Pistol (idle)
+AMWEI07 Dildo (idle)
+
+AMLOI01 TODO

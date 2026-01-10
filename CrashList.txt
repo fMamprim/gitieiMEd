@@ -1,4 +1,12 @@
-03/07/24 (DD/MM/YY)
+04/01/26 (DD/MM/YY)
+
+Erro: 0x004C666A
+Problema: Limite de damage atomic.
+Solução: Instale Open Limit Adjuster, ou se preferir, f92la configurado.
+
+Erro: 0x0040998A
+Problema: Limite relacionado com o streaming de uma herança de arquivos .txd (txdp). Aparentemente acontece ao tentar abrir o jogo com um limite de stream memory baixo demais.
+Solução: Use algum mod que possa ajustar o limite de streaming memory (isto é, Open Limit Adjuster, MixSets ou Improved Streaming), se você já usa, tente aumentar o limite. Recomendado instalar nosso mod Improved Streaming, nele há boas pré-configurações e sempre força a usar aquele limite, substituindo o limite definido por outros mods.
 
 Erro: 0x015691EE
 Problema: Limite de modelos de veículos com paintjob.
@@ -394,7 +402,8 @@ Solução: Pode ter sido algum mod de efeito especial que você tenha instalado.
 
 Erro: 0x0156A2A7
 Problema: Bateu o limite de scripts (CRunningScripts) (não os .cs).
-Solução: Use fastman92 limit adjuster. Procure por "Running scripts" dentro do .ini, remova o "#" no início da linha e aumente o número para uns 200... ou 300..... "Running scripts = 200".
+Solução 1: Use fastman92 limit adjuster. Procure por "Running scripts" dentro do .ini, remova o "#" no início da linha e aumente o número para uns 200... ou 300..... "Running scripts = 200".
+Solução 2: Se o problema aconteceu em um interior após causar confusão (como atirar), pode ser um problema comum onde o jogo originalmente roda no limite de pessoas num interior e ao causar confusão, aplica um script em todas as pessoas random (não controlado por script), ou seja, algum mod adicionou pessoas a mais no interior fazendo atingir o limite. Urbanize havia esse problema e foi corrigido em 2026.
 
 Erro: 0x0040AB3B
 Problema: Linha(s) do data\pedgrp.dat vazia(s) ou nome de algum pedestre estar errado etc.
@@ -619,7 +628,7 @@ Erro: 0xE8AC1250 (em "Backtrace" no fim do log terá vários "unknown" e um shel
 Problema: Algum tipo de incompatibilidade do vehlightsfix.asi
 Solução: Corrigido ao aumentar a prioridade dele no modloader.ini, ou seja, coloque ele numa pasta e deixe esta pasta numa prioridade grande, como "100". Clique aqui para saber como.
 
-Erro: 0x00406034, 0x00406035, 0x00406036, 0x00406037, 0x00406038, 0x004F243E, 0x00405FDC
+Erro: 0x00406034, 0x00406035, 0x00406036, 0x00406037, 0x00406038, 0x004F243E, 0x00405FDC, 0x004F2442, 0x00552A07, 0x008369B0
 Problema: Limites de arquivos .ipl que contém objetos na section "inst".
 Solução 1: Instale Open Limit Adjuster (versão 1.5.9 ou mais nova) que aumentará os limites automaticamente.
 Solução 2: Instale fastman92 limit adjuster, aumentando o limite "Entity index array".
@@ -1012,8 +1021,10 @@ Erro: 0x0065ED19
 Solução: Este crash já foi solucionado ao limpar a pasta do Mod Loader, removendo arquivos não necessários. Mas acredito que isso não tenha sentido e não foi realmente por causa disso
 
 Erro: 0x0048C3A9
-Problema: Erro ao tentar carregar um IFP. Muito possivelmente o IFP não está instalado no seu GTA.
-Solução: Verifique a instalação dos IFP. No SCRLog.log deverá ter o nome do script na qual pediu o IFP
+Problema 1: Erro ao tentar carregar um IFP. Possivelmente o arquivo .IFP não está instalado no seu jogo.
+Solução 1: Verifique a instalação dos IFP. No SCRLog.log deverá ter o nome do script na qual pediu o IFP.
+Problema 2: Algum limite do jogo causado pela opção "PreLoadAnims = 1" no arquivo .ini do Improved Streaming.
+Solução 1: Desative  o "PreLoadAnims" colocando "0".
 
 Erro: 0x0057A065
 Problema 1: Já foi relatado ao usar carro bugado. Relatado com o mod 90s AVP por causa do Bandito, onde depois de spawnar ele e ir pro menu display (configurações avançadas de vídeo), dará o crash.
@@ -1251,14 +1262,20 @@ Erro: 0x00553F71
 Problema: Relacionado a renderização do mapa.
 
 Erro: 0x00534134
-Problema 1: O mesmo ID sendo carregado em modelos diferentes, muito comum em instalar diferentes mods de mapa com autores que não se importam com compatibilidades. Se você teve esse crash depois de instalar uma peça no Tuning Mod, foi por que duas peças (ou mais algum outro mod diferente) estão usando o mesmo ID, informe ao autor e/ou siga este tutorial para corrigir a incompatibilidade.
-Solução 1: Reveja seus novos arquivos IDE, algum pode estar usando o mesmo ID do outro. Na maioria dos mods (não scripts) você pode simplesmente abrir e trocar o ID por algum outro livre (clique aqui para ver a lista ou use este tutorial para corrigir a incompatibilidade).
-Problema 2: COL impróprio (ou faltando)
-Solução 2: COL: Reveja se o COL está sendo carregado no IMG ou Mod Loader, caso IMG, reveja também se o IMG está sendo carregado no gta.dat ou Mod Loader. Para instalar um COL no Mod Loader de maneira correta, siga o Tutorial de Mod Loader na parte onde fala sobre instalação de .COL
-Problema 3: Objeto com LOD foi removido.
-Solução 3: Remover um objeto do mapa que contenha LOD, é necessário o uso tanto do arquivo *_stream*.ipl (dentro do gta3.img) quanto o .ipl da pasta data/maps. Se você por exemplo remover um objeto somente no arquivo *_stream*.ipl mas não remover também do .ipl da pasta data/maps, causará este crash. O que também pode ocorrer na instalação de algum mod, por exemplo você já tem um mod que altera o mesmo arquivo .ipl, assim o tal arquivo necessário não será carregado e causará este crash. Você terá que verificar se os arquivos estão todos instalados e carregando (você pode consultar o modloader.log para ver se está sendo carregado, se já tem outro mesmo arquivo instalado etc). Alternativamente, se você está criando um mod de mapa, você pode mover o objeto para o subsolo ao invés de deletá-lo, assim evitará problemas como este mas também terá que fazer o mesmo com o LOD (que fica no .ipl da pasta data/maps).
-Problema 4: Você está com algum .img do jogo aberto em algum programa, como Alci's IMG Editor.
-Solução 4: Feche-o.
+Problema 1: O mesmo número ID sendo carregado em modelos diferentes, muito comum em instalar diferentes mods de mapa, objetos ou peças para Tuning Mod com autores que não se importam com compatibilidades.
+Solução 1: Reveja seus arquivos IDE, se identificar um mod, notifique ao autor, algum mod pode estar usando o mesmo número ID de outro mod que você tenha instalado. Na maioria dos mods (não scripts) você pode simplesmente abrir e trocar o ID por algum outro livre: https://tuningmod.mixmods.com.br/p/ids.html
+Problema 2: Você está usando Proper Fixes com RoSA Evolved e esqueceu de aumentar a prioridade do Proper Fixes no "modloader.ini".
+Solução 2: Aumente a prioridade do Proper Fixes ou abaixe a do RoSA. Veja como em: https://www.mixmods.com.br/2015/07/tutorial-dicas-tudo-sobre-modloader-gta/#Priority ou: https://github.com/jessicanataliagta/tutorials_for_gta/wiki/GTA-SA-‐-How-to-Install-RoSA-Evolved
+Problema 3: COL impróprio (ou faltando)
+Solução 3: Reveja se o arquivo COL está sendo carregado no IMG ou Mod Loader, caso IMG, reveja também se o IMG está sendo carregado no gta.dat ou Mod Loader. Para instalar um COL no Mod Loader de maneira correta, siga o Tutorial de Mod Loader na parte onde fala sobre instalação de .COL
+Problema 4: Objeto com LOD foi removido.
+Solução 4: Remover um objeto do mapa que contenha LOD, é necessário o uso tanto do arquivo *_stream*.ipl (dentro do .img) quanto o .ipl de texto da pasta data/maps (o que pode causar outros problemas em jogos salvos por mudar a ordem de linhas, é mais recomendado só escondê-lo). Pode ocorrer na instalação de algum mod, por exemplo você já tem um mod que altera o mesmo arquivo .ipl, pesquise no seu ModLoader.
+Problema 5: Você está com algum .img do jogo aberto em algum programa, como Alci's IMG Editor.
+Solução 5: Feche-o.
+Problema 6: Falta de colisor, provavelmente o jogo tentou criar um objeto que não está mais instalado em seu jogo ou não foi adicionado o colisor de algum modelo.
+Solução 6: Verifique a instalação dos mods que você tem, especialmente scripts com modelos adicionados sem substituir. O mod RepairGTA pode remover automaticamente todos os objetos com modelo inexistente salvo em seu jogo salvo e assim corrigir este crash.
+Problema 7: Falta de arquivo .txd referente à uma linha TXDP.
+Solução 7: Identifique qual mod está causando o problema e verifique os arquivos .ide, removendo a linha TXDP responsável por carregar o txd faltante. Foi relatado ao remover o mod Proper Fixes ou SA Optimized Map e possuir algum outro mod que tenha uma linha TXDP com o nome de algum arquivo txd pertencente a eles.
 
 Erro: 0x0040E179
 Tipo: O jogo freeza ao olhar para um objeto
@@ -1532,6 +1549,7 @@ Solução 10: Falta o arquivo stream.ini na pasta do jogo.
 Solução 11: Não use caracteres especiais (nem pontuações etc) no nome da pasta do jogo ou em algum local do caminho. Também não use caminho longo demais. Já foi solucionado após remover caracteres [ e . do nome da pasta do jogo, mas não se sabe exatamente se era isto o problema, ou se o caminho era longo demais, ou se era algum bug do Windows etc.
 Solução 12: Se foi durante a rádio de usuário: Vá em "Documents\GTA San Andreas User Files\User Tracks" e verifique se há arquivos de música corrompidos ou qualquer outro arquivo que não seja o formato mp3. Também tente instalar o mais novo Windows Media Player pelo "Adicionar ou remover programas" ou site da Microsoft.
 Solução 13: Skin Selector aleatoriamente pode causar erro ao ler o arquivo .img ao abrir o jogo, basta abrir de novo que não causará o problema, ainda não se sabe ao certo o que faz causar isto.
+Solução 14: Você tem algum dos seguintes arquivos no ModLoader que não seguem o endereço como é na pasta original (problema original do ModLoader?): data/gridref.dat; data/Decision/PedEvent.txt; data/Paths/ROADBLOX.DAT; models/coll/peds.col
 
 
 Outros problemas:
@@ -1544,8 +1562,7 @@ Sobre: Tentando usar o instalador mas ele já identifica que o jogo está instal
 Solução: Abra o menu iniciar, digite regedit e abra o regedit.exe. Vá em HKEY_LOCAL_MACHINE -> SOFTWARE, lá terá uma "pasta" Rockstar Games, e dentro GTA San Andreas com uma "chave" dentro dela. Delete a chave ou a própria pasta "GTA San Andreas".
 Se não encontrou, procure dentro da HKEY_CURRENT_USER.
 
-Erro: Mensagem "Runtime Error!" "This application has requested the Runtime to terminate it in
-an unusual way."
+Erro: Mensagem "Runtime Error!" "This application has requested the Runtime to terminate it in an unusual way."
 Sobre: Pode ser causado por algum erro em algum mod .asi. O "modloader.log" ou outro crash dump pode dar uma dica de qual foi o mod (mesmo que não 100% correto).
 Durante o gameplay: Além de .asi, pode ter sido causado por alto uso de memória caso você tenha configurado o jogo para usar 2 GB de stream memory sem usar largeaddress.
 Ao tentar iniciar o jogo: Além de .asi, pode ser problema do cachê do ModLoader. Vá na pasta "C:\Users\JuniorDjjr\AppData\Local\modloader" onde "JuniorDjjr" é o seu nome de usuário, e delete todo o conteúdo. Da próxima vez seu jogo demorará um pouco para abrir, mas funcionará.

@@ -1,5 +1,5 @@
-[10:51:28.867000] (system)	Session started.
-[10:51:28.867000] (debug)	Module handle: 723E0000
+[21:37:15.269340] (system)	Session started.
+[21:37:15.270342] (debug)	Module handle: 609D0000
 
 MoonLoader v.026.5-beta loaded.
 Developers: FYP, hnnssy, EvgeN 1137
@@ -7,22 +7,25 @@ Developers: FYP, hnnssy, EvgeN 1137
 Copyright (c) 2016, BlastHack Team
 http://blast.hk/moonloader/
 
-[10:51:28.867000] (info)	Working directory: C:\Users\FELIPE\Documents\gitieiMEd\moonloader
-[10:51:28.867000] (debug)	FP Control: 0009001F
-[10:51:28.867000] (debug)	Game: GTA SA 1.0.0.0 US
-[10:51:28.867000] (system)	Installing pre-game hooks...
-[10:51:28.869000] (system)	Hooks installed.
-[10:51:29.694000] (debug)	Initializing opcode handler table
-[10:51:29.694000] (debug)	package.path = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?.luac;C:\Users\FELIPE\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
-[10:51:29.694000] (debug)	package.cpath = C:\Users\FELIPE\Documents\gitieiMEd\moonloader\lib\?.dll;
-[10:51:29.694000] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\changer.lua'...
-[10:51:29.694000] (debug)	New script: 13916A6C
-[10:51:29.696000] (system)	In-Game Commands Changer: Loaded successfully.
-[10:51:29.696000] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\Teleporter.lua'...
-[10:51:29.696000] (debug)	New script: 13916BF4
-[10:51:29.703000] (system)	Teleporter: Loaded successfully.
-[10:51:29.703000] (system)	Loading script 'C:\Users\FELIPE\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
-[10:51:29.703000] (debug)	New script: 13916D7C
-[10:51:29.712000] (system)	Lua Visual Veh Spawner: Loaded successfully.
-[10:51:37.455000] (system)	Installing post-load hooks...
-[10:51:37.456000] (system)	Hooks installed.
+[21:37:15.270342] (info)	Working directory: C:\Users\felip\Documents\gitieiMEd\moonloader
+[21:37:15.270342] (debug)	FP Control: 0009001F
+[21:37:15.270342] (debug)	Game: GTA SA 1.0.0.0 US
+[21:37:15.270342] (system)	Installing pre-game hooks...
+[21:37:15.271345] (system)	Hooks installed.
+[21:37:18.638589] (debug)	Initializing opcode handler table
+[21:37:18.638589] (debug)	package.path = C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\?.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
+[21:37:18.638589] (debug)	package.cpath = C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.dll;
+[21:37:18.642407] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\animation-manager.lua'...
+[21:37:18.642407] (debug)	New script: 06398744
+[21:37:18.656374] (system)	Animation Manager: Loaded successfully.
+[21:37:18.656374] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\changer.lua'...
+[21:37:18.656374] (debug)	New script: 05DE5F0C
+[21:37:18.665376] (system)	In-Game Commands Changer: Loaded successfully.
+[21:37:18.665376] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\Teleporter.lua'...
+[21:37:18.665376] (debug)	New script: 05DE5024
+[21:37:18.672377] (system)	Teleporter: Loaded successfully.
+[21:37:18.673377] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
+[21:37:18.673377] (debug)	New script: 05DE5374
+[21:37:18.707945] (system)	Lua Visual Veh Spawner: Loaded successfully.
+[21:37:22.078116] (system)	Installing post-load hooks...
+[21:37:22.078116] (system)	Hooks installed.

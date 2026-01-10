@@ -1,0 +1,12 @@
+KEEP THIS FILE INSIDE MODLOADER - DEIXE ESTE ARQUIVO DENTRO DO MODLOADER
+
+vehicles.ide (original)
+480,	comet,		comet,		car, 		COMET,	 	COMET, 		null,	executive, 	5, 	0,	2ff0,		-1, 0.7, 0.7,		0
+
+CARCOLS.DAT
+
+car4
+comet, 82,82,0,0, 12,12,0,0, 2,2,0,0, 6,6,0,0, 4,4,0,0, 0,0,0,0, 53,53,0,0, 1,0,0,0
+
+HANDLING.CFG
+COMET        1400.0    2200.0   2.2    0.0 0.1 -0.2  75  0.70 0.9  0.5  	5 200.0 30.0 10.0 4 P 	11.0  0.45 0 30.0  	1.4  0.14  3.0   0.28 -0.15 0.5  0.3		0.25 0.60 35000 	40000000	0			1  1	0

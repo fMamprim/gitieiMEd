@@ -1,0 +1,17 @@
+KEEP THIS FILE INSIDE MODLOADER
+
+carmods.dat
+wayfarer, stereo
+
+
+ORIGINAL LINES:
+
+vehicles.ide
+586,	wayfarer	wayfarer,	bike,		WAYFARER,	WAYFARE,	wayfarer,motorbike,	6,	0,	0,		23, 0.654, 0.654,	-1
+
+carcols.dat
+wayfarer, 119,1, 122,1, 8,1, 10,1, 13,1, 25,1, 27,1, 32,1
+
+handling.cfg
+WAYFARER      800.0     600.0   4.0    0.0 0.1   0.0  103 1.4 0.85 0.48 	4 190.0 40.0 5.0  R P 	10.0  0.55 0 35.0  	0.65 0.20  0.0   0.09 -0.11 0.55 0.0		0.0  0.24 10000 	41002000	0			1  1	8
+!	WAYFARER	0.10	0.05	0.20	0.05	30.0	25.0	0.945	1.20	0.7		0.1		33.0	-55.0	-0.006	0.4		0.3
