@@ -3809,6 +3809,27 @@ Found file [0xFFFFFFFFFFFFFFFF] "Pack Apocalipse 2\Loader.txt" with handler "<no
 Found file [0x0000000CE63794E1] "Pack Apocalipse 2\Pack Apocalipse 2.ide" with handler "gta3.std.data"
 Found file [0x00000204BBD665C0] "Pack Apocalipse 2\pack_apoc2.txd" with handler "gta3.std.stream"
 
+Scanning files at "modloader\urbanize\"...
+Found file [0x000006041BF8CEBD] "gta3img\djjr_urbanize.ifp" with handler "gta3.std.stream"
+Found file [0xFFFFFFFFFFFFFFFF] "Map\Loader.txt" with handler "<none>"
+Found file [0x0000000D29008D87] "Map\Urbanize - AirConds.ipl" with handler "gta3.std.data"
+Found file [0x0000000D5CBE8104] "Map\Urbanize - Benches.ipl" with handler "gta3.std.data"
+Found file [0x0000000DB8B6D0BE] "Map\Urbanize - Bins.ipl" with handler "gta3.std.data"
+Found file [0x0000000DC2A94D19] "Map\Urbanize - Boxes.ipl" with handler "gta3.std.data"
+Found file [0x0000000DAC7E03CA] "Map\Urbanize - Chairs.ipl" with handler "gta3.std.data"
+Found file [0x0000000D86074BE6] "Map\Urbanize - Fences.ipl" with handler "gta3.std.data"
+Found file [0x0000000D9CF6BC9B] "Map\Urbanize - Garbage.ipl" with handler "gta3.std.data"
+Found file [0x0000000D08A97903] "Map\Urbanize - Lights.ipl" with handler "gta3.std.data"
+Found file [0x0000000DA9228A6E] "Map\Urbanize - Mails.ipl" with handler "gta3.std.data"
+Found file [0x0000000DE524C5E3] "Map\Urbanize - Roofs.ipl" with handler "gta3.std.data"
+Found file [0x0000000D439BEF20] "Map\Urbanize - Street Side.ipl" with handler "gta3.std.data"
+Found file [0x0000000D5E5561DC] "Map\Urbanize - Vases.ipl" with handler "gta3.std.data"
+Found file [0x0000000DF2C99A17] "Map\Urbanize.ipl" with handler "gta3.std.data"
+Found file [0x0000000181D679B1] "Urbanize (Junior_Djjr).asi" with handler "gta3.std.asi"
+No handler or callme for file "Urbanize (lastest version) - MixMods.url"
+No handler or callme for file "Urbanize (lastest version) - Patreon.url"
+No handler or callme for file "Urbanize.log"
+
 Ignoring mod at "modloader\vazio\"
 
 Scanning files at "modloader\vehdeform\"...
@@ -5727,6 +5748,23 @@ Updating state for "modloader\soundize\"...
 Installing file "modloader\soundize\base\guids.txt"
 Installing file "modloader\soundize\soundize (junior_djjr).asi"
 Installing file "modloader\soundize\soundize.txd"
+Updating state for "modloader\urbanize\"...
+Installing file "modloader\urbanize\gta3img\djjr_urbanize.ifp"
+Installing file "modloader\urbanize\map\loader.txt"
+Installing file "modloader\urbanize\map\urbanize - airconds.ipl"
+Installing file "modloader\urbanize\map\urbanize - benches.ipl"
+Installing file "modloader\urbanize\map\urbanize - bins.ipl"
+Installing file "modloader\urbanize\map\urbanize - boxes.ipl"
+Installing file "modloader\urbanize\map\urbanize - chairs.ipl"
+Installing file "modloader\urbanize\map\urbanize - fences.ipl"
+Installing file "modloader\urbanize\map\urbanize - garbage.ipl"
+Installing file "modloader\urbanize\map\urbanize - lights.ipl"
+Installing file "modloader\urbanize\map\urbanize - mails.ipl"
+Installing file "modloader\urbanize\map\urbanize - roofs.ipl"
+Installing file "modloader\urbanize\map\urbanize - street side.ipl"
+Installing file "modloader\urbanize\map\urbanize - vases.ipl"
+Installing file "modloader\urbanize\map\urbanize.ipl"
+Installing file "modloader\urbanize\urbanize (junior_djjr).asi"
 Updating state for "modloader\vehdeform\"...
 Installing file "modloader\vehdeform\vehdeform.sa.asi"
 Updating state for "modloader\essenciais\"...
@@ -7428,9 +7466,9 @@ Installing file "modloader\original radio extended\non stop pop\cleo\cleo_text\r
 Installing file "modloader\original radio extended\non stop pop\models\fronten1.txd"
 Uninstalling file "modloader\prioridade 20\atmosphere interface pack\models\fronten1.txd"
 Updating gta3.std.data state...
-Parsing readme file "modloader\controller\anim\warning anim !!.txt"
-Parsing readme file "modloader\controller\gta3.img\warning skin !!.txt"
-Parsing readme file "modloader\controller\holding\credits.txt"
+Parsing cached readme data for "modloader\controller\anim\warning anim !!.txt"
+Parsing cached readme data for "modloader\controller\gta3.img\warning skin !!.txt"
+Parsing cached readme data for "modloader\controller\holding\credits.txt"
 Parsing cached readme data for "modloader\prioridade 5\nextgen effects\map\gtadat.txt"
 Found cached level file line for 'modloader\prioridade 5\nextgen effects\map\gtadat.txt':1
 Found cached level file line for 'modloader\prioridade 5\nextgen effects\map\gtadat.txt':2
@@ -7443,18 +7481,18 @@ Parsing cached readme data for "modloader\tuning mod parts\pack apocalipse 2\loa
 Found cached level file line for 'modloader\tuning mod parts\pack apocalipse 2\loader.txt':1
 Parsing cached readme data for "modloader\prioridade 10\proper hd models\loader.txt"
 Found cached level file line for 'modloader\prioridade 10\proper hd models\loader.txt':4
-Parsing readme file "modloader\prioridade 10\proper player retex 3.0\1-do not put in modpacks.txt"
-Parsing readme file "modloader\prioridade 10\proper player retex 3.0\leiame (ou morra).txt"
-Parsing readme file "modloader\prioridade 10\proper player retex 3.0\readme (or die).txt"
+Parsing cached readme data for "modloader\prioridade 10\proper player retex 3.0\1-do not put in modpacks.txt"
+Parsing cached readme data for "modloader\prioridade 10\proper player retex 3.0\leiame (ou morra).txt"
+Parsing cached readme data for "modloader\prioridade 10\proper player retex 3.0\readme (or die).txt"
 Parsing readme file "modloader\skygfx - extended\models\texdb.txt"
 Ignoring text file "modloader\skygfx - extended\models\texdb.txt" because it's too big.
-Parsing readme file "modloader\prioridade 20\cutscene characters remastered\!diminuir prioridade.txt"
+Parsing cached readme data for "modloader\prioridade 20\cutscene characters remastered\!diminuir prioridade.txt"
 Parsing cached readme data for "modloader\prioridade 20\ls lit church\churchlite.txt"
 Found cached level file line for 'modloader\prioridade 20\ls lit church\churchlite.txt':1
 Found cached level file line for 'modloader\prioridade 20\ls lit church\churchlite.txt':2
 Found cached level file line for 'modloader\prioridade 20\ls lit church\churchlite.txt':3
-Parsing readme file "modloader\prioridade 20\new rc shop\!diminuir prioridade.txt"
-Parsing readme file "modloader\prioridade 20\remastered cj house\!mudar prioridade talvez.txt"
+Parsing cached readme data for "modloader\prioridade 20\new rc shop\!diminuir prioridade.txt"
+Parsing cached readme data for "modloader\prioridade 20\remastered cj house\!mudar prioridade talvez.txt"
 Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\data lines\datalines.txt"
 Found cached vehicles handling line for 'modloader\prioridade 20\revamped vehicle project\data lines\datalines.txt':2
 Found cached vehicles handling line for 'modloader\prioridade 20\revamped vehicle project\data lines\datalines.txt':3
@@ -7481,35 +7519,49 @@ Found cached vehicle upgrades line for 'modloader\prioridade 20\revamped vehicle
 Found cached vehicle upgrades line for 'modloader\prioridade 20\revamped vehicle project\data lines\datalines.txt':30
 Found cached vehicle upgrades line for 'modloader\prioridade 20\revamped vehicle project\data lines\datalines.txt':31
 Found cached vehicle upgrades line for 'modloader\prioridade 20\revamped vehicle project\data lines\datalines.txt':32
-Parsing readme file "modloader\prioridade 20\revamped vehicle project\list of changes.txt"
-Parsing readme file "modloader\prioridade 20\revamped vehicle project\readme.txt"
+Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\list of changes.txt"
+Parsing cached readme data for "modloader\prioridade 20\revamped vehicle project\readme.txt"
 Parsing cached readme data for "modloader\prioridade 20\rusty brown's ring donuts overhaul\loader.txt"
 Found cached level file line for 'modloader\prioridade 20\rusty brown's ring donuts overhaul\loader.txt':3
 Parsing cached readme data for "modloader\prioridade 40\animal statues remastered\loader.txt"
 Found cached level file line for 'modloader\prioridade 40\animal statues remastered\loader.txt':1
-Parsing readme file "modloader\prioridade 40\nextgen remaster weapons\diminuir prioridade.txt"
-Parsing readme file "modloader\zmenu\keybinds configuradas.txt"
+Parsing cached readme data for "modloader\prioridade 40\nextgen remaster weapons\diminuir prioridade.txt"
+Parsing cached readme data for "modloader\zmenu\keybinds configuradas.txt"
 Parsing readme file "modloader\soundize\base\guids.txt"
 Ignoring text file "modloader\soundize\base\guids.txt" because it's too big.
-Parsing readme file "modloader\essenciais\allweapon\tutorial.txt"
-Parsing readme file "modloader\essenciais\amazing screenshot\tutorial.txt"
-Parsing cached readme data for "modloader\essenciais\minhas adaptacoes\cleo\fogocj[3].txt"
-Parsing readme file "modloader\essenciais\noclip\leiame.txt"
-Parsing readme file "modloader\essenciais\super fast teleporter\tutorial.txt"
-Parsing readme file "modloader\essenciais\unflip\aperta 7.txt"
-Parsing readme file "modloader\essenciais\unflip\cleo\unflip.txt"
-Parsing readme file "modloader\animmenu1.1\readme.txt"
-Parsing readme file "modloader\oribitcam1.2\--- read me !!! ---.txt"
-Parsing readme file "modloader\rosa project evolved\1-do not put in modpacks.txt"
-Parsing readme file "modloader\rosa project evolved\1-samp and mta\mta\about mta.txt"
-Parsing readme file "modloader\rosa project evolved\1-samp and mta\mta\sobre mta.txt"
-Parsing readme file "modloader\rosa project evolved\1-samp and mta\samp\read - leia.txt"
-Parsing readme file "modloader\rosa project evolved\2-acordo de licença.txt"
-Parsing readme file "modloader\rosa project evolved\2-imglimitadjuster error fix\leiame.txt"
-Parsing readme file "modloader\rosa project evolved\2-imglimitadjuster error fix\readme.txt"
-Parsing readme file "modloader\rosa project evolved\2-license agreement.txt"
-Parsing readme file "modloader\rosa project evolved\3-obrigado.txt"
-Parsing readme file "modloader\rosa project evolved\3-thanks.txt"
+Parsing readme file "modloader\urbanize\map\loader.txt"
+Found level file line for 'modloader\urbanize\map\loader.txt':12: IPL data\maps\Urbanize.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':19: IPL data\maps\Urbanize - Bins.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':26: IPL data\maps\Urbanize - Boxes.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':33: IPL data\maps\Urbanize - Benches.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':40: IPL data\maps\Urbanize - Chairs.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':47: IPL data\maps\Urbanize - Roofs.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':54: IPL data\maps\Urbanize - AirConds.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':60: IPL data\maps\Urbanize - Mails.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':66: IPL data\maps\Urbanize - Vases.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':72: IPL data\maps\Urbanize - Fences.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':78: IPL data\maps\Urbanize - Garbage.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':84: IPL data\maps\Urbanize - Lights.ipl
+Found level file line for 'modloader\urbanize\map\loader.txt':90: IPL data\maps\Urbanize - Street Side.ipl
+Parsing cached readme data for "modloader\essenciais\allweapon\tutorial.txt"
+Parsing cached readme data for "modloader\essenciais\amazing screenshot\tutorial.txt"
+Parsing readme file "modloader\essenciais\minhas adaptacoes\cleo\fogocj[3].txt"
+Parsing cached readme data for "modloader\essenciais\noclip\leiame.txt"
+Parsing cached readme data for "modloader\essenciais\super fast teleporter\tutorial.txt"
+Parsing cached readme data for "modloader\essenciais\unflip\aperta 7.txt"
+Parsing cached readme data for "modloader\essenciais\unflip\cleo\unflip.txt"
+Parsing cached readme data for "modloader\animmenu1.1\readme.txt"
+Parsing cached readme data for "modloader\oribitcam1.2\--- read me !!! ---.txt"
+Parsing cached readme data for "modloader\rosa project evolved\1-do not put in modpacks.txt"
+Parsing cached readme data for "modloader\rosa project evolved\1-samp and mta\mta\about mta.txt"
+Parsing cached readme data for "modloader\rosa project evolved\1-samp and mta\mta\sobre mta.txt"
+Parsing cached readme data for "modloader\rosa project evolved\1-samp and mta\samp\read - leia.txt"
+Parsing cached readme data for "modloader\rosa project evolved\2-acordo de licença.txt"
+Parsing cached readme data for "modloader\rosa project evolved\2-imglimitadjuster error fix\leiame.txt"
+Parsing cached readme data for "modloader\rosa project evolved\2-imglimitadjuster error fix\readme.txt"
+Parsing cached readme data for "modloader\rosa project evolved\2-license agreement.txt"
+Parsing cached readme data for "modloader\rosa project evolved\3-obrigado.txt"
+Parsing cached readme data for "modloader\rosa project evolved\3-thanks.txt"
 Parsing cached readme data for "modloader\rosa project evolved\rosa project evolved -  exterior\files\world_loader.txt"
 Found cached level file line for 'modloader\rosa project evolved\rosa project evolved -  exterior\files\world_loader.txt':1
 Found cached level file line for 'modloader\rosa project evolved\rosa project evolved -  exterior\files\world_loader.txt':2
@@ -7520,15 +7572,15 @@ Parsing cached readme data for "modloader\rosa project evolved\rosa project evol
 Found cached level file line for 'modloader\rosa project evolved\rosa project evolved - cutscene\files\cutscene_loader.txt':1
 Parsing cached readme data for "modloader\rosa project evolved\rosa project evolved - interior\files\interior_loader.txt"
 Found cached level file line for 'modloader\rosa project evolved\rosa project evolved - interior\files\interior_loader.txt':1
-Parsing cached readme data for "modloader\soundize ambient sounds\guids.txt"
+Parsing readme file "modloader\soundize ambient sounds\guids.txt"
 Parsing cached readme data for "modloader\prioridade 60\fix\food eating fix\food models\food eating fix.txt"
 Found cached level file line for 'modloader\prioridade 60\fix\food eating fix\food models\food eating fix.txt':1
 Found cached level file line for 'modloader\prioridade 60\fix\food eating fix\food models\food eating fix.txt':2
-Parsing readme file "modloader\prioridade 60\mapas\8-tracks random\readme_eg.txt"
-Parsing readme file "modloader\prioridade 60\mapas\8-tracks random\readme_esp.txt"
-Parsing readme file "modloader\prioridade 60\mapas\dam extended\read me first.txt"
-Parsing readme file "modloader\prioridade 60\mapas\dam extended\read me.txt"
-Parsing readme file "modloader\prioridade 60\mapas\generic mod\readme.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\8-tracks random\readme_eg.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\8-tracks random\readme_esp.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\dam extended\read me first.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\dam extended\read me.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\generic mod\readme.txt"
 Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling ambulan.txt"
 Found cached vehicles handling line for 'modloader\prioridade 60\mapas\handling\handling ambulan.txt':1
 Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling bravura.txt"
@@ -7537,15 +7589,15 @@ Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling 
 Found cached vehicles handling line for 'modloader\prioridade 60\mapas\handling\handling buffalo.txt':1
 Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling hpv1000.txt"
 Found cached vehicles handling line for 'modloader\prioridade 60\mapas\handling\handling hpv1000.txt':1
-Parsing readme file "modloader\prioridade 60\mapas\handling\handling landstal.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling landstal.txt"
 Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling peren.txt"
 Found cached vehicles handling line for 'modloader\prioridade 60\mapas\handling\handling peren.txt':1
 Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling police_la.txt"
 Found cached vehicles handling line for 'modloader\prioridade 60\mapas\handling\handling police_la.txt':1
 Parsing cached readme data for "modloader\prioridade 60\mapas\handling\handling tractor.txt"
 Found cached vehicles handling line for 'modloader\prioridade 60\mapas\handling\handling tractor.txt':1
-Parsing readme file "modloader\prioridade 60\mapas\san andreas bus station\leeme.txt"
-Parsing readme file "modloader\prioridade 60\mapas\san andreas bus station\readme.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\san andreas bus station\leeme.txt"
+Parsing cached readme data for "modloader\prioridade 60\mapas\san andreas bus station\readme.txt"
 Parsing cached readme data for "modloader\prioridade 60\restored unused peds\data\gta.dat.txt"
 Found cached level file line for 'modloader\prioridade 60\restored unused peds\data\gta.dat.txt':4
 Parsing cached readme data for "modloader\prioridade 60\veículos\carros\comet plus+\lineas comet.txt"
@@ -7589,16 +7641,16 @@ Found cached level file line for 'modloader\prioridade 80\enterable hidden inter
 Parsing cached readme data for "modloader\prioridade 80\new algorithm for trains\loader.txt"
 Found cached level file line for 'modloader\prioridade 80\new algorithm for trains\loader.txt':4
 Found cached level file line for 'modloader\prioridade 80\new algorithm for trains\loader.txt':5
-Parsing readme file "modloader\prioridade 80\weather forecast\tutorial.txt"
-Parsing readme file "modloader\prioridade 90\attach vehicle\tecla 2.txt"
-Parsing readme file "modloader\prioridade 90\collectibles on radar\desativa com f12.txt"
-Parsing readme file "modloader\prioridade 90\horn call homies\cleo\horn call homies.txt"
-Parsing readme file "modloader\prioridade 90\parked car maker\leiame.txt"
+Parsing cached readme data for "modloader\prioridade 80\weather forecast\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 90\attach vehicle\tecla 2.txt"
+Parsing cached readme data for "modloader\prioridade 90\collectibles on radar\desativa com f12.txt"
+Parsing cached readme data for "modloader\prioridade 90\horn call homies\cleo\horn call homies.txt"
+Parsing cached readme data for "modloader\prioridade 90\parked car maker\leiame.txt"
 Parsing cached readme data for "modloader\prioridade 90\parking save garages\data\loader.txt"
 Found cached level file line for 'modloader\prioridade 90\parking save garages\data\loader.txt':1
 Found cached level file line for 'modloader\prioridade 90\parking save garages\data\loader.txt':2
 Found cached level file line for 'modloader\prioridade 90\parking save garages\data\loader.txt':3
-Parsing readme file "modloader\prioridade 90\parking save garages\leiame.txt"
+Parsing cached readme data for "modloader\prioridade 90\parking save garages\leiame.txt"
 Parsing cached readme data for "modloader\prioridade 90\sf tags\loader.txt"
 Found cached level file line for 'modloader\prioridade 90\sf tags\loader.txt':1
 Parsing cached readme data for "modloader\proper fixes\additional models\loader.txt"
@@ -7611,51 +7663,51 @@ Found cached level file line for 'modloader\proper fixes\lod vegetation\loader.t
 Found cached level file line for 'modloader\proper fixes\lod vegetation\loader.txt':5
 Parsing cached readme data for "modloader\proper fixes\sa optimized map\gta.dat.txt"
 Found cached level file line for 'modloader\proper fixes\sa optimized map\gta.dat.txt':10
-Parsing readme file "modloader\prioridade 100\0x858624\aperte b + page down para diminuir.txt"
-Parsing readme file "modloader\prioridade 100\0x858624\aperte b + page up para aumentar.txt"
-Parsing readme file "modloader\prioridade 100\boxrain\aperte w+b.txt"
-Parsing readme file "modloader\prioridade 100\carjump\aperta shift.txt"
-Parsing readme file "modloader\prioridade 100\change4colors\digite color.txt"
-Parsing readme file "modloader\prioridade 100\clipboard cheat\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\0x858624\aperte b + page down para diminuir.txt"
+Parsing cached readme data for "modloader\prioridade 100\0x858624\aperte b + page up para aumentar.txt"
+Parsing cached readme data for "modloader\prioridade 100\boxrain\aperte w+b.txt"
+Parsing cached readme data for "modloader\prioridade 100\carjump\aperta shift.txt"
+Parsing cached readme data for "modloader\prioridade 100\change4colors\digite color.txt"
+Parsing cached readme data for "modloader\prioridade 100\clipboard cheat\tutorial.txt"
 Parsing cached readme data for "modloader\prioridade 100\custom vinewood text\loader.txt"
 Found cached level file line for 'modloader\prioridade 100\custom vinewood text\loader.txt':3
 Found cached level file line for 'modloader\prioridade 100\custom vinewood text\loader.txt':4
-Parsing readme file "modloader\prioridade 100\dance with f5\cleo\dance.txt"
+Parsing cached readme data for "modloader\prioridade 100\dance with f5\cleo\dance.txt"
 Parsing cached readme data for "modloader\prioridade 100\graffiti anywhere\graffitis\loader.txt"
 Found cached level file line for 'modloader\prioridade 100\graffiti anywhere\graffitis\loader.txt':5
 Found cached level file line for 'modloader\prioridade 100\graffiti anywhere\graffitis\loader.txt':6
-Parsing readme file "modloader\prioridade 100\graffiti anywhere\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\insanity\readme - en.txt"
-Parsing readme file "modloader\prioridade 100\insanity\readme - pt.txt"
-Parsing readme file "modloader\prioridade 100\insanity\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\kamehameha\aperta tab + h.txt"
-Parsing readme file "modloader\prioridade 100\myths maker\digite myths para abrir o menu de configuração.txt"
-Parsing readme file "modloader\prioridade 100\name weapon spawner\aperta o +  i.txt"
-Parsing readme file "modloader\prioridade 100\name weapon spawner\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\passenger\aperta g.txt"
-Parsing readme file "modloader\prioridade 100\passenger\cleo\passenger.txt"
-Parsing readme file "modloader\prioridade 100\passenger\passenger readme.txt"
-Parsing readme file "modloader\prioridade 100\pedrain\aperta alt + 1.txt"
-Parsing readme file "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1.txt"
-Parsing readme file "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1[0].txt"
-Parsing readme file "modloader\prioridade 100\portal gun\digite portal.txt"
-Parsing readme file "modloader\prioridade 100\rzl-trainer\how to use.txt"
-Parsing readme file "modloader\prioridade 100\selfie mod\comandos.txt"
-Parsing readme file "modloader\prioridade 100\shoot stuff\digite shootstuff tecla m muda pra ped.txt"
-Parsing readme file "modloader\prioridade 100\skin selector (n)\aperta tab + e + bolinha do mouse.txt"
+Parsing cached readme data for "modloader\prioridade 100\graffiti anywhere\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\insanity\readme - en.txt"
+Parsing cached readme data for "modloader\prioridade 100\insanity\readme - pt.txt"
+Parsing cached readme data for "modloader\prioridade 100\insanity\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\kamehameha\aperta tab + h.txt"
+Parsing cached readme data for "modloader\prioridade 100\myths maker\digite myths para abrir o menu de configuração.txt"
+Parsing cached readme data for "modloader\prioridade 100\name weapon spawner\aperta o +  i.txt"
+Parsing cached readme data for "modloader\prioridade 100\name weapon spawner\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\passenger\aperta g.txt"
+Parsing cached readme data for "modloader\prioridade 100\passenger\cleo\passenger.txt"
+Parsing cached readme data for "modloader\prioridade 100\passenger\passenger readme.txt"
+Parsing cached readme data for "modloader\prioridade 100\pedrain\aperta alt + 1.txt"
+Parsing cached readme data for "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1.txt"
+Parsing cached readme data for "modloader\prioridade 100\pedrain\cleo\spawn de pedestres by igreen.dll alt+1[0].txt"
+Parsing cached readme data for "modloader\prioridade 100\portal gun\digite portal.txt"
+Parsing cached readme data for "modloader\prioridade 100\rzl-trainer\how to use.txt"
+Parsing cached readme data for "modloader\prioridade 100\selfie mod\comandos.txt"
+Parsing cached readme data for "modloader\prioridade 100\shoot stuff\digite shootstuff tecla m muda pra ped.txt"
+Parsing cached readme data for "modloader\prioridade 100\skin selector (n)\aperta tab + e + bolinha do mouse.txt"
 Parsing readme file "modloader\prioridade 100\skin selector (n)\cleo\skin_n.txt"
 Ignoring text file "modloader\prioridade 100\skin selector (n)\cleo\skin_n.txt" because it's too big.
 Parsing readme file "modloader\prioridade 100\smooth camera\cleo\smoothcamerawork_ver05.txt"
 Ignoring text file "modloader\prioridade 100\smooth camera\cleo\smoothcamerawork_ver05.txt" because it's too big.
-Parsing readme file "modloader\prioridade 100\smooth camera\smcm e controles.txt"
-Parsing readme file "modloader\prioridade 100\spawn cj\digite spawncj.txt"
-Parsing readme file "modloader\prioridade 100\spikes mod\aperta k em carro de policia.txt"
-Parsing readme file "modloader\prioridade 100\spikes mod\digita spikes para usar em qualquer carro.txt"
-Parsing readme file "modloader\prioridade 100\spikes mod\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\vomitar\tutorial.txt"
-Parsing readme file "modloader\prioridade 100\waldrivebyleo\aperta 4 para ir pro teto.txt"
-Parsing readme file "modloader\prioridade 100\waldrivebyleo\aperta w + 1 no carro.txt"
-Parsing readme file "modloader\prioridade 100\walkstyle\digite walkstyle.txt"
+Parsing cached readme data for "modloader\prioridade 100\smooth camera\smcm e controles.txt"
+Parsing cached readme data for "modloader\prioridade 100\spawn cj\digite spawncj.txt"
+Parsing cached readme data for "modloader\prioridade 100\spikes mod\aperta k em carro de policia.txt"
+Parsing cached readme data for "modloader\prioridade 100\spikes mod\digita spikes para usar em qualquer carro.txt"
+Parsing cached readme data for "modloader\prioridade 100\spikes mod\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\vomitar\tutorial.txt"
+Parsing cached readme data for "modloader\prioridade 100\waldrivebyleo\aperta 4 para ir pro teto.txt"
+Parsing cached readme data for "modloader\prioridade 100\waldrivebyleo\aperta w + 1 no carro.txt"
+Parsing cached readme data for "modloader\prioridade 100\walkstyle\digite walkstyle.txt"
 Done updating gta3.std.data state.
 Starting up filesystem watcher...
 
@@ -7696,6 +7748,7 @@ Loading default level file "DATA\DEFAULT.DAT"
 Preloading level file "DATA\GTA.DAT"
 Loading custom level file "C:\Users\felip\AppData\Local\modloader\gta3.std.data\0\gta.dat"
 Loading preloaded level entries...
+The file "modloader\urbanize\map\urbanize - fences.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - fences.ipl" to "data\maps\urbanize - fences.ipl"
 The file "modloader\tuning mod parts\pack apocalipse 1\pack apocalipse 1.ide" does not seem to be in the right virtual path, moving from "pack apocalipse 1\pack apocalipse 1.ide" to "modloader\tuning mod parts\pack apocalipse 1\pack apocalipse 1.ide"
 The file "modloader\proper fixes\additional models\properfixes.ipl" does not seem to be in the right virtual path, moving from "additional models\properfixes.ipl" to "data\maps\properfixes.ipl"
 The file "modloader\prioridade 5\nextgen effects\map\effects.ide" does not seem to be in the right virtual path, moving from "nextgen effects\map\effects.ide" to "data\maps\leveldes\effects.ide"
@@ -7705,10 +7758,24 @@ The file "modloader\tuning mod parts\pack apocalipse 2\pack apocalipse 2.ide" do
 The file "modloader\tuning mod parts\gta v rat rod engine\vrat_engine.ide" does not seem to be in the right virtual path, moving from "gta v rat rod engine\vrat_engine.ide" to "modloader\tuning mod parts\gta v rat rod engine\vrat_engine.ide"
 The file "modloader\proper fixes\lod vegetation\lodvegetation.ide" does not seem to be in the right virtual path, moving from "lod vegetation\lodvegetation.ide" to "data\maps\lodvegetation.ide"
 The file "modloader\prioridade 20\ls lit church\churchlite.ide" does not seem to be in the right virtual path, moving from "ls lit church\churchlite.ide" to "data\maps\churchlite.ide"
+The file "modloader\urbanize\map\urbanize - lights.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - lights.ipl" to "data\maps\urbanize - lights.ipl"
 The file "modloader\prioridade 20\ls lit church\churchlite.ipl" does not seem to be in the right virtual path, moving from "ls lit church\churchlite.ipl" to "data\maps\churchlite.ipl"
 The file "modloader\prioridade 90\parking save garages\data\maps\grgx_park\grgx_park.ide" does not seem to be in the right virtual path, moving from "data\maps\grgx_park\grgx_park.ide" to "data\maps\grgx_park.ide"
 The file "modloader\prioridade 40\animal statues remastered\asremastered.ide" does not seem to be in the right virtual path, moving from "animal statues remastered\asremastered.ide" to "data\maps\asremastered.ide"
 The file "modloader\rosa project evolved\rosa project evolved -  exterior\files\txdp.ide" does not seem to be in the right virtual path, moving from "rosa project evolved -  exterior\files\txdp.ide" to "data\maps\txdp.ide"
+The file "modloader\urbanize\map\urbanize - airconds.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - airconds.ipl" to "data\maps\urbanize - airconds.ipl"
+The file "modloader\urbanize\map\urbanize - benches.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - benches.ipl" to "data\maps\urbanize - benches.ipl"
+The file "modloader\prioridade 80\breakable vending machines\breakable vending machines.ide" does not seem to be in the right virtual path, moving from "breakable vending machines\breakable vending machines.ide" to "data\maps\breakable vending machines.ide"
+The file "modloader\proper fixes\additional models\properfixes.ide" does not seem to be in the right virtual path, moving from "additional models\properfixes.ide" to "data\maps\properfixes.ide"
+The file "modloader\urbanize\map\urbanize - bins.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - bins.ipl" to "data\maps\urbanize - bins.ipl"
+The file "modloader\urbanize\map\urbanize - boxes.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - boxes.ipl" to "data\maps\urbanize - boxes.ipl"
+The file "modloader\urbanize\map\urbanize - street side.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - street side.ipl" to "data\maps\urbanize - street side.ipl"
+The file "modloader\urbanize\map\urbanize - chairs.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - chairs.ipl" to "data\maps\urbanize - chairs.ipl"
+The file "modloader\urbanize\map\urbanize - garbage.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - garbage.ipl" to "data\maps\urbanize - garbage.ipl"
+The file "modloader\urbanize\map\urbanize - mails.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - mails.ipl" to "data\maps\urbanize - mails.ipl"
+The file "modloader\urbanize\map\urbanize - roofs.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - roofs.ipl" to "data\maps\urbanize - roofs.ipl"
+The file "modloader\urbanize\map\urbanize - vases.ipl" does not seem to be in the right virtual path, moving from "map\urbanize - vases.ipl" to "data\maps\urbanize - vases.ipl"
+The file "modloader\urbanize\map\urbanize.ipl" does not seem to be in the right virtual path, moving from "map\urbanize.ipl" to "data\maps\urbanize.ipl"
 The file "modloader\prioridade 60\fix\food eating fix\food models\food eating fix.ide" does not seem to be in the right virtual path, moving from "fix\food eating fix\food models\food eating fix.ide" to "data\maps\food eating fix.ide"
 The file "modloader\prioridade 60\mapas\san andreas bus station\maps\vegas\vegass.ipl" does not seem to be in the right virtual path, moving from "mapas\san andreas bus station\maps\vegas\vegass.ipl" to "data\maps\vegas\vegass.ipl"
 The file "modloader\prioridade 60\mapas\dam extended\dam with alot addons with waterfall\countryn.ipl" does not seem to be in the right virtual path, moving from "mapas\dam extended\dam with alot addons with waterfall\countryn.ipl" to "data\maps\country\countryn.ipl"
@@ -7723,8 +7790,6 @@ The file "modloader\prioridade 60\mapas\san andreas bus station\maps\vegas\vegas
 The file "modloader\prioridade 80\new algorithm for trains\tllgs.ide" does not seem to be in the right virtual path, moving from "new algorithm for trains\tllgs.ide" to "modloader\new algorithm for trains\tllgs.ide"
 The file "modloader\prioridade 90\parking save garages\data\maps\grgx_park\grgx_park.ipl" does not seem to be in the right virtual path, moving from "data\maps\grgx_park\grgx_park.ipl" to "data\maps\grgx_park.ipl"
 The file "modloader\prioridade 70\male01 nervoso\peds.ide" does not seem to be in the right virtual path, moving from "male01 nervoso\peds.ide" to "data\peds.ide"
-The file "modloader\prioridade 80\breakable vending machines\breakable vending machines.ide" does not seem to be in the right virtual path, moving from "breakable vending machines\breakable vending machines.ide" to "data\maps\breakable vending machines.ide"
-The file "modloader\proper fixes\additional models\properfixes.ide" does not seem to be in the right virtual path, moving from "additional models\properfixes.ide" to "data\maps\properfixes.ide"
 The file "modloader\prioridade 80\enterable hidden interiors\map files replace\leveldes\levelmap.ide" does not seem to be in the right virtual path, moving from "enterable hidden interiors\map files replace\leveldes\levelmap.ide" to "data\maps\leveldes\levelmap.ide"
 The file "modloader\prioridade 90\sf tags\sf_tags.ipl" does not seem to be in the right virtual path, moving from "sf tags\sf_tags.ipl" to "data\maps\sf_tags.ipl"
 The file "modloader\proper fixes\map\data\maps\vegas\vegaxref.ipl" is not a registered entry in the level file, ignoring.
@@ -8428,9 +8493,10 @@ Importing model file for index 20728 at "modloader\prioridade 40\nextgen remaste
 Importing model file for index 1559 at "modloader\rosa project evolved\rosa project evolved -  exterior\files\rosa-dff\gta3\diamond_3.dff"
 Importing model file for index 473 at "modloader\prioridade 60\veículos\barcos\jaguars_raft\dinghy.dff"
 Importing model file for index 20144 at "modloader\prioridade 60\veículos\barcos\jaguars_raft\dinghy.txd"
+Importing model file for index 25742 at "modloader\urbanize\gta3img\djjr_urbanize.ifp"
 Importing model file for index 593 at "modloader\prioridade 60\veículos\avioes\aviao papel\dodo.dff"
 Importing model file for index 20264 at "modloader\prioridade 60\veículos\avioes\aviao papel\dodo.txd"
-Importing model file for index 25742 at "modloader\prioridade 100\myths maker\cleo\animals\anim1\dog.ifp"
+Importing model file for index 25743 at "modloader\prioridade 100\myths maker\cleo\animals\anim1\dog.ifp"
 Importing model file for index 1607 at "modloader\prioridade 10\hd underwater\dolphin.dff"
 Importing model file for index 20751 at "modloader\prioridade 10\hd underwater\dolphin.txd"
 Importing model file for index 5732 at "modloader\prioridade 10\mesh smoothed pack\donuts\donut01_lawn.dff"
@@ -8702,7 +8768,7 @@ Importing model file for index 20055 at "modloader\prioridade 40\nextgen remaste
 Importing model file for index 474 at "modloader\prioridade 70\skins\funkeiros\hermes.dff"
 Importing model file for index 20145 at "modloader\prioridade 70\skins\funkeiros\hermes.txd"
 Importing model file for index 20310 at "modloader\prioridade 70\skins\correio\hmogar.txd"
-Importing model file for index 25743 at "modloader\prioridade 100\myths maker\cleo\animals\anim7\horse_animation.ifp"
+Importing model file for index 25744 at "modloader\prioridade 100\myths maker\cleo\animals\anim7\horse_animation.ifp"
 Importing model file for index 23000 at "modloader\prioridade 40\nextgen remaster weapons\gameplay  pickups\horse_shoe_pick.txd"
 Importing model file for index 588 at "modloader\prioridade 60\veículos\veh br\hotdog.dff"
 Importing model file for index 20259 at "modloader\prioridade 60\veículos\veh br\hotdog.txd"
@@ -8842,7 +8908,7 @@ Importing model file for index 1013 at "modloader\prioridade 40\carros originais
 Importing model file for index 1024 at "modloader\prioridade 40\carros originais imvehft\models\gta3img\dffs\lgt_b_sspt.dff"
 Importing model file for index 403 at "modloader\prioridade 40\carros originais imvehft\models\gta3img\dffs\linerun.dff"
 Importing model file for index 20074 at "modloader\prioridade 40\carros originais imvehft\models\gta3img\txds\linerun.txd"
-Importing model file for index 25744 at "modloader\prioridade 100\myths maker\cleo\animals\anim18\lion.ifp"
+Importing model file for index 25745 at "modloader\prioridade 100\myths maker\cleo\animals\anim18\lion.ifp"
 Importing model file for index 17944 at "modloader\prioridade 10\wind project\lngbeblok2_lae.dff"
 Importing model file for index 769 at "modloader\prioridade 10\wind project\vegetation\locust_hi.dff"
 Importing model file for index 888 at "modloader\prioridade 10\wind project\vegetation\locust_po.dff"
@@ -9100,7 +9166,7 @@ Importing model file for index 23188 at "modloader\prioridade 70\skins\antigas\p
 Importing model file for index 22853 at "modloader\prioridade 70\mapa\interiores\academia tozi\interior\punchbag2.txd"
 Importing model file for index 471 at "modloader\prioridade 60\veículos\carros\quad\quad.dff"
 Importing model file for index 20142 at "modloader\prioridade 60\veículos\carros\quad\quad.txd"
-Importing model file for index 25745 at "modloader\prioridade 100\myths maker\cleo\animals\anim19\rabit.ifp"
+Importing model file for index 25746 at "modloader\prioridade 100\myths maker\cleo\animals\anim19\rabit.ifp"
 Importing model file for index 563 at "modloader\prioridade 60\veículos\veh br\raindanc.dff"
 Importing model file for index 20234 at "modloader\prioridade 60\veículos\veh br\raindanc.txd"
 Importing model file for index 489 at "modloader\prioridade 60\veículos\carros\rancher\rancher.dff"
@@ -9561,7 +9627,7 @@ Importing model file for index 42 at "modloader\prioridade 60\restored unused pe
 Importing model file for index 23071 at "modloader\prioridade 60\restored unused peds\wmytx2.txd"
 Importing model file for index 252 at "modloader\prioridade 70\skins\antigas\wmyva2.dff"
 Importing model file for index 20520 at "modloader\prioridade 70\skins\antigas\wmyva2.txd"
-Importing model file for index 25746 at "modloader\prioridade 100\myths maker\cleo\animals\anim13\wolf.ifp"
+Importing model file for index 25747 at "modloader\prioridade 100\myths maker\cleo\animals\anim13\wolf.ifp"
 Importing model file for index 20774 at "modloader\prioridade 70\mapa\cidade\posto ipiranga\wshxrefpump.txd"
 Importing model file for index 23772 at "modloader\ginputsa\models\x360btns.txd"
 Importing model file for index 456 at "modloader\prioridade 60\veículos\veh br\yankee.dff"
@@ -9633,6 +9699,19 @@ Loading custom scene "modloader\prioridade 60\mapas\generic mod\data\maps\generi
 Loading custom scene "modloader\prioridade 5\nextgen effects\map\effects.ipl"
 Loading custom scene "modloader\prioridade 20\ls lit church\churchlite.ipl"
 Loading custom scene "modloader\prioridade 20\rusty brown's ring donuts overhaul\data\maps\fddonut.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - bins.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - boxes.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - benches.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - chairs.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - roofs.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - airconds.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - mails.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - vases.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - fences.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - garbage.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - lights.ipl"
+Loading custom scene "modloader\urbanize\map\urbanize - street side.ipl"
 Loading custom scene "modloader\prioridade 80\enterable hidden interiors\data\maps\ehi\ehi.ipl"
 Loading custom scene "modloader\prioridade 90\parking save garages\data\maps\grgx_park\grgx_park.ipl"
 Loading custom scene "modloader\prioridade 90\sf tags\sf_tags.ipl"
@@ -9648,8 +9727,8 @@ Loading default ped relationship data "DATA\PED.DAT"
 Loading custom weapon data "modloader\rosa project evolved\rosa project evolved -  exterior\files\data\weapon.dat"
 Loading custom ped groups "modloader\prioridade 60\restored unused peds\data\pedgrp.dat"
 Loading default car groups "CARGRP.DAT"
-Starting injected cleo script search 05329380 for version '0'...
-Injecting extra scripts into search 05329380...
+Starting injected cleo script search 0600D4C0 for version '0'...
+Injecting extra scripts into search 0600D4C0...
 Injecting cleo script "modloader\prioridade 5\car speed dependant fov\cleo\sa.carspeeddependantfov.cs"
 Injecting cleo script "modloader\prioridade 5\nextgen effects\cleo\effects mod - missions fx.cs"
 Injecting cleo script "modloader\prioridade 20\rusty brown's ring donuts overhaul\cleo\rbrd.cs"
@@ -9745,11 +9824,11 @@ Injecting cleo script "modloader\prioridade 100\vomitar\cleo\sitsmkdrkgang.cs"
 Injecting cleo script "modloader\prioridade 100\vomitar\cleo\sitsmokedrink.cs"
 Injecting cleo script "modloader\prioridade 100\waldrivebyleo\cleo\waldrivebyleo.cs"
 Injecting cleo script "modloader\prioridade 100\walkstyle\cleo\walkstyle.cs"
-Finishing injected cleo script search 05329380...
-Starting injected cleo script search 05328F40 for version '4'...
-Finishing injected cleo script search 05328F40...
-Starting injected cleo script search 053290C0 for version '3'...
-Finishing injected cleo script search 053290C0...
+Finishing injected cleo script search 0600D4C0...
+Starting injected cleo script search 0600D500 for version '4'...
+Finishing injected cleo script search 0600D500...
+Starting injected cleo script search 0600D0C0 for version '3'...
+Finishing injected cleo script search 0600D0C0...
 Loading default action reaction stats "DATA\AR_STATS.DAT"
 Loading default stat update conditions "DATA\STATDISP.DAT"
 Loading custom shopping data "C:\Users\felip\AppData\Local\modloader\gta3.std.data\0\shopping.dat"
@@ -11433,6 +11512,27 @@ No handler or callme for file "Soundize.ini"
 No handler or callme for file "Soundize.log"
 Found file [0x000002040C98F7E2] "Soundize.txd" with handler "gta3.std.stream"
 No handler or callme for file "SoundizeServer.log"
+
+Scanning files at "modloader\urbanize\"...
+Found file [0x000006041BF8CEBD] "gta3img\djjr_urbanize.ifp" with handler "gta3.std.stream"
+Found file [0xFFFFFFFFFFFFFFFF] "Map\Loader.txt" with handler "<none>"
+Found file [0x0000000D29008D87] "Map\Urbanize - AirConds.ipl" with handler "gta3.std.data"
+Found file [0x0000000D5CBE8104] "Map\Urbanize - Benches.ipl" with handler "gta3.std.data"
+Found file [0x0000000DB8B6D0BE] "Map\Urbanize - Bins.ipl" with handler "gta3.std.data"
+Found file [0x0000000DC2A94D19] "Map\Urbanize - Boxes.ipl" with handler "gta3.std.data"
+Found file [0x0000000DAC7E03CA] "Map\Urbanize - Chairs.ipl" with handler "gta3.std.data"
+Found file [0x0000000D86074BE6] "Map\Urbanize - Fences.ipl" with handler "gta3.std.data"
+Found file [0x0000000D9CF6BC9B] "Map\Urbanize - Garbage.ipl" with handler "gta3.std.data"
+Found file [0x0000000D08A97903] "Map\Urbanize - Lights.ipl" with handler "gta3.std.data"
+Found file [0x0000000DA9228A6E] "Map\Urbanize - Mails.ipl" with handler "gta3.std.data"
+Found file [0x0000000DE524C5E3] "Map\Urbanize - Roofs.ipl" with handler "gta3.std.data"
+Found file [0x0000000D439BEF20] "Map\Urbanize - Street Side.ipl" with handler "gta3.std.data"
+Found file [0x0000000D5E5561DC] "Map\Urbanize - Vases.ipl" with handler "gta3.std.data"
+Found file [0x0000000DF2C99A17] "Map\Urbanize.ipl" with handler "gta3.std.data"
+Found file [0x0000000181D679B1] "Urbanize (Junior_Djjr).asi" with handler "gta3.std.asi"
+No handler or callme for file "Urbanize (lastest version) - MixMods.url"
+No handler or callme for file "Urbanize (lastest version) - Patreon.url"
+No handler or callme for file "Urbanize.log"
 Updating gta3.std.data state...
 Done updating gta3.std.data state.
 Removing imported model file at index 20000
@@ -11452,41 +11552,33 @@ Importing model file for index 300 at "modloader\prioridade 10\proper hd models\
 Removing imported model file at index 301
 Removing imported model file at index 302
 Removing imported model file at index 303
-Importing model file for index 300 at "modloader\rosa project evolved\rosa project evolved - cutscene\files\models\rosa-dff\cutscene\cs9mm.dff"
-Removing imported model file at index 301
-Removing imported model file at index 302
-Removing imported model file at index 303
-Removing imported model file at index 304
-Importing model file for index 305 at "modloader\prioridade 40\nextgen remaster weapons\cutscenes  weapons - items\csmoneystck.dff"
-Importing model file for index 306 at "modloader\prioridade 70\cutscene\cspulaski.dff"
-Removing imported model file at index 307
-Importing model file for index 308 at "modloader\prioridade 20\cutscene characters remastered\cstenpenny.dff"
+Loading default decision maker "m_empty.ped"
 
 
 
 Game version: GTA SA 1.0 US
-Unhandled exception at 0x42480000 in gta_sa.exe: 0xC0000096: Privileged instruction.
+Unhandled exception at 0x42480008 in gta_sa.exe: 0xC0000005: Access violation reading location 0xFFFFFFFF.
     Register dump:
-        EAX: 0x00863C40  EBX: 0x0F6B08C8  ECX: 0x19166EF8  EDX: 0x00000496  
-        EDI: 0x0F6B0970  ESI: 0x19166EF8  EBP: 0x00B9A014  EIP: 0x42480000  
-        ESP: 0x0177FA7C  EFL: 0x00210202  CS: 0x00000023   SS: 0x0000002B   
+        EAX: 0x00863C40  EBX: 0x19FDC8C8  ECX: 0x1A0640F9  EDX: 0x00009696  
+        EDI: 0x19FDC970  ESI: 0x1A06FEF8  EBP: 0x00B9A014  EIP: 0x42480008  
+        ESP: 0x0177FA7C  EFL: 0x00210282  CS: 0x00000023   SS: 0x0000002B   
         GS: 0x0000002B   FS: 0x00000053   ES: 0x0000002B   DS: 0x0000002B   
         
     Stack dump:
         0x0177FA7C:  00564073 00000000 00B7D0B8 76C1F360 00000000 00000000
-        0x0177FA94:  0053C9C1 00000001 00000001 00748E70 00000001 01AB8C98
-        0x0177FAAC:  0177FB54 FFFFFFFF 000A5000 42206B85 01F204B0 00000008
+        0x0177FA94:  0053C9C1 00000001 00000001 00748E70 00000001 01848C98
+        0x0177FAAC:  0177FB54 FFFFFFFF 000A5000 4268D446 01DD04B0 00000008
         0x0177FAC4:  00000100 00000008 00000102 44700000 44070000 00000000
         0x0177FADC:  00000000 00000780 00000438 00000000 00002710 00000000
-        0x0177FAF4:  00000012 00000000 00000000 02EFDFAC 000003C0 0000021C
+        0x0177FAF4:  00000012 00000000 00000000 0312FCB0 000003C0 0000021C
         0x0177FB0C:  0000002C 00000000 00000001 FFFFFFFF FFFFFFFF FFFFFFFF
         0x0177FB24:  FFFFFFFF 00000000 00000000 00000780 00000438 5109E0D4
-        0x0177FB3C:  00400000 00000000 01AB8C98 00000001 043F427C 043F4278
+        0x0177FB3C:  00400000 00000000 01848C98 00000001 04384C2C 04384C28
         0x0177FB54:  0177FB94 5109C7A8 0177FBB4 0177FBB8 0177FBBC 0177FBC0
         base: 0x01580000   top: 0x0177FA7C   bottom: 0x01780000
         
     Backtrace (may be wrong):
-        =>0x42480000 in unknown (+0x42480000) (0x0177FA78) 
+        =>0x42480008 in unknown (+0x42480008) (0x0177FA78) 
           0x00564073 in gta_sa.exe (+0x164073) (0x0177FA90) 
           0x0053C9C1 in gta_sa.exe (+0x13c9c1) 
         
