@@ -1,0 +1,4 @@
+PT: Carregado pelo modloader. Este arquivo .ide só é usado para adicionar texturas extras num .txd sem a necessidade de substituir o arquivo. Não usado para versão mobile.
+EN: Loaded by modloader. This .ide file is only used to add extra textures to a .txd without having to replace the file. Not used for mobile version.
+
+IDE DATA\MAPS\Proper HD Models.ide

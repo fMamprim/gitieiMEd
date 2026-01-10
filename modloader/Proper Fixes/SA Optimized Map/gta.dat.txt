@@ -1,0 +1,10 @@
+SA Optimized Map by Jéssica Natália & Junior_Djjr - MixMods.com.br
+https://www.mixmods.com.br/2021/09/sa-optimized-map/
+
+EN: KEEP THIS FILE INSIDE MODLOADER. If you can't use ModLoader, put this line into your data\gta.dat.
+    You are free to include this mod in your projects as long as you leave clear credits with a link to this post.
+
+PT: DEIXE ESTE ARQUIVO DENTRO DO MODLOADER. Se você não pode usar ModLoader, coloque esta linha no seu data\gta.dat.
+    Você é livre para incluir este mod em seus projetos, desde que deixe créditos claros com um link para esta postagem.
+
+IDE DATA\MAPS\SA Optimized Map.ide

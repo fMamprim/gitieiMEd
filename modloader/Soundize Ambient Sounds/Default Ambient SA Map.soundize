@@ -1,0 +1,481 @@
+version 1
+
+ambient
+# Type      Bank        Event                           Position                 Radius  Volume  VolInCond   Fade    MinHour MaxHour Flags   
+
+# LS Port Metal Roof (24)
+Box         Ambient     Rain_Metal_1                    2015.35 -1971.60 22.90   140.0   1.0     0.0         3.0     -1      -1      8
+    2015.35 -1971.60 22.90 69.63 8.92 2.41 0.0
+
+# Blackfield Stadium LV
+Point       Ambient     Stadium_Outside                 1096.70 1522.00 -46.80   400.0   0.7     0.5         3.0     -1      -1      1
+
+# Fort Carson Oil Refinery
+Box         Ambient     Industrial_Chimneys_1           230.90 1418.90 12.00     400.0   1.0     0.3         3.0     -1      -1      1
+    219.90 1413.60 19.10 76.66 128.78 20.82 0.0
+
+# LV Strip Club North
+Box         Ambient     Stripclub_Outside               2504.90 2119.80 10.78    180.0   0.7     0.9         3.0     -1      -1      1
+    2504.61 2119.60 11.91 18.31 9.62 5.04 0.0
+
+# LV Fuel Depot Chimneys
+Box         Ambient     Industrial_Chimneys_1           2661.80 2749.10 4.80     400.0   1.0     0.3         3.0     -1      -1      1
+    2667.80 2763.60 16.90 81.95 152.55 15.81 0.0
+
+# Blackfield Ammunation
+Box         Ambient     Ammunation_Outside              772.07 1875.02 7.36      70.0    0.6     0.5         3.0     -1      -1      0
+    773.29 1873.92 5.11 6.35 14.06 3.54 0.0
+
+# LS Port Metal Roof (46)
+Box         Ambient     Rain_Metal_1                    2788.05 -2417.23 20.01   100.0   1.0     0.0         3.0     -1      -1      8
+    2788.05 -2417.23 20.01 26.36 22.79 2.51 0.0
+
+# LV Ammunation South
+Box         Ambient     Ammunation_Outside              2175.19 944.90 13.31     125.1   0.6     0.5         3.0     -1      -1      0
+    2176.37 943.58 11.23 34.09 29.08 3.54 0.0
+
+# Gay Club
+Box         Ambient     Club_Beats_1                    -2544.20 177.80 10.00    200.0   0.5     0.5         3.0     -1      -1      0
+    -2544.80 185.82 5.88 14.96 30.59 6.04 0.0
+
+# Fort Carson Oil Field Pipes North
+Volumetric  Ambient     Pipe_Liquid_Big_1               485.60 1430.80 13.60     500.0   0.7     0.3         3.0     -1      -1      0
+    Box 638.50 1397.10 13.10 1.40 113.90 1.25 0.0
+    Box 638.45 1468.65 11.70 1.45 30.86 1.25 0.0
+    Box 597.19 1485.10 10.30 81.62 1.21 1.52 0.0
+    Box 529.96 1485.10 7.41 56.07 1.21 2.33 0.0
+    Box 499.92 1516.98 5.98 1.64 67.07 2.13 0.0
+    Box 487.77 1552.06 6.84 21.76 1.58 2.50 0.0
+    Box 467.62 1551.85 9.50 18.99 1.34 3.86 0.0
+    Box 450.50 1551.61 13.13 18.99 1.64 3.86 0.0
+    Box 427.18 1551.18 15.50 27.89 1.47 2.51 0.0
+    Box 412.48 1537.73 15.50 1.15 24.36 2.66 0.0
+    Box 412.48 1513.43 13.88 1.15 24.36 3.34 0.0
+    Box 412.86 1488.83 11.78 1.15 27.74 3.34 0.0
+    Box 413.31 1455.82 9.00 1.69 43.83 2.97 0.0
+    Box 406.85 1433.36 10.45 3.43 1.85 7.44 0.0
+    Box 339.40 1433.38 14.51 128.36 1.63 1.58 0.0
+    end
+
+# Palomino Ammunation
+Box         Ambient     Ammunation_Outside              2329.60 64.00 26.75      70.0    0.6     0.5         3.0     -1      -1      0
+    2331.75 63.15 26.62 4.44 9.94 4.11 0.0
+
+# LS Port Chimneys 3
+Box         Ambient     Industrial_Chimneys_1           2477.60 -2100.30 17.85   300.0   1.0     0.3         3.0     -1      -1      1
+    2493.90 -2105.00 18.05 66.66 70.91 11.41 0.0
+
+# Blackfield Strip Club
+Box         Ambient     Stripclub_Outside               697.33 1971.82 6.68      200.0   0.6     0.9         3.0     -1      -1      1
+    697.96 1971.76 5.67 23.96 7.80 4.90 0.0
+
+# LS Port Metal Roof (45)
+Box         Ambient     Rain_Metal_1                    2415.52 -2468.49 20.01   100.0   1.0     0.0         3.0     -1      -1      8
+    2415.52 -2468.49 20.01 23.45 28.07 2.51 45.0
+
+# LS Port Metal Roof (21)
+Box         Ambient     Rain_Metal_1                    2148.50 -2261.60 24.91   170.0   1.0     0.0         3.0     -1      -1      8
+    2148.50 -2261.60 24.91 32.40 60.95 2.67 45.0
+
+# LS Port Chimneys 2
+Box         Ambient     Industrial_Chimneys_1           2659.50 -2100.30 17.85   300.0   1.0     0.3         3.0     -1      -1      1
+    2660.50 -2095.90 18.05 66.49 56.62 11.41 0.0
+
+# Blueberry Ammunation
+Box         Ambient     Ammunation_Outside              250.04 -175.22 3.04      100.0   0.6     0.5         3.0     -1      -1      0
+    249.53 -176.50 2.69 13.71 20.99 5.19 0.0
+
+# Fort Carson Oil Field Pipes South
+Volumetric  Ambient     Pipe_Liquid_Big_1               424.10 1377.40 13.60     500.0   0.7     0.3         3.0     -1      -1      0
+    Box 345.04 1313.54 13.57 1.40 22.52 1.25 0.0
+    Box 378.14 1325.25 13.86 66.56 1.21 1.25 0.0
+    Box 484.08 1324.96 11.11 94.45 1.21 1.25 0.0
+    Box 548.66 1325.28 11.86 33.06 1.21 1.25 0.0
+    Box 566.32 1341.51 12.22 1.83 31.36 1.25 0.0
+    Box 566.83 1394.72 14.52 1.50 35.11 1.25 0.0
+    Box 566.72 1419.22 12.98 1.36 15.83 1.25 0.0
+    Box 551.36 1428.39 11.04 28.65 1.21 1.30 0.0
+    Box 520.24 1428.39 8.89 35.38 1.21 1.30 0.0
+    Box 476.90 1428.30 7.22 51.14 1.21 1.25 0.0
+    Box 419.52 1428.05 7.53 26.63 1.21 1.25 0.0
+    Box 406.96 1428.16 11.05 1.28 1.21 6.89 0.0
+    Box 339.23 1428.16 14.40 134.41 1.21 1.15 0.0
+    end
+
+# LS Port 3
+Box         Ambient     Industrial_1                    2296.60 -2312.10 12.55   500.0   0.8     0.3         3.0     -1      -1      1
+    2298.50 -2332.20 18.05 40.09 220.21 11.41 45.0
+
+# Beer Factory
+Volumetric  Ambient     Industrial_Factory_1            -94.04 -256.50 2.31      350.0   1.0     0.5         5.0     6       21      1
+    Box -130.20 -274.42 14.40 48.46 81.64 30.40 0.0
+    Box -69.81 -251.30 14.40 81.64 36.00 35.16 0.0
+    Box -91.73 -225.72 20.11 31.71 23.86 40.00 0.0
+    end
+
+# LV Ammunation North
+Box         Ambient     Ammunation_Outside              2553.23 2082.69 12.14    110.0   0.6     0.5         3.0     -1      -1      0
+    2554.41 2082.60 11.09 29.97 31.50 3.54 0.0
+
+# LS Port Metal Roof (20)
+Box         Ambient     Rain_Metal_1                    2049.60 -2082.90 25.32   200.0   1.0     0.0         3.0     -1      -1      8
+    2049.60 -2082.90 25.32 81.72 34.92 2.67 0.0
+
+# LS Ammunation Big
+Box         Ambient     Ammunation_Outside              1378.70 -1284.20 18.20   100.0   0.6     0.5         3.0     -1      -1      0
+    1378.06 -1284.50 15.27 21.49 34.30 9.07 0.0
+
+# LV Club
+Box         Ambient     Club_Beats_1                    2506.89 1233.76 18.58    170.0   0.5     0.5         3.0     -1      -1      0
+    2507.23 1230.96 12.83 16.95 25.81 6.04 0.0
+
+# LS Port Metal Roof (23)
+Box         Ambient     Rain_Metal_1                    2133.01 -1963.77 19.33   130.0   1.0     0.0         3.0     -1      -1      8
+    2133.01 -1963.77 19.33 52.08 8.92 2.41 0.0
+
+# Angel Pine Ammunation
+Box         Ambient     Ammunation_Outside              -2099.28 -2467.82 30.49  70.0    0.6     0.5         3.0     -1      -1      0
+    -2098.06 -2466.84 30.36 13.17 7.97 4.11 39.0
+
+# LS Port Metal Roof (25)
+Box         Ambient     Rain_Metal_1                    1736.56 -1960.58 19.16   150.0   1.0     0.0         3.0     -1      -1      8
+    1736.56 -1960.58 19.16 87.89 8.92 2.41 0.0
+
+# LS Port Chimneys 1
+Box         Ambient     Industrial_Chimneys_1           2586.30 -2206.30 17.85   500.0   1.0     0.3         3.0     -1      -1      1
+    2594.60 -2200.10 18.05 311.63 23.36 11.41 0.0
+
+# LS East Factory
+Volumetric  Ambient     Industrial_Factory_1            2673.70 -1523.70 28.00   300.0   0.6     0.2         5.0     6       21      1
+    Box 2682.60 -1527.80 31.99 56.68 19.94 28.17 0.0
+    Box 2698.92 -1561.29 27.19 23.79 48.38 30.08 0.0
+    Box 2664.36 -1506.20 35.47 20.53 26.78 21.44 0.0
+    Box 2660.60 -1470.50 36.78 12.71 45.31 18.62 0.0
+    end
+
+# Corvin Stadium
+Point       Ambient     Stadium_Outside                 -2052.90 -443.50 -30.30  350.0   0.7     0.5         3.0     -1      -1      1
+
+# El Quebrados Ammunation
+Box         Ambient     Ammunation_Outside              -1508.87 2618.46 55.95   70.0    0.6     0.5         3.0     -1      -1      0
+    -1509.01 2617.87 55.90 4.37 15.64 3.06 0.0
+
+# LS Ammunation
+Box         Ambient     Ammunation_Outside              2394.16 -1988.32 18.20   80.0    0.6     0.5         3.0     -1      -1      0
+    2394.82 -1987.19 14.10 13.71 9.90 5.19 0.0
+
+# LS Port 2
+Box         Ambient     Industrial_1                    2233.40 -2572.20 12.55   400.0   0.8     0.3         3.0     -1      -1      1
+    2244.70 -2575.70 18.05 55.80 166.36 11.41 0.0
+
+# Alhambra Club
+Box         Ambient     Club_Beats_1                    1883.20 -1682.30 21.10   300.0   0.5     0.5         3.0     -1      -1      0
+    1867.60 -1682.60 19.52 61.57 85.52 14.75 0.0
+
+# LS Port Metal Roof (22)
+Box         Ambient     Rain_Metal_1                    2240.80 -2274.56 22.66   170.0   1.0     0.0         3.0     -1      -1      8
+    2240.80 -2274.56 22.66 32.40 60.95 2.67 45.0
+
+# LS Port Metal Roof (47)
+Box         Ambient     Rain_Metal_1                    2788.05 -2455.30 20.01   100.0   1.0     0.0         3.0     -1      -1      8
+    2788.05 -2455.30 20.01 26.36 22.79 2.51 0.0
+
+# SF East Factory
+Volumetric  Ambient     Industrial_Factory_1            -1832.00 60.10 15.45     300.0   0.7     0.2         5.0     6       21      1
+    Box -1846.80 51.30 27.35 35.68 118.49 28.54 0.0
+    end
+
+# SF Ammunation
+Box         Ambient     Ammunation_Outside              -2627.23 203.81 3.96     70.0    0.6     0.5         3.0     -1      -1      0
+    -2626.67 200.32 4.63 16.71 15.64 4.11 0.0
+
+# LV Strip Club South
+Box         Ambient     Stripclub_Outside               2541.51 1033.26 10.19    200.0   0.5     0.7         3.0     -1      -1      1
+    2543.30 1030.43 12.28 4.96 12.81 4.90 0.0
+
+# LS Forum
+Point       Ambient     Stadium_Outside                 2737.72 -1760.27 -46.90  300.0   0.7     0.5         3.0     -1      -1      1
+
+# Red County Chemical Factory
+Volumetric  Ambient     Industrial_Chimneys_1           -1088.30 -658.00 48.80   400.0   1.0     0.3         3.0     -1      -1      1
+    Box -1085.70 -658.30 41.10 68.04 128.78 20.82 0.0
+    Box -1019.09 -707.60 41.10 65.83 38.71 20.82 0.0
+    end
+
+# Fort Carson Ammunation
+Box         Ambient     Ammunation_Outside              -322.11 832.18 15.22     70.0    0.6     0.5         3.0     -1      -1      0
+    -320.72 832.54 14.44 8.75 12.19 3.54 0.0
+
+# LS Strip Club
+Box         Ambient     Stripclub_Outside               2420.08 -1216.15 26.41   180.0   0.6     0.8         3.0     -1      -1      1
+    2421.25 -1217.61 25.55 28.55 5.07 4.90 0.0
+
+# LS Port
+Volumetric  Ambient     Industrial_1                    2581.20 -2485.60 12.55   1000.0  1.3     0.3         3.0     -1      -1      1
+    Box 2737.60 -2444.90 18.05 117.43 196.94 11.41 0.0
+    Box 2598.20 -2403.70 18.05 169.28 101.40 11.41 0.0
+    Box 2491.30 -2435.50 18.05 74.43 152.74 11.41 45.0
+    Box 2464.60 -2557.10 18.05 107.64 189.03 11.41 0.0
+    end
+
+# LS Port Metal Roof (50)
+Box         Ambient     Rain_Metal_1                    2065.50 -2026.28 18.14   100.0   1.0     0.0         3.0     -1      -1      8
+    2065.50 -2026.28 18.14 18.18 50.47 2.51 0.0
+
+# LS Port Metal Roof (51)
+Box         Ambient     Rain_Metal_1                    1934.90 -2123.20 17.32   100.0   1.0     0.0         3.0     -1      -1      8
+    1934.90 -2123.20 17.32 15.40 27.14 1.57 0.0
+
+# Seville Metal Roof
+Box         Ambient     Rain_Metal_1                    2744.07 -1965.12 19.84   140.0   1.0     0.0         3.0     -1      -1      8
+    2744.07 -1965.12 19.84 18.00 30.00 1.50 0.0
+
+# Jefferson Safe House Metal Roof
+Box         Ambient     Rain_Metal_1                    2111.24 -1275.16 29.09   60.0    0.6     0.0         3.0     -1      -1      8
+    2111.24 -1275.16 29.09 10.00 12.00 1.00 180.0
+
+# LS West Metal Roof
+Box         Ambient     Rain_Metal_1                    699.17 -1354.80 27.40    170.0   1.0     0.0         3.0     -1      -1      8
+    699.17 -1354.80 27.40 62.00 48.00 2.50 0.0
+
+# LS North West Metal Roof (1)
+Box         Ambient     Rain_Metal_1                    835.12 -1250.10 26.23    170.0   1.0     0.0         3.0     -1      -1      8
+    835.12 -1250.10 26.23 49.09 30.89 2.50 0.0
+
+# LS North West Metal Roof (2)
+Box         Ambient     Rain_Metal_1                    865.30 -1187.10 28.58    170.0   1.0     0.0         3.0     -1      -1      8
+    865.30 -1187.10 28.58 94.51 30.89 2.50 0.0
+
+# LS North West Metal Roof (3)
+Box         Ambient     Rain_Metal_1                    1121.70 -983.60 51.35    120.0   1.0     0.0         3.0     -1      -1      8
+    1121.70 -983.60 51.35 35.44 16.57 6.43 0.0
+
+# LS Recycling Center Metal Roof
+Box         Ambient     Rain_Metal_1                    2426.75 -1426.11 32.55   120.0   1.2     0.0         3.0     -1      -1      8
+    2426.75 -1426.11 32.55 27.87 15.95 2.96 0.0
+
+end
+
+
+
+
+
+object
+# Model name			Bank        Event                  Type				Offset 			Radius  Volume  VolInCond   Fade    MinHour MaxHour Flags   
+
+indust1las_LAS          Ambient     Tank_Liquid_Big_1      Point    		0.0 0.0 0.0		200.0   0.7     0.3    		3.0     -1     	-1      0
+ref_oiltank01           Ambient     Tank_Liquid_Big_1      Point    		0.0 0.0 0.0		200.0   0.7     0.3    		3.0     -1     	-1      0
+
+des_ufosign             Ambient     Metal_Spin_Rusty       Point    		0.0 0.0 1.0		100.0   1.0     0.3    		3.0     -1     	-1      0
+
+nt_windmill             Ambient     Metal_Spin_Squeak      Point    		0.0 0.0 5.0		200.0   1.0     0.3    		3.0     -1     	-1      0
+
+nt_aircon1_01           Ambient     Air_Cond_1        	   Point    		0.0 0.0 0.0		30.0   0.7     0.3    		3.0     -1     	-1      0
+nt_aircon1dbl           Ambient     Air_Cond_1        	   Point    		0.0 0.0 0.0		30.0   0.7     0.3    		3.0     -1     	-1      0
+														   
+sfxref_aircon11         Ambient     Air_Cond_2        	   Point    		0.0 0.0 0.0		30.0   0.6     0.3    		3.0     -1     	-1      0
+sfxref_aircon12         Ambient     Air_Cond_2        	   Point    		0.0 0.0 0.0		30.0   0.6     0.3    		3.0     -1     	-1      0
+sfxref_aircon13         Ambient     Air_Cond_2        	   Point    		0.0 0.0 0.0		30.0   0.6     0.3    		3.0     -1     	-1      0
+sfxref_aircon14         Ambient     Air_Cond_2        	   Point    		0.0 0.0 0.0		30.0   0.6     0.3    		3.0     -1     	-1      0
+nt_aircon3_01           Ambient     Air_Cond_2        	   Point    		0.0 0.0 0.0		30.0   0.6     0.3    		3.0     -1     	-1      0
+														   
+nt_aircon1_02           Ambient     Air_Cond_3        	   Point    		0.0 0.0 0.0		30.0   0.7     0.3    		3.0     -1     	-1      0
+gen_roofbit3            Ambient     Air_Cond_3        	   Point    		0.0 0.0 0.0		30.0   0.7     0.3    		3.0     -1     	-1      0
+gen_roofbit4            Ambient     Air_Cond_3        	   Point    		0.0 0.0 0.0		30.0   0.7     0.3    		3.0     -1     	-1      0
+gen_roofbit5            Ambient     Air_Cond_3        	   Point    		0.0 0.0 0.0		30.0   0.7     0.3    		3.0     -1     	-1      0
+
+gen_roofbit1            Ambient     Air_Cond_Old_1         Point    		0.0 0.0 0.0		40.0   0.7     0.3    		3.0     -1     	-1      0
+gen_roofbit2            Ambient     Air_Cond_Old_1         Point    		0.0 0.0 0.0		40.0   0.7     0.3    		3.0     -1     	-1      0
+AIRCON                  Ambient     Air_Cond_Old_1         Point    		0.0 0.0 0.0		40.0   0.7     0.3    		3.0     -1     	-1      0
+CJ_AIRCON               Ambient     Air_Cond_Old_1         Point    		0.0 0.0 0.0		40.0   0.7     0.3    		3.0     -1     	-1      0
+DYN_AIRCON              Ambient     Air_Cond_Old_1         Point    		0.0 0.0 0.0		40.0   0.7    0.3    		3.0     -1     	-1      0
+
+nt_noddonkbase          Ambient     Oil_Pumpjack_1         Point    		0.0 0.0 0.0		300.0  0.9    0.3    		3.0     -1     	-1      0
+derrick01          		Ambient     Oil_Pumpjack_1         Point    		0.0 0.0 0.0		150.0  0.7    0.3    		3.0     -1     	-1      0
+
+veg_tree3				Ambient     Tree_Wind_1a			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+veg_treea1				Ambient     Tree_Wind_1b			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+veg_treeb1				Ambient     Tree_Wind_1c			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+veg_treea3				Ambient     Tree_Wind_2a			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+veg_palwee03			Ambient     Tree_Wind_3a			Point    		-5.0 -5.0 10.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palm04				Ambient     Tree_Wind_3a			Point    		0.0 0.0 25.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palm02				Ambient     Tree_Wind_3b			Point    		0.0 0.0 20.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palm03				Ambient     Tree_Wind_3b			Point    		0.0 0.0 20.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palwee01			Ambient     Tree_Wind_3a			Point    		0.0 10.0 15.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palwee02			Ambient     Tree_Wind_3b			Point    		0.0 0.0 20.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palmbig14			Ambient     Tree_Wind_4				Point    		0.0 0.0 15.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_palm01				Ambient     Tree_Wind_3a			Point    		-10.0 -10.0 25.0	130.0  0.2    0.0    		1.0     -1     	-1      0
+sjmpalmbig				Ambient     Tree_Wind_2a			Point    		0.0 0.0 15.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+pinetree08				Ambient     Tree_Wind_2a			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree06				Ambient     Tree_Wind_2b			Point    		0.0 0.0 5.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree05				Ambient     Tree_Wind_2a			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree02				Ambient     Tree_Wind_5				Point    		0.0 0.0 5.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree04				Ambient     Tree_Wind_1b			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree01				Ambient     Tree_Wind_5				Point    		0.0 0.0 5.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree03				Ambient     Tree_Wind_2b			Point    		0.0 0.0 5.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+pinetree07				Ambient     Tree_Wind_2a			Point    		0.0 0.0 7.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+firtree2				Ambient     Tree_Wind_4				Point    		0.0 0.0 20.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_veg_tree4			Ambient     Tree_Wind_1a			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_bushytree			Ambient     Tree_Wind_4				Point    		0.0 0.0 5.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_veg_tree5			Ambient     Tree_Wind_1c			Point    		0.0 0.0 5.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_bevhiltree			Ambient     Tree_Wind_5				Point    		0.0 0.0 8.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_group			Ambient     Tree_Wind_1a			Point    		0.0 0.0 15.0		200.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_scabby			Ambient     Tree_Wind_3a			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_					Ambient     Tree_Wind_2c			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_scabg			Ambient     Tree_Wind_5				Point    		0.0 0.0 17.0		200.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_copse1			Ambient     Tree_Wind_4				Point    		0.0 0.0 30.0		200.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_copse2			Ambient     Tree_Wind_1a			Point    		0.0 0.0 30.0		200.0  0.3    0.0    		1.0     -1     	-1      0
+sm_veg_tree4_big		Ambient     Tree_Wind_1c			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_redwood_				Ambient     Tree_Wind_4				Point    		0.0 0.0 60.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_redwoodgrp			Ambient     Tree_Wind_1c			Point    		0.0 0.0 60.0		240.0  0.4    0.0    		1.0     -1     	-1      0
+sm_fir_scabtg			Ambient     Tree_Wind_1c			Point    		0.0 0.0 30.0		200.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_scabt			Ambient     Tree_Wind_5				Point    		0.0 0.0 30.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_fir_tall				Ambient     Tree_Wind_1b			Point    		0.0 0.0 40.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_firtbshg				Ambient     Tree_Wind_1a			Point    		0.0 0.0 25.0		200.0  0.3    0.0    		1.0     -1     	-1      0
+sm_veg_tree6			Ambient     Tree_Wind_5				Point    		0.0 0.0 5.0			60.0   0.3    0.0    		1.0     -1     	-1      0
+sm_veg_tree7_big		Ambient     Tree_Wind_4				Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_veg_tree7vbig		Ambient     Tree_Wind_4				Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+sm_vegvbbig				Ambient     Tree_Wind_4				Point    		0.0 0.0 25.0		200.0  0.4    0.0    		1.0     -1     	-1      0
+sm_bushvbig				Ambient     Tree_Wind_4				Point    		0.0 0.0 25.0		200.0  0.4    0.0    		1.0     -1     	-1      0
+sm_veg_tree4_vbig		Ambient     Tree_Wind_1a			Point    		0.0 0.0 30.0		200.0  0.4    0.0    		1.0     -1     	-1      0
+sm_vegvbbigbrn			Ambient     Tree_Wind_4				Point    		0.0 0.0 35.0		200.0  0.4    0.0    		1.0     -1     	-1      0
+vgs_palm01				Ambient     Tree_Wind_3a			Point    		0.0 0.0 25.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+vgs_palm02				Ambient     Tree_Wind_5				Point    		0.0 0.0 2.0			130.0  0.2    0.0    		1.0     -1     	-1      0
+vgs_palm03				Ambient     Tree_Wind_5				Point    		0.0 0.0 2.0			130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_bevtree1			Ambient     Tree_Wind_1b			Point    		0.0 0.0 25.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+veg_bevtree2			Ambient     Tree_Wind_4				Point    		0.0 0.0 30.0		240.0  0.4    0.0    		1.0     -1     	-1      0
+veg_bevtree3			Ambient     Tree_Wind_1c			Point    		0.0 0.0 0.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+sjmpalmbigpv			Ambient     Tree_Wind_5				Point    		0.0 0.0 12.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+sm_bevhiltreepv			Ambient     Tree_Wind_5				Point    		0.0 0.0 10.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+vgs_palm04				Ambient     Tree_Wind_5				Point    		0.0 0.0 8.0			130.0  0.2    0.0    		1.0     -1     	-1      0
+veg_largefurs07			Ambient     Tree_Wind_1c			Point    		0.0 0.0 60.0		200.0  0.4    0.0    		1.0     -1     	-1      0
+veg_largefurs03			Ambient     Tree_Wind_1b			Point    		-10.0 0.0 60.0		200.0  0.4    0.0    		1.0     -1     	-1      0
+veg_largefurs04			Ambient     Tree_Wind_5				Point    		0.0 0.0 60.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+veg_largefurs06			Ambient     Tree_Wind_1a			Point    		0.0 0.0 60.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly19			Ambient     Tree_Wind_1a			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly04			Ambient     Tree_Wind_5				Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly07			Ambient     Tree_Wind_2b			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly08			Ambient     Tree_Wind_5				Point    		0.0 0.0 20.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly09			Ambient     Tree_Wind_2c			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly10			Ambient     Tree_Wind_5				Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly11			Ambient     Tree_Wind_1a			Point    		0.0 0.0 20.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+tree_hipoly14			Ambient     Tree_Wind_5				Point    		0.0 0.0 15.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+tree_hipoly09b			Ambient     Tree_Wind_5				Point    		0.0 0.0 15.0		130.0  0.2    0.0    		1.0     -1     	-1      0
+ceasertree01_lvs		Ambient     Tree_Wind_5				Point    		0.0 0.0 0.0			130.0  0.3    0.0    		1.0     -1     	-1      0
+aw_streettree3			Ambient     Tree_Wind_1b			Point    		0.0 0.0 5.0			130.0  0.2    0.0    		1.0     -1     	-1      0
+aw_streettree2			Ambient     Tree_Wind_1c			Point    		0.0 0.0 5.0			130.0  0.2    0.0    		1.0     -1     	-1      0
+sjmpalmtall				Ambient     Tree_Wind_3a			Point    		0.0 0.0 60.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+vgs_palmvtall			Ambient     Tree_Wind_3a			Point    		0.0 0.0 60.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+new_bushtest			Ambient     Tree_Wind_5				Point    		0.0 0.0 0.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+Ash1_hi					Ambient     Tree_Wind_1b			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+Cedar3_hi				Ambient     Tree_Wind_2b			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+Cedar2_hi				Ambient     Tree_Wind_5				Point    		0.0 0.0 4.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+Cedar1_hi				Ambient     Tree_Wind_1b			Point    		0.0 0.0 10.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+Elmtreegrn_hi			Ambient     Tree_Wind_1b			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmtreegrn2_hi			Ambient     Tree_Wind_1a			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Locust_hi				Ambient     Tree_Wind_5				Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Pinebg_hi				Ambient     Tree_Wind_2b			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+sprucetree_hi			Ambient     Tree_Wind_3a			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmred_hi				Ambient     Tree_Wind_1c			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmdead_hi				Ambient     Tree_Wind_3a			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmsparse_hi			Ambient     Tree_Wind_3b			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmwee_hi				Ambient     Tree_Wind_5				Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Hazelweetree_hi			Ambient     Tree_Wind_1b			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Hazeltall_hi			Ambient     Tree_Wind_1a			Point    		0.0 0.0 15.0		130.0  0.3    0.0    		1.0     -1     	-1      0
+Elmred_hism				Ambient     Tree_Wind_2b			Point    		0.0 0.0 10.0		60.0   0.2    0.0    		1.0     -1     	-1      0
+Pinebg_hism				Ambient     Tree_Wind_1c			Point    		0.0 0.0 5.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmsparse_hism			Ambient     Tree_Wind_1b			Point    		0.0 0.0 5.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmwee_hism				Ambient     Tree_Wind_5				Point    		0.0 0.0 3.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+Elmtreegrn_hism			Ambient     Tree_Wind_1a			Point    		0.0 0.0 5.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+hashburytree4sfs		Ambient     Tree_Wind_5				Point    		0.0 0.0 5.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+sm_fir_tallgroup		Ambient     Tree_Wind_1a			Point    		0.0 0.0 60.0		240.0  0.5    0.0    		1.0     -1     	-1      0
+vbg_fir_copse			Ambient     Tree_Wind_4				Point    		0.0 0.0 60.0		240.0  0.5    0.0    		1.0     -1     	-1      0
+aw_streettree1			Ambient     Tree_Wind_5				Point    		0.0 0.0 3.0			60.0   0.2    0.0    		1.0     -1     	-1      0
+genVEG_bush07			Ambient     Tree_Wind_5				Point    		0.0 0.0 1.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+genVEG_bush09			Ambient     Tree_Wind_5				Point    		0.0 0.0 1.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+genVEG_bush11			Ambient     Tree_Wind_5				Point    		0.0 0.0 1.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Ash_PO					Ambient     Tree_Wind_2b			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Cedar3_PO				Ambient     Tree_Wind_2a			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Cedar2_PO				Ambient     Tree_Wind_3b			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Cedar1_PO				Ambient     Tree_Wind_3a			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Elmtreegrn_PO			Ambient     Tree_Wind_2a			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Elmtreegrn2_PO			Ambient     Tree_Wind_2b			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Pinebg_PO				Ambient     Tree_Wind_3a			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Elmred_PO				Ambient     Tree_Wind_3b			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Hazelweetree_PO			Ambient     Tree_Wind_1a			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Elmredsm_PO				Ambient     Tree_Wind_1b			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+Elmsparsesm_PO			Ambient     Tree_Wind_2b			Point    		0.0 0.0 3.0			20.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_y01			Ambient     Tree_Wind_3a			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_y02			Ambient     Tree_Wind_3b			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_g01			Ambient     Tree_Wind_3a			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_g02			Ambient     Tree_Wind_3b			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_r01			Ambient     Tree_Wind_3a			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_r02			Ambient     Tree_Wind_3b			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_b01			Ambient     Tree_Wind_3a			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+VgsN_nitree_b02			Ambient     Tree_Wind_3b			Point    		0.0 00.0 8.0		80.0   0.2    0.0    		1.0     -1     	-1      0
+																	   
+sm_firtallded			Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+sm_fir_group			Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			60.0   0.5    0.0    		1.0     -1     	-1      0
+sm_fir_dead				Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+sm_fir_copse1			Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+sm_fir_copse2			Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+sm_fir_scabtg			Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+bg_fir_dead				Ambient     Tree_Creaking_1			Point    		0.0 0.0 2.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+veg_largefurs01			Ambient     Tree_Creaking_1			Point    		0.0 0.0 5.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+veg_largefurs02			Ambient     Tree_Creaking_1			Point    		0.0 0.0 5.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+veg_largefurs04			Ambient     Tree_Creaking_1			Point    		0.0 0.0 5.0			50.0   0.5    0.0    		1.0     -1     	-1      0
+veg_largefurs05			Ambient     Tree_Creaking_1			Point    		0.0 5.0 10.0		50.0   0.5    0.0    		1.0     -1     	-1      0
+sjmpalmtall				Ambient     Tree_Creaking_1			Point    		0.0 0.0 5.0			50.0   0.3    0.0    		1.0     -1     	-1      0
+vgs_palmvtall			Ambient     Tree_Creaking_1			Point    		0.0 0.0 5.0			50.0   0.3    0.0    		1.0     -1     	-1      0
+sm_fir_tallgroup		Ambient     Tree_Creaking_1			Point    		0.0 0.0 10.0		50.0   0.5    0.0    		1.0     -1     	-1      0
+vbg_fir_copse			Ambient     Tree_Creaking_1			Point    		0.0 0.0 10.0		50.0   0.5    0.0    		1.0     -1     	-1      0
+
+compmedhos2_LAe			Ambient     Rain_Metal_1			Box             0.0 0.0 1.0   		60.0   1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.0    11.0 9.0 1.0   0.0
+	
+compfukhouse3			Ambient     Rain_Metal_1			Box             0.0 0.0 1.0   		60.0   1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.0    11.0 9.0 1.0   0.0
+	
+midranhus_LAS			Ambient     Rain_Metal_1			Box             0.0 0.0 1.0   		60.0   1.0    0.0         	3.0     -1      -1      8
+    -0.6 0.0 2.7   17.0 9.0 1.0   0.0
+	
+compproj01_LA			Ambient     Rain_Metal_1			Box             0.0 0.0 1.5   		100.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.5   18.0 45.0 1.5   0.0
+	
+dckcanpy				Ambient     Rain_Metal_1			Box             0.0 0.0 1.5   		100.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.5   38.0 16.0 2.0   0.0
+	
+las2warhus_las2			Ambient     Rain_Metal_1			Box             0.0 0.0 3.5   		180.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 3.5   35.0 80.0 2.5   0.0
+	
+rdwarhusmed				Ambient     Rain_Metal_1			Box             0.0 0.0 2.5   		180.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 2.5   35.0 67.0 2.5   0.0
+	
+rdwarhusbig				Ambient     Rain_Metal_1			Box             0.0 0.0 2.5   		230.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 2.5   135.0 33.0 2.5   0.0
+	
+rdwarhus				Ambient     Rain_Metal_1			Box             0.0 0.0 1.0   		80.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.0   22.0 15.0 2.0   0.0
+	
+rdwarhus2				Ambient     Rain_Metal_1			Box             0.0 0.0 1.0   		80.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.0   15.0 29.0 2.0   0.0
+	
+nwwarhus				Ambient     Rain_Metal_1			Box             0.0 0.0 2.0   		100.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 2.0   26.0 22.0 3.0   0.0
+	
+arhang_LAS				Ambient     Rain_Metal_1			Box             0.0 0.0 2.5   		160.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 2.5   42.0 50.0 3.0   0.0
+	
+project2lae2			Ambient     Rain_Metal_1			Box             0.0 0.0 1.5   		140.0  1.0    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.5   18.0 30.0 2.0   0.0
+	
+conhoos4				Ambient     Rain_Metal_1			Box             0.0 0.0 1.0   		50.0  0.7    0.0         	3.0     -1      -1      8
+    0.0 0.0 1.0   11.0 5.0 1.0   0.0
+	
+end
+
+
+# Flags:
+# 1: Condition: Night
+# 2: Condition: Low population
+# 4: Volumetric: Use simplified

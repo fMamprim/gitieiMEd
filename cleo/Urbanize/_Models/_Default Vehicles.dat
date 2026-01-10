@@ -1,5 +1,5 @@
 # Vehicle style models configuration file for Urbanize mod
-# You can also add new files like this one, in "CLEO\Urbanize\_Models" folder, so you don't need to replace this.
+# You can also add new files like this one, in "CLEO\Urbanize\_Models" folder, so you don't need to replace this. Using an item "-" clears the whole list for new next items.
 
 # 0
 Harley
@@ -42,4 +42,74 @@ End
 # 6
 UnloadVan
 yankee
+mule
+End
+
+# 7
+CarRepair
+blistac
+majestic
+bravura
+esperant
+manana
+virgo
+glendale
+tahoma
+End
+
+# 8
+CarRepairCountry
+walton
+mesa
+peren
+regina
+clover
+sadler
+End
+
+# 9
+SmallAirplane
+dodo
+beagle
+End
+
+# 10
+MediumAirplane
+beagle
+shamal
+End
+
+# 11
+BigAirplane
+at400
+End
+
+# 12
+CityHeli
+maverick
+End
+
+# 13
+CheapHeli
+sparrow
+End
+
+# 14
+RescueHeli
+raindanc
+End
+
+# 15
+Chauffeur
+stretch
+End
+
+# 16
+Motocross
+sanchez
+End
+
+# 17
+Quadcross
+quad
 End

@@ -1,0 +1,7 @@
+It is totally forbidden to use the mod files in another project.
+It is completely forbidden to release unofficial edited versions of the mod.
+It is totally forbidden to upload the mod on monetized links like sharemods etc without my consent.
+It is totally forbidden to repost the mod using link shorteners or paywalls.
+It is totally forbidden to put this mod or assets of this mod on multiplayer servers like MTA and SAMP. In that case, contact me on MixMods discord, where a fee of 30 dollars will be paid for permission to use. But keep in mind that you will only be able to put in your server, the public version of the mod, obviously you can't merge in your server the version made for patreon supporters.
+
+Anyone who violates these conditions will be subject to removal for violation of copyright/license agreement.

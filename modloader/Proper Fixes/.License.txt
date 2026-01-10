@@ -1,0 +1,21 @@
+Proper Fixes built by MixMods.com.br and a passionate modding community.
+
+== PT:
+Você tem permissão para criar trabalhos que contém arquivos derivados deste mod, mas não para incluí-lo por completo ou em grande parte. Mas você pode precisar de permissão de autores específicos.
+Por exemplo, se você está criando um mod e precisa substituir o arquivo "exemplo.col" do jogo, você tem permissão para usar o arquivo do Proper Fixes como base em vez do arquivo original do jogo.
+Mas preserve créditos, por exemplo "Contém partes de Proper Fixes <version>" com o link da postagem original (onde nela haverá todos os créditos etc):
+https://www.mixmods.com.br/2022/01/sa-proper-fixes/
+Se nós não adicionamos créditos para você, nos perdoe, não é fácil gerenciar 16 mil arquivos. Entre em contato.
+Reupload é proibido, repost é permitido (use nosso link). Nós queremos ter melhor controle sobre os updates e bug reports.
+Já faz literalmente anos que o mod "Community Map Fixes", da GTA Forums, começou a usar o "Proper Fixes" no projeto deles, mesmo nós falando diretamente com eles para não usar, e ainda propositalmente não quiseram nos dar créditos, e ninguém ainda foi punido e continuam sendo defendidos pela staff da GTA Forums.
+
+
+== EN:
+You are allowed to create derivative works including files from this mod, but not to include it in full or in large part. But you may need permission from specific authors.
+For example, if you are creating a mod and need to replace the game's "example.col" file, you are allowed to use the Proper Fixes file as a base instead of from game files.
+But preserve credits, for example "Contains parts of Proper Fixes <version>" with link of the original post (where there will be all credits etc):
+https://www.mixmods.com.br/2022/01/sa-proper-fixes/
+If we didn't add credits for you, forgive us, it's not easy to manage 16,000 files. Contact us.
+Reupload is prohibited, repost is allowed (use our link). We want to have better control over updates and bug reports.
+It's been literally years since the "Community Map Fixes" mod from GTA Forums started using "Proper Fixes" in their project, even though we told them directly not to use it, and they purposely didn't want to give us credit, and no one has yet been punished and they continue to be defended by the GTA Forums staff.
+

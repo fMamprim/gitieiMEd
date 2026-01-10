@@ -1,0 +1,78 @@
+# Proper Fixes built by MixMods.com.br and entire GTA community.
+objs
+#xbox
+14769, carupg_int_rays, genintINTCARint3, 100, 4
+17979, LBchApts1_tr_LAe2, eastbeach2a_lae2, 100, 132
+17476, cuntwland74b_tr, cuntwlandwest, 299, 68
+13564, sw_gas01_tr, cunte_gas01, 100, 2097156
+6254, venlaw_grnd_wat, lawwhitebuilds, 120, 4
+13893, TCElawcnt1a_law2_tr, roads_tunnellahills, 200, 4
+13892, cuntelungrdj_tr, lahillsgrounds, 299, 4
+16791, des_reffenc03_fnc, des_refinery, 220, 2097156
+12770, sw_bigburb_01d, CE_burbhouse, 100, 2097156
+12771, sw_bigburb_02d, CE_burbhouse, 100, 2097156
+12772, sw_bigburb_03d, CE_burbhouse, 100, 2097156
+12773, sw_bigburb_04d, CE_burbhouse, 100, 2097156
+12774, sw_bigburbsave2d, CE_burbhouse, 100, 2097156
+12775, LODswbigburb01d, CE_burbLOD, 500, 128
+12776, LODswbigburb02d, CE_burbLOD, 500, 128
+12777, LODswbigburb03d, CE_burbLOD, 500, 128
+12778, LODswbigburb04d, CE_burbLOD, 500, 128
+12779, carshow_SFSe_trans, carshow_sfse, 100, 2098180
+12780, santahouse05_fence, santamonhus1, 150, 132
+#additions
+12781, CE_safepool, properf_dynamic, 200, 4
+12785, funturf_door, LA_gene, 100, 0
+12741, cj_ext_water, properf_dynamic, 299, 0
+12742, carspacesdual, 711_sfw, 120, 4
+#Gas station hanging sign
+12786, nt_gasstationhang, cxref_quarrytest, 299, 0
+#add missing power wires
+12787, des_powercable_06, desn2_alphabits, 150, 2097284
+12788, des_powercable_13, desn2_alphabits, 150, 2097284
+12789, des_powercable_14, desn2_alphabits, 150, 2097284
+12790, des_powercable_15, desn2_alphabits, 150, 2097284
+12791, des_powercable_16, desn2_alphabits, 150, 2097284
+12792, des_powercable_17, desn2_alphabits, 150, 2097284
+12793, des_powercable_18, desn2_alphabits, 150, 2097284
+12782, des_powercable_23, desn2_alphabits, 150, 2097284
+12783, des_powercable_24, desn2_alphabits, 150, 2097284
+12784, des_powercable_25, desn2_alphabits, 150, 2097284
+#Physics to genome_SFE
+13573, genome_SFE1, bigwhitesfe, 50, 0
+12794, genome_SFE2, bigwhitesfe, 50, 0
+12795, genome_SFE3, bigwhitesfe, 50, 0
+12796, genome_SFE4, bigwhitesfe, 50, 0
+12797, genome_SFE5, bigwhitesfe, 50, 0
+12798, genome_SFE6, bigwhitesfe, 50, 0
+12799, genome_SFE7, bigwhitesfe, 50, 0
+13565, genome_SFE8, bigwhitesfe, 50, 0
+#frames reflex in ufo bar
+13566, ufo_framesreflex, properf_int, 50, 2097156
+13567, pdomes_domo, properf_int, 100, 2098180 //Pleasure Domes breakeable dome
+13569, lod_ebrigroad10, cs_lod, 600, 0 //Lod to the Fort Carson bridge
+13570, lodradarmast3, lodproperf_la, 600, 2097156 //Lod to antenna
+13571, lodarmast1_LAwN, lodproperf_la, 600, 2097156 //Lod to antenna
+13572, adam_vOdoor, adam_v_doort, 60, 32 //Grotti Showroom door
+end
+
+tobj
+#2dfx mod fixes
+13574, bowln, neontex, 225, 4, 20, 6
+13575, jlneon, neontex, 225, 4, 20, 6
+13568, pdomes_neon, pdomes_logo, 225, 4, 20, 6 //Pleasure Domes neon
+# Project Lumos IDs: 15329-15453
+#pyramid - added
+15329, lumos_pyramid_neon, pf_nitelites, 1500, 132, 20, 5
+15330, lumos_pyrbeamnt, pf_nitelites, 1500, 8, 20, 5
+15331, lumos_pyram01nt, pf_nitelites, 1500, 128, 20, 3
+15332, lumos_pyram02nt, pf_nitelites, 1500, 128, 3, 5
+15333, lumos_pyram03nt, pf_nitelites, 1500, 128, 5, 6
+#pyramid - replaced hours
+9100, luxorlight_dy, pyramid, 150, 128, 5, 20
+9101, luxorlight_nt, pyramid, 150, 128, 20, 5
+8395, vgEpyrmd_dy, pyramid, 150, 128, 5, 20
+8701, lodpyrmd_dy, vegaselod1, 1500, 128, 5, 20
+9104, vgEpyrmd_nt, pyramid, 150, 128, 20, 5
+9105, lodpyrmd_nt, vegaselod1, 1500, 128, 20, 5
+end

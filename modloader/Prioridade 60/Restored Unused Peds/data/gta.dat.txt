@@ -1,0 +1,4 @@
+EN: Keep this file inside modloader. For mobile or console, put this line after all "IPL" lines inside your "data/gta.dat" using any text editor.
+PT: Deixe este arquivo dentro do modloader. Para mobile ou console, adicione esta linha após as linhas "IPL" dentro do seu "data/gta.dat" usando um texto de texto.
+
+IDE DATA\MAPS\Restored Unused Peds.IDE

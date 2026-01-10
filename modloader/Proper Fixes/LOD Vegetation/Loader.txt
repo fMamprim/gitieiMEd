@@ -1,0 +1,5 @@
+LOD Vegetation by Junior_Djjr - MixMods.com.br
+KEEP THIS FILE INSIDE MODLOADER
+
+COLFILE 0 DATA\MAPS\LODvegetation.COL
+IDE DATA\MAPS\LODvegetation.IDE

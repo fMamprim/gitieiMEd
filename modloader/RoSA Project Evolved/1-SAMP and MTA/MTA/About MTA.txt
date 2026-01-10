@@ -1,0 +1,1 @@
+Update April 2024: Now I can confirm that's impossible to RoSA to work on MTA. This would require the server owner to inject the mod on the entire server. And I don't allow server owners to use the mod, as they would be monetizing my work. It's impossible for a player to inject the mod in a MTA server, so don't even waste your time trying it.

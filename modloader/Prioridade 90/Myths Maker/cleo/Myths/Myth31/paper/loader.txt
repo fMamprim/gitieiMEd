@@ -1,2 +1,0 @@
-IDE data\maps\paper.ide
-COLFILE 0 data\maps\paper.col

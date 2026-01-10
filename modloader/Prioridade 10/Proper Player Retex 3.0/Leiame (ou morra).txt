@@ -1,0 +1,39 @@
+  __  __ _      __  __           _     
+ |  \/  (_)    |  \/  |         | | 2025
+ | \  / |___  _| \  / | ___   __| |___ 
+ | |\/| | \ \/ / |\/| |/ _ \ / _` / __|
+ | |  | | |>  <| |  | | (_) | (_| \__ \
+ |_|  |_|_/_/\_\_|  |_|\___/ \__,_|___/
+                                       
+
+=======   MixMods.com.br   ======= - Melhor visualizável em fontes mono-espaçadas, como "Consolas".
+
+
+------- Instruções:
+
+Extraia a pasta "Proper Player Retex" para a pasta do Modloader.
+
+SE VOCÊ TEM UMA VERSÃO ANTIGA, DESINSTALE ANTES DE INSTALAR A NOVA!
+
+-- Download do Essentials Pack: https://www.mixmods.com.br/2019/06/sa-essentials-pack/
+
+
+ Já que este mod usa player.img, sempre será carregado na menor prioridade:
+ https://www.mixmods.com.br/2015/07/tutorial-dicas-tudo-sobre-modloader-gta/#Priority
+ Portanto qualquer mod de roupas irá substituir as roupas deste mod.
+
+ Este mod é compatível com outros mods de roupas para o CJ original, no entanto, com corpo resolução 1024px.
+ Ou seja, se você tentar instalar por exemplo uma camisa com resolução 512 causará crash, é necessário estar em 1024.
+ 
+
+Versão: v3.0
+--------------------
+
+Autores: Jéssica Natália, Junior_Djjr, OjTrue, Zeneric, Jão, François Declasse
+Proper Tattoos Retex: Jéssica Natália, Grove Street Games (GTA Trilogy)
+
+
+====   MixMods.com.br                ====
+====   fb.com/FamiliaMixMods         ====
+====   youtube.com/JuniorDjjrMixMods ====
+

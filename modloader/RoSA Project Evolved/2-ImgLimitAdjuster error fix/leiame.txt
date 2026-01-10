@@ -1,0 +1,5 @@
+Se você estiver tendo o erro mostrado na image.png, instale isso: https://www.mixmods.com.br/2019/06/sa-essentials-pack/
+
+Nota 1: O erro é causado por estar usando o .exe errado para o jogo. Utilize com o .exe que vem no pack acima. Também, NÃO inicie o jogo através da Steam ou Rockstar Games Launcher, sempre inicie pelo .exe na pasta do jogo.
+
+Nota 2: É possível que seu jogo já tenha alguns dos mods daquele pack, então verifique antes de instalar. Caso já tenha alguns dos mods do pack, recomendo que os remova e utilize os arquivos do pack apenas.

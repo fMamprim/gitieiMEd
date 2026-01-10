@@ -1,5 +1,5 @@
 # Ped style models configuration file for Urbanize mod
-# You can also add new files like this one, in "CLEO\Urbanize\_Models" folder, so you don't need to replace this.
+# You can also add new files like this one, in "CLEO\Urbanize\_Models" folder, so you don't need to replace this. Using an item "-" clears the whole list for new next items.
 
 # 0
 Vendor
@@ -127,6 +127,7 @@ DesertWorker
 dwmylc1
 dnmolc2
 dwmylc2
+dnmolc1
 End
 
 # 17
@@ -142,3 +143,71 @@ somyri
 somobu
 End
 
+# 18
+CivilWorker
+bmost
+hmost
+hmyst
+omost
+wmost
+vwmycd
+End
+
+# 19
+BreakDanceLS
+bmydj
+smyst
+End
+
+# 20
+BreakDanceSF
+sbmycr
+bmydj
+End
+
+# 21
+BreakDanceLV
+vbmycr
+smyst
+End
+
+# 22
+SmallAirplanePilot
+sbmyri
+End
+
+# 23
+MediumAirplanePilot
+sbmyri
+End
+
+# 24
+BigAirplanePilot
+wmyplt
+End
+
+# 25
+CityHeliPilot
+somyri
+End
+
+# 26
+CheapHeliPilot
+swmocd
+End
+
+# 27
+RescueHeliPilot
+swmycr
+End
+
+# 28
+ParticularGuard
+WMYSGRD
+End
+
+# 29
+CrossBiker
+somyst
+omyst
+End

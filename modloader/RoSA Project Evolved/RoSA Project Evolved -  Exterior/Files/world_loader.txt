@@ -1,0 +1,5 @@
+IDE DATA/MAPS/txdp.ide
+IMG DATA/MAPS/rosa_evolved_a.IMG
+IMG DATA/MAPS/rosa_evolved_b.IMG
+IMG DATA/MAPS/rosa_evolved_c.IMG
+IMG DATA/MAPS/rosa_evolved_d.IMG
