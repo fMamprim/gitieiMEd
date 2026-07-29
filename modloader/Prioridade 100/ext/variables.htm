@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Variables</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script language="javascript" type="text/javascript" src="clipboard.js"></script>
+
+</HEAD>
+<BODY topMargin=0 >
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: #c0c0c0 1px solid" 
+height=121 cellSpacing=0 cellPadding=0 width=640>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%"><IMG 
+      src="logo2.jpg" width="640" height="121" border=0 class="conthdr" ></TD>
+  </TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=640 border=0>
+  <TBODY>
+  
+  <TD width="100%" height="100%" vAlign=top>
+   <DIV><IMG 
+      src="old/coding/articles.png" width="640" height="33"></DIV>
+
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=36 
+            src="mtdl.png" width=5></TD>
+          <TD class=ntitle vAlign=top 
+          background="mtdbg.png" height=36>Variables</TD>
+          <TD width=5><IMG height=36 
+            src="mtdr.png" 
+      width=20></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5 background="ltd.gif"></TD>
+          <TD class=news vAlign=top><p>Variables (vars) maintain values and read/rewrite many times.  There are a number of variable types:<br><br>
+
+	- Global variables. They are denoted by a <span class="general1-variable">$</span> (dollar sign, before an identifier).<br> 
+	Their values are available from any place of a code.<br><br>
+
+	- Local variables. They are denoted by a <span class="general1-variable">@</span> (AT sign, after an identifier).<br>
+	Their values are available only within the current thread.  <br>
+	Each thread (external scripts are threads too) has its own  
+	local variables set (<span class="general1-variable">0@</span>..<span class="general1-variable">33@</span> in SA, <span class="general1-variable">0@</span>..<span class="general1-variable">17@</span> in GTA3,VC).<br>
+	<br>
+
+	SA missions have a bigger set than usual. SA missions uses locals in range 
+	of <span class="general1-variable">0@</span>..<span class="general1-variable">1023@</span><br>
+	<br>
+	
+	The variables can be used as expression operands.  Sanny Builder allows usage of no opcode for the 
+expressions where one of the operands is a number constant.  For ex.</p>
+
+<div class=mycode5>
+<span class="general1-variable">$var</span> = <span class="general1-number">0</span><br>
+<span class="general1-variable">$myarray</span>(<span class="general1-variable">$index</span>, <span class="general1-number">10i</span>) >= <span class="general1-number">150</span> </div>
+<br>
+<p>If both operands are  variables, the compiler can not detect what the  opcode is needed for because the vars may be either an integer or float.  In order to define a variable type, there is a  specific contruct.<br>
+  <a name="VAR_END"></a><br>
+  <span class="general1-reservedword">VAR..END</span> contruct allows to declare variables and their types for advanced use.<br><br>
+
+	For example, write the following code:</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard();"  ></span>
+<TEXTAREA ID="holdtext" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext" class="NON"><span class="general1-reservedword">var</span>
+<span class="general1-variable">$1stIntVar</span> : Integer
+<span class="general1-variable">$2ndIntVar </span>: Integer
+<span class="general1-reservedword">end</span></pre>
+</div>
+<br><p>
+and you can use these variables in the expressions without opcodes</p>
+
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard1();"  ></span>
+<TEXTAREA ID="holdtext1" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext1" class="NON"><span class="general1-variable">$1stIntVar</span> = <span class="general1-variable">$2ndIntVar
+</span><span class="general1-variable">$1stIntVar</span> *= <span class="general1-variable">$2ndIntVar</span></pre>
+</div>
+<p>
+and so on.<a name="type"></a><br><br>
+
+
+	The following types are supported:<br><br>
+
+Integer, Int  - integer values<br><br>
+
+	Float  - floating-points values<br><br>
+
+	String, ShortString  - fixed length string variable<br>
+	<br>
+	(only for the arrays, use <span class="general1-variable">s$</span>, <span class="general1-variable">@s</span> for the variables)<br>
+	<br>
+
+	LongString  - Variable length string variable<br><br>
+	(only for the arrays, use<span class="general1-variable"> v$</span>, <span class="general1-variable">@v</span> for the variables)<br>
+</p>
+<p>A local variable can be declared. Take note that one  will have the same type in every thread.<br>
+So, you can redeclare this local variable to set a new type for it:</p>
+
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard2();"  ></span>
+<TEXTAREA ID="holdtext2" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext2" class="NON"><span class="general1-reservedword">Thread</span> <span class="general1-string">'Food'</span>
+<span class="general1-reservedword">Var</span>
+<span class="general1-variable">10@</span> : Float
+<span class="general1-variable">$Var</span> : Float
+<span class="general1-reservedword">End</span>
+<span class="general1-variable">$var</span> = <span class="general1-number">1</span>
+<span class="general1-variable">10@</span> = <span class="general1-variable">$Var</span>
+<span class="general1-reservedword">end_thread</span>
+
+<span class="general1-reservedword">Thread</span> <span class="general1-string">'Loop'</span>
+<span class="general1-reservedword">Var</span>
+<span class="general1-variable">10@ </span>: Int
+<span class="general1-variable">$Var</span> : Int
+<span class="general1-reservedword">End</span>
+<span class="general1-variable">$var</span> = <span class="general1-number">1</span>
+<span class="general1-variable">10@ </span>= <span class="general1-variable">$Var</span>
+<span class="general1-reservedword">end_thread</span></pre></div>
+<br><p>In the thread Food <span class="general1-variable">10@</span> is the floating-point  variable.<br>
+Loop <span class="general1-variable">10@</span> is the integer variable.<br><br>
+
+	You can redeclare any variables as many times as you need.<br><br>
+
+	Also you can set an initial value for the variable when declaring it.<br>
+	For this purpose write symbol = and after that,  the initial value:</p>
+
+<div  class="imgcursor" align="right"><span class="kbd" ><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard3();"  ></span>
+<TEXTAREA ID="holdtext3" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext3" class="NON"><span class="general1-reservedword">var</span>
+<span class="general1-variable">$fVar</span>: float = <span class="general1-number">1.0</span>
+<span class="general1-reservedword">end</span></pre></div>
+<br><p>Variable <span class="general1-variable">$fVar</span> will be remembered as Float and also the compiler will write an opcode in the SCM.</p>
+
+<code class=mycode5>
+0005: <span class="general1-variable">$fVar</span> = <span class="general1-number">1.0</span></code>
+<p>
+Initialization is allowed for the variables only.</p>
+
+          </TD>
+          <TD width=5 
+        background="rtd.gif"></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=20 
+            src="mtdlbot.png" width=5 border=0></TD>
+          <TD align=left 
+            background="mtdbgbot.png"> </TD>
+          <TD class=ninfo align=right 
+          background="mtdbgbot.png">&nbsp; 
+            </TD>
+          <TD width=5><IMG height=20 
+            src="mtdrbot.png" width=5 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+</TD></TR><td width="100%"></TBODY></TABLE>
+</TABLE></body></html>

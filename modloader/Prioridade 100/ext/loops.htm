@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Loop statements</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script language="javascript" type="text/javascript" src="clipboard.js"></script>
+</HEAD>
+<BODY topMargin=0 >
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: #c0c0c0 1px solid" 
+height=121 cellSpacing=0 cellPadding=0 width=640>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%"><IMG 
+      src="logo2.jpg" width="640" height="121" border=0 class="conthdr" ></TD>
+  </TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=640 border=0>
+  <TBODY>
+  
+  <TD width="100%" height="100%" vAlign=top>
+   <DIV><IMG 
+      src="old/coding/articles.png" width="640" height="33"></DIV>
+
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=36 
+            src="mtdl.png" width=5></TD>
+          <TD class=ntitle vAlign=top 
+          background="mtdbg.png" height=36>Loop statements</TD>
+          <TD width=5><IMG height=36 
+            src="mtdr.png" 
+      width=20></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5 background="ltd.gif"></TD>
+          <TD class=news vAlign=top><p>
+   Sanny Builder has three kinds of controls loops: <br>
+	Repeat, While, For statements.</p>
+<ol>
+	<li><a href="#FOR..END"> FOR..END</a>
+	<li><a href="#WHILE..END"> WHILE..END</a>
+	<li><a href="#REPEAT..UNTIL"> REPEAT..UNTIL</a>
+</ol>
+<p>
+   Loops can be nested (i.e. one loop inside another).<br>
+   <br>
+	
+	Do not forget to use the delay (wait) in the loops!
+</p>
+<hr><br>
+
+		<b><a name="FOR..END">FOR..END statement</a></b>
+<p>
+   This operator sets the loop with a strictly certain number of iterations.<br>
+	The following syntax is used:</p>
+<DIV class=mycode5><span class="general1-reservedword">FOR</span> &lt;counter&gt; = &lt;initial value&gt; <span class="general1-reservedword">TO/DOWNTO</span> &lt;final value&gt; [step &lt;int&gt; = <span class="general1-number">1</span>]<br>
+...<br>
+<span class="general1-reservedword">END</span></div>
+<p><strong>&lt;counter&gt;</strong> - variable that is used as the loop iterations (repeats) 
+	counter.<br>
+	<br>
+
+    <strong>&lt;initial value&gt;</strong> - starting value of the counter (any value 
+    including the model identifiers).
+
+<br>
+<br>
+
+  <strong>TO/DOWNTO </strong>- at <strong>TO</strong> the counter is increased, at <strong>DOWNTO</strong> - is decreased.<br>
+  <br>
+
+   <strong>&lt;final value&gt;</strong> - - final value of the loop when finished.<br>
+    (any value including the model identifiers).
+<br>
+<br>
+
+   <strong>&lt;step&gt;</strong> - value of an increment or reduction of the counter after iteration.<br>
+	(optional). By default its value is equal to 1.<br><br>
+	Example:</p>
+
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard();"  ></span>
+<TEXTAREA ID="holdtext" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext" class="NON"><span class="general1-reservedword">var</span>
+<span class="general1-variable">$value</span>: int = <span class="general1-number">0</span>
+<span class="general1-variable">$final</span>: int = <span class="general1-number">100</span>
+<span class="general1-reservedword">end</span>
+
+<span class="general1-reservedword">FOR</span> <span class="general1-variable">$MyCounter</span> = <span class="general1-number">1</span> <span class="general1-reservedword">to</span> <span class="general1-variable">$final </span>step <span class="general1-number">2</span>
+<span class="general1-variable">$value</span> += <span class="general1-variable">$mycounter</span>
+<span class="general1-reservedword">end</span></pre></div>
+
+<br><hr><p><br>
+
+		<b><a name="WHILE..END">WHILE..END operator</a></b></p>Syntax:<br><br>
+<DIV class=mycode5>	<span class="general1-reservedword">WHILE</span> &lt;condition&gt;<br>
+	 ...<br>
+	 <span class="general1-reservedword">END</span></div>
+<p>
+Loop WHILE is working until the condition returns True. The condition is 
+	evaluated before the loop iterations. Hence, if the condition is false, 
+	the statement sequence is never executed.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard1();"  ></span>
+<TEXTAREA ID="holdtext1" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext1" class="NON"><span class="general1-variable">$var</span> = <span class="general1-number">10</span>
+
+<span class="general1-reservedword">while</span> <span class="general1-variable">$var</span> > <span class="general1-number">11</span>
+inc(<span class="general1-variable">$var</span>)
+<span class="general1-reservedword">end</span></pre></div>
+<p>
+As the condition is false, the command Inc($var) will be never executed</p><br>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard2();"  ></span>
+<TEXTAREA ID="holdtext2" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext2" class="NON"><span class="general1-reservedword">while not</span> <span class="general1-model">#AK47</span>.<span class="general1-command">Available</span>
+<span class="general1-reservedword">wait</span><span class="general1-number"> 0</span><span class="general1-reservedword">
+end</span></pre></div>
+<p>
+  Operator WHILE may accept the logic constants True and False:<br><br>
+
+	While True..End - loop executes infinitely until the 
+	loop stopped by command Break.<br>
+	<br>
+
+	While False .. End - loop is ignored by the compiler.<br><br>
+	In the current version the only condition is accessible within the loop but you can check out more conditions inside loop  statement and use the commands Break and Continue.</p>
+<hr><p><br>
+
+		<b><a name="REPEAT..UNTIL">REPEAT..UNTIL statement</a></b></p>Syntax:<br><br>
+<DIV class=mycode5>
+	<span class="general1-reservedword">REPEAT<br> 
+	 </span>...<span class="general1-reservedword"><br>
+	 UNTIL</span> &lt;condition&gt;</div>
+<p>
+   This loop executes until the condition returns False. <br>
+	The condition is evaluated after iterations therefore loop has 
+	one iteration minimum.<br><br>
+
+	Operator Repeat can accept the logic constants True and False:<br><br>
+
+	<span class="general1-reservedword">Repeat</span> .. <span class="general1-reservedword">Until True</span> - loop has the only iteration<br>
+	<span class="general1-reservedword">Repeat</span> .. <span class="general1-reservedword">Until False</span> - loop executes infinitely until it's 
+	stopped by Break.<br><br>
+	In the current version, the only condition is  accessible within the loop but you can check out more conditions inside  loop statement and use the commands Break and Continue.</p>
+<br><hr>
+
+		<b>Continue and Break</b>
+<p>
+
+  If you want to skip the current iteration and  proceed to the next, 
+	use the command Continue. <br>
+	<br>
+
+	It can be used as the parameter (jf continue) or separate command.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard3();"  ></span>
+<TEXTAREA ID="holdtext3" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext3" class="NON"><span class="general1-reservedword">if</span>
+<span class="general1-variable">$currentactor</span>.<span class="general1-command">dead</span>
+<span class="general1-reservedword">jf</span> continue <span class="general1-comment">// uses instead of a label</span>
+
+<span class="general1-reservedword">if</span>
+<span class="general1-reservedword">not </span><span class="general1-variable">$currentactor</span>.<span class="general1-command">dead</span>
+<span class="general1-reservedword">then</span>
+Continue <span class="general1-comment">// uses as a jump to the next iteration</span></pre></div>
+<p>The useful command, Break, causes the  flow of loop to exit.&nbsp; It can be used  both as a separate command or parameter (jf break).</p>
+          </TD>
+          <TD width=5 
+        background="rtd.gif"></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=20 
+            src="mtdlbot.png" width=5 border=0></TD>
+          <TD align=left 
+            background="mtdbgbot.png"> </TD>
+          <TD class=ninfo align=right 
+          background="mtdbgbot.png">&nbsp; 
+            </TD>
+          <TD width=5><IMG height=20 
+            src="mtdrbot.png" width=5 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+</TD></TR><td width="100%"></TBODY></TABLE>
+</TABLE></body></html>

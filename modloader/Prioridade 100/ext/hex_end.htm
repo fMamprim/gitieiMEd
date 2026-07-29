@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>HEX..END</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script language="javascript" type="text/javascript" src="clipboard.js"></script>
+
+</HEAD>
+<BODY topMargin=0 >
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: #c0c0c0 1px solid" 
+height=121 cellSpacing=0 cellPadding=0 width=640>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%"><IMG 
+      src="logo2.jpg" width="640" height="121" border=0 class="conthdr" ></TD>
+  </TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=640 border=0>
+  <TBODY>
+  
+  <TD width="100%" height="100%" vAlign=top>
+   <DIV><IMG 
+      src="old/coding/articles.png" width="640" height="33"></DIV>
+
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=36 
+            src="mtdl.png" width=5></TD>
+          <TD class=ntitle vAlign=top 
+          background="mtdbg.png" height=36>HEX..END</TD>
+          <TD width=5><IMG height=36 
+            src="mtdr.png" 
+      width=20></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5 background="ltd.gif"></TD>
+          <TD class=news vAlign=top><p>Sanny supports writing hex values directly in  the SCM file*<br>
+
+	For example:</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard();"  ></span>
+<TEXTAREA ID="holdtext" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext" class="NON"><span class="general1-reservedword">hex</span>
+<span class="general1-number">04 00 02 0800 04 01</span>
+<span class="general1-reservedword">end</span></pre></div>
+<p>
+	It will be compiled as 0004: <span class="general1-variable">$2</span> = <span class="general1-number">1</span><br>
+	<br>
+	This construct can accept labels and global variables.<br>
+They will be compiled as numbers (their hex representation as after a compilation) without the  data type.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard1();"  ></span>
+<TEXTAREA ID="holdtext1" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext1" class="NON"><span class="general1-label">:get_offset</span>
+<span class="general1-reservedword">hex</span>
+<span class="general1-number">04 00 02 </span><span class="general1-variable">$PLAYER_CHAR</span><span class="general1-number"> 01 </span><span class="general1-label">@get_offset</span>
+<span class="general1-reservedword">end</span></pre></div>
+<p>
+     It will be compiled as 0004: <span class="general1-variable">$PLAYER_CHAR</span> = <span class="general1-label">@get_offset</span></p>
+<p>
+    Also you can use the aDMA data type within this statement. It's very
+    handy when you need to write the numbers.<br>
+    The number after the &amp; sign  can  be both positive and negative;<br>
+    in decimal format or in hexadimal one.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard2();"  ></span>
+<TEXTAREA ID="holdtext2" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext2" class="NON"><span class="general1-reservedword">hex</span>
+<span class="general1-variable">&1000</span> <span class="general1-variable">&</span><span class="general1-number">-0xA33500</span> 
+<span class="general1-reservedword">end</span></span></div>
+<p>
+<a name="strings">Also you can compile the strings</a> using this statement. In order to do this enclose the word with double quotes and write a single space before and after them.<br>
+<br>
+
+Example</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard3();"  ></span>
+<TEXTAREA ID="holdtext3" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext3" class="NON"><span class="general1-reservedword">hex</span>
+<span class="general1-number">09</span> <span class="general1-string">"Word1"</span> <span class="general1-number">20</span> <span class="general1-string">"Word2"</span>
+<span class="general1-reservedword">end</span></pre></div>
+<p>The only word is allowed to enclose.&nbsp; To compile the phrase  (a number of words) enclose each word separately and put a single space between  them.&nbsp; To compile  a space char, write the number 20 (ascii code of space char).<br> 
+* Recommended for advanced users only.&nbsp;  Any mistakes will make the file incapable of  being decompiled &amp;/or render it unreadable by the game.</p>
+</TD>
+          <TD width=5 
+        background="rtd.gif"></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=20 
+            src="mtdlbot.png" width=5 border=0></TD>
+          <TD align=left 
+            background="mtdbgbot.png"></TD>
+          <TD class=ninfo align=right 
+          background="mtdbgbot.png">&nbsp; 
+            </TD>
+          <TD width=5><IMG height=20 
+            src="mtdrbot.png" width=5 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+</TD></TR><td width="100%"></TBODY></TABLE>
+</TABLE></body></html>

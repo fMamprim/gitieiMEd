@@ -1,0 +1,63 @@
+{$CLEO .cs}
+
+// Aguarda o jogo carregar completamente
+0000: NOP
+:WAIT_LOAD
+wait 0
+if
+    Player.Defined($PLAYER_CHAR)
+jf @WAIT_LOAD
+
+// Inicialização do sistema
+0@ = 1    // Level atual
+1@ = 30   // Requisito de kills inicial
+
+// Salva o total de kills da stat ID 121 ANTES de começar o contador
+0424: get_int_stat 121 to 2@ 
+
+:MAIN_LOOP
+wait 0
+if
+    Player.Defined($PLAYER_CHAR)
+jf @MAIN_LOOP
+
+// Lê as kills globais novamente a cada frame
+0424: get_int_stat 121 to 3@ 
+0085: 4@ = 3@
+0062: 4@ -= 2@ // Kills feitas exclusivamente neste level (Atual - Base)
+
+// Verifica se bateu a meta
+if
+    001C:   4@ >= 1@ 
+then
+    000A: 0@ += 1   // Up!
+    0085: 2@ = 3@   // A meta foi batida, o total atual vira a base do próximo level
+    
+    // Aumenta a meta em 10%
+    008D: 5@ = integer 1@ to_float 
+    0011: 5@ *= 1.1                
+    000B: 5@ += 0.5                
+    008C: 1@ = float 5@ to_integer 
+    
+    4@ = 0 // Reseta a tela do level atual imediatamente
+end
+
+// Renderiza o Level na tela (canto superior direito)
+0349: set_text_draw_font 2 
+033E: set_draw_text_proportional 1 
+081C: draw_text_outline 1 RGBA 0 0 0 255 
+03E4: set_text_draw_align_right 1 
+0340: set_text_draw_RGBA 255 255 255 255 
+033F: set_text_draw_letter_size 0.4 1.2 
+045A: draw_text_1number 600.0 50.0 GXT 'LVL_TXT' number 0@ 
+
+// Renderiza a contagem de Kills logo abaixo
+0349: set_text_draw_font 2 
+033E: set_draw_text_proportional 1 
+081C: draw_text_outline 1 RGBA 0 0 0 255 
+03E4: set_text_draw_align_right 1 
+0340: set_text_draw_RGBA 255 255 255 255 
+033F: set_text_draw_letter_size 0.4 1.2 
+045B: draw_text_2numbers 600.0 70.0 GXT 'KIL_TXT' numbers 4@ 1@
+
+jump @MAIN_LOOP

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Additional commands</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script language="javascript" type="text/javascript" src="clipboard.js"></script>
+
+</HEAD>
+<BODY topMargin=0 >
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: #c0c0c0 1px solid" 
+height=121 cellSpacing=0 cellPadding=0 width=640>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%"><IMG 
+      src="logo2.jpg" width="640" height="121" border=0 class="conthdr" ></TD>
+  </TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=640 border=0>
+  <TBODY>
+  
+  <TD width="100%" height="100%" vAlign=top>
+   <DIV><IMG 
+      src="old/coding/articles.png" width="640" height="33"></DIV>
+
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=36 
+            src="mtdl.png" width=5></TD>
+          <TD class=ntitle vAlign=top 
+          background="mtdbg.png" height=36>Additional commands</TD>
+          <TD width=5><IMG height=36 
+            src="mtdr.png" 
+      width=20></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5 background="ltd.gif"></TD>
+          <TD class=news vAlign=top><p>
+   <strong>INC</strong> <br><BR> Increments the first parameter by the second one.  First parameter is a variable.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard();"  ></span>
+<TEXTAREA ID="holdtext" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext" class="NON">Inc(<span class="general1-variable">$IntVariable</span>, <span class="general1-variable">$Value</span>)
+=
+<span class="general1-variable">$IntVariable</span> += <span class="general1-variable">$Value</span>
+
+Inc(<span class="general1-variable">1@</span>)
+=
+<span class="general1-variable">1@</span> += <span class="general1-number">1</span></pre></div>
+<br><br><hr>
+<p>
+   <strong>DEC</strong> <br><BR> Decreases the first parameter by the second one.  First parameter is a variable.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard1();"  ></span>
+<TEXTAREA ID="holdtext1" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext1" class="NON">Dec(<span class="general1-variable">$IntVariable</span>, <span class="general1-variable">$Value</span>)
+=
+<span class="general1-variable">$IntVariable</span> -= <span class="general1-variable">$Value</span></pre></div>
+<br><p>Second parameter is equal to 1 if isn't  specified.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard2();"  ></span>
+<TEXTAREA ID="holdtext2" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext2" class="NON">Dec(<span class="general1-variable">1@</span>)
+=
+<span class="general1-variable">1@</span> -= <span class="general1-number">1</span></pre></div>
+<br><br><hr>
+<p>
+	<strong>MUL</strong> <br><br>
+	Multiplies the first parameter by the second one.  First parameter is a variable.</p><br>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard3();"  ></span>
+<TEXTAREA ID="holdtext3" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext3" class="NON">Mul(<span class="general1-variable">$IntVariable</span>, <span class="general1-variable">$Value</span>)
+=
+<span class="general1-variable">$IntVariable</span> = <span class="general1-variable">$IntVariable</span> * <span class="general1-variable">$Value</span></pre></div>
+<p>Second parameter is equal to 2 if isn't  specified.</p>
+<br>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard4();"  ></span>
+<TEXTAREA ID="holdtext4" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext4" class="NON">Mul(<span class="general1-variable">1@</span>)
+=
+<span class="general1-variable">1@</span> = <span class="general1-variable">1@</span> * <span class="general1-number">2</span></pre></div>
+<br><br><hr>
+<p>
+<strong>DIV</strong><br><br>
+Divides the first parameter by the second one.&nbsp; First parameter is a variable.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard5();"  ></span>
+<TEXTAREA ID="holdtext5" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext5" class="NON">Div(<span class="general1-variable">$IntVariable</span>, <span class="general1-variable">$Value</span>)
+=
+<span class="general1-variable">$IntVariable</span> = <span class="general1-variable">$IntVariable</span> / <span class="general1-variable">$Value</span></pre></div>
+<p>Second parameter is equal to 2 if isn't  specified. </p>
+<br>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard6();"  ></span>
+<TEXTAREA ID="holdtext6" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext6" class="NON">Div(<span class="general1-variable">1@</span>)
+=
+<span class="general1-variable">1@</span> = <span class="general1-variable">1@</span> / <span class="general1-number">2</span></pre></div>
+<br><br><hr>
+<p>
+&nbsp;&nbsp;<strong>(internal) ALLOC*</strong> <a name="ALLOC"></a><br>
+This  function sets the memory address for the global variable.&nbsp; It has to be used only for the ones with  custom names (i.e. $text).&nbsp; For others, the memory address is set by name: the  variable $40 is always addressed at memory address #40.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard7();"  ></span>
+<TEXTAREA ID="holdtext7" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext7" class="NON">Alloc(<span class="general1-variable">$MyVar</span>, <span class="general1-number">40</span>) - the variable <span class="general1-variable">$MyVar</span> will be compiled as <span class="general1-variable">$40</span></pre></div>
+<br>
+(!) See also 'help\examples\alloc.txt'<br>
+<br><hr>
+<p><strong>SQR</strong> <a name="SQR"></a><br><br>
+Calculates the square of a variable passed as a parameter*.&nbsp; It can be used as procedure only.</p>
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard8();"  ></span>
+<TEXTAREA ID="holdtext8" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext8" class="NON">sqr(<span class="general1-variable">$var</span>) 
+=
+<span class="general1-variable">$var</span> *= <span class="general1-variable">$var</span></pre></DIV>
+<p>
+* variable type has to be defined. See item: <a href="features.htm#The multilingual interface"> (The multilingual interface)</a>
+</p>
+<hr>
+<p><strong>RANDOM</strong> <a name="RANDOM"></a><br><br>
+  This  function generates a random number within a range specified by the parameters. </p>
+
+<div  class="imgcursor" align="right"><span class="kbd"><img src="ico_cb.gif" alt="Copy to Clipboard" width="16" height="16"  onClick="ClipBoard9();"  ></span>
+<TEXTAREA ID="holdtext9" STYLE="display:none;"></TEXTAREA></div>
+<div class=mycode5>
+<pre id="copytext9" class="NON"><span class="general1-variable">$rnd</span> = random(<span class="general1-number">1</span>, <span class="general1-variable">$high</span>)</pre></div>
+<p>This function can be used for both  integers and floats.&nbsp; The opcode  is chosen in accordance with the type of a  result variable 
+($rnd in this case)</p>
+ </TD>
+          <TD width=5 
+        background="rtd.gif"></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=20 
+            src="mtdlbot.png" width=5 border=0></TD>
+          <TD align=left 
+            background="mtdbgbot.png"> </TD>
+          <TD class=ninfo align=right 
+          background="mtdbgbot.png">&nbsp; 
+            </TD>
+          <TD width=5><IMG height=20 
+            src="mtdrbot.png" width=5 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+</TD></TR><td width="100%"></TBODY></TABLE>
+</TABLE></body></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Previous Releases</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</HEAD>
+<BODY topMargin=0 >
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: #c0c0c0 1px solid" 
+height=121 cellSpacing=0 cellPadding=0 width=640>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%"><img 
+      src="logo2.jpg" width="640" height="121" border=0 class="conthdr" ></TD>
+  </TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=640 border=0>
+  <TBODY>
+  
+  <TD width="100%" height="100%" vAlign=top>
+   <DIV><IMG 
+      src="old/abaut/articles.png" width="640" height="33"></DIV>
+
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=36 
+            src="mtdl.png" width=5></TD>
+          <TD class=ntitle vAlign=top 
+          background="mtdbg.png" height=36>Version History</TD>
+          <TD width=5><IMG height=36 
+            src="mtdr.png" 
+      width=20></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5 background="ltd.gif"></TD>
+          <TD class=news vAlign=top><br>
+
+	<p>Previous Releases:</p>
+    <p>01.01.2007 v. 2.99e - </p>
+<ul>
+  <li> fixed disappearing code parts within the HEX..END contruction in the debug_mode &nbsp;&nbsp;decompiling
+  <li> the <a href="hex_end.htm">hex..end</a> statement could accept the aDMA type
+  <li>the FOR statement could accept the model identifiers  as the counter values 
+  <li>the hex..end statement could accept the <a href="hex_end.htm#strings">strings</a></li>
+</ul>
+<br>
+<p>    03.12.2006    v. 2.99d - </p>
+<ul>
+    <li>Memory Hacker became a separate tool. Now  downloadable at: &nbsp;&nbsp;<a href="http://sannybuilder.com/downloads" target="_blank">http://sannybuilder.com/downloads</a>
+    <li> fixed decompiler bug 
+</ul>
+
+<p>	30.11.2006	v. 2.99c - </p>
+
+<ul>
+<li> added the Memory Hacker plug-in
+<li>possibility to decompile the main.scm of Liberty City Stories
+<li>support the number of constants as the global <a href="arrays.htm">array</a> indexes
+<li>the global variables are decompiled with the type aDMA (&) if not a multiple to 4
+<li>at compilation the default values for the segments are used when the file header is not &nbsp;&nbsp;&nbsp;present
+<li>possibility to open a file using Drag&Drop
+<li>new preprocessor <a href="directives.htm">directives</a>: {$VERSION}, {$VERSION_RESTORE} 
+</ul>
+<p>
+(!) If you get a compiler error message like "Unknown directive xxxx"<br>
+	when compiling the sources from v2.99, replace the line {$VERSION xxxx}<br>
+	to any place after the header, for instance before the comment </p>
+<p>
+	//-------------MAIN---------------</p>
+
+
+	27.09.2006	v. 2.99 -
+<ul>Major changes:
+<li> added new commands WriteMem and ReadMem
+	<li> support hexadimal numbers 
+	<li> HEX..END statement can accept labels and global variables 
+	<li> full support of &-datatype (ADMA)
+	<li> opportunity to give custom names to labels 
+	<li> opportunity to choose a different case for custom names and strings (Options->Format)
+	<li> added the console in order to switch the special options of SB
+	<li> decompiler supports the GXT-files of GTA III & GTA VC
+	<li> added special symbol constants in the long strings
+</UL>
+<ul>Minor changes:
+	<li> information about an INI file (version, author, date)
+	<li> classes support an original order of the parameters 
+	  (like in SASCM.INI from PLPynton).<br> &nbsp;&nbsp;&nbsp;In order to support such order 
+	  there should be a line {$VERSION x.0.xxxx}, <br> &nbsp;&nbsp;&nbsp;see comments in the INI about this
+	<li> added option to confirm exit program 
+	<li> quick switching of the Edit Mode
+	<li> converting of the selected piece of code
+	<li> opportunity to pass the current file name to the external tool
+	<li> corrected some mistakes in the configuration files
+	<li> removed auto-casting of an integer number to a float one 
+	  when the variable was declared &nbsp;&nbsp;&nbsp;as Float. Now the compiler chooses an opcode 
+	  depending on the number type <br>&nbsp;&nbsp;&nbsp;only (in math expressions without opcodes)
+	<li> reading/writing of the player's z_angle in Coord Manager; 
+	  quick insertion of this one in a &nbsp;&nbsp;&nbsp;script by pressing Ctrl+Shift+E (for SA) 
+</ul>
+<p>Other notes:<br>
+	(!) The following opcodes were changed in SASCM.INI: 0181, 00c3, 00c4 in order 
+	to support the commands WriteMem and ReadMem. In original files these opcodes 
+	are not used and the games do not support them so there should be no problem.<br>
+<br>
+
+	(!) The class member Car.SetSpeedInstantly was named incorrectly (with wrong 
+	opcode) in the file classes.db for SA. If you get the error message about 
+	this method at compilation, rename it in Actor.DrivingPlane manually. We apologize.
+</p>
+
+04.08.2006	v. 2.98 -
+<ul>
+	 <li> Sanny Builder became multilingual 
+	 <li> added menu for external applications
+	 <li> the special version of Opcode Search Tool is built in SB
+	 Details in a file 'OST Readme.txt'
+	 <li> checking of the math expressions while decompiling when the option "Write opcodes"
+	   is &nbsp;&nbsp;&nbsp;disabled (to sure that all the opcodes were used correctly)
+	 <li> an opportunity to choose an IMG-file manually if the last one 
+	   is not found in a folder with &nbsp;&nbsp;&nbsp;the SCM-file (an option "Manual IMG opening")
+	 <li> an opportunity to add new macros directly from the editor;
+	   added macros descriptions
+	 <li> the list of models can be sorted alphabetically/by value
+	   (Alt+S when the list is active)
+	 <li> minor corrections and changes
+</ul>
+
+
+	11.06.2006	v. 2.97 -
+<ul>
+	<li> new data type: & that denotes direct byte address (ADMA).
+	<li> minor updates
+</ul>
+	01.04.2006	v. 2.96 -
+<ul>
+	<li> improved the option jump to label
+	<li> added an opportunity to call macros list of macros
+	<li> added an option of replacement of mission numbers with their names
+	<li> fixed some bugs
+</ul>
+
+v 2.9f -
+<ul>
+<li> model names is added to the DEFINE OBJECT list by the compiler (this list may be not presented in the source file at all)
+<li> block comments support {}
+<li> macrorecording
+<li> minor changes
+</ul>
+
+		 v 2.9 -
+<ul>
+ 5.11.05 - some bugs fixed, update
+	<li> additional commands (see by item 2.5) are added
+	<li> operator IN is added
+	<li> construction IF..THEN..ELSE..END is added
+	<li> loops WHILE, REPEAT are added
+	<li> the opportunity of use of the enclosed loops is added.
+	<li> function alloc() is added, allowing to specify for a variable the specific address in memory
+	<li> new comment style: //
+	<li> positions of markers and the cursor are remembered for the closed files
+</ul>	 
+
+
+	05.11.2005	release #8	v. 2.6 -
+<ul>
+	 <li> full support of formats of Vice City and GTA3 is added
+	 <li> the opportunity of initialization of variables and files as members of a class is added
+	 <li> display of the list of variables and labels is added</li>
+	 <li> support of loops (FOR operator) is added</li>
+	 <li> minor changes:</li>
+	  <li> missions can be started on their name (start_mission MYMISSION), where
+	     MYMISSION is a name of a starting label (DEFINE MISSION 100 at @MYMISSION)</li>
+	 <li> the list of imported models (defined objects) on Ctrl+Space is accessible</li>
+	 <li> the new pseudo-operator &lt;&gt;</li>
+	 <li> if at decompiling it is not found script.img, it is used original</li>
+	  <li> for arrays the type handle is added</li>
+	 <li> an opportunity of switching-off of the warning of use IMG by game</li>
+</ul>
+
+	10.10.2005	release #7	v. 2.5 -
+<ul>
+	<li> added "properties" support</li>
+	<li> added macroes support</li>
+	<li> added construction VAR...END for variables management</li>
+	<li> all math commands can be used without opcodes [0004..008B]</li>
+	<li> new pseudo operators < and <=</li>
+	<li> added a capability that the compiler itself set necessary value for IF command</li>
+	<li> added "extended" parameters support</li>
+	<li> added models list showing</li>
+	<li> minor changes and fixes</li>
+</ul>
+
+	18.09.2005	release #6	v. 2.0 -
+<ul>
+	<li> added classes support</li>
+	<li> added keywords support</li>
+	<li> added a capability to write some math commands without 
+	opcodes (now such capability exists for opcodes 0004,0005,0006,0007,0038,0039,0042,0043)</li>
+	<li> for opcode 00D6 the default parameter is 0 (if = if 0)</li>
+	<li> added the option of a choice of various kinds of labels (Formats-> Labels Format)</li>
+	<li> added keywords True and False which designate 1 and 0 accordingly</li>
+	<li> added construction HEX...END for writing hexadecimal values directly in SCM</li>
+</ul>
+
+	07.09.2005	release #5	v. 1.1 -
+<ul>
+	<li> added coords manager</li>
+	<li> some bugs fixed</li>
+</ul>
+
+	04.08.2005	release #4	v. 1.0 -
+<ul>
+	<li> new format of labels</li>
+	<li> added convertor from BW''s SA Mission Builder syntax</li>
+	<li> at decompiling names of models and texts from american.gxt are added in source</li>
+	<li> added new options</li>
+	<li> some bugs fixed</li>
+</ul>
+
+	20.08.2005 	 release #3	v. 0.8 -
+<ul>
+	<li> added the capability to associate SCM-files with the program</li>
+	<li> after decompilling the outputfile name now changes if file with
+	such name already exists. E.g, if already exists main.scm.txt, the 
+	new file will be main.scm[0].txt </li>
+	<li> error messages becames more informative</li>
+	<li> added check of label redeclaring</li>
+	<li> some bugs fixed</li>
+</ul>
+
+	10.08.2005 	 release #2	v. 0.7 -
+<ul>
+	<li> added new options for text manipulation</li>
+	<li> added a capability to work with several files simultaneously</li>
+	<li> added a opcodes search function through F1 (beta)</li>
+</ul>
+	04.08.2005 	 release #1	v. 0.6 -
+<ul>
+	<li> full decompiling of GTA SA *.scm-files</li>
+	<li> compilation source in the SA SCM-file and IMG-file.</li>
+	<li> minimum options of text manipulation</li>
+</ul>        </TD>
+          <TD width=5 
+        background="rtd.gif"></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=20 
+            src="mtdlbot.png" width=5 border=0></TD>
+          <TD align=left 
+            background="mtdbgbot.png"> </TD>
+          <TD class=ninfo align=right 
+          background="mtdbgbot.png">&nbsp; 
+            </TD>
+          <TD width=5><IMG height=20 
+            src="mtdrbot.png" width=5 
+        border=0></TD></TR></TBODY></TABLE>
+</TD></TR>
+</TABLE></body></html>

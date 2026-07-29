@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Features</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</HEAD>
+<BODY topMargin=0 >
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: #c0c0c0 1px solid" 
+height=121 cellSpacing=0 cellPadding=0 width=640>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%"><IMG 
+      src="logo2.jpg" width="640" height="121" border=0 class="conthdr" ></TD>
+  </TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=640 border=0>
+  <TBODY>
+  
+  <TD width="100%" height="100%" vAlign=top>
+   <DIV><IMG 
+      src="old/redaktor/articles.png" width="640" height="33"></DIV>
+
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=36 
+            src="mtdl.png" width=5></TD>
+          <TD class=ntitle vAlign=top 
+          background="mtdbg.png" height=36>Features</TD>
+          <TD width=5><IMG height=36 
+            src="mtdr.png" 
+      width=20></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5 background="ltd.gif"></TD>
+          <TD class=news vAlign=top><p>Sanny Builder IDE grants the end-user the  following possibilities:</p>
+
+		
+		 
+<p>
+     <b> Syntax Highlighting </b> <br><br>
+You may highlight the parameters of opcodes, comments and keywords.  Words that can be highlighted are defined in the file; 'keywords.ini'. They are highlighted as the keywords.</p>
+
+
+		<b> Fast <strong>Movement Through Code</strong> </b>
+<p>Sanny offers you two ways of accomplishing this. First, you can bookmark the line by pressing Ctrl +  Shift + &lt;0..9&gt; and then to pass to this one by pressing Ctrl +  &lt;0..9&gt;.&nbsp; To delete all bookmarks, use option Edit -&gt; Clear All Bookmarks.&nbsp; The second method is via an option 'Go To Line'.&nbsp; It is invoked by pressing Ctrl + G.&nbsp; Enter a sequence number of the necessary line  and the editor will move the cursor to it.</p>
+
+<p>		<b><a name="jumpLabel" id="jumpLabel">Jump <strong>To Label</strong> </a></b>
+<br>
+<br>
+    Place the  cursor on any label, for example @MyLabel. 
+	Press Ctrl + Num2 and the editor will move the cursor to the line 
+	with this label (:MyLabel). To go back press Ctrl + Num8.<br><br>
+	You can also locate jumps to the needed  label.&nbsp; Place  the cursor on the label then press Ctrl + Num4 to go to the line above where this label is present.&nbsp; Alternatively, press Ctrl + Num6  to go to the line below.&nbsp; If there are no such lines, the cursor position will not change.</p>
+
+
+		<p><strong>Displaying  Different Opcode Information</strong> <strong> </strong></p>
+		<p>
+    SB displays a needed parameters number, a digital value of the 
+	model under the cursor in the statusbar when the option 'Show opcode 
+	info' is enabled.
+</p>
+
+<p>		<b>SAMB Source Code Converter </b>
+<br><br>
+Sanny supports SAMB 0.33 syntax.&nbsp; <strong>To use the converter</strong>, open the source file in Sanny Builder and select menu  item: 'Tools -&gt; Code converter -&gt; MB -&gt; SB'.&nbsp;  Note the convertor uses the file 'MB.ini' from  the SB directory which contains the variables used by SAMB and their  memory addresses.&nbsp; If you added your own  variables in the file variables.ini (from the SAMB 0.33), copy them into the file MB.ini. </p>
+
+
+<p>		<b>Opcode search </b>
+<br><br>	
+	Type search terms that the needed opcode may contain (for example, 'fade') and press F1.  The line will be changed to the first line from file 'opcodes.txt' containing this word (0169: set_fade_color 0 0 0).  If you need another opcode with this word, press F1 again.  The chars '_' and '.' between words are ignored.  If you want to find words with these symbols press Ctrl + F1.  If you type '_thread' and press Ctrl + F1 the line with '_thread' will be found instead of 'thread'.  (<a href="opcode_search.htm">See clause 4 for more info</a>)</p>
+
+
+<p>		<b><a name="Player coords managing">Player Coordinates Management </a></b>
+<br><br>
+Press F4 when SA is running and the  Coords Manager window will appear.&nbsp; Here, you can set new player coords and copy the  current ones.&nbsp; In the upper edit line, you can input  all three coordinates XYZ, delimited by a single space or &quot;,&quot;.&nbsp; Additionally,  you can insert CJ's  current coords in the text by pressing Ctrl + Shift + C. To insert the player's  angle, press Ctrl + Shift  + E.</p>
+
+		<b> <a name="use macros">Macroes Support</a></b>
+        <p>The macros is the group of lines that are inserted in the editor when you type a special word and press F2.&nbsp; All macros are  contained in the file 'macroes.txt'.&nbsp; To  call the macros list,  press <a href="hotkeys.htm#Ctrl + J">Ctrl + J</a><br>
+	<br>
+Macros syntax (in macroes.txt):<br><br>
+The name of a macros (special word) is written as a  simple line.&nbsp; In that line, you can also add a  short description of the macros. <br>
+<br>
+Additionally, it's possible to add the macros to  the file 'macroes.txt' directly from the editor.&nbsp; For this purpose,  select the necessary piece of code (text) and choose &quot;Service -&gt; Add macros&quot;.&nbsp; Then, input  the name of your new macros (description optional) and press OK.&nbsp; The new macros is  ready to use now.<br>
+<br>
+Each line of the macros is designated by the  symbol =.&nbsp; The cursor position is  designated by symbol |.<br><br>
+
+<b>Macrorecorder</b><br><br>
+You can record your key pressing sequence  (macros).&nbsp;  Example code:</p>
+<DIV class=mycode5>
+<span class="general1-variable">$Actor</span><span class="general1-space"> = </span><span class="general1-class">Actor</span><span class="general1-symbol">.</span><span class="general1-command">Create</span><span class="general1-symbol">(CivMale, </span><span class="general1-model">#MALE01</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">10.0</span><span class="general1-symbol">)<br>
+</span><span class="general1-variable">$ActorWithGun</span><span class="general1-space"> = </span><span class="general1-class">Actor</span><span class="general1-symbol">.</span><span class="general1-command">Create</span><span class="general1-symbol">(CivMale, </span><span class="general1-model">#MALE01</span><span class="general1-symbol">, </span><span class="general1-number">110.0</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">20.0</span><span class="general1-symbol">)<br>
+</span><span class="general1-variable">$Gang01</span><span class="general1-space"> = </span><span class="general1-class">Actor</span><span class="general1-symbol">.</span><span class="general1-command">Create</span><span class="general1-symbol">(CivMale, </span><span class="general1-model">#MALE01</span><span class="general1-symbol">, </span><span class="general1-number">120.0</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">30.0</span><span class="general1-symbol">)<br>
+</span><span class="general1-variable">$Gang02</span><span class="general1-space"> = </span><span class="general1-class">Actor</span><span class="general1-symbol">.</span><span class="general1-command">Create</span><span class="general1-symbol">(CivMale, </span><span class="general1-model">#MALE01</span><span class="general1-symbol">, </span><span class="general1-number">130.0</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">40.0</span><span class="general1-symbol">)<br>
+</span><span class="general1-variable">$Killer</span><span class="general1-space"> = </span><span class="general1-class">Actor</span><span class="general1-symbol">.</span><span class="general1-command">Create</span><span class="general1-symbol">(CivMale, </span><span class="general1-model">#MALE01</span><span class="general1-symbol">, </span><span class="general1-number">140.0</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">50.0</span><span class="general1-symbol">)<br>
+</span><span class="general1-variable">$ActorWithoutGun</span><span class="general1-space"> = </span><span class="general1-class">Actor</span><span class="general1-symbol">.</span><span class="general1-command">Create</span><span class="general1-symbol">(CivMale, </span><span class="general1-model">#MALE01</span><span class="general1-symbol">, </span><span class="general1-number">150.0</span><span class="general1-symbol">, </span><span class="general1-number">100.0</span><span class="general1-symbol">, </span><span class="general1-number">60.0</span><span class="general1-symbol">) </span>
+</div>
+<p>Say you need to exchange the actor's  handles in each pair<br>
+	(i.e to put <span class="general1-variable">$ActorWithGun</span> instead of <span class="general1-variable">$Actor</span>)<br>
+	<br>
+
+	<a name="macro">Place the cursor on the first line and press</a> <a href="hotkeys.htm#Ctrl + M">Ctrl + M</a>.	Immediately, the editor begins logging all keystrokes  - so be careful! <br><br>
+
+	- Press and hold [Ctrl] and press once  [Right arrow]<br>
+	- Now press [Shift] + [Home] and [Ctrl] + [Ins].<br> 
+	- Press [Down arrow]. The cursor must be on the second line with the global variable  on the clipboard<br>
+	- Press [Ctrl] + [Right arrow] and [Shift] + [Ins].<br>
+	- Press [Ctrl] + [Left arrow], [Shift] + [Home], [Ctrl] + [Ins] and [Delete]<br>
+	- Press [Up arrow]<br>
+	- Press [Ctrl] + [Shift] + [Right arrow] and [Shift] + [Ins]<br>
+	- Press [Home] button.<br><br>
+	Now the first two lines look like:</p>
+<DIV class=mycode5> <span class="general1-variable">$ActorWithGun</span> = <span class="general1-class">Actor</span>.<span class="general1-command">Create</span>(CivMale, <span class="general1-number">100.0</span>, <span class="general1-number">100.0</span>, <span class="general1-number">10.0</span>)<br>
+  <span class="general1-variable">$Actor</span> = <span class="general1-class">Actor</span>.<span class="general1-command">Create</span>(CivMale, <span class="general1-number">110.0</span>, <span class="general1-number">100.0</span>, <span class="general1-number">20.0</span>)</div>
+<p>
+and cursor is in the beginning of the first line. Now press Ctrl + M. 
+
+	<a name="replay macro">The macros is recorded</a>. Now you can repeat the recorded keystrokes by 
+	pressing Ctrl + P. Put the cursor on the third line, press <a href="hotkeys.htm#Ctrl + P">Ctrl + P</a>	and the actors handles will be exchanged.<br>
+	<br>
+	While processing, you can pause the  recording by pressing Ctrl + P.&nbsp; To continue,  Ctrl + P again.</p>
+
+
+		<p><strong>Replacing  Mission Numbers With Their Names</strong> <strong> </strong></p>
+		<p>Sanny Builder can use the mission name  instead of its number.&nbsp; The mission name  is the label that is defined by DEFINE MISSION.&nbsp;  For example, if you have: <br></p>
+<DIV class=mycode5>
+	DEFINE MISSION <span class="general1-number">10</span> AT <span class="general1-label">@MYMISSION</span></DIV>
+	<p>Instead of: </p>
+    <DIV class=mycode5>
+	<span class="general1-reservedword">start_mission</span> <span class="general1-number">10</span></DIV>
+    <p>You can use:</p>
+<DIV class=mycode5>
+	<span class="general1-reservedword">start_mission</span> MYMISSION</div>
+<p>In SB, there is also the option:  Replace Mission Numbers.&nbsp; When it's enabled, the decompiler automatically replaces  all mission numbers.&nbsp; The compiler  supports both of the variants.<br>
+  <br>
+To call the mission names list, press Ctrl + Space.&nbsp; The cursor has to be directly after command  start_mission.<br>
+<br>
+Additionally, you can jump from the mission name  to the mission.&nbsp; It's  the same as <a href="#jumpLabel">Jump To Label</a></p>
+
+
+		<b> <a name="The multilingual interface">Multilingual Interface </a></b>
+<p>Now available - both in the windows texts and the  engine messages.&nbsp; You  can switch languages via options (F10).&nbsp;  File 'lang\How to translate.txt' contains more information about creating your own translation.</p>
+
+
+		<b><a name="current edit mode"> All-in-One Editor </a></b>
+<p>Sanny Builder offers various modes to edit the  scripts of GTA III, GTA VC, GTA SA.&nbsp;  The current edit mode in use is always displayed in the bottom right corner.&nbsp; To switch to  another edit mode, use  the context menu displayed on-click by  the current mode name.</p>
+
+		<strong>External Tools/Plug-ins Menu</strong>
+		<p>You can add up to 9 tools which can be executed whenever you need them.&nbsp; Every tool has its  own hotkey for your convenience.&nbsp; You may also pass  parameters to your tool. As the command line  parameter of the tool, you can specify special  word $SB_FileName.&nbsp; It references the name of the current open file.</p>
+
+
+		<p><strong>Code Commenting</strong> <strong></strong></p>
+		<p>Comments are denoted by a  double slash //, as seen in other scripting languages  (php etc.).&nbsp; All text placed after // (within that same line) will be  ignored by the compiler.&nbsp; You can comment  out multiple lines at once by selecting them and pressing Ctrl + Q - repeat to  undo at any time.<br>
+          <br>
+To comment out multiple lines or part of the line,  use block comments {}:</p>
+<DIV class=mycode5>	0001: <span class="general1-reservedword">wait</span>  <span class="general1-comment">{comments here}</span> <span class="general1-number">0</span> ms</div>
+<p>
+   Also it is possible to comment out the several lines by selecting them 
+	and pressing Ctrl+Q. To uncommenting the code repeat it once again. </p>
+
+
+		<strong>Custom Labels</strong>
+		<p>You can give labels custom names that are  not dependent on  decompiler options.&nbsp; The names are  specified in the file CustomLabels.ini (separately  for each game). File syntax reference:</p>
+<DIV class=mycode5>&lt;label address&gt;=&lt;custom name&gt;</div>
+<p>If the decompiler finds the label at the specified address,  it will get the custom name.<br>
+  <br>
+To find out the label address toggle the label format &quot;Global Offset.&quot;&nbsp;  After decompiling, the number in a label  name will become its offset. </p>
+</TD>
+          <TD width=5 
+        background="rtd.gif"></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width=5><IMG height=20 
+            src="mtdlbot.png" width=5 border=0></TD>
+          <TD align=left 
+            background="mtdbgbot.png"></TD>
+          <TD class=ninfo align=right 
+          background="mtdbgbot.png">&nbsp; 
+            </TD>
+          <TD width=5><IMG height=20 
+            src="mtdrbot.png" width=5 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+</TD></TR><td width="100%"></TBODY></TABLE>
+</TABLE></body></html>
