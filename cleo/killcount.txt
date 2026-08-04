@@ -1,0 +1,81 @@
+{$CLEO .cs}
+
+// Mod: Kill Counter HUD (Sintaxe Clássica)
+// Digite "KILLCOUNT" para ligar/desligar o contador.
+
+03A4: name_thread 'KILLCNT'
+
+0001: wait 2000 ms
+03F0: use_text_commands 1
+
+// Cria as labels de texto na memória GXT
+0ADF: add_text_label 'KLS_S' "KILLS: ~1~"
+0ADF: add_text_label 'KLS_T' "TOTAL: ~1~"
+
+0@ = 0 // isHudActive (0 = OFF, 1 = ON)
+1@ = 0 // initialKills
+2@ = 0 // currentKills
+3@ = 0 // sessionKills
+
+:MAIN_LOOP
+0001: wait 0 ms
+
+if
+    8256: not is_player_defined $PLAYER_CHAR
+then
+    0002: jump @MAIN_LOOP
+end
+
+if
+    0ADC: test_cheat "KILLCOUNT"
+then
+    if
+        0@ == 0
+    then
+        0@ = 1
+        0652: 1@ = get_int_stat 121
+        0ACA: print_help_string "~g~Kill Counter: ~w~ON"
+    else
+        0@ = 0
+        0ACA: print_help_string "~r~Kill Counter: ~w~OFF"
+    end
+    0001: wait 250 ms
+end
+
+if
+    0@ == 1
+then
+    0652: 2@ = get_int_stat 121
+
+    if
+        002D: 2@ >= 1@
+    then
+        0085: 3@ = 2@
+        0062: 3@ -= 1@
+    else
+        0085: 1@ = 2@
+        3@ = 0
+    end
+
+    // Fundo preto translúcido
+    038E: draw_rect 560.0 125.0 120.0 44.0 0 0 0 170
+
+    // Linha de detalhe vermelha superior
+    038E: draw_rect 560.0 104.0 120.0 2.0 220 30 30 230
+
+    // Texto: KILLS da sessão
+    0349: set_text_font 1
+    033F: set_text_scale 0.32 1.15
+    0340: set_text_colour 255 70 70 255
+    081C: set_text_edge 1 0 0 0 200
+    045A: display_text_with_number 506.0 108.0 'KLS_S' 3@
+
+    // Texto: TOTAL de kills da carreira
+    0349: set_text_font 1
+    033F: set_text_scale 0.24 0.9
+    0340: set_text_colour 200 200 200 220
+    081C: set_text_edge 1 0 0 0 200
+    045A: display_text_with_number 506.0 126.0 'KLS_T' 2@
+end
+
+0002: jump @MAIN_LOOP

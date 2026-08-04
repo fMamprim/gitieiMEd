@@ -1,0 +1,289 @@
+// CLEO custom script: Meteor Gun
+// Sanny Builder 4
+// mode: GTA SA (v1.0 - SBL)
+//
+// Type "METEOR" to toggle the Meteor Gun.
+// When active, aiming and shooting spawns the massive rock prop (model 1305 dyn_quarryrock01)
+// plunging from the sky directly onto the shot impact point.
+// Upon landing, multiple diverse explosions trigger around the rock!
+
+{$CLEO .cs}
+
+script_name {name} 'meteor'
+
+wait {time} 2000
+
+int isMeteorActive = false
+int targetPed = -1
+int rockObj = -1
+int foundHit = false
+int fallTicks = 0
+
+float camX = 0.0
+float camY = 0.0
+float camZ = 0.0
+float lookX = 0.0
+float lookY = 0.0
+float lookZ = 0.0
+
+float vecX = 0.0
+float vecY = 0.0
+float vecZ = 0.0
+
+float currentDist = 0.0
+float currentX = 0.0
+float currentY = 0.0
+float currentZ = 0.0
+float checkGroundZ = 0.0
+float tmp = 0.0
+
+float targetX = 0.0
+float targetY = 0.0
+float targetZ = 0.0
+float groundZ = 0.0
+float spawnZ = 0.0
+
+float objX = 0.0
+float objY = 0.0
+float objZ = 0.0
+float contactZ = 0.0
+
+float expX = 0.0
+float expY = 0.0
+
+while true
+    wait {time} 0
+
+    if
+        not is_player_playing $player1
+    then
+        continue
+    end
+
+    if
+        test_cheat "METEOR"
+    then
+        if
+            isMeteorActive == false
+        then
+            isMeteorActive = true
+            // Give Desert Eagle (ID 24) with 200 ammo and equip it
+            give_weapon_to_char $scplayer 24 200
+            set_current_char_weapon $scplayer 24
+            print_help_string {text} "~g~Meteor Gun: ~w~ACTIVATED! Aim and fire."
+        else
+            isMeteorActive = false
+            print_help_string {text} "~r~Meteor Gun: ~w~DEACTIVATED"
+        end
+
+        wait {time} 300
+    end
+
+    if
+        isMeteorActive == true
+    then
+        // Check if player is shooting
+        if
+            is_char_shooting $scplayer
+        then
+            targetPed = -1
+
+            // 1. Check if aiming/targeting a ped directly
+            if
+                get_char_player_is_targeting $player1 targetPed
+            then
+                if
+                    not is_char_dead targetPed
+                then
+                    targetX, targetY, targetZ = get_char_coordinates targetPed
+                end
+            else
+                // 2. Trace line of sight from camera to find exact ground point
+                camX, camY, camZ = get_active_camera_coordinates
+                lookX, lookY, lookZ = get_active_camera_point_at
+
+                vecX = lookX
+                vecX -= camX
+                vecY = lookY
+                vecY -= camY
+                vecZ = lookZ
+                vecZ -= camZ
+
+                foundHit = false
+                currentDist = 4.0
+
+                while currentDist <= 90.0
+                    currentX = camX
+                    tmp = vecX
+                    tmp *= currentDist
+                    currentX += tmp
+
+                    currentY = camY
+                    tmp = vecY
+                    tmp *= currentDist
+                    currentY += tmp
+
+                    currentZ = camZ
+                    tmp = vecZ
+                    tmp *= currentDist
+                    currentZ += tmp
+
+                    checkGroundZ = get_ground_z_for_3d_coord currentX currentY currentZ
+
+                    if
+                        currentZ <= checkGroundZ
+                    then
+                        targetX = currentX
+                        targetY = currentY
+                        targetZ = checkGroundZ
+                        foundHit = true
+                        break
+                    end
+
+                    currentDist += 4.0
+                end
+
+                if
+                    foundHit == false
+                then
+                    // Fallback to 40 meters forward snapped to ground
+                    tmp = vecX
+                    tmp *= 40.0
+                    targetX = camX
+                    targetX += tmp
+
+                    tmp = vecY
+                    tmp *= 40.0
+                    targetY = camY
+                    targetY += tmp
+
+                    targetZ = get_ground_z_for_3d_coord targetX targetY camZ
+                end
+            end
+
+            // 3. Request Model 1305 (dyn_quarryrock01)
+            request_model 1305
+            load_all_models_now
+
+            if
+                has_model_loaded 1305
+            then
+                spawnZ = targetZ
+                spawnZ += 45.0
+
+                rockObj = create_object_no_offset 1305 targetX targetY spawnZ
+                set_object_collision rockObj true
+                set_object_dynamic rockObj true
+                set_object_mass rockObj 50000.0
+                set_object_velocity rockObj 0.0 0.0 -60.0
+
+                // 4. Wait until the rock lands on the ground
+                fallTicks = 0
+                while fallTicks < 60
+                    wait {time} 0
+                    fallTicks += 1
+
+                    if
+                        does_object_exist rockObj
+                    then
+                        objX, objY, objZ = get_object_coordinates rockObj
+                        groundZ = get_ground_z_for_3d_coord objX objY objZ
+                        contactZ = groundZ
+                        contactZ += 2.5
+
+                        if
+                            objZ <= contactZ
+                        then
+                            break
+                        end
+                    else
+                        break
+                    end
+                end
+
+                // 5. Trigger multiple diverse explosions around the impact zone
+                if
+                    does_object_exist rockObj
+                then
+                    objX, objY, objZ = get_object_coordinates rockObj
+                else
+                    objX = targetX
+                    objY = targetY
+                    objZ = targetZ
+                end
+
+                groundZ = get_ground_z_for_3d_coord objX objY objZ
+
+                // Center: TankFire (10)
+                add_explosion objX objY groundZ 10
+
+                // North: Rocket (2)
+                expX = objX
+                expY = objY
+                expY += 3.5
+                add_explosion expX expY groundZ 2
+
+                // South: Aircraft (7)
+                expX = objX
+                expY = objY
+                expY -= 3.5
+                add_explosion expX expY groundZ 7
+
+                // East: Car (4)
+                expX = objX
+                expX += 3.5
+                expY = objY
+                add_explosion expX expY groundZ 4
+
+                // West: Molotov fire (1)
+                expX = objX
+                expX -= 3.5
+                expY = objY
+                add_explosion expX expY groundZ 1
+
+                // Diagonal NE: Mine (8)
+                expX = objX
+                expX += 4.5
+                expY = objY
+                expY += 4.5
+                add_explosion expX expY groundZ 8
+
+                // Diagonal SW: Grenade (0)
+                expX = objX
+                expX -= 4.5
+                expY = objY
+                expY -= 4.5
+                add_explosion expX expY groundZ 0
+
+                // Diagonal NW: QuickCar (5)
+                expX = objX
+                expX -= 4.5
+                expY = objY
+                expY += 4.5
+                add_explosion expX expY groundZ 5
+
+                // Diagonal SE: Molotov fire (1)
+                expX = objX
+                expX += 4.5
+                expY = objY
+                expY -= 4.5
+                add_explosion expX expY groundZ 1
+
+                shake_cam 250
+
+                if
+                    does_object_exist rockObj
+                then
+                    mark_object_as_no_longer_needed rockObj
+                end
+
+                mark_model_as_no_longer_needed 1305
+            end
+
+            // Debounce / weapon cooldown
+            wait {time} 400
+        end
+    end
+end
+
+terminate_this_script

@@ -5,10 +5,10 @@ SpawnWithTunes = false
 TeleportMarker = false
 
 [Menu]
-LastUpdateChecked = 5
+LastUpdateChecked = 4
 
 [Window]
-CurrentPage = 4
+CurrentPage = 5
 PosX = 200.0
 PosY = 151.0
 SizeX = 480.0

@@ -1,0 +1,16 @@
+{$CLEO .cs}
+Alloc($PLAYER_ACTOR, 3)
+
+nop 
+1@ = get_char_health $PLAYER_ACTOR
+
+:Noname_10
+wait 0
+if 
+  is_key_pressed KeyCode.Num9
+goto_if_false @Noname_44
+1@ = 0
+set_char_health $PLAYER_ACTOR {health} 1@
+
+:Noname_44
+goto @Noname_10

@@ -1,5 +1,5 @@
-[22:40:34.333578] (system)	Session started.
-[22:40:34.333578] (debug)	Module handle: 53C90000
+[23:21:41.656548] (system)	Session started.
+[23:21:41.656548] (debug)	Module handle: 7AD50000
 
 MoonLoader v.026.5-beta loaded.
 Developers: FYP, hnnssy, EvgeN 1137
@@ -7,31 +7,31 @@ Developers: FYP, hnnssy, EvgeN 1137
 Copyright (c) 2016, BlastHack Team
 http://blast.hk/moonloader/
 
-[22:40:34.333578] (info)	Working directory: C:\Users\felip\Documents\gitieiMEd\moonloader
-[22:40:34.333578] (debug)	FP Control: 0009001F
-[22:40:34.333578] (debug)	Game: GTA SA 1.0.0.0 US
-[22:40:34.333578] (system)	Installing pre-game hooks...
-[22:40:34.351501] (system)	Hooks installed.
-[22:40:42.658115] (debug)	Initializing opcode handler table
-[22:40:42.659245] (debug)	package.path = C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\?.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
-[22:40:42.659245] (debug)	package.cpath = C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.dll;
-[22:40:42.661324] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\animation-manager.lua'...
-[22:40:42.663828] (debug)	New script: 0691543C
-[22:40:42.754370] (system)	Animation Manager: Loaded successfully.
-[22:40:42.754370] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\changer.lua'...
-[22:40:42.754370] (debug)	New script: 06915934
-[22:40:42.761228] (system)	In-Game Commands Changer: Loaded successfully.
-[22:40:42.761228] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\Teleporter.lua'...
-[22:40:42.761228] (debug)	New script: 06914554
-[22:40:42.766288] (system)	Teleporter: Loaded successfully.
-[22:40:42.766288] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
-[22:40:42.766288] (debug)	New script: 0691405C
-[22:40:42.838179] (system)	Lua Visual Veh Spawner: Loaded successfully.
-[22:40:46.691342] (system)	Installing post-load hooks...
-[22:40:46.691342] (system)	Hooks installed.
-[22:56:45.472424] (system)	Unloading...
-[22:56:45.472424] (system)	Animation Manager: Script terminated. (0691543C)
-[22:56:45.472424] (system)	In-Game Commands Changer: Script terminated. (06915934)
-[22:56:45.487419] (system)	Teleporter: Script terminated. (06914554)
-[22:56:45.502626] (system)	Lua Visual Veh Spawner: Script terminated. (0691405C)
-[22:56:45.522059] (system)	Session terminated.
+[23:21:41.656548] (info)	Working directory: C:\Users\felip\Documents\gitieiMEd\moonloader
+[23:21:41.656548] (debug)	FP Control: 0009001F
+[23:21:41.656548] (debug)	Game: GTA SA 1.0.0.0 US
+[23:21:41.656548] (system)	Installing pre-game hooks...
+[23:21:41.659135] (system)	Hooks installed.
+[23:21:44.829590] (debug)	Initializing opcode handler table
+[23:21:44.829590] (debug)	package.path = C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?\init.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\?\init.lua;.\?.lua;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?\init.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\?.luac;C:\Users\felip\Documents\gitieiMEd\moonloader\?\init.luac;.\?.luac
+[23:21:44.829590] (debug)	package.cpath = C:\Users\felip\Documents\gitieiMEd\moonloader\lib\?.dll;
+[23:21:44.831650] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\animation-manager.lua'...
+[23:21:44.831650] (debug)	New script: 04269264
+[23:21:44.838823] (system)	Animation Manager: Loaded successfully.
+[23:21:44.838823] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\changer.lua'...
+[23:21:44.838823] (debug)	New script: 04269FA4
+[23:21:44.840824] (system)	In-Game Commands Changer: Loaded successfully.
+[23:21:44.840824] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\Teleporter.lua'...
+[23:21:44.840824] (debug)	New script: 0426940C
+[23:21:44.843834] (system)	Teleporter: Loaded successfully.
+[23:21:44.843834] (system)	Loading script 'C:\Users\felip\Documents\gitieiMEd\moonloader\visual-veh-spawner.lua'...
+[23:21:44.843834] (debug)	New script: 04269904
+[23:21:44.854595] (system)	Lua Visual Veh Spawner: Loaded successfully.
+[23:21:46.956780] (system)	Installing post-load hooks...
+[23:21:46.956780] (system)	Hooks installed.
+[23:26:45.426311] (system)	Unloading...
+[23:26:45.426311] (system)	Animation Manager: Script terminated. (04269264)
+[23:26:45.427831] (system)	In-Game Commands Changer: Script terminated. (04269FA4)
+[23:26:45.461985] (system)	Teleporter: Script terminated. (0426940C)
+[23:26:45.486033] (system)	Lua Visual Veh Spawner: Script terminated. (04269904)
+[23:26:45.497786] (system)	Session terminated.

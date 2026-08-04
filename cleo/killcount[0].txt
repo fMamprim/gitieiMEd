@@ -1,0 +1,137 @@
+// CLEO custom script: In-game Kill Counter with Levels
+// Sanny Builder 4
+// mode: GTA SA (v1.0 - SBL)
+//
+// Type "KILLCOUNT" to toggle the on-screen kill counter.
+// Progression system:
+//   - Level 1 requires 25 kills
+//   - Level 2 requires 27 kills
+//   - Level 3 requires 29 kills
+//   - Level N requires 25 + (N - 1) * 2 kills (increases by 2 each level)
+
+{$CLEO .cs}
+
+script_name {name} 'killcnt'
+
+wait {time} 2000
+
+// Register dynamic GXT keys
+// In GTA SA GXT tokens, ~1~ is the sequential placeholder for numbers (~1~ first number, ~1~ second number)
+add_text_label {dynamicKey} 'KL_LVL' {text} "LEVEL ~1~"
+add_text_label {dynamicKey} 'KL_PRG' {text} "KILLS: ~1~ / ~1~"
+add_text_label {dynamicKey} 'KL_TOT' {text} "TOTAL: ~1~"
+add_text_label {dynamicKey} 'LVL_UP' {text} "~g~LEVEL UP! ~w~LEVEL ~1~"
+
+int isHudActive = false
+int currentLevel = 1
+int levelKills = 0
+int levelReq = 25
+int sessionKills = 0
+int lastStatKills = 0
+int currentStatKills = 0
+int killsDelta = 0
+
+lastStatKills = get_int_stat 121
+
+while true
+    wait {time} 0
+
+    if
+        not is_player_playing $player1
+    then
+        continue
+    end
+
+    if
+        test_cheat "KILLCOUNT"
+    then
+        if
+            isHudActive == false
+        then
+            isHudActive = true
+            print_help_string {text} "~g~Kill Counter: ~w~ON"
+        else
+            isHudActive = false
+            print_help_string {text} "~r~Kill Counter: ~w~OFF"
+        end
+
+        // Debounce cheat input
+        wait {time} 250
+    end
+
+    // Track kills continuously
+    currentStatKills = get_int_stat 121
+
+    if
+        currentStatKills > lastStatKills
+    then
+        killsDelta = currentStatKills
+        killsDelta -= lastStatKills
+        lastStatKills = currentStatKills
+
+        sessionKills += killsDelta
+        levelKills += killsDelta
+
+        // Check if level requirement was reached (or exceeded by multiple kills)
+        while levelKills >= levelReq
+            levelKills -= levelReq
+            currentLevel += 1
+
+            // Calculate next level requirement: 25 + (currentLevel - 1) * 2
+            levelReq = currentLevel
+            levelReq -= 1
+            levelReq *= 2
+            levelReq += 25
+
+            // Level up celebration feedback: sound and banner
+            add_one_off_sound {x} 0.0 {y} 0.0 {z} 0.0 {soundId} 1058
+            print_with_number_big {key} 'LVL_UP' {num} currentLevel {duration} 2500 {style} TextStyle.Middle
+        end
+    else
+        if
+            currentStatKills < lastStatKills
+        then
+            // Stat decreased (game reloaded / new game started) -> reset tracking
+            lastStatKills = currentStatKills
+            levelKills = 0
+            sessionKills = 0
+            currentLevel = 1
+            levelReq = 25
+        end
+    end
+
+    if
+        isHudActive == true
+    then
+        use_text_commands {state} true
+
+        // Background box (centered at X: 560, Y: 132, Width: 124, Height: 60)
+        draw_rect {pos} 560.0 132.0 {size} 124.0 60.0 {rgb} 0 0 0 {alpha} 175
+
+        // Top accent border (Gold/Orange)
+        draw_rect {pos} 560.0 103.0 {size} 124.0 2.5 {rgb} 255 140 0 {alpha} 230
+
+        // Line 1: Current Level
+        set_text_font {font} Font.Subtitles
+        set_text_scale {width} 0.34 {height} 1.2
+        set_text_colour {rgb} 255 215 0 {alpha} 255
+        set_text_edge {size} 1 {rgb} 0 0 0 {alpha} 200
+        display_text_with_number {offsetLeft} 504.0 {offsetTop} 106.0 {key} 'KL_LVL' {num} currentLevel
+
+        // Line 2: Kills in current level / Requirement
+        set_text_font {font} Font.Subtitles
+        set_text_scale {width} 0.28 {height} 1.0
+        set_text_colour {rgb} 255 80 80 {alpha} 255
+        set_text_edge {size} 1 {rgb} 0 0 0 {alpha} 200
+        display_text_with_2_numbers {offsetLeft} 504.0 {offsetTop} 124.0 {key} 'KL_PRG' {num1} levelKills {num2} levelReq
+
+        // Line 3: Total Session Kills
+        set_text_font {font} Font.Subtitles
+        set_text_scale {width} 0.22 {height} 0.85
+        set_text_colour {rgb} 200 200 200 {alpha} 220
+        set_text_edge {size} 1 {rgb} 0 0 0 {alpha} 200
+        display_text_with_number {offsetLeft} 504.0 {offsetTop} 141.0 {key} 'KL_TOT' {num} sessionKills
+    end
+end
+
+terminate_this_script
