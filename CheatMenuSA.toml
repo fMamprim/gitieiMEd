@@ -5,7 +5,7 @@ SpawnWithTunes = false
 TeleportMarker = false
 
 [Menu]
-LastUpdateChecked = 4
+LastUpdateChecked = 15
 
 [Window]
 CurrentPage = 5
